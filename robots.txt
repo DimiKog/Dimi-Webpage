@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Update the URL after you attach a custom domain
+# Sitemap: https://YOUR-DOMAIN/sitemap.xml

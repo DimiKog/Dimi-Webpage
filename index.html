@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dimitris Kogias — Researcher / Academic</title>
+    <meta name="description"
+        content="Personal homepage of Dimitris Kogias — researcher & educator in blockchain, distributed systems, and cybersecurity." />
+    <!-- Inline SVG favicon -->
+    <link rel="icon"
+        href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="%230b0d12"/><text x="50%" y="54%" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="%236ee7ff">DK</text></svg>' />
+    <style>
+        :root {
+            --bg: #0b0d12;
+            --card: #121623;
+            --muted: #9aa3b2;
+            --text: #e6e9ef;
+            --brand: #6ee7ff;
+            --accent: #a78bfa;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, Inter, sans-serif;
+            background: linear-gradient(180deg, #0b0d12, #0b0d12 40%, #0f1422 100%);
+            color: var(--text);
+        }
+
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0 18px;
+        }
+
+        .lang-switch button {
+            margin-left: 8px;
+            padding: 6px 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, .12);
+            background: transparent;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        .lang-switch button.active {
+            background: linear-gradient(135deg, var(--brand), var(--accent));
+            color: #041018;
+            font-weight: 700;
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .01));
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            background: #0f1422;
+            border: 1px solid rgba(255, 255, 255, .12);
+            font-weight: 800;
+            color: var(--brand);
+        }
+
+        h1 {
+            margin: 8px 0 4px;
+            font-size: 38px;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .btns {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, .12);
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .btn.primary {
+            background: linear-gradient(135deg, var(--brand), var(--accent));
+            color: #041018;
+            font-weight: 700;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            margin: 30px 0 10px;
+            text-align: center;
+            color: var(--muted);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div style="display:flex;align-items:center;gap:10px">
+                <div class="avatar">DK</div>
+                <div>
+                    <div class="muted">Researcher • Blockchain • Cybersecurity</div>
+                    <h1>Dimitris Kogias</h1>
+                </div>
+            </div>
+            <div class="lang-switch">
+                <span class="muted">Language:</span>
+                <button id="btn-en" onclick="setLang('en')">EN</button>
+                <button id="btn-gr" onclick="setLang('gr')">GR</button>
+            </div>
+        </nav>
+
+        <!-- English content -->
+        <main id="en" class="card">
+            <p class="muted">Welcome — this is a lightweight, static page hosted on Cloudflare Pages. We’ll grow it step
+                by step.</p>
+            <h2>About</h2>
+            <p>I am a researcher and educator working at the intersection of <strong>blockchain security</strong>,
+                <strong>distributed consensus</strong>, and <strong>Web3 education</strong>.</p>
+            <div class="btns">
+                <a class="btn primary" href="#contact">Contact</a>
+                <a class="btn" href="assets/cv.pdf" download>Download CV (PDF)</a>
+            </div>
+        </main>
+
+        <!-- Greek content -->
+        <main id="gr" class="card hidden">
+            <p class="muted">Καλώς ήρθατε — μια ελαφριά, στατική σελίδα στο Cloudflare Pages. Θα τη μεγαλώσουμε
+                βήμα-βήμα.</p>
+            <h2>Σχετικά</h2>
+            <p>Είμαι ερευνητής και διδάσκων που εργάζεται στη διασταύρωση της <strong>ασφάλειας blockchain</strong>, των
+                <strong>μηχανισμών συναίνεσης</strong> και της <strong>εκπαίδευσης Web3</strong>.</p>
+            <div class="btns">
+                <a class="btn primary" href="#contact">Επικοινωνία</a>
+                <a class="btn" href="assets/cv.pdf" download>Λήψη Βιογραφικού (PDF)</a>
+            </div>
+        </main>
+
+        <section id="contact" class="card">
+            <h2>Contact / Επικοινωνία</h2>
+            <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+            <p>GitHub: <a href="https://github.com/your-github" target="_blank">@your-github</a></p>
+        </section>
+
+        <footer>© 2025 Dimitris Kogias · Athens, GR</footer>
+    </div>
+
+    <script>
+        // Language toggle with persistence
+        const key = "site_lang";
+        function applyButtonState(lang) {
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-gr').classList.toggle('active', lang === 'gr');
+        }
+        function setLang(lang) {
+            ['en', 'gr'].forEach(id => document.getElementById(id).classList.add('hidden'));
+            document.getElementById(lang).classList.remove('hidden');
+            localStorage.setItem(key, lang);
+            applyButtonState(lang);
+        }
+        (function initLang() {
+            let lang = localStorage.getItem(key);
+            if (!lang) {
+                const nav = navigator.language || 'en';
+                lang = nav.toLowerCase().startsWith('el') ? 'gr' : 'en';
+            }
+            setLang(lang);
+        })();
+    </script>
+</body>
+
+</html>
