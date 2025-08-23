@@ -1,24 +1,27 @@
-# Personal Site (Cloudflare Pages)
+# Dimi Webpage – Dimitris Kogias’ Personal Bilingual Static Site
 
-A minimal bilingual (EN/GR) static site for **Dimitris Kogias**, ready to deploy to **Cloudflare Pages**.
+Welcome! This is the **personal bilingual (EN/GR) static webpage of Dimitris Kogias**, thoughtfully designed for easy deployment on **Cloudflare Pages**.
 
 ## 🚀 Quick Deploy
-1. Create a new GitHub repo (e.g. `personal-site`) and push this folder.
-2. In Cloudflare Dashboard → **Pages** → **Create a project** → Connect Git.
-3. Framework preset: **None**. Build command: *(empty)*. Output folder: `.`  
-4. Deploy → you get `https://<something>.pages.dev`.
+1. Create a new GitHub repository (e.g. `Dimi-Webpage`) and push this folder to it.
+2. In the Cloudflare Dashboard, go to **Pages** → **Create a project** → Connect Git.
+3. Framework preset: **None**. Build command: *(leave empty)*. Output folder: `.`
+4. Deploy — your site will be live at `https://<something>.pages.dev`.
 
 ## 🗣 Language
-- Toggle EN/GR with the buttons; choice saved in `localStorage`.
-- Default follows browser language (`el*` → GR, otherwise EN).
+- Switch between English and Greek using the buttons; your choice is saved in `localStorage`.
+- By default, the language follows your browser’s preference (`el*` → Greek, otherwise English).
 
 ## 📁 Customize
-- Update `index.html` Contact info (email, GitHub).
-- Replace `assets/cv.pdf` with your real CV.
-- Swap the avatar block with `<img src="assets/avatar.jpg">` if you want your photo.
+- Edit the contact information (email, GitHub, etc.) in `index.html`.
+- Replace `assets/cv.pdf` with your actual CV file.
+- To use your own photo, swap the avatar block with `<img src="assets/avatar.jpg">`.
+
+## 👀 Preview
+To preview the site locally, simply open `index.html` in your browser—no server or build step required.
 
 ## 📈 SEO
-- Edit `robots.txt` + update Sitemap line after domain.
-- Update `sitemap.xml` with your domain.
+- Edit `robots.txt` and update the Sitemap line with your domain.
+- Update `sitemap.xml` to reflect your actual domain.
 
 © 2025 Dimitris Kogias
