@@ -12,25 +12,22 @@
 
     <!-- Touch icon for iOS home screen -->
     <link rel="apple-touch-icon" href="assets/Dimi_favicon.png" />
-
-</head>
-<link rel="canonical" href="https://dimi-webpage.pages.dev/" />
-<script>
-    // Pre-set initial language ASAP to avoid UI flash on language buttons
-    (function () {
-        try {
-            var key = 'site_lang';
-            var lang = localStorage.getItem(key);
-            if (!lang) {
-                var nav = (navigator.language || 'en').toLowerCase();
-                // Greek is "el-*" per IETF; map to our internal 'gr' code
-                lang = nav.startsWith('el') ? 'gr' : 'en';
-            }
-            document.documentElement.setAttribute('data-lang', lang);
-        } catch (e) { document.documentElement.setAttribute('data-lang', 'en'); }
-    })();
-</script>
-</head>
+    <link rel="canonical" href="https://dimi-webpage.pages.dev/" />
+    <script>
+        // Pre-set initial language ASAP to avoid UI flash on language buttons
+        (function () {
+            try {
+                var key = 'site_lang';
+                var lang = localStorage.getItem(key);
+                if (!lang) {
+                    var nav = (navigator.language || 'en').toLowerCase();
+                    // Greek is "el-*" per IETF; map to our internal 'gr' code
+                    lang = nav.startsWith('el') ? 'gr' : 'en';
+                }
+                document.documentElement.setAttribute('data-lang', lang);
+            } catch (e) { document.documentElement.setAttribute('data-lang', 'en'); }
+        })();
+    </script>
 </head>
 
 <body>
@@ -102,26 +99,47 @@
 
     <main class="container">
         <!-- ABOUT -->
-        <section id="about" class="card" style="padding:22px">
+        <section id="about" class="alt">
             <h2 class="section-title" data-en="About" data-gr="Σχετικά">About</h2>
-            <div class="grid">
-                <div class="tile" style="grid-column:span 7">
-                    <p id="about-txt">
-                        I am a researcher and lecturer working at the intersection of <strong>blockchain
-                            security</strong>,
-                        <strong>distributed consensus</strong>, and <strong>Web3 education</strong>. Recent work
-                        includes a
-                        <em>Hyperledger Besu QBFT</em> network (5 validators), a gamified learning app
-                        <em>Proof of Escape (PoE)</em>, and an LDL Fantasy DApp with SBT profiles and trade governance.
-                    </p>
-                </div>
-                <div class="tile" style="grid-column:span 5">
-                    <ul class="list">
-                        <li>PhD in Computer Networks</li>
-                        <li>Private Besu PoA/QBFT network + Blockscout + faucet</li>
-                        <li>Teaching: Blockchain, P2P Networks, Cybersecurity</li>
-                    </ul>
-                </div>
+
+            <div class="card">
+                <p id="about-p1">
+                    I am a researcher and educator working at the intersection of blockchain technology, cybersecurity,
+                    distributed consensus, and applied Web3 education. My work focuses on practical, production‑grade
+                    networks—especially Hyperledger Besu (PoA/QBFT)—and on building clear learning paths for engineers
+                    and students.
+                </p>
+                <p id="about-p2">
+                    Recently I have deployed multi‑validator Besu networks, supervised hands‑on labs, provided lectures
+                    on
+                    blockchain cybersecurity and Web3, and designed gamified learning experiences (e.g., Proof‑of‑Escape
+                    and
+                    SBT‑based credentialing). I collaborate with academic and industry partners to translate research
+                    into
+                    maintainable infrastructure and teaching materials.
+                </p>
+                <p id="about-p3">
+                    I teach blockchain courses at the Master’s level at the University of West Attica (UniWA) and the
+                    University of
+                    Malta. I also work as a Senior Researcher in European and national projects and contribute to
+                    proposal writing and
+                    technical leadership.
+                </p>
+                <p id="about-p4">
+                    My research has been published in peer‑reviewed conferences and journals. I am co‑author of the
+                    first open‑access
+                    book on Blockchain Technology in Greek (Kallipos editions), which I also use as a textbook in my
+                    courses.
+                </p>
+                <ul class="list" style="margin-top:10px">
+                    <li><span id="about-li1"><b>PhD in Computer Networks</b>—focus on distributed systems &
+                            security</span></li>
+                    <li><span id="about-li2"><b>Private Besu PoA/QBFT networks</b> with Blockscout & Faucet for teaching
+                            and research</span></li>
+                    <li><span id="about-li3"><b>Teaching</b>: Blockchain, (P2P) Networks, Cybersecurity</span></li>
+                    <li><span id="about-li4"><b>Interests</b>: protocol hardening, validator ops, verifiable
+                            credentials</span></li>
+                </ul>
             </div>
         </section>
 
@@ -305,9 +323,37 @@
             'stat-2-lbl': { en: 'Besu validators deployed', gr: 'Εγκατεστημένοι validators Besu' },
             'stat-3-lbl': { en: 'Active DApps', gr: 'Ενεργά DApps' },
             // about
-            'about-txt': {
-                en: 'I am a researcher and lecturer working at the intersection of blockchain security, distributed consensus, and Web3 education. Recent work includes a Hyperledger Besu QBFT network (5 validators), a gamified learning app Proof of Escape (PoE), and an LDL Fantasy DApp with SBT profiles and trade governance.',
-                gr: 'Είμαι ερευνητής και διδάσκων στη διασταύρωση ασφάλειας blockchain, κατανεμημένης συναίνεσης και εκπαίδευσης Web3. Πρόσφατα έργα: δίκτυο Hyperledger Besu QBFT (5 validators), gamified εφαρμογή μάθησης Proof of Escape (PoE) και LDL Fantasy DApp με SBT προφίλ και σύστημα ανταλλαγών/ψηφοφορίας.'
+            'about-p1': {
+                en: 'I am a researcher and educator working at the intersection of blockchain technology, cybersecurity, distributed consensus, and applied Web3 education. My work focuses on practical, production‑grade networks—especially Hyperledger Besu (PoA/QBFT)—and on building clear learning paths for engineers and students.',
+                gr: 'Είμαι ερευνητής και διδάσκων στη διασταύρωση τεχνολογίας blockchain, κυβερνοασφάλειας, κατανεμημένης συναίνεσης και εφαρμοσμένης εκπαίδευσης Web3. Εστιάζω σε πρακτικά, παραγωγικά δίκτυα—ιδίως Hyperledger Besu (PoA/QBFT)—και στη δημιουργία καθαρών διαδρομών μάθησης για μηχανικούς και φοιτητές.'
+            },
+            'about-p2': {
+                en: 'Recently I have deployed multi‑validator Besu networks, supervised hands‑on labs, provided lectures on blockchain cybersecurity and Web3, and designed gamified learning experiences (e.g., Proof‑of‑Escape and SBT‑based credentialing). I collaborate with academic and industry partners to translate research into maintainable infrastructure and teaching materials.',
+                gr: 'Πρόσφατα υλοποίησα δίκτυα Besu με πολλούς validators, συντόνισα πρακτικά εργαστήρια, παρέδωσα διαλέξεις για την κυβερνοασφάλεια στο blockchain και το Web3 και σχεδίασα παιγνιοποιημένες εμπειρίες μάθησης (π.χ. Proof‑of‑Escape και διαπιστευτήρια βασισμένα σε SBT). Συνεργάζομαι με ακαδημαϊκούς και φορείς της βιομηχανίας ώστε η έρευνα να μετατρέπεται σε βιώσιμες υποδομές και εκπαιδευτικό υλικό.'
+            },
+            'about-p3': {
+                en: 'I teach blockchain courses at the Master’s level at the University of West Attica (UniWA) and the University of Malta. I also work as a Senior Researcher in European and national projects and contribute to proposal writing and technical leadership.',
+                gr: 'Διδάσκω μαθήματα blockchain σε μεταπτυχιακό επίπεδο στο Πανεπιστήμιο Δυτικής Αττικής (UniWA) και στο Πανεπιστήμιο Μάλτας. Παράλληλα εργάζομαι ως Senior Researcher σε ευρωπαϊκά και εθνικά έργα και συμβάλλω στη συγγραφή προτάσεων και τον τεχνικό συντονισμό.'
+            },
+            'about-p4': {
+                en: 'My research has been published in peer‑reviewed conferences and journals. I am co‑author of the first open‑access book on Blockchain Technology in Greek (Kallipos editions), which I also use as a textbook in my courses.',
+                gr: 'Η έρευνά μου έχει δημοσιευθεί σε διεθνή συνέδρια και περιοδικά με κριτές. Είμαι συν‑συγγραφέας του πρώτου ανοικτής πρόσβασης βιβλίου για την Τεχνολογία Blockchain στα ελληνικά (εκδόσεις Κάλλιπος), το οποίο χρησιμοποιώ και ως διδακτικό σύγγραμμα στα μαθήματά μου.'
+            },
+            'about-li1': {
+                en: 'PhD in Computer Networks—focus on distributed systems & security',
+                gr: 'Διδακτορικό στα Δίκτυα Υπολογιστών — εστίαση σε κατανεμημένα συστήματα & ασφάλεια'
+            },
+            'about-li2': {
+                en: 'Private Besu PoA/QBFT networks with Blockscout & Faucet for teaching and research',
+                gr: 'Ιδιωτικά δίκτυα Besu PoA/QBFT με Blockscout & Faucet για διδασκαλία και έρευνα'
+            },
+            'about-li3': {
+                en: 'Teaching: Blockchain, (P2P) Networks, Cybersecurity',
+                gr: 'Διδασκαλία: Blockchain, Δίκτυα (P2P), Κυβερνοασφάλεια'
+            },
+            'about-li4': {
+                en: 'Interests: protocol hardening, validator ops, verifiable credentials',
+                gr: 'Ενδιαφέροντα: ενίσχυση πρωτοκόλλων, λειτουργία validators, επαληθεύσιμα διαπιστευτήρια'
             },
             'pub-note': {
                 en: 'A short list can go here; link to full lists on Google Scholar / ResearchGate.',
