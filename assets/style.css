@@ -176,6 +176,7 @@ html[data-lang="gr"] #btn-gr{
   border-radius:var(--card-b);
   box-shadow:var(--shadow);
   overflow:hidden; /* prevent any child from overflowing outside */
+  padding: clamp(18px, 3.2vw, 24px); /* fluid padding for better text fit */
 }
 .hero .card{ padding:28px; animation:fadeUp .6s ease both }
 @media (max-width: 880px){
@@ -188,10 +189,10 @@ html[data-lang="gr"] #btn-gr{
 }
 @media (max-width: 640px){
   /* unify card padding on phones */
-  .card{ padding:16px; }
   section{ padding:8px 16px; margin:28px 0; }
   .grid{ gap:14px; }
   .stats{ grid-template-columns:repeat(2,1fr); gap:10px; }
+  .card{ padding-inline: 18px; }
 }
 @media (max-width: 640px){
   .tile h3{ font-size:16px; }
@@ -208,61 +209,14 @@ html[data-lang="gr"] #btn-gr{
 .hero .sub{
   color: var(--muted);          /* adapt to dark/light theme */
 }
-.tag{ display:inline-flex; gap:8px; align-items:center; padding:6px 12px; border-radius:999px; background:var(--tag-bg); border:1px solid var(--tag-border); color:var(--tag-text); font-weight:600; font-size:clamp(11px,1.4vw,13px) }
-html[data-theme="dark"] .tag{ text-shadow: 0 1px 0 rgba(0,0,0,.25); }
-h1{ font-size:clamp(28px, 4vw, 44px); line-height:1.15; margin:.4rem 0 }
-h1, h2, h3{
-  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
-}
-.sub{ color:var(--muted); font-size:clamp(15px, 1.8vw, 18px) }
-.btns{ display:flex; flex-wrap:wrap; gap:12px; margin-top:18px }
-.btn{ display:inline-flex; align-items:center; gap:10px; padding:11px 16px; border-radius:12px; border:1px solid var(--line) }
-.btn.primary{ background:linear-gradient(135deg,var(--brand),var(--accent)); color:#00111a; font-weight:800 }
-.card:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgba(0,0,0,.28);
-  border-color: rgba(255,255,255,.22);
-}
-.btn:hover{
-  transform: translateY(-1px);
-}
-.btn.ghost{ background:transparent; color:var(--text) }
-.card, .btn, a, .nav a{
-  transition: all .2s ease;
-}
-.stats{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:16px }
-.stat{ padding:14px; border-radius:14px; border:1px dashed var(--line) }
-.stat b{ font-size:20px; display:block }
-
-/* Sections */
-section{ padding:12px 24px; margin:36px 0; scroll-margin-top:84px }
-.alt{
-  background: linear-gradient(180deg, var(--glass), rgba(255,255,255,.02));
-  border: 1px solid var(--line);
-  border-radius: var(--card-b);
-  padding: 18px 24px;
-}
-@media (max-width: 640px){
-  .alt .section-title{ text-shadow: 0 1px 0 rgba(0,0,0,.08); }
-}
-.section-title{
-  font-size:20px;
-  color: var(--text);
-  margin:8px 0 12px;
-  font-weight:700;              /* stronger weight for readability */
-  letter-spacing:-0.1px;        /* crisper rendering for GR/EN */
-  line-height:1.25;
-}
-.grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:22px }
-.tile{ padding:18px; overflow:hidden }
-.tile h3{ margin:0 0 8px; font-size:18px }
-
-/* Wrap long words/links to avoid overflow on small screens */
+/* Wrap long words/links and improve readability */
 .card h1,.card h2,.card h3,.card .sub,
 .card p,.card li,.tile p,.tile li{
   overflow-wrap:anywhere;
   word-break:break-word;
   hyphens:auto;
+  -webkit-hyphens:auto; /* iOS Safari */
+  line-height:1.5;
 }
 code{ white-space:normal; word-break:break-word; }
 pre{ white-space:pre-wrap; word-break:break-word; }
@@ -345,6 +299,7 @@ pre{ white-space:pre-wrap; word-break:break-word; }
     row-gap:8px;
   }
   .contact-card .list li{ font-size:15px; }
+  .card li, .tile li{ line-height:1.55; }
 }
 
 /* Visible keyboard focus for header links */
