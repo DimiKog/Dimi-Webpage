@@ -10,9 +10,8 @@
   --brand:#5cd2f3;          /* brighter cyan for links/buttons */
   --accent:#b79cff;         /* slightly brighter purple */
   --ok:#34d399;
-
-  --card-b:20px;
-  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --hdr-bg: rgba(10,12,18,.92);       /* header background (dark) */
+  --nav-link:#e6edf6;                 /* nav link color (dark) */
 }
 
 /* Light mode – also boost contrast a bit */
@@ -27,7 +26,37 @@
     --line:rgba(0,0,0,.15);
     --brand:#0e99c5;        /* cyan shifted darker for light bg */
     --accent:#6c4fff;
+    --hdr-bg: rgba(255,255,255,.85);  /* header background (light) */
+    --nav-link:#0b172a;               /* nav link color (light) */
   }
+}
+
+/* --- Manual theme overrides (take precedence over media queries) --- */
+:root[data-theme="dark"]{
+  --bg:#0a0c12;
+  --bg-2:#0d1220;
+  --glass:rgba(255,255,255,.05);
+  --text:#f1f4f9;
+  --muted:#c4ceda;
+  --line:rgba(255,255,255,.16);
+  --brand:#5cd2f3;
+  --accent:#b79cff;
+  --ok:#34d399;
+  --hdr-bg: rgba(10,12,18,.92);
+  --nav-link:#e6edf6;
+}
+:root[data-theme="light"]{
+  --bg:#f6f9fc;
+  --bg-2:#eef3f9;
+  --glass:rgba(255,255,255,.9);
+  --text:#0b172a;
+  --muted:#314559;
+  --line:rgba(0,0,0,.15);
+  --brand:#0e99c5;
+  --accent:#6c4fff;
+  --ok:#34d399;
+  --hdr-bg: rgba(255,255,255,.85);
+  --nav-link:#0b172a;
 }
 
 *{ box-sizing:border-box }
@@ -52,7 +81,7 @@ a:hover, a:focus{
   position:sticky;
   top:0;
   z-index:40;
-  background: rgba(10,12,18,.92);
+  background: var(--hdr-bg);
   backdrop-filter: saturate(160%) blur(8px);
   border-bottom:1px solid var(--line);
 }
@@ -65,7 +94,7 @@ a:hover, a:focus{
 .logo{ width:40px; height:40px; border-radius:12px; background:linear-gradient(135deg,var(--brand),var(--accent)); display:grid; place-items:center; color:#07121a; font-weight:900; box-shadow:var(--shadow); border:1px solid var(--line) }
 .nav a{
   margin:0 10px;
-  color:#e6edf6;
+  color:var(--nav-link);
   font-weight:600;
 }
 .nav a.active,
@@ -78,18 +107,34 @@ a:hover, a:focus{
 .lang{ display:flex; align-items:center; gap:8px }
 .lang button{ padding:6px 10px; border-radius:10px; border:1px solid var(--line); background:transparent; color:var(--text); cursor:pointer }
 .lang button.active{ background:linear-gradient(135deg,var(--brand),var(--accent)); color:#041018; font-weight:700 }
+.theme{ display:flex; align-items:center; }
+
+/* Removed old .theme button styles */
+
+.theme select{
+  padding:6px 10px;
+  border-radius:10px;
+  border:1px solid var(--line);
+  background:var(--bg);
+  color:var(--text);
+  cursor:pointer;
+}
+.theme select:focus{
+  outline:2px solid var(--brand);
+  outline-offset:2px;
+}
 
 /* Hero */
 .hero{ display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:center; padding:36px 24px }
 .card{ background:linear-gradient(180deg,var(--glass),rgba(255,255,255,.02)); border:1px solid var(--line); border-radius:var(--card-b); box-shadow:var(--shadow) }
 .hero .card{ padding:28px; animation:fadeUp .6s ease both }
 .hero h1{
-  color:#eef3f9;
+  color: var(--text);           /* adapt to dark/light theme */
   font-weight:800;
   letter-spacing:-0.2px;
 }
 .hero .sub{
-  color:#c7d2de;
+  color: var(--muted);          /* adapt to dark/light theme */
 }
 .tag{ display:inline-flex; gap:8px; align-items:center; padding:6px 12px; border-radius:999px; background:rgba(167,139,250,.18); border:1px solid rgba(167,139,250,.35); color:#dbeafe; font-size:13px }
 h1{ font-size:44px; line-height:1.15; margin:.4rem 0 }
@@ -104,7 +149,11 @@ h1{ font-size:44px; line-height:1.15; margin:.4rem 0 }
 
 /* Sections */
 section{ padding:8px 24px; margin:24px 0 }
-.section-title{ font-size:20px; color:#cbd4e1; margin:8px 0 12px }
+.section-title{
+  font-size:20px;
+  color: var(--text);           /* higher contrast and theme-aware */
+  margin:8px 0 12px;
+}
 .grid{ display:grid; grid-template-columns:repeat(12,1fr); gap:22px }
 .tile{ grid-column:span 6; padding:18px }
 .tile h3{ margin:0 0 8px; font-size:18px }
@@ -128,7 +177,7 @@ footer{ margin:40px 0 18px; color:var(--muted); text-align:center }
 
 /* Constrain hero card images */
 .hero .card img{
-  max-width:200px;
+  max-width:180px;
   height:auto;
 }
 
