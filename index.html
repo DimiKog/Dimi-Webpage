@@ -4,188 +4,243 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dimitris Kogias — Researcher / Academic</title>
+    <title>Dimitrios G. Kogias — Researcher • Blockchain • Cybersecurity</title>
     <meta name="description"
-        content="Personal homepage of Dimitris Kogias — researcher & educator in blockchain, distributed systems, and cybersecurity." />
-    <!-- Inline SVG favicon -->
-    <link rel="icon"
-        href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="%230b0d12"/><text x="50%" y="54%" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="%236ee7ff">DK</text></svg>' />
-    <style>
-        :root {
-            --bg: #0b0d12;
-            --card: #121623;
-            --muted: #9aa3b2;
-            --text: #e6e9ef;
-            --brand: #6ee7ff;
-            --accent: #a78bfa;
-        }
-
-        body {
-            margin: 0;
-            font-family: system-ui, Inter, sans-serif;
-            background: linear-gradient(180deg, #0b0d12, #0b0d12 40%, #0f1422 100%);
-            color: var(--text);
-        }
-
-        .container {
-            max-width: 880px;
-            margin: 0 auto;
-            padding: 24px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 12px;
-            padding: 10px 0 18px;
-        }
-
-        .lang-switch button {
-            margin-left: 8px;
-            padding: 6px 10px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, .12);
-            background: transparent;
-            color: var(--text);
-            cursor: pointer;
-        }
-
-        .lang-switch button.active {
-            background: linear-gradient(135deg, var(--brand), var(--accent));
-            color: #041018;
-            font-weight: 700;
-        }
-
-        .card {
-            background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .01));
-            border: 1px solid rgba(255, 255, 255, .08);
-            border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        .avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 16px;
-            display: grid;
-            place-items: center;
-            background: #0f1422;
-            border: 1px solid rgba(255, 255, 255, .12);
-            font-weight: 800;
-            color: var(--brand);
-        }
-
-        h1 {
-            margin: 8px 0 4px;
-            font-size: 38px;
-        }
-
-        .muted {
-            color: var(--muted);
-        }
-
-        .btns {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 12px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 14px;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, .12);
-            text-decoration: none;
-            color: var(--text);
-        }
-
-        .btn.primary {
-            background: linear-gradient(135deg, var(--brand), var(--accent));
-            color: #041018;
-            font-weight: 700;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        footer {
-            margin: 30px 0 10px;
-            text-align: center;
-            color: var(--muted);
-        }
-    </style>
+        content="Personal homepage of Dimitrios G. Kogias — researcher & educator in blockchain, distributed systems, and cybersecurity." />
+    <link rel="icon" type="image/png" href="assets/Dimi_favicon.png" />
+</head>
+<link rel="stylesheet" href="assets/styles.css" />
 </head>
 
 <body>
-    <div class="container">
-        <nav>
-            <div style="display:flex;align-items:center;gap:10px">
-                <div class="avatar">DK</div>
+    <!-- Header -->
+    <header class="hdr">
+        <div class="hdr-inner container">
+            <div class="brand">
+                <div class="logo">DK</div>
                 <div>
-                    <div class="muted">Researcher • Blockchain • Cybersecurity</div>
-                    <h1>Dimitris Kogias</h1>
+                    <strong>Dimitris Kogias</strong><br>
+                    <span class="muted">Researcher • Blockchain • Cybersecurity</span>
                 </div>
             </div>
-            <div class="lang-switch">
-                <span class="muted">Language:</span>
+            <nav class="nav">
+                <a href="#about" class="active">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#publications">Publications</a>
+                <a href="#teaching">Teaching</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="lang" role="group" aria-label="Language">
                 <button id="btn-en" onclick="setLang('en')">EN</button>
                 <button id="btn-gr" onclick="setLang('gr')">GR</button>
             </div>
-        </nav>
+        </div>
+    </header>
 
-        <!-- English content -->
-        <main id="en" class="card">
-            <p class="muted">Welcome — this is a lightweight, static page hosted on Cloudflare Pages. We’ll grow it step
-                by step.</p>
-            <h2>About</h2>
-            <p>I am a researcher and educator working at the intersection of <strong>blockchain security</strong>,
-                <strong>distributed consensus</strong>, and <strong>Web3 education</strong>.</p>
+    <!-- Hero -->
+    <section class="hero container">
+        <div class="card">
+            <span class="tag">Web3 • Distributed Consensus • Education</span>
+            <h1 id="hero-title">Building safer blockchain systems & clearer learning paths.</h1>
+            <p class="sub" id="hero-sub">
+                I work on blockchain security, Besu PoA/QBFT networks, and hands-on Web3 education.
+            </p>
             <div class="btns">
-                <a class="btn primary" href="#contact">Contact</a>
-                <a class="btn" href="assets/cv.pdf" download>Download CV (PDF)</a>
+                <a class="btn primary" href="#contact" id="cta-primary">Get in touch</a>
+                <a class="btn ghost" href="#projects" id="cta-secondary">See projects</a>
             </div>
-        </main>
-
-        <!-- Greek content -->
-        <main id="gr" class="card hidden">
-            <p class="muted">Καλώς ήρθατε — μια ελαφριά, στατική σελίδα στο Cloudflare Pages. Θα τη μεγαλώσουμε
-                βήμα-βήμα.</p>
-            <h2>Σχετικά</h2>
-            <p>Είμαι ερευνητής και διδάσκων που εργάζεται στη διασταύρωση της <strong>ασφάλειας blockchain</strong>, των
-                <strong>μηχανισμών συναίνεσης</strong> και της <strong>εκπαίδευσης Web3</strong>.</p>
-            <div class="btns">
-                <a class="btn primary" href="#contact">Επικοινωνία</a>
-                <a class="btn" href="assets/cv.pdf" download>Λήψη Βιογραφικού (PDF)</a>
+            <div class="stats">
+                <div class="stat"><b id="stat-1">5+</b><span class="muted" id="stat-1-lbl">Years teaching
+                        blockchain</span></div>
+                <div class="stat"><b id="stat-2">5</b><span class="muted" id="stat-2-lbl">Besu validators
+                        deployed</span></div>
+                <div class="stat"><b id="stat-3">2</b><span class="muted" id="stat-3-lbl">Active DApps</span></div>
             </div>
-        </main>
+        </div>
+        <div class="card" style="padding:0;overflow:hidden">
+            <img src="assets/avatar.png" alt="Dimitris Kogias"
+                style="display:block;width:100%;height:100%;object-fit:cover" />
+        </div>
+    </section>
 
-        <section id="contact" class="card">
-            <h2>Contact / Επικοινωνία</h2>
-            <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-            <p>GitHub: <a href="https://github.com/your-github" target="_blank">@your-github</a></p>
+    <main class="container">
+        <!-- ABOUT -->
+        <section id="about" class="card" style="padding:22px">
+            <h2 class="section-title" data-en="About" data-gr="Σχετικά">About</h2>
+            <div class="grid">
+                <div class="tile" style="grid-column:span 7">
+                    <p id="about-txt">
+                        I am a researcher and lecturer working at the intersection of <strong>blockchain
+                            security</strong>,
+                        <strong>distributed consensus</strong>, and <strong>Web3 education</strong>. Recent work
+                        includes a
+                        <em>Hyperledger Besu QBFT</em> network (5 validators), a gamified learning app
+                        <em>Proof of Escape (PoE)</em>, and an LDL Fantasy DApp with SBT profiles and trade governance.
+                    </p>
+                </div>
+                <div class="tile" style="grid-column:span 5">
+                    <ul class="list">
+                        <li>PhD in Computer Networks</li>
+                        <li>Private Besu PoA/QBFT network + Blockscout + faucet</li>
+                        <li>Teaching: Blockchain, P2P Networks, Cybersecurity</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <footer>© 2025 Dimitris Kogias · Athens, GR</footer>
-    </div>
+        <!-- PROJECTS -->
+        <section id="projects">
+            <h2 class="section-title" data-en="Selected Projects" data-gr="Ενδεικτικά Έργα">Selected Projects</h2>
+            <div class="grid">
+                <article class="card tile">
+                    <h3>Proof of Escape (PoE)</h3>
+                    <p class="muted">Gamified learning with quiz → reward NFT, leaderboard, wallet connect.</p>
+                    <ul class="list">
+                        <li>Reward contract: <code>PoEQuizRewardNFT</code> (Besu QBFT)</li>
+                        <li>Next: claim button integration</li>
+                    </ul>
+                </article>
+                <article class="card tile">
+                    <h3>LDL Fantasy League DApp</h3>
+                    <p class="muted">League management with SBT identity, multi-team trades, and voting.</p>
+                    <ul class="list">
+                        <li>Backend: Flask + Google Sheets API</li>
+                        <li>On-chain: trade voting + SBT profiles</li>
+                    </ul>
+                </article>
+                <article class="card tile">
+                    <h3>Besu QBFT Research Network</h3>
+                    <p class="muted">Private Ethereum network for consensus and DORA resilience research.</p>
+                    <ul class="list">
+                        <li>5 validators, Explorer, Faucet</li>
+                        <li>Hardened nodes & monitoring</li>
+                    </ul>
+                </article>
+                <article class="card tile">
+                    <h3>Blockchain Security Labs</h3>
+                    <p class="muted">Hands-on exercises: consensus, threats, bZx-style simulations.</p>
+                    <ul class="list">
+                        <li>Whiteboard ledger, oracle design</li>
+                        <li>Trace analysis, PoC demos</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- PUBLICATIONS -->
+        <section id="publications">
+            <h2 class="section-title" data-en="Publications" data-gr="Δημοσιεύσεις">Publications</h2>
+            <div class="card" style="padding:18px">
+                <p class="muted" id="pub-note">
+                    A short list can go here; link to full lists on Google Scholar / ResearchGate.
+                </p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Crypto Cybersecurity & DORA: Building Resilient Crypto Services</h3>
+                        <div class="muted">2025 • Lecture/Whitepaper</div>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Consensus Labs: Teaching PBFT/QBFT via Besu</h3>
+                        <div class="muted">2024 • Pedagogical toolkit</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEACHING -->
+        <section id="teaching">
+            <h2 class="section-title" data-en="Teaching" data-gr="Διδασκαλία">Teaching</h2>
+            <div class="grid">
+                <div class="card tile">
+                    <h3>Peer-to-Peer Networks & Blockchain</h3>
+                    <p class="muted">Undergraduate course: P2P, consensus, smart contracts, security.</p>
+                </div>
+                <div class="card tile">
+                    <h3>Cybersecurity, Auditing & Advanced Blockchain</h3>
+                    <p class="muted">10-hour online course with labs and assignments.</p>
+                </div>
+                <div class="card tile">
+                    <h3>Workshops</h3>
+                    <p class="muted">Hands-on ZKP, oracles, and governance modules for DApps.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <h2 class="section-title" data-en="Contact" data-gr="Επικοινωνία">Contact</h2>
+            <div class="card" style="padding:18px">
+                <ul class="list">
+                    <li>Email: <a
+                            href="mailto:dimitris@kogias.eu">you@example.com</a><!-- TODO: replace with your email -->
+                    </li>
+                    <li>GitHub: <a href="https://github.com/DimiKog" target="_blank"
+                            rel="noreferrer">@DimiKog</a><!-- TODO: replace with your GitHub profile --></li>
+                    <li>Scholar: <a href="https://scholar.google.com/citations?user=VY5yMDYAAAAJ&hl=el" target="_blank"
+                            rel="noreferrer">Google
+                            Scholar</a><!-- TODO: add your Google Scholar URL --></li>
+                    <li>LinkedIn / X: <a href="www.linkedin.com/in/dimitris-kogias-b376222a target=" _blank"
+                            rel="noreferrer">profiles</a><!-- TODO: add your LinkedIn or X profile URL --></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>© <span id="y"></span> Dimitris Kogias · Athens, GR</footer>
 
     <script>
-        // Language toggle with persistence
+        // Year
+        document.getElementById('y').textContent = new Date().getFullYear();
+
+        // Nav highlight on click
+        document.querySelectorAll('.nav a').forEach(a => {
+            a.addEventListener('click', () => {
+                document.querySelectorAll('.nav a').forEach(x => x.classList.remove('active'));
+                a.classList.add('active');
+            });
+        });
+
+        // Language toggle with persistence + content swaps
         const key = "site_lang";
-        function applyButtonState(lang) {
+        const langElems = {
+            // hero
+            'hero-title': {
+                en: 'Building safer blockchain systems & clearer learning paths.',
+                gr: 'Δημιουργώντας ασφαλέστερα blockchain συστήματα & πιο σαφείς διαδρομές μάθησης.'
+            },
+            'hero-sub': {
+                en: 'I work on blockchain security, Besu PoA/QBFT networks, and hands-on Web3 education.',
+                gr: 'Ασχολούμαι με ασφάλεια blockchain, δίκτυα Besu PoA/QBFT και πρακτική εκπαίδευση Web3.'
+            },
+            'cta-primary': { en: 'Get in touch', gr: 'Επικοινωνία' },
+            'cta-secondary': { en: 'See projects', gr: 'Δες έργα' },
+            // stats labels
+            'stat-1-lbl': { en: 'Years teaching blockchain', gr: 'Χρόνια διδασκαλίας σε blockchain' },
+            'stat-2-lbl': { en: 'Besu validators deployed', gr: 'Εγκατεστημένοι validators Besu' },
+            'stat-3-lbl': { en: 'Active DApps', gr: 'Ενεργά DApps' },
+            // about
+            'about-txt': {
+                en: 'I am a researcher and lecturer working at the intersection of blockchain security, distributed consensus, and Web3 education. Recent work includes a Hyperledger Besu QBFT network (5 validators), a gamified learning app Proof of Escape (PoE), and an LDL Fantasy DApp with SBT profiles and trade governance.',
+                gr: 'Είμαι ερευνητής και διδάσκων στη διασταύρωση ασφάλειας blockchain, κατανεμημένης συναίνεσης και εκπαίδευσης Web3. Πρόσφατα έργα: δίκτυο Hyperledger Besu QBFT (5 validators), gamified εφαρμογή μάθησης Proof of Escape (PoE) και LDL Fantasy DApp με SBT προφίλ και σύστημα ανταλλαγών/ψηφοφορίας.'
+            },
+            'pub-note': {
+                en: 'A short list can go here; link to full lists on Google Scholar / ResearchGate.',
+                gr: 'Μπορεί να μπει μια σύντομη λίστα εδώ· σύνδεσμοι για πλήρεις λίστες σε Google Scholar / ResearchGate.'
+            }
+        };
+
+        function setLang(lang) {
+            for (const id in langElems) {
+                const el = document.getElementById(id);
+                if (el && langElems[id][lang]) el.textContent = langElems[id][lang];
+            }
+            // section titles using data-* attributes
+            document.querySelectorAll('.section-title').forEach(el => {
+                el.textContent = el.dataset[lang === 'gr' ? 'gr' : 'en'];
+            });
+            localStorage.setItem(key, lang);
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
             document.getElementById('btn-gr').classList.toggle('active', lang === 'gr');
-        }
-        function setLang(lang) {
-            ['en', 'gr'].forEach(id => document.getElementById(id).classList.add('hidden'));
-            document.getElementById(lang).classList.remove('hidden');
-            localStorage.setItem(key, lang);
-            applyButtonState(lang);
         }
         (function initLang() {
             let lang = localStorage.getItem(key);
