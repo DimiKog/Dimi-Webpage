@@ -109,6 +109,14 @@ a:hover, a:focus{
 .lang{ display:flex; align-items:center; gap:8px }
 .lang button{ padding:6px 10px; border-radius:10px; border:1px solid var(--line); background:transparent; color:var(--text); cursor:pointer }
 .lang button.active{ background:linear-gradient(135deg,var(--brand),var(--accent)); color:#041018; font-weight:700 }
+
+/* Make language active state persistent from initial load (no flash) */
+html[data-lang="en"] #btn-en,
+html[data-lang="gr"] #btn-gr{
+  background:linear-gradient(135deg,var(--brand),var(--accent));
+  color:#041018;
+  font-weight:700;
+}
 .theme{ display:flex; align-items:center; }
 
 /* Removed old .theme button styles */
@@ -124,6 +132,24 @@ a:hover, a:focus{
 .theme select:focus{
   outline:2px solid var(--brand);
   outline-offset:2px;
+}
+
+/* Hamburger button (hidden on desktop) */
+.hamburger{
+  display:none;
+  width:42px; height:42px;
+  border-radius:10px;
+  border:1px solid var(--line);
+  background:transparent;
+  color:var(--text);
+  cursor:pointer;
+  align-items:center; justify-content:center;
+  gap:5px;
+}
+.hamburger span{
+  display:block;
+  width:20px; height:2px;
+  background:var(--text);
 }
 
 /* Hero */
@@ -193,7 +219,28 @@ footer{ margin:40px 0 18px; color:var(--muted); text-align:center }
   .hero{ grid-template-columns:1fr }
   .tile{ grid-column:span 12 }
   .stats{ grid-template-columns:repeat(3,1fr) }
-  .nav{ display:none; } /* keep hidden on phones; we'll consider a burger menu later */
+  /* Mobile nav: hidden by default, slides down when open */
+  .hamburger{ display:inline-flex; }
+  .nav{
+    position:fixed;
+    left:0; right:0; top:64px; bottom:auto;
+    background: var(--hdr-bg);
+    backdrop-filter: blur(10px);
+    display:flex; flex-direction:column;
+    gap:12px;
+    padding:16px 24px;
+    transform: translateY(-130%);
+    opacity:0;
+    pointer-events:none;
+    transition: transform .25s ease, opacity .25s ease;
+    border-bottom:1px solid var(--line);
+  }
+  .nav.nav--open{
+    transform: translateY(0);
+    opacity:1;
+    pointer-events:auto;
+  }
+  .nav a{ padding:8px 0; }
 }
 @keyframes fadeUp{ from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:translateY(0)} }
 
@@ -277,6 +324,30 @@ footer{ margin:40px 0 18px; color:var(--muted); text-align:center }
 /* Skip link utility */
 .sr-only-focusable{ position:absolute; left:-9999px; }
 .sr-only-focusable:focus{ left:8px; top:8px; background:var(--bg); color:var(--text); padding:8px 10px; border-radius:8px; outline:2px solid var(--brand); }
+
+/* Back to top button */
+.back-to-top{
+  position:fixed;
+  right:16px; bottom:16px;
+  width:40px; height:40px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,var(--glass),rgba(255,255,255,.02));
+  color:var(--text);
+  box-shadow: var(--shadow);
+  cursor:pointer;
+  display:grid; place-items:center;
+  opacity:0; transform: translateY(10px);
+  transition: opacity .2s ease, transform .2s ease;
+  z-index:50;
+}
+.back-to-top.show{
+  opacity:1; transform: translateY(0);
+}
+.back-to-top:focus-visible{
+  outline:2px solid var(--brand);
+  outline-offset:2px;
+}
 
 @media (prefers-reduced-motion: reduce){
   *{ animation: none !important; transition: none !important; }

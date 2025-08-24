@@ -13,7 +13,24 @@
     <!-- Touch icon for iOS home screen -->
     <link rel="apple-touch-icon" href="assets/Dimi_favicon.png" />
 
-    <link rel="canonical" href="https://dimi-webpage.pages.dev/" />
+</head>
+<link rel="canonical" href="https://dimi-webpage.pages.dev/" />
+<script>
+    // Pre-set initial language ASAP to avoid UI flash on language buttons
+    (function () {
+        try {
+            var key = 'site_lang';
+            var lang = localStorage.getItem(key);
+            if (!lang) {
+                var nav = (navigator.language || 'en').toLowerCase();
+                // Greek is "el-*" per IETF; map to our internal 'gr' code
+                lang = nav.startsWith('el') ? 'gr' : 'en';
+            }
+            document.documentElement.setAttribute('data-lang', lang);
+        } catch (e) { document.documentElement.setAttribute('data-lang', 'en'); }
+    })();
+</script>
+</head>
 </head>
 
 <body>
@@ -28,7 +45,11 @@
                     <span class="muted">Researcher • Blockchain • Cybersecurity</span>
                 </div>
             </div>
-            <nav class="nav" role="navigation" aria-label="Primary">
+            <button id="menu-toggle" class="hamburger" aria-label="Open menu" aria-controls="site-nav"
+                aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="site-nav" class="nav" role="navigation" aria-label="Primary">
                 <a href="#about" class="active">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#publications">Publications</a>
@@ -371,6 +392,8 @@
                 el.textContent = el.dataset[lang === 'gr' ? 'gr' : 'en'];
             });
             localStorage.setItem(key, lang);
+            document.documentElement.setAttribute('data-lang', lang);
+            // keep button classes for older CSS; CSS also styles via [data-lang]
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
             document.getElementById('btn-gr').classList.toggle('active', lang === 'gr');
         }
@@ -378,6 +401,7 @@
             let lang = localStorage.getItem(key);
             if (!lang) {
                 const nav = navigator.language || 'en';
+                // Note: Greek locale codes start with 'el' (Hellenic), not 'gr'; we map 'el-*' -> 'gr' internally.
                 lang = nav.toLowerCase().startsWith('el') ? 'gr' : 'en';
             }
             setLang(lang);
@@ -413,7 +437,36 @@
                 }
             }
         })();
+        // --- Mobile menu toggle ---
+        (function () {
+            const btn = document.getElementById('menu-toggle');
+            const nav = document.getElementById('site-nav');
+            if (!btn || !nav) return;
+            btn.addEventListener('click', () => {
+                const open = nav.classList.toggle('nav--open');
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+            // Close menu when clicking a nav link (mobile)
+            nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+                nav.classList.remove('nav--open');
+                btn.setAttribute('aria-expanded', 'false');
+            }));
+        })();
+
+        // --- Back to top button ---
+        (function () {
+            const btn = document.getElementById('back-to-top');
+            if (!btn) return;
+            function toggle() {
+                if (window.scrollY > 300) { btn.classList.add('show'); }
+                else { btn.classList.remove('show'); }
+            }
+            window.addEventListener('scroll', toggle, { passive: true });
+            toggle();
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        })();
     </script>
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
 </body>
 
 </html>
