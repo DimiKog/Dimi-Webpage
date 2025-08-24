@@ -111,6 +111,27 @@ a:hover, a:focus{
   color:var(--nav-link);
   font-weight:600;
 }
+
+/* Nav: center items and allow graceful wrapping on tighter widths */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  white-space: normal;
+}
+.nav a { margin: 0 8px; }
+
+/* Tighter nav on mid-sized screens (delay wrapping) */
+@media (max-width: 1180px){
+  .nav { gap: 8px; }
+  .nav a { margin: 0 6px; font-size: 0.96rem; }
+}
+@media (max-width: 1060px){
+  .nav { gap: 6px; }
+  .nav a { margin: 0 4px; font-size: 0.92rem; }
+}
 .nav a.active,
 .nav a:hover,
 .nav a:focus{
@@ -268,6 +289,10 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   flex:0 0 auto;
 }
 
+/* Inline external-link icon (force small size) */
+.ext-icon{ display:inline-block; width:.95em; height:.95em; max-width:14px; max-height:14px; vertical-align:-1px; fill:currentColor; flex:0 0 auto; }
+.ext-icon path{ fill:currentColor; }
+
 /* Checklist with checkmark icons */
 .checklist{ list-style:none; padding-left:0; display:grid; gap:8px; }
 .checklist li{ display:flex; align-items:flex-start; gap:8px; }
@@ -362,6 +387,25 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 /* Added per instructions */
 @media (max-width:980px){
   .hdr{ position:sticky; top:0; }
+
+  /* Mobile nav: hidden by default, slides down when open */
+  .hamburger{ display:inline-flex; }
+  .nav{
+    position:fixed;
+    left:0; right:0; top:64px;
+    background: var(--hdr-bg);
+    backdrop-filter: blur(10px);
+    display:flex; flex-direction:column;
+    gap:12px;
+    padding:16px 24px;
+    transform: translateY(-130%);
+    opacity:0;
+    pointer-events:none;
+    transition: transform .25s ease, opacity .25s ease;
+    border-bottom:1px solid var(--line);
+  }
+  .nav.nav--open{ transform: translateY(0); opacity:1; pointer-events:auto; }
+  .nav a{ padding:8px 0; margin:0; }
 }
 
 /* Adjust hero image scaling */
