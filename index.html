@@ -75,9 +75,12 @@
                 <div class="stat"><b id="stat-3">2</b><span class="muted" id="stat-3-lbl">Active DApps</span></div>
             </div>
         </div>
-        <div class="card" style="padding:0; overflow:hidden; display:flex; justify-content:center; align-items:center">
+        <div class="card"
+            style="padding:16px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px">
             <img src="assets/DimiKog.jpg" alt="Dimitris Kogias"
-                style="width:100%; height:auto; max-width:320px; border-radius:16px; object-fit:cover" />
+                style="width:100%; height:auto; max-width:220px; border-radius:16px; object-fit:cover; box-shadow: 0 8px 24px rgba(0,0,0,.25); border:1px solid var(--line)" />
+            <div id="hero-caption" class="muted" style="font-weight:600; text-align:center">Senior Researcher –
+                Blockchain Educator</div>
         </div>
     </section>
 
@@ -112,34 +115,38 @@
             <div class="grid">
                 <article class="card tile">
                     <h3>Proof of Escape (PoE)</h3>
-                    <p class="muted">Gamified learning with quiz → reward NFT, leaderboard, wallet connect.</p>
+                    <p id="proj-poe-desc" class="muted">Gamified learning with quiz → reward NFT, leaderboard, wallet
+                        connect.</p>
                     <ul class="list">
-                        <li>Reward contract: <code>PoEQuizRewardNFT</code> (Besu QBFT)</li>
-                        <li>Next: claim button integration</li>
+                        <li id="proj-poe-1">Reward contract: <code>PoEQuizRewardNFT</code> (Besu QBFT)</li>
+                        <li id="proj-poe-2">Next: claim button integration</li>
                     </ul>
                 </article>
                 <article class="card tile">
                     <h3>LDL Fantasy League DApp</h3>
-                    <p class="muted">League management with SBT identity, multi-team trades, and voting.</p>
+                    <p id="proj-ldl-desc" class="muted">League management with SBT identity, multi-team trades, and
+                        voting.</p>
                     <ul class="list">
-                        <li>Backend: Flask + Google Sheets API</li>
-                        <li>On-chain: trade voting + SBT profiles</li>
+                        <li id="proj-ldl-1">Backend: Flask + Google Sheets API</li>
+                        <li id="proj-ldl-2">On-chain: trade voting + SBT profiles</li>
                     </ul>
                 </article>
                 <article class="card tile">
                     <h3>Besu QBFT Research Network</h3>
-                    <p class="muted">Private Ethereum network for consensus and DORA resilience research.</p>
+                    <p id="proj-besu-desc" class="muted">Private Ethereum network for consensus and DORA resilience
+                        research.</p>
                     <ul class="list">
-                        <li>5 validators, Explorer, Faucet</li>
-                        <li>Hardened nodes & monitoring</li>
+                        <li id="proj-besu-1">5 validators, Explorer, Faucet</li>
+                        <li id="proj-besu-2">Hardened nodes &amp; monitoring</li>
                     </ul>
                 </article>
                 <article class="card tile">
                     <h3>Blockchain Security Labs</h3>
-                    <p class="muted">Hands-on exercises: consensus, threats, bZx-style simulations.</p>
+                    <p id="proj-labs-desc" class="muted">Hands-on exercises: consensus, threats, bZx-style simulations.
+                    </p>
                     <ul class="list">
-                        <li>Whiteboard ledger, oracle design</li>
-                        <li>Trace analysis, PoC demos</li>
+                        <li id="proj-labs-1">Whiteboard ledger, oracle design</li>
+                        <li id="proj-labs-2">Trace analysis, PoC demos</li>
                     </ul>
                 </article>
             </div>
@@ -171,15 +178,15 @@
             <div class="grid">
                 <div class="card tile">
                     <h3>Peer-to-Peer Networks & Blockchain</h3>
-                    <p class="muted">Undergraduate course: P2P, consensus, smart contracts, security.</p>
+                    <p id="teach-1" class="muted">Undergraduate course: P2P, consensus, smart contracts, security.</p>
                 </div>
                 <div class="card tile">
                     <h3>Cybersecurity, Auditing & Advanced Blockchain</h3>
-                    <p class="muted">10-hour online course with labs and assignments.</p>
+                    <p id="teach-2" class="muted">10-hour online course with labs and assignments.</p>
                 </div>
                 <div class="card tile">
                     <h3>Workshops</h3>
-                    <p class="muted">Hands-on ZKP, oracles, and governance modules for DApps.</p>
+                    <p id="teach-3" class="muted">Hands-on ZKP, oracles, and governance modules for DApps.</p>
                 </div>
             </div>
         </section>
@@ -190,11 +197,15 @@
             <div class="card contact-card">
                 <img src="assets/avatar.png" alt="Dimitris Kogias" class="contact-avatar" />
                 <ul class="list">
-                    <li>Email: <a href="mailto:dimitris@kogias.eu">dimitris@kogias.eu</a></li>
-                    <li>GitHub: <a href="https://github.com/DimiKog" target="_blank" rel="noreferrer">@DimiKog</a></li>
-                    <li>Scholar: <a href="https://scholar.google.com/citations?user=VY5yMDYAAAAJ&hl=el" target="_blank"
+                    <li><span id="lbl-email">Email:</span> <a href="mailto:dimitris@kogias.eu">dimitris@kogias.eu</a>
+                    </li>
+                    <li><span id="lbl-github">GitHub:</span> <a href="https://github.com/DimiKog" target="_blank"
+                            rel="noreferrer">@DimiKog</a></li>
+                    <li><span id="lbl-scholar">Scholar:</span> <a
+                            href="https://scholar.google.com/citations?user=VY5yMDYAAAAJ&amp;hl=el" target="_blank"
                             rel="noreferrer">Google Scholar</a></li>
-                    <li>LinkedIn: <a href="https://www.linkedin.com/in/dimitris-kogias-b376222a/" target="_blank"
+                    <li><span id="lbl-linkedin">LinkedIn:</span> <a
+                            href="https://www.linkedin.com/in/dimitris-kogias-b376222a/" target="_blank"
                             rel="noreferrer">Profile</a></li>
                     <!-- If you want X/Twitter as well, add another <li> here -->
                 </ul>
@@ -230,6 +241,10 @@
             },
             'cta-primary': { en: 'Get in touch', gr: 'Επικοινωνία' },
             'cta-secondary': { en: 'See projects', gr: 'Δες έργα' },
+            'hero-caption': {
+                en: 'Senior Researcher – Blockchain Educator',
+                gr: 'Κύριος Ερευνητής – Εκπαιδευτής Blockchain'
+            },
             // stats labels
             'stat-1-lbl': { en: 'Years teaching blockchain', gr: 'Χρόνια διδασκαλίας σε blockchain' },
             'stat-2-lbl': { en: 'Besu validators deployed', gr: 'Εγκατεστημένοι validators Besu' },
@@ -242,7 +257,74 @@
             'pub-note': {
                 en: 'A short list can go here; link to full lists on Google Scholar / ResearchGate.',
                 gr: 'Μπορεί να μπει μια σύντομη λίστα εδώ· σύνδεσμοι για πλήρεις λίστες σε Google Scholar / ResearchGate.'
-            }
+            },
+            // projects
+            'proj-poe-desc': {
+                en: 'Gamified learning with quiz → reward NFT, leaderboard, wallet connect.',
+                gr: 'Παιχνιδοποιημένη μάθηση με κουίζ → ανταμοιβή NFT, leaderboard, σύνδεση πορτοφολιού.'
+            },
+            'proj-poe-1': {
+                en: 'Reward contract: PoEQuizRewardNFT (Besu QBFT)',
+                gr: 'Συμβόλαιο ανταμοιβής: PoEQuizRewardNFT (Besu QBFT)'
+            },
+            'proj-poe-2': {
+                en: 'Next: claim button integration',
+                gr: 'Επόμενο: ενσωμάτωση κουμπιού claim'
+            },
+            'proj-ldl-desc': {
+                en: 'League management with SBT identity, multi-team trades, and voting.',
+                gr: 'Διαχείριση λίγκας με ταυτότητα SBT, ανταλλαγές πολλών ομάδων και ψηφοφορία.'
+            },
+            'proj-ldl-1': {
+                en: 'Backend: Flask + Google Sheets API',
+                gr: 'Backend: Flask + Google Sheets API'
+            },
+            'proj-ldl-2': {
+                en: 'On-chain: trade voting + SBT profiles',
+                gr: 'On-chain: ψηφοφορία ανταλλαγών + προφίλ SBT'
+            },
+            'proj-besu-desc': {
+                en: 'Private Ethereum network for consensus and DORA resilience research.',
+                gr: 'Ιδιωτικό δίκτυο Ethereum για έρευνα συναίνεσης και ανθεκτικότητας DORA.'
+            },
+            'proj-besu-1': {
+                en: '5 validators, Explorer, Faucet',
+                gr: '5 validators, Explorer, Faucet'
+            },
+            'proj-besu-2': {
+                en: 'Hardened nodes & monitoring',
+                gr: 'Σκληρυμένοι κόμβοι &amp; παρακολούθηση'
+            },
+            'proj-labs-desc': {
+                en: 'Hands-on exercises: consensus, threats, bZx-style simulations.',
+                gr: 'Πρακτικές ασκήσεις: συναίνεση, απειλές, προσομοιώσεις τύπου bZx.'
+            },
+            'proj-labs-1': {
+                en: 'Whiteboard ledger, oracle design',
+                gr: 'Λευκός πίνακας ledger, σχεδίαση oracle'
+            },
+            'proj-labs-2': {
+                en: 'Trace analysis, PoC demos',
+                gr: 'Ανάλυση ιχνών, επιδείξεις PoC'
+            },
+            // teaching
+            'teach-1': {
+                en: 'Undergraduate course: P2P, consensus, smart contracts, security.',
+                gr: 'Προπτυχιακό μάθημα: P2P, συναίνεση, smart contracts, ασφάλεια.'
+            },
+            'teach-2': {
+                en: '10-hour online course with labs and assignments.',
+                gr: 'Διαδικτυακό μάθημα 10 ωρών με εργαστήρια και εργασίες.'
+            },
+            'teach-3': {
+                en: 'Hands-on ZKP, oracles, and governance modules for DApps.',
+                gr: 'Πρακτικά εργαστήρια για ZKP, oracles και ενότητες διακυβέρνησης για DApps.'
+            },
+            // contact labels
+            'lbl-email': { en: 'Email:', gr: 'Ηλ. ταχυδρομείο:' },
+            'lbl-github': { en: 'GitHub:', gr: 'GitHub:' },
+            'lbl-scholar': { en: 'Scholar:', gr: 'Scholar:' },
+            'lbl-linkedin': { en: 'LinkedIn:', gr: 'LinkedIn:' },
         };
 
         function setLang(lang) {
