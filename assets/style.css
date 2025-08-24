@@ -88,7 +88,7 @@ a{ color:var(--brand); text-decoration:none }
 a:hover, a:focus{
   text-decoration:underline;
 }
-.container{ max-width:1120px; margin:0 auto; padding:clamp(16px, 3vw, 24px) }
+.container{ max-width:1120px; margin:0 auto; padding:24px }
 
 /* Header */
 .hdr{
@@ -176,7 +176,6 @@ html[data-lang="gr"] #btn-gr{
   border-radius:var(--card-b);
   box-shadow:var(--shadow);
   overflow:hidden; /* prevent any child from overflowing outside */
-  padding: clamp(18px, 3.2vw, 24px); /* fluid padding for better text fit */
 }
 .hero .card{ padding:28px; animation:fadeUp .6s ease both }
 @media (max-width: 880px){
@@ -191,11 +190,8 @@ html[data-lang="gr"] #btn-gr{
   /* unify card padding on phones */
   section{ padding:8px 16px; margin:28px 0; }
   .grid{ gap:14px; }
+  .card{ padding:16px; }
   .stats{ grid-template-columns:repeat(2,1fr); gap:10px; }
-  .card{ padding-inline: 18px; }
-}
-@media (max-width: 640px){
-  .tile h3{ font-size:16px; }
 }
 @media (max-width: 640px){
   .section-title{ font-size:22px; margin:10px 0 12px; }
@@ -206,9 +202,13 @@ html[data-lang="gr"] #btn-gr{
   font-weight:800;
   letter-spacing:-0.2px;
 }
+/* Revert to fixed desktop font size */
+h1{ font-size:44px; line-height:1.15; margin:.4rem 0 }
 .hero .sub{
   color: var(--muted);          /* adapt to dark/light theme */
 }
+/* Revert to fixed desktop subtitle font size */
+.sub{ color:var(--muted); font-size:18px }
 /* Wrap long words/links and improve readability */
 .card h1,.card h2,.card h3,.card .sub,
 .card p,.card li,.tile p,.tile li{
@@ -220,6 +220,11 @@ html[data-lang="gr"] #btn-gr{
 }
 code{ white-space:normal; word-break:break-word; }
 pre{ white-space:pre-wrap; word-break:break-word; }
+
+/* Restore base grid and tile structure */
+.grid{ display:grid; grid-template-columns:repeat(12,1fr); gap:22px }
+.tile{ grid-column:span 6; padding:18px; overflow:hidden }
+.tile h3{ margin:0 0 8px; font-size:18px }
 
 .list{ display:grid; gap:12px }
 .muted{ color:var(--muted) }
@@ -355,7 +360,7 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 
 /* Adjust hero image scaling */
 .hero .card img{
-  max-width:clamp(150px, 22vw, 180px);
+  max-width:180px;
   height:auto;
 }
 
@@ -393,3 +398,6 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   /* Links show URL (optional; many browsers handle this via settings) */
   a{ color:#000 !important; text-decoration:none !important; }
 }
+
+/* Revert tag font size to fixed desktop size */
+.tag{ display:inline-flex; gap:8px; align-items:center; padding:6px 12px; border-radius:999px; background:var(--tag-bg); border:1px solid var(--tag-border); color:var(--tag-text); font-weight:600; font-size:13px }
