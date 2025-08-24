@@ -104,14 +104,17 @@
 
             <div class="card">
                 <p id="about-p1">
-                    Researcher and educator focused on blockchain security and distributed consensus. I build and
+                    Researcher and educator focused on blockchain technology, cybersecurity and distributed
+                    applications. I build and
                     operate Hyperledger Besu (PoA/QBFT) networks and turn those systems into clear, hands‑on learning
                     material.
                 </p>
                 <p id="about-p2">
                     I teach at the University of West Attica (UniWA) and the University of Malta. As a Senior Researcher
-                    I contribute to EU and national projects. I am co‑author of the first open‑access Greek book on
-                    blockchain (Kallipos).
+                    I contribute to EU and Greek National projects. I am co‑author of the first open‑access Greek book
+                    on blockchain
+                    (<a href="https://repository.kallipos.gr/handle/11419/9130" target="_blank"
+                        rel="noreferrer">Kallipos editions</a>).
                 </p>
                 <ul class="list checklist" style="margin-top:10px">
                     <li>
@@ -150,7 +153,8 @@
                                     d="M9.5 16.3 4.9 11.7l1.4-1.4 3.2 3.2 7.2-7.2 1.4 1.4-8.6 8.6Z" />
                             </svg>
                         </span>
-                        <span id="about-li4"><b>Interests</b>: protocol hardening, validator ops, verifiable
+                        <span id="about-li4"><b>Interests</b>: Zero Knowledge Proofs (ZKPs), protocol hardening,
+                            validator ops, verifiable
                             credentials</span>
                     </li>
                 </ul>
@@ -339,11 +343,11 @@
             // about
             'about-p1': {
                 en: 'Researcher and educator focused on blockchain security and distributed consensus. I build and operate Hyperledger Besu (PoA/QBFT) networks and turn those systems into clear, hands‑on learning material.',
-                gr: 'Είμαι ερευνητής και διδάσκων με εστίαση στην ασφάλεια blockchain και την κατανεμημένη συναίνεση. Στήνω και λειτουργώ δίκτυα Hyperledger Besu (PoA/QBFT) και τα μετατρέπω σε πρακτικό, εργαστηριακό υλικό.'
+                gr: 'Είμαι ερευνητής και διδάσκων με έμφαση στην ασφάλεια στο blockchain και την κατανεμημένη συναίνεση. Στήνω και λειτουργώ δίκτυα Hyperledger Besu (PoA/QBFT) και τα μετατρέπω σε πρακτικό, εργαστηριακό υλικό.'
             },
             'about-p2': {
-                en: 'I teach at the University of West Attica (UniWA) and the University of Malta. As a Senior Researcher I contribute to EU and national projects. I am co‑author of the first open‑access Greek book on blockchain (Kallipos).',
-                gr: 'Διδάσκω στο Πανεπιστήμιο Δυτικής Αττικής (UniWA) και στο Πανεπιστήμιο Μάλτας. Ως Senior Researcher συμμετέχω σε ευρωπαϊκά και εθνικά έργα. Είμαι συν‑συγγραφέας του πρώτου ανοικτού ελληνικού βιβλίου για το blockchain (Κάλλιπος).'
+                en: 'I teach at the University of West Attica (UniWA) and the University of Malta. As a Senior Researcher I contribute to EU and Greek National projects. I am co‑author of the first open‑access Greek book on blockchain (<a href="https://repository.kallipos.gr/handle/11419/9130" target="_blank" rel="noreferrer">Kallipos editions</a>).',
+                gr: 'Διδάσκω στο Πανεπιστήμιο Δυτικής Αττικής (UniWA) και στο Πανεπιστήμιο Μάλτας. Ως Senior Researcher συμμετέχω σε ευρωπαϊκά και ελληνικά εθνικά έργα. Είμαι συν‑συγγραφέας του πρώτου ανοικτού ελληνικού βιβλίου για το blockchain (<a href="https://repository.kallipos.gr/handle/11419/9130" target="_blank" rel="noreferrer">εκδόσεις Κάλλιπος</a>).'
             },
             'about-li1': {
                 en: 'PhD in Computer Networks—focus on distributed systems & security',
@@ -437,7 +441,10 @@
         function setLang(lang) {
             for (const id in langElems) {
                 const el = document.getElementById(id);
-                if (el && langElems[id][lang]) el.textContent = langElems[id][lang];
+                if (el && langElems[id][lang]) {
+                    if (id === 'about-p2') { el.innerHTML = langElems[id][lang]; }
+                    else { el.textContent = langElems[id][lang]; }
+                }
             }
             // section titles using data-* attributes
             document.querySelectorAll('.section-title').forEach(el => {
