@@ -196,6 +196,10 @@ html[data-lang="gr"] #btn-gr{
 @media (max-width: 640px){
   .tile h3{ font-size:16px; }
 }
+@media (max-width: 640px){
+  .section-title{ font-size:22px; margin:10px 0 12px; }
+  section{ scroll-margin-top:72px; }
+}
 .hero h1{
   color: var(--text);           /* adapt to dark/light theme */
   font-weight:800;
@@ -231,17 +235,23 @@ h1, h2, h3{
 .stat b{ font-size:20px; display:block }
 
 /* Sections */
-section{ padding:12px 24px; margin:36px 0 }
+section{ padding:12px 24px; margin:36px 0; scroll-margin-top:84px }
 .alt{
   background: linear-gradient(180deg, var(--glass), rgba(255,255,255,.02));
   border: 1px solid var(--line);
   border-radius: var(--card-b);
   padding: 18px 24px;
 }
+@media (max-width: 640px){
+  .alt .section-title{ text-shadow: 0 1px 0 rgba(0,0,0,.08); }
+}
 .section-title{
   font-size:20px;
-  color: var(--text);           /* higher contrast and theme-aware */
+  color: var(--text);
   margin:8px 0 12px;
+  font-weight:700;              /* stronger weight for readability */
+  letter-spacing:-0.1px;        /* crisper rendering for GR/EN */
+  line-height:1.25;
 }
 .grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:22px }
 .tile{ padding:18px; overflow:hidden }
