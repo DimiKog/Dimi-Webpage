@@ -6,7 +6,7 @@
 
   --text:#f1f4f9;           /* brighter body text */
   --muted:#c4ceda;          /* lighter muted text for readability */
-  --line:rgba(255,255,255,.16); /* slightly stronger dividers */
+  --line:rgba(255,255,255,.28); /* stronger border for dark theme */
   --brand:#5cd2f3;          /* brighter cyan for links/buttons */
   --accent:#b79cff;         /* slightly brighter purple */
   --ok:#34d399;
@@ -40,7 +40,7 @@
   --glass:rgba(255,255,255,.05);
   --text:#f1f4f9;
   --muted:#c4ceda;
-  --line:rgba(255,255,255,.16);
+  --line:rgba(255,255,255,.28);   /* stronger border for dark theme */
   --brand:#5cd2f3;
   --accent:#b79cff;
   --ok:#34d399;
