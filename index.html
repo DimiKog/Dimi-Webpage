@@ -48,7 +48,8 @@
             </button>
             <nav id="site-nav" class="nav" role="navigation" aria-label="Primary">
                 <a href="#about" class="active">About</a>
-                <a href="#projects">Projects</a>
+                <a id="nav-research" href="#research-projects">Research</a>
+                <a id="nav-portfolio" href="#portfolio">Portfolio</a>
                 <a href="#publications">Publications</a>
                 <a href="#teaching">Teaching</a>
                 <a href="#contact">Contact</a>
@@ -177,16 +178,47 @@
                                     d="M9.5 16.3 4.9 11.7l1.4-1.4 3.2 3.2 7.2-7.2 1.4 1.4-8.6 8.6Z" />
                             </svg>
                         </span>
-                        <span id="about-li6">Associate Editor for “Blockchain for Web3 and the Metaverse” at Frontiers
-                            in Blockchain</span>
+                        <span id="about-li6">Associate Editor for “Blockchain for Web3 and the Metaverse” at <a
+                                href="https://loop.frontiersin.org/people/1136660/overview" target="_blank"
+                                rel="noreferrer">Frontiers in Blockchain <svg class="ext-icon" aria-hidden="true"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
+                                </svg></a></span>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <!-- PROJECTS -->
-        <section id="projects">
-            <h2 class="section-title" data-en="Selected Projects" data-gr="Ενδεικτικά Έργα">Selected Projects</h2>
+        <!-- RESEARCH PROJECTS -->
+        <section id="research-projects">
+            <h2 class="section-title" data-en="Research Projects" data-gr="Ερευνητικά Έργα">Research Projects</h2>
+            <div class="grid">
+                <article class="card tile">
+                    <h3>Besu QBFT Research Network</h3>
+                    <p id="proj-besu-desc" class="muted">Private Ethereum network for consensus and DORA resilience
+                        research.</p>
+                    <ul class="list">
+                        <li id="proj-besu-1">5 validators, Explorer, Faucet</li>
+                        <li id="proj-besu-2">Hardened nodes &amp; monitoring</li>
+                    </ul>
+                </article>
+                <article class="card tile">
+                    <h3>Blockchain Security Labs</h3>
+                    <p id="proj-labs-desc" class="muted">Hands-on exercises: consensus, threats, bZx-style simulations.
+                    </p>
+                    <ul class="list">
+                        <li id="proj-labs-1">Whiteboard ledger, oracle design</li>
+                        <li id="proj-labs-2">Trace analysis, PoC demos</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- PERSONAL DEVELOPMENT PORTFOLIO -->
+        <section id="portfolio">
+            <h2 class="section-title" data-en="Personal Development Portfolio" data-gr="Προσωπικό Portfolio Ανάπτυξης">
+                Personal Development Portfolio</h2>
             <div class="grid">
                 <article class="card tile">
                     <h3>Proof of Escape (PoE)</h3>
@@ -204,24 +236,6 @@
                     <ul class="list">
                         <li id="proj-ldl-1">Backend: Flask + Google Sheets API</li>
                         <li id="proj-ldl-2">On-chain: trade voting + SBT profiles</li>
-                    </ul>
-                </article>
-                <article class="card tile">
-                    <h3>Besu QBFT Research Network</h3>
-                    <p id="proj-besu-desc" class="muted">Private Ethereum network for consensus and DORA resilience
-                        research.</p>
-                    <ul class="list">
-                        <li id="proj-besu-1">5 validators, Explorer, Faucet</li>
-                        <li id="proj-besu-2">Hardened nodes &amp; monitoring</li>
-                    </ul>
-                </article>
-                <article class="card tile">
-                    <h3>Blockchain Security Labs</h3>
-                    <p id="proj-labs-desc" class="muted">Hands-on exercises: consensus, threats, bZx-style simulations.
-                    </p>
-                    <ul class="list">
-                        <li id="proj-labs-1">Whiteboard ledger, oracle design</li>
-                        <li id="proj-labs-2">Trace analysis, PoC demos</li>
                     </ul>
                 </article>
             </div>
@@ -388,15 +402,15 @@
             },
             'about-li4': {
                 en: 'Interests: Zero Knowledge Proofs (ZKPs), protocol hardening, validator ops, verifiable credentials',
-                gr: 'Ενδιαφέροντα: Αποδείξης Μηδενικής Γνώσης (ZKPs), ενίσχυση πρωτοκόλλων, λειτουργία validators, επαληθεύσιμα διαπιστευτήρια'
+                gr: 'Ενδιαφέροντα: Αποδείξεις Μηδενικής Γνώσης (ZKPs), ενίσχυση πρωτοκόλλων, λειτουργία validators, επαληθεύσιμα διαπιστευτήρια'
             },
             'about-li5': {
                 en: "Member at INATBA's Academic Advisory Board",
                 gr: 'Μέλος του Academic Advisory Board της INATBA'
             },
             'about-li6': {
-                en: 'Associate Editor for “Blockchain for Web3 and the Metaverse” at Frontiers in Blockchain',
-                gr: 'Associate Editor για το θέμα «Blockchain for Web3 and the Metaverse» στο Frontiers in Blockchain'
+                en: 'Associate Editor for “Blockchain for Web3 and the Metaverse” at <a href="https://loop.frontiersin.org/people/1136660/overview" target="_blank" rel="noreferrer">Frontiers in Blockchain <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z"/></svg></a>',
+                gr: 'Associate Editor για το θέμα «Blockchain for Web3 and the Metaverse» στο <a href="https://loop.frontiersin.org/people/1136660/overview" target="_blank" rel="noreferrer">Frontiers in Blockchain <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z"/></svg></a>'
             },
             'pub-note': {
                 en: 'A short list can go here; link to full lists on Google Scholar / ResearchGate.',
@@ -475,7 +489,7 @@
             for (const id in langElems) {
                 const el = document.getElementById(id);
                 if (el && langElems[id][lang]) {
-                    if (id === 'about-p2') { el.innerHTML = langElems[id][lang]; }
+                    if (id === 'about-p2' || id === 'about-li6') { el.innerHTML = langElems[id][lang]; }
                     else { el.textContent = langElems[id][lang]; }
                 }
             }
@@ -562,3 +576,5 @@
 </body>
 
 </html>
+'nav-research': { en: 'Research', gr: 'Έρευνα' },
+'nav-portfolio': { en: 'Portfolio', gr: 'Portfolio' },
