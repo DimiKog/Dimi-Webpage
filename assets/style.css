@@ -80,8 +80,8 @@ footer{ margin:40px 0 18px; color:var(--muted); text-align:center }
 }
 
 .contact-avatar{
-  width:80px;
-  height:80px;
+  width:60px;
+  height:60px;
   border-radius:50%;
   object-fit:cover;
   border:2px solid var(--brand);
@@ -96,7 +96,7 @@ footer{ margin:40px 0 18px; color:var(--muted); text-align:center }
     gap:12px;
   }
   .contact-avatar{
-    width:72px;
-    height:72px;
+    width:56px;
+    height:56px;
   }
 }
