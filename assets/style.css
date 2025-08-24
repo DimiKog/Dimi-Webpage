@@ -211,56 +211,17 @@ section{ padding:12px 24px; margin:36px 0 }
 .timeline-item{ position:relative; padding-left:2px }
 .timeline-item::before{ content:""; position:absolute; left:-9px; top:6px; width:10px; height:10px; border-radius:50%; background:linear-gradient(135deg,var(--brand),var(--accent)); }
 
-footer{ margin:40px 0 18px; color:var(--muted); text-align:center }
-
-/* Utilities */
-.hidden{ display:none }
-@media (max-width:980px){
-  .hero{ grid-template-columns:1fr }
-  .tile{ grid-column:span 12 }
-  .stats{ grid-template-columns:repeat(3,1fr) }
-  /* Mobile nav: hidden by default, slides down when open */
-  .hamburger{ display:inline-flex; }
-  .nav{
-    position:fixed;
-    left:0; right:0; top:64px; bottom:auto;
-    background: var(--hdr-bg);
-    backdrop-filter: blur(10px);
-    display:flex; flex-direction:column;
-    gap:12px;
-    padding:16px 24px;
-    transform: translateY(-130%);
-    opacity:0;
-    pointer-events:none;
-    transition: transform .25s ease, opacity .25s ease;
-    border-bottom:1px solid var(--line);
-  }
-  .nav.nav--open{
-    transform: translateY(0);
-    opacity:1;
-    pointer-events:auto;
-  }
-  .nav a{ padding:8px 0; }
-}
-@keyframes fadeUp{ from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:translateY(0)} }
-
-/* Constrain hero card images */
-.hero .card img{
-  max-width:180px;
-  height:auto;
-}
-
-/* Contact card layout (desktop) */
+/* Contact styles */
 .contact-card{
-  padding:18px;
+  padding:14px 16px;          /* was 18px */
   display:flex;
-  align-items:center;
-  gap:16px;
+  align-items:flex-start;     /* tighter top alignment */
+  gap:12px;                   /* was 16px */
 }
 
 .contact-avatar{
-  width:60px;
-  height:60px;
+  width:48px;                 /* was 60px */
+  height:48px;                /* was 60px */
   border-radius:50%;
   object-fit:cover;
   border:2px solid var(--brand);
@@ -269,24 +230,35 @@ footer{ margin:40px 0 18px; color:var(--muted); text-align:center }
 
 /* Compact list spacing only inside the contact card */
 .contact-card .list{
-  gap:8px;               /* was 12px globally */
-  line-height:1.4;
+  display:grid;               /* override generic .list */
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  column-gap:16px;
+  row-gap:6px;                /* was 8px */
+  line-height:1.25;           /* was 1.4 */
 }
 
 /* Icon utilities */
 .icon{
-  width:18px;
-  height:18px;
+  width:16px;                 /* was 18px */
+  height:16px;                /* was 18px */
   fill:currentColor;         /* inherits text/link color */
   vertical-align:middle;
   opacity:.95;
   flex:0 0 auto;
 }
+
 /* Align icon + text nicely inside contact items */
 .contact-card .list li{
   display:flex;
   align-items:center;
-  gap:8px;
+  gap:6px;                    /* was 8px */
+  font-size:14.5px;           /* a bit smaller */
+}
+
+/* Keep labels narrow and readable */
+.contact-card .list li span[id^="lbl-"]{
+  min-width:84px;             /* aligns columns */
+  color:var(--muted);
 }
 /* Slightly brighten icons on hover to signal interactivity */
 .contact-card a:hover .icon,
@@ -299,12 +271,18 @@ footer{ margin:40px 0 18px; color:var(--muted); text-align:center }
   .contact-card{
     flex-direction:column;
     align-items:flex-start;
-    gap:12px;
+    gap:10px;                 /* was 12px */
+    padding:14px;             /* tighter on mobile too */
   }
   .contact-avatar{
-    width:56px;
-    height:56px;
+    width:52px;               /* a touch larger for touch */
+    height:52px;
   }
+  .contact-card .list{
+    grid-template-columns: 1fr; /* single column on mobile */
+    row-gap:8px;
+  }
+  .contact-card .list li{ font-size:15px; }
 }
 
 /* Visible keyboard focus for header links */
