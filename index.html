@@ -39,7 +39,7 @@
                 <div class="logo">DK</div>
                 <div>
                     <strong>Dimitris G. Kogias</strong><br>
-                    <span class="muted">Researcher • Blockchain • Cybersecurity</span>
+                    <span class="muted" id="brand-tag">Researcher • Blockchain • Cybersecurity</span>
                 </div>
             </div>
             <button id="menu-toggle" class="hamburger" aria-label="Open menu" aria-controls="site-nav"
@@ -47,12 +47,12 @@
                 <span></span><span></span><span></span>
             </button>
             <nav id="site-nav" class="nav" role="navigation" aria-label="Primary">
-                <a href="#about" class="active">About</a>
+                <a id="nav-about" href="#about" class="active">About</a>
                 <a id="nav-research" href="#research-projects">Research</a>
                 <a id="nav-portfolio" href="#portfolio">Portfolio</a>
-                <a href="#publications">Publications</a>
-                <a href="#teaching">Teaching</a>
-                <a href="#contact">Contact</a>
+                <a id="nav-publications" href="#publications">Publications</a>
+                <a id="nav-teaching" href="#teaching">Teaching</a>
+                <a id="nav-contact" href="#contact">Contact</a>
             </nav>
             <div class="lang" role="group" aria-label="Language">
                 <button id="btn-en" onclick="setLang('en')">EN</button>
@@ -71,7 +71,7 @@
     <!-- Hero -->
     <section class="hero container">
         <div class="card">
-            <span class="tag">Web3 • Distributed Consensus • Education</span>
+            <span class="tag" id="hero-tag">Web3 • Distributed Consensus • Education</span>
             <h1 id="hero-title">Building safer blockchain systems & clearer learning paths.</h1>
             <p class="sub" id="hero-sub">
                 I work on blockchain security, DApps, Besu PoA/QBFT networks, and hands-on Web3 education.
@@ -350,6 +350,11 @@
         // Language toggle with persistence + content swaps
         const key = "site_lang";
         const langElems = {
+            // document title
+            'doc-title': {
+                en: 'Dimitris G. Kogias — Researcher • Blockchain • Cybersecurity',
+                gr: 'Dimitris G. Kogias — Ερευνητής • Blockchain • Κυβερνοασφάλεια'
+            },
             // hero
             'hero-title': {
                 en: 'Building safer blockchain systems & clearer learning paths.',
@@ -365,8 +370,20 @@
                 en: 'Senior Researcher – Blockchain Educator',
                 gr: 'Κύριος Ερευνητής – Εκπαιδευτής Blockchain'
             },
+            'brand-tag': {
+                en: 'Researcher • Blockchain • Cybersecurity',
+                gr: 'Ερευνητής • Blockchain • Κυβερνοασφάλεια'
+            },
             'nav-research': { en: 'Research', gr: 'Έρευνα' },
             'nav-portfolio': { en: 'Portfolio', gr: 'Portfolio' },
+            'nav-about': { en: 'About', gr: 'Σχετικά' },
+            'nav-publications': { en: 'Publications', gr: 'Δημοσιεύσεις' },
+            'nav-teaching': { en: 'Teaching', gr: 'Διδασκαλία' },
+            'nav-contact': { en: 'Contact', gr: 'Επικοινωνία' },
+            'hero-tag': {
+                en: 'Web3 • Distributed Consensus • Education',
+                gr: 'Web3 • Κατανεμημένη Συναίνεση • Εκπαίδευση'
+            },
             // stats labels
             'stat-1-lbl': { en: 'Years teaching in academic institutions', gr: 'Χρόνια διδασκαλίας σε Ακαδημαϊκά Ιδρύματα' },
             'stat-2-lbl': { en: 'Years teaching blockchain', gr: 'Χρόνια διδασκαλίας στο blockchain' },
@@ -489,6 +506,8 @@
             });
             localStorage.setItem(key, lang);
             document.documentElement.setAttribute('data-lang', lang);
+            // Update the document title for the selected language
+            if (langElems['doc-title'] && langElems['doc-title'][lang]) { document.title = langElems['doc-title'][lang]; }
             // keep button classes for older CSS; CSS also styles via [data-lang]
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
             document.getElementById('btn-gr').classList.toggle('active', lang === 'gr');
@@ -501,6 +520,8 @@
                 lang = nav.toLowerCase().startsWith('el') ? 'gr' : 'en';
             }
             setLang(lang);
+            // Set the document title for the initial language on first load
+            if (langElems['doc-title'] && langElems['doc-title'][lang]) { document.title = langElems['doc-title'][lang]; }
         })();
 
         // --- Manual Light/Dark/System theme selection ---
