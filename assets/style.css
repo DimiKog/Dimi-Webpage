@@ -451,3 +451,7 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 
 /* Revert tag font size to fixed desktop size */
 .tag{ display:inline-flex; gap:8px; align-items:center; padding:6px 12px; border-radius:999px; background:var(--tag-bg); border:1px solid var(--tag-border); color:var(--tag-text); font-weight:600; font-size:13px }
+
+/* --- Project meta (year/program badges) --- */
+.proj-meta{ display:flex; align-items:center; gap:8px; margin:4px 0 8px; color:var(--muted); font-size:.92rem; }
+.proj-year{ padding:2px 8px; border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.04); }
