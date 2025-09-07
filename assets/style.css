@@ -455,3 +455,16 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 /* --- Project meta (year/program badges) --- */
 .proj-meta{ display:flex; align-items:center; gap:8px; margin:4px 0 8px; color:var(--muted); font-size:.92rem; }
 .proj-year{ padding:2px 8px; border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.04); }
+/* Program badges next to project year */
+.proj-badge{
+  padding:2px 8px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:rgba(255,255,255,.06);
+  color:var(--muted);
+  font-size:.92rem;
+}
+/* Optional subtle variants */
+.badge-horizon{ background:rgba(183,156,255,.10); border-color:rgba(183,156,255,.30); }
+.badge-life{    background:rgba( 92,210,243,.10); border-color:rgba( 92,210,243,.30); }
+.badge-espa{    background:rgba( 52,211,153,.10); border-color:rgba( 52,211,153,.30); }
