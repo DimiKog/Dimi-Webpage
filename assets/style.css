@@ -519,3 +519,22 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 .badge-resources{ background:rgba(45,212,191,.18); border-color:rgba(45,212,191,.45) }
 /* Open Source (green) */
 .badge-oss{ background:rgba(52,211,153,.18); border-color:rgba(52,211,153,.45) }
+
+/* — Tighten cards on smaller phones — */
+@media (max-width: 600px){
+  /* overall card padding */
+  .card{ padding:14px; }
+
+  /* project/portfolio tiles a bit tighter */
+  .card.tile{
+    padding:12px;
+    margin-bottom:14px;
+  }
+
+  /* spacing around badges and lists */
+  .card.tile .proj-meta{ margin:4px 0 6px; }
+  .card.tile ul.list{ margin-top:6px; }
+
+  /* make badges a touch more compact */
+  .proj-badge{ padding:3px 8px; font-size:11.5px; }
+}
