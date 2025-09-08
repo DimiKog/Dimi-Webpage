@@ -490,3 +490,32 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 .badge-horizon{ background:rgba(183,156,255,.10); border-color:rgba(183,156,255,.30); }
 .badge-life{    background:rgba( 92,210,243,.10); border-color:rgba( 92,210,243,.30); }
 .badge-espa{    background:rgba( 52,211,153,.10); border-color:rgba( 52,211,153,.30); }
+
+/* --- Project badges (colored variants) --- */
+.proj-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+  margin:.25rem 0 .5rem;
+}
+.proj-badge{
+  display:inline-block;
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:12px;
+  line-height:1;
+  border:1px solid var(--line);
+  background:var(--glass);
+}
+
+/* Web3 DApp (purple) */
+.badge-web3{ background:rgba(183,156,255,.18); border-color:rgba(183,156,255,.45) }
+/* Research Network (blue) */
+.badge-research{ background:rgba(99,179,237,.18); border-color:rgba(99,179,237,.45) }
+/* Security Labs (red) */
+.badge-security{ background:rgba(244,114,114,.18); border-color:rgba(244,114,114,.45) }
+/* Resources (teal) */
+.badge-resources{ background:rgba(45,212,191,.18); border-color:rgba(45,212,191,.45) }
+/* Open Source (green) */
+.badge-oss{ background:rgba(52,211,153,.18); border-color:rgba(52,211,153,.45) }
