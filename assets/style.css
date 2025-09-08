@@ -496,21 +496,6 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 /* Revert tag font size to fixed desktop size */
 .tag{ display:inline-flex; gap:8px; align-items:center; padding:6px 12px; border-radius:999px; background:var(--tag-bg); border:1px solid var(--tag-border); color:var(--tag-text); font-weight:600; font-size:13px }
 
-. 
-/* --- Teaching: semester & years badges --- */
-.badge-semester{
-  background:#1e88e5;        /* default blue */
-  color:#fff;
-  border-color:rgba(0,0,0,.1);
-}
-.badge-semester.spring{ background:#7e57c2; } /* purple (Spring) */
-.badge-semester.fall{   background:#ffb300; color:#111; } /* amber (Fall) with dark text for contrast */
-
-.badge-years{
-  background:#455a64;   /* slate */
-  color:#fff;
-  border-color:rgba(0,0,0,.1);
-}
 
 /* Make sure teaching badges sit nicely together */
 #teaching .proj-meta{
@@ -543,18 +528,8 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   text-decoration:none;
 }
 
-/* — Tighten cards on smaller phones — */
-@media (max-width: 600px){
-  /* overall card padding */
-  .card{ padding:14px; }
 
-  /* project/portfolio tiles a bit tighter */
-  .card.tile{
-    padding:12px;
-    margin-bottom:14px;
-  }
-
-  /* Small inline emoji icons for skills/badges */
+/* Small inline emoji icons for skills/badges */
 .skill-ico{
   display:inline-block;
   font-size:1rem;
@@ -571,6 +546,17 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   transform: translateY(1px);
   line-height:1;
 }
+
+/* — Tighten cards on smaller phones — */
+@media (max-width: 600px){
+  /* overall card padding */
+  .card{ padding:14px; }
+
+  /* project/portfolio tiles a bit tighter */
+  .card.tile{
+    padding:12px;
+    margin-bottom:14px;
+  }
 
   /* spacing around badges and lists */
   .card.tile .proj-meta{ margin:4px 0 6px; }
@@ -686,6 +672,29 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 a.proj-badge:focus-visible {
   outline: 2px solid var(--brand);
   outline-offset: 2px;
+}
+
+/* --- Teaching: Semester & Year badges --- */
+.proj-badge.badge-semester{
+  color:#fff;
+  border:none;
+}
+
+/* Spring: purple */
+.proj-badge.badge-semester[data-semester="spring"]{
+  background:#7c3aed; /* purple 600 */
+}
+
+/* Fall: amber */
+.proj-badge.badge-semester[data-semester="fall"]{
+  background:#d97706; /* amber 600 */
+}
+
+/* Neutral year badge */
+.proj-badge.badge-year{
+  background: linear-gradient(180deg,var(--glass), rgba(255,255,255,.02));
+  color: var(--text);
+  border:1px solid var(--line);
 }
 
 /* --- Year badges for research projects --- */
