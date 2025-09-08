@@ -474,24 +474,7 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 /* Revert tag font size to fixed desktop size */
 .tag{ display:inline-flex; gap:8px; align-items:center; padding:6px 12px; border-radius:999px; background:var(--tag-bg); border:1px solid var(--tag-border); color:var(--tag-text); font-weight:600; font-size:13px }
 
-/* --- Project meta (year/program badges) --- */
-.proj-meta{ display:flex; align-items:center; gap:8px; margin:4px 0 8px; color:var(--muted); font-size:.92rem; flex-wrap:wrap }
-.proj-year{ padding:2px 8px; border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.04); }
-/* Program badges next to project year */
-.proj-badge{
-  padding:2px 8px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background:rgba(255,255,255,.06);
-  color:var(--muted);
-  font-size:.92rem;
-}
-/* Optional subtle variants */
-.badge-horizon{ background:rgba(183,156,255,.10); border-color:rgba(183,156,255,.30); }
-.badge-life{    background:rgba( 92,210,243,.10); border-color:rgba( 92,210,243,.30); }
-.badge-espa{    background:rgba( 52,211,153,.10); border-color:rgba( 52,211,153,.30); }
-
-/* --- Project badges (colored variants) --- */
+/* --- Project meta & base project badge --- */
 .proj-meta{
   display:flex;
   flex-wrap:wrap;
@@ -506,19 +489,10 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   font-size:12px;
   line-height:1;
   border:1px solid var(--line);
-  background:var(--glass);
+  background:transparent;   /* let color variants paint background */
+  color:var(--text);
+  text-decoration:none;
 }
-
-/* Web3 DApp (purple) */
-.badge-web3{ background:rgba(183,156,255,.18); border-color:rgba(183,156,255,.45) }
-/* Research Network (blue) */
-.badge-research{ background:rgba(99,179,237,.18); border-color:rgba(99,179,237,.45) }
-/* Security Labs (red) */
-.badge-security{ background:rgba(244,114,114,.18); border-color:rgba(244,114,114,.45) }
-/* Resources (teal) */
-.badge-resources{ background:rgba(45,212,191,.18); border-color:rgba(45,212,191,.45) }
-/* Open Source (green) */
-.badge-oss{ background:rgba(52,211,153,.18); border-color:rgba(52,211,153,.45) }
 
 /* — Tighten cards on smaller phones — */
 @media (max-width: 600px){
@@ -592,17 +566,16 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 }
 .pub-badge{
   display:inline-block;
-  padding:3px 9px;
-  border-radius:999px;
+  padding:3px 7px;
+  border-radius:6px;
   font-size:12px;
-  line-height:1;
+  font-weight:600;
+  margin-right:6px;
+  color:#fff;            /* ensure text readable on colored bg */
   border:1px solid var(--line);
-  background:var(--glass);
-  color:var(--text);
 }
-/* Variants */
-.pub-badge.journal{ background:rgba(99,179,237,.18); border-color:rgba(99,179,237,.45); }
-.pub-badge.book{    background:rgba(250,204,21,.20); border-color:rgba(250,204,21,.45); }
+.pub-badge.journal{ background:#1976d2; }
+.pub-badge.book{    background:#6a1b9a; }
 
 /* DOI link styling */
 .doi-link{
@@ -625,12 +598,6 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 }
 
 /* --- Badge color palette (Research & Teaching) --- */
-.proj-badge{
-  display:inline-block; padding:4px 8px; border-radius:999px;
-  font-size:12px; font-weight:600; line-height:1;
-  border:1px solid var(--line); background:var(--bg-elev); color:var(--text);
-  text-decoration:none;
-}
 
 /* Research program badges */
 .badge-horizon { background:#0b66c3; color:#fff; border-color:rgba(0,0,0,.1); }
@@ -650,3 +617,19 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 .badge-uom   { background:#ad1457; color:#fff; border-color:rgba(0,0,0,.1); }
 
 a.proj-badge:focus-visible { outline:2px solid var(--focus); outline-offset:2px; }
+
+/* --- Year badges for research projects --- */
+.proj-year {
+  display: inline-block;
+  padding: 3px 7px;
+  margin-right: 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #eceff1;   /* light gray */
+  color: #37474f;        /* dark slate */
+}
+[data-theme="dark"] .proj-year {
+  background: #263238;   /* dark blue-gray */
+  color: #cfd8dc;        /* light gray text */
+}
