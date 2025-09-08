@@ -136,7 +136,7 @@
             <!-- Portrait uses responsive <picture> with WebP/AVIF fallback and .hero-portrait framing -->
             <picture class="img-rounded img-bordered img-shadow">
                 <source type="image/webp" srcset="assets/DimiKog.webp" />
-                <img src="assets/DimiKog.webp" alt="Portrait of Dimitris G. Kogias" loading="eager" decoding="async"
+                <img src="assets/DimiKog.jpg" alt="Portrait of Dimitris G. Kogias" loading="eager" decoding="async"
                     width="220" height="264" class="hero-portrait img-fluid" />
             </picture>
             <div id="hero-caption" class="hero-caption">
@@ -241,12 +241,17 @@
                         alt="University of West Attica (UniWA) logo" loading="lazy" decoding="async" />
                     <img class="affil-logo" src="assets/logos/un_malta_logo.svg" alt="University of Malta logo"
                         loading="lazy" decoding="async" />
-                    <img class="affil-logo" src="assets/logos/INATBA_logo.svg" alt="INATBA logo" loading="lazy"
-                        decoding="async" />
-                    <img class="affil-logo" src="assets/logos/Frontiers_bloc_logo.svg"
+
+                    <!-- darker-on-light: boost; also subtle shadow to lift on light bg -->
+                    <img class="affil-logo logo--boost logo--shadow" src="assets/logos/INATBA_logo.svg"
+                        alt="INATBA logo" loading="lazy" decoding="async" />
+                    <img class="affil-logo logo--boost logo--shadow" src="assets/logos/Frontiers_bloc_logo.svg"
                         alt="Frontiers in Blockchain logo" loading="lazy" decoding="async" />
-                    <img class="affil-logo" src="assets/logos/lciis_logo.svg" alt="LCIIS Research Lab logo"
+
+                    <!-- very dark mark on dark theme: invert -->
+                    <img class="affil-logo logo--invert" src="assets/logos/lciis_logo.svg" alt="LCIIS Research Lab logo"
                         loading="lazy" decoding="async" />
+
                     <img class="affil-logo" src="assets/logos/consert_logo.svg" alt="ConSeRT Research Group logo"
                         loading="lazy" decoding="async" />
                 </div>
@@ -811,12 +816,12 @@
                 loading="lazy" decoding="async" />
             <img class="affil-logo" src="assets/logos/un_malta_logo.svg" alt="University of Malta logo" loading="lazy"
                 decoding="async" />
-            <img class="affil-logo" src="assets/logos/INATBA_logo.svg" alt="INATBA logo" loading="lazy"
-                decoding="async" />
-            <img class="affil-logo" src="assets/logos/Frontiers_bloc_logo.svg" alt="Frontiers in Blockchain logo"
+            <img class="affil-logo logo--boost logo--shadow" src="assets/logos/INATBA_logo.svg" alt="INATBA logo"
                 loading="lazy" decoding="async" />
-            <img class="affil-logo" src="assets/logos/lciis_logo.svg" alt="LCIIS Research Lab logo" loading="lazy"
-                decoding="async" />
+            <img class="affil-logo logo--boost logo--shadow" src="assets/logos/Frontiers_bloc_logo.svg"
+                alt="Frontiers in Blockchain logo" loading="lazy" decoding="async" />
+            <img class="affil-logo logo--invert" src="assets/logos/lciis_logo.svg" alt="LCIIS Research Lab logo"
+                loading="lazy" decoding="async" />
             <img class="affil-logo" src="assets/logos/consert_logo.svg" alt="ConSeRT Research Group logo" loading="lazy"
                 decoding="async" />
         </div>

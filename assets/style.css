@@ -725,13 +725,31 @@ picture img{ display:block; max-width:100%; height:auto; }
 }
 :root[data-theme="light"] .affil-logo{
   background: rgba(0,0,0,.04);
-  filter: grayscale(100%) opacity(.85) brightness(.95);
+  /* keep logos readable on light theme */
+  filter: grayscale(35%) opacity(.95) brightness(.95);
 }
 .affil-logo:hover,
 .affil-logo:focus{
   filter: none;
   opacity:1;
   transform: translateY(-1px);
+}
+
+/* --- Per‑logo tuning for tricky marks --- */
+/* Use on very light logos in LIGHT theme (e.g., INATBA, Frontiers) */
+.affil-logo.logo--boost{
+  filter: grayscale(0%) opacity(1) brightness(1) contrast(1.12) !important;
+}
+/* Add a subtle outline on light bg to keep faint logos visible */
+:root[data-theme="light"] .affil-logo.logo--shadow{
+  background:#fff;
+  border-color:rgba(0,0,0,.12);
+  filter: grayscale(0%) opacity(1) brightness(.98) contrast(1.2) drop-shadow(0 0 .5px rgba(0,0,0,.45)) !important;
+}
+/* For dark logos on DARK theme (e.g., LCIIS): invert to a light mark */
+:root[data-theme="dark"] .affil-logo.logo--invert{
+  filter: invert(1) hue-rotate(180deg) brightness(1.1) contrast(1.05) !important;
+  background: rgba(255,255,255,.12);
 }
 
 /* Footer presentation */
