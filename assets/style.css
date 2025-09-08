@@ -623,3 +623,30 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   #publications .timeline-item h3{ font-size:16px; }
   #publications .timeline .muted{ font-size:13.5px; }
 }
+
+/* --- Badge color palette (Research & Teaching) --- */
+.proj-badge{
+  display:inline-block; padding:4px 8px; border-radius:999px;
+  font-size:12px; font-weight:600; line-height:1;
+  border:1px solid var(--line); background:var(--bg-elev); color:var(--text);
+  text-decoration:none;
+}
+
+/* Research program badges */
+.badge-horizon { background:#0b66c3; color:#fff; border-color:rgba(0,0,0,.1); }
+.badge-life    { background:#2e7d32; color:#fff; border-color:rgba(0,0,0,.1); }
+.badge-espa    { background:#b23a48; color:#fff; border-color:rgba(0,0,0,.1); }
+
+/* Portfolio/other badges */
+.badge-web3      { background:#6a1b9a; color:#fff; border-color:rgba(0,0,0,.1); }
+.badge-research  { background:#1565c0; color:#fff; border-color:rgba(0,0,0,.1); }
+.badge-security  { background:#ef6c00; color:#fff; border-color:rgba(0,0,0,.1); }
+.badge-resources { background:#455a64; color:#fff; border-color:rgba(0,0,0,.1); }
+.badge-oss       { background:#263238; color:#fff; border-color:rgba(0,0,0,.1); }
+
+/* Teaching badges */
+.badge-msc   { background:#3949ab; color:#fff; border-color:rgba(0,0,0,.1); } /* common MSc label */
+.badge-uniwa { background:#00695c; color:#fff; border-color:rgba(0,0,0,.1); }
+.badge-uom   { background:#ad1457; color:#fff; border-color:rgba(0,0,0,.1); }
+
+a.proj-badge:focus-visible { outline:2px solid var(--focus); outline-offset:2px; }
