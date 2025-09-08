@@ -177,6 +177,16 @@
                                 <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">...</svg>
                             </a> (“Blockchain for Web3 and the Metaverse”)</span>
                     </li>
+                    <li>
+                        <span class="icon-check" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M9.5 16.3 4.9 11.7l1.4-1.4 3.2 3.2 7.2-7.2 1.4 1.4-8.6 8.6Z" />
+                            </svg>
+                        </span>
+                        <span id="about-li6"><b>Regulatory focus</b>: cybersecurity and blockchain resilience under
+                            DORA</span>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -337,29 +347,35 @@
                     <p id="proj-besu-desc" class="muted">Private Hyperledger Besu (QBFT) Ethereum network for research
                         on consensus, privacy, and operational resilience.</p>
                     <ul class="list">
-                        <li id="proj-besu-1">5 validators, Blockscout explorer & Faucet</li>
+                        <li id="proj-besu-1">Besu (v25.6.0) netowrk with 5 validators, Blockscout explorer & Faucet</li>
                         <li id="proj-besu-2">Hardened nodes & monitoring (metrics, logs, alerts)</li>
                         <li id="proj-besu-3">Applied smart contracts: Soulbound Tokens, NFTs, ZKPs, oracles</li>
                     </ul>
                 </article>
                 <article class="card tile">
                     <h3>Blockchain Security Labs</h3>
-                    <p id="proj-labs-desc" class="muted">Hands-on exercises: consensus, threats, bZx-style
-                        simulations.
-                    </p>
+                    <div class="proj-meta">
+                        <span class="proj-badge" data-en="Security Labs" data-gr="Εργαστήρια Ασφάλειας">Security
+                            Labs</span>
+                    </div>
+                    <p id="proj-labs-desc" class="muted">Hands-on labs on consensus mechanics, common attack patterns,
+                        and DeFi incident simulations inspired by the bZx oracle/flash-loan exploits.</p>
                     <ul class="list">
-                        <li id="proj-labs-1">Whiteboard ledger, oracle design</li>
-                        <li id="proj-labs-2">Trace analysis, PoC demos</li>
+                        <li id="proj-labs-1">Oracle design and price‑feed defenses (TWAPs, circuit breakers)</li>
+                        <li id="proj-labs-2">Incident walkthroughs & trace analysis (bZx‑style oracle/flash‑loan)</li>
                     </ul>
                 </article>
                 <article class="card tile">
                     <h3>LDL Fantasy League DApp</h3>
-                    <p id="proj-ldl-desc" class="muted">League management with SBT identity, multi-team trades,
-                        and
-                        voting.</p>
+                    <div class="proj-meta">
+                        <span class="proj-badge" data-en="Web3 DApp" data-gr="Web3 DApp">Web3 DApp</span>
+                    </div>
+                    <p id="proj-ldl-desc" class="muted">Fantasy League management with SBT identity, multi‑team trades,
+                        and voting.</p>
                     <ul class="list">
-                        <li id="proj-ldl-1">Backend: Flask + Google Sheets API</li>
-                        <li id="proj-ldl-2">On-chain: trade voting + SBT profiles</li>
+                        <li id="proj-ldl-1">Backend: Flask + Google Sheets API + PostgreSQL</li>
+                        <li id="proj-ldl-2">On‑chain: trade voting + SBT profiles</li>
+                        <li id="proj-ldl-3">Planned: DAO mechanism for voting on league regulations</li>
                     </ul>
                 </article>
             </div>
@@ -604,6 +620,10 @@
                 en: 'Professional roles: Member of INATBA\'s Academic Advisory Board, Associate Editor, <a href="https://loop.frontiersin.org/people/1136660/overview" target="_blank" rel="noopener noreferrer">Frontiers in Blockchain <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z"/></svg></a> (“Blockchain for Web3 and the Metaverse”)',
                 gr: 'Επαγγελματικοί ρόλοι: Μέλος του Academic Advisory Board της INATBA, Associate Editor στο <a href="https://loop.frontiersin.org/people/1136660/overview" target="_blank" rel="noopener noreferrer">Frontiers in Blockchain <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z"/></svg></a> («Blockchain for Web3 and the Metaverse»)'
             },
+            'about-li6': {
+                en: 'Regulatory focus: cybersecurity and blockchain resilience under DORA',
+                gr: 'Ρυθμιστική εστίαση: κυβερνοασφάλεια και ανθεκτικότητα blockchain στο πλαίσιο του DORA'
+            },
             'pub-note': {
                 en: 'A few popular/representative publications are listed here. For the full list, please see my CV or Google Scholar.',
                 gr: 'Παρακάτω παρατίθενται μερικές δημοφιλείς/ενδεικτικές δημοσιεύσεις. Για την πλήρη λίστα, δείτε το Βιογραφικό μου ή το Google Scholar.'
@@ -626,24 +646,28 @@
                 gr: 'Ειδική ανταμοιβή: ένα NFT που θα ξεκλειδώνει το επόμενο επίπεδο (όταν είναι έτοιμο)'
             },
             'proj-ldl-desc': {
-                en: 'League management with SBT identity, multi-team trades, and voting.',
-                gr: 'Διαχείριση λίγκας με ταυτότητα SBT, ανταλλαγές πολλών ομάδων και ψηφοφορία.'
+                en: 'Fantasy League management with SBT identity, multi‑team trades, and voting.',
+                gr: 'Διαχείριση Fantasy League με ταυτότητα SBT, ανταλλαγές μεταξύ πολλών ομάδων και ψηφοφορία.'
             },
             'proj-ldl-1': {
-                en: 'Backend: Flask + Google Sheets API',
-                gr: 'Backend: Flask + Google Sheets API'
+                en: 'Backend: Flask + Google Sheets API + PostgreSQL',
+                gr: 'Backend: Flask + Google Sheets API + PostgreSQL'
             },
             'proj-ldl-2': {
-                en: 'On-chain: trade voting + SBT profiles',
-                gr: 'On-chain: ψηφοφορία ανταλλαγών + προφίλ SBT'
+                en: 'On‑chain: trade voting + SBT profiles',
+                gr: 'On‑chain: ψηφοφορία ανταλλαγών + προφίλ SBT'
+            },
+            'proj-ldl-3': {
+                en: 'Planned: DAO mechanism for voting on league regulations',
+                gr: 'Σε εξέλιξη: μηχανισμός DAO για ψηφοφορίες στους κανονισμούς της λίγκας'
             },
             'proj-besu-desc': {
                 en: 'Private Hyperledger Besu (QBFT) Ethereum network for research on consensus, privacy, and operational resilience.',
                 gr: 'Ιδιωτικό δίκτυο Hyperledger Besu (QBFT) για έρευνα στη συναίνεση, την ιδιωτικότητα και τη λειτουργική ανθεκτικότητα.'
             },
             'proj-besu-1': {
-                en: '5 validators, Blockscout explorer & Faucet',
-                gr: '5 κόμβοι επαλήθευσης, Blockscout explorer και χρήση Faucet'
+                en: 'Besu (v25.6.0) netowrk with 5 validators, Blockscout explorer & Faucet',
+                gr: 'Δίκτυο Besu (v.25.6.0) με 5 κόμβους επαλήθευσης, Blockscout explorer και χρήση Faucet'
             },
             'proj-besu-2': {
                 en: 'Hardened nodes & monitoring (metrics, logs, alerts)',
@@ -654,16 +678,16 @@
                 gr: 'Εφαρμοσμένα smart contracts: Soulbound Tokens, NFTs, ZKPs, oracles'
             },
             'proj-labs-desc': {
-                en: 'Hands-on exercises: consensus, threats, bZx-style simulations.',
-                gr: 'Πρακτικές ασκήσεις: συναίνεση, απειλές, προσομοιώσεις τύπου bZx.'
+                en: 'Hands-on labs on consensus mechanics, common attack patterns, and DeFi incident simulations inspired by the bZx oracle/flash-loan exploits.',
+                gr: 'Πρακτικά εργαστήρια για μηχανισμούς συναίνεσης, συνήθη μοτίβα επιθέσεων και προσομοιώσεις περιστατικών DeFi εμπνευσμένες από τα exploits του bZx (oracle/flash-loan).'
             },
             'proj-labs-1': {
-                en: 'Whiteboard ledger, oracle design',
-                gr: 'Λευκός πίνακας ledger, σχεδίαση oracle'
+                en: 'Oracle design and price‑feed defenses (TWAPs, circuit breakers)',
+                gr: 'Σχεδίαση oracle και άμυνες στα price‑feeds (TWAPs, circuit breakers)'
             },
             'proj-labs-2': {
-                en: 'Trace analysis, PoC demos',
-                gr: 'Ανάλυση ιχνών, επιδείξεις PoC'
+                en: 'Incident walkthroughs & trace analysis (bZx‑style oracle/flash‑loan)',
+                gr: 'Ανάλυση περιστατικών & ιχνών (επιθέσεις τύπου bZx – oracle/flash‑loan)'
             },
             // teaching
             'teach-1': {
