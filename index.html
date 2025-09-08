@@ -13,6 +13,9 @@
     <!-- Touch icon for iOS home screen -->
     <link rel="apple-touch-icon" href="assets/Dimi_favicon.png" />
     <link rel="canonical" href="https://dimi-webpage.pages.dev/" />
+    <!-- Preload hero portrait (WebP) for faster LCP -->
+    <link rel="preload" as="image" href="assets/DimiKog.webp" imagesrcset="assets/DimiKog.webp"
+        imagesizes="(max-width: 980px) 160px, 220px" />
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://dimi-webpage.pages.dev/" />
@@ -129,12 +132,15 @@
                 <div class="stat"><b id="stat-5">2</b><span class="muted" id="stat-5-lbl"> DApps developed</span></div>
             </div>
         </div>
-        <div class="card"
-            style="padding:16px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px">
-            <img src="assets/DimiKog.jpg" alt="Portrait of Dimitris G. Kogias" loading="eager" decoding="async"
-                width="200" height="250"
-                style="width:auto; height:auto; max-width:200px; border-radius:16px; object-fit:cover; box-shadow: 0 8px 24px rgba(0,0,0,.25); border:1px solid var(--line)" />
-            <div id="hero-caption" style="font-weight:700; text-align:center; margin-top:4px; color: var(--text);">
+        <div class="card hero-aside">
+            <!-- Portrait uses responsive <picture> with WebP/AVIF fallback and .hero-portrait framing -->
+            <picture class="img-rounded img-bordered img-shadow">
+                <source type="image/avif" srcset="assets/DimiKog.avif" />
+                <source type="image/webp" srcset="assets/DimiKog.webp" />
+                <img src="assets/DimiKog.jpg" alt="Portrait of Dimitris G. Kogias" loading="eager" decoding="async"
+                    width="200" height="240" class="hero-portrait img-fluid" />
+            </picture>
+            <div id="hero-caption" class="hero-caption">
                 Senior Researcher – Blockchain Educator
             </div>
         </div>
@@ -160,7 +166,7 @@
                     (<a href="https://repository.kallipos.gr/handle/11419/9130" target="_blank"
                         rel="noopener noreferrer">Kallipos editions</a>).
                 </p>
-                <ul class="list checklist" style="margin-top:10px">
+                <ul class="list checklist mt-10">
                     <li>
                         <span class="icon-check" aria-hidden="true">
                             <svg viewBox="0 0 24 24">
@@ -168,7 +174,8 @@
                                     d="M9.5 16.3 4.9 11.7l1.4-1.4 3.2 3.2 7.2-7.2 1.4 1.4-8.6 8.6Z" />
                             </svg>
                         </span>
-                        <span id="about-li1"><b>PhD in Computer Networks</b>— focus on distributed systems &
+                        <span class="skill-ico" aria-hidden="true">⚡</span>
+                        <span id="about-li1"><b>PhD in Computer Networks</b>— focus on distributed systems &amp;
                             security</span>
                     </li>
                     <li>
@@ -188,6 +195,7 @@
                                     d="M9.5 16.3 4.9 11.7l1.4-1.4 3.2 3.2 7.2-7.2 1.4 1.4-8.6 8.6Z" />
                             </svg>
                         </span>
+                        <span class="skill-ico" aria-hidden="true">🌐</span>
                         <span id="about-li3"><b>Teaching & workshops on</b>: Blockchain, P2P Networks, Cybersecurity,
                             DApp security labs</span>
                     </li>
@@ -221,6 +229,7 @@
                                     d="M9.5 16.3 4.9 11.7l1.4-1.4 3.2 3.2 7.2-7.2 1.4 1.4-8.6 8.6Z" />
                             </svg>
                         </span>
+                        <span class="skill-ico" aria-hidden="true">🔒</span>
                         <span id="about-li6"><b>Regulatory focus</b>: cybersecurity and blockchain resilience under
                             DORA</span>
                     </li>
@@ -487,7 +496,7 @@
         <section id="publications">
             <h2 class="section-title" data-en="Popular Publications" data-gr="Δημοφιλείς Δημοσιεύσεις">Popular
                 Publications</h2>
-            <div class="card" style="padding:18px">
+            <div class="card pad-18">
                 <p class="muted" id="pub-note">
                     A few popular/representative publications are listed here. For the full list, please see my CV or
                     Google Scholar.
@@ -503,7 +512,9 @@
                             data-gr="Journal of Parallel and Distributed Computing 109 (2017) 142–154">Journal of
                             Parallel and Distributed Computing 109 (2017) 142–154</div>
                         <div class="pub-meta">
-                            <span class="pub-badge journal">Journal</span>
+                            <span class="pub-badge journal">
+                                <span class="pub-emoji" aria-hidden="true">📄</span> Journal
+                            </span>
                             <a href="https://doi.org/10.1016/j.jpdc.2017.05.021" target="_blank" class="doi-link">DOI:
                                 10.1016/j.jpdc.2017.05.021</a>
                         </div>
@@ -522,7 +533,9 @@
                         <div class="muted" data-en="Information 11(12), 2020" data-gr="Information 11(12), 2020">
                             Information 11(12), 2020</div>
                         <div class="pub-meta">
-                            <span class="pub-badge journal">Journal</span>
+                            <span class="pub-badge journal">
+                                <span class="pub-emoji" aria-hidden="true">📄</span> Journal
+                            </span>
                             <a href="https://doi.org/10.3390/info11120570" target="_blank" class="doi-link">DOI:
                                 10.3390/info11120570</a>
                         </div>
@@ -541,7 +554,9 @@
                         <div class="muted" data-en="Sensors 22(3), 2022, Article 993"
                             data-gr="Sensors 22(3), 2022, Άρθρο 993">Sensors 22(3), 2022, Article 993</div>
                         <div class="pub-meta">
-                            <span class="pub-badge journal">Journal</span>
+                            <span class="pub-badge journal">
+                                <span class="pub-emoji" aria-hidden="true">📄</span> Journal
+                            </span>
                             <a href="https://doi.org/10.3390/s22030993" target="_blank" class="doi-link">DOI:
                                 10.3390/s22030993</a>
                         </div>
@@ -561,7 +576,9 @@
                             data-gr="Computer Networks 54(10), 2010, 1615–1629">Computer Networks 54(10), 2010,
                             1615–1629</div>
                         <div class="pub-meta">
-                            <span class="pub-badge journal">Journal</span>
+                            <span class="pub-badge journal">
+                                <span class="pub-emoji" aria-hidden="true">📄</span> Journal
+                            </span>
                             <a href="https://doi.org/10.1016/j.comnet.2010.01.007" target="_blank" class="doi-link">DOI:
                                 10.1016/j.comnet.2010.01.007</a>
                         </div>
@@ -579,7 +596,9 @@
                         <div class="muted" data-en="Computer 49(11), 2016, 96–99"
                             data-gr="Computer 49(11), 2016, 96–99">Computer 49(11), 2016, 96–99</div>
                         <div class="pub-meta">
-                            <span class="pub-badge journal">Journal</span>
+                            <span class="pub-badge journal">
+                                <span class="pub-emoji" aria-hidden="true">📄</span> Journal
+                            </span>
                             <a href="https://doi.org/10.1109/MC.2016.344" target="_blank" class="doi-link">DOI:
                                 10.1109/MC.2016.344</a>
                         </div>
@@ -598,7 +617,9 @@
                             data-gr="Χ. Πατρικάκης, Ε.Α. Λελίγκου, Δ. Κόγιας — 2023, Ανοικτής Πρόσβασης (Κάλλιπος)">Ch.
                             Patrikakis, E.A. Leligou, D. Kogias — 2023, Open Access (Kallipos)</div>
                         <div class="pub-meta">
-                            <span class="pub-badge book">Book</span>
+                            <span class="pub-badge book">
+                                <span class="pub-emoji" aria-hidden="true">📚</span> Book
+                            </span>
                             <a href="http://dx.doi.org/10.57713/kallipos-171" target="_blank" class="doi-link">DOI:
                                 10.57713/kallipos-171</a>
                         </div>
@@ -650,6 +671,7 @@
                         </a>
                     </h3>
                     <div class="proj-meta">
+                        <span class="skill-ico" aria-hidden="true">🔒</span>
                         <a class="proj-badge badge-msc"
                             href="https://cscyb.uniwa.gr/el/course/technologies-alysidas-systoichion-katanemimenoy-katholikoy/"
                             target="_blank" rel="noopener noreferrer" data-en="MSc course" data-gr="Μετ/κό μάθημα">MSc
@@ -676,6 +698,7 @@
                         </a>
                     </h3>
                     <div class="proj-meta">
+                        <span class="skill-ico" aria-hidden="true">⚡</span>
                         <a class="proj-badge badge-msc" href="https://msc-acs.uniwa.gr/orologio-programma/"
                             target="_blank" rel="noopener noreferrer" data-en="MSc course" data-gr="Μετ/κό μάθημα">MSc
                             course</a>
@@ -699,6 +722,7 @@
                         </a>
                     </h3>
                     <div class="proj-meta">
+                        <span class="skill-ico" aria-hidden="true">🌐</span>
                         <a class="proj-badge badge-msc" href="https://www.um.edu.mt/courses/studyunit/DLT5301"
                             target="_blank" rel="noopener noreferrer" data-en="MSc course" data-gr="Μετ/κό μάθημα">MSc
                             course</a>

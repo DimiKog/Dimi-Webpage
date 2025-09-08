@@ -188,6 +188,10 @@ html[data-lang="gr"] #btn-gr{
 }
 
 /* Hero */
+@keyframes fadeUp{
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 .hero{ display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:center; padding:36px 24px }
 @media (max-width: 1200px){
   .hero{ gap:22px; padding:28px 20px; }
@@ -310,6 +314,24 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   opacity:.95;
   flex:0 0 auto;
 }
+
+/* --- Utilities moved from inline styles --- */
+.hero-aside{
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+.hero-caption{
+  font-weight:700;
+  text-align:center;
+  margin-top:4px;
+  color: var(--text);
+}
+.pad-18{ padding:18px; }
+.mt-10{ margin-top:10px; }
 
 /* Inline external-link icon (force small size) */
 .ext-icon{ display:inline-block; width:.95em; height:.95em; max-width:14px; max-height:14px; vertical-align:-1px; fill:currentColor; flex:0 0 auto; }
@@ -505,6 +527,24 @@ pre{ white-space:pre-wrap; word-break:break-word; }
     margin-bottom:14px;
   }
 
+  /* Small inline emoji icons for skills/badges */
+.skill-ico{
+  display:inline-block;
+  font-size:1rem;
+  line-height:1;
+  margin-right:6px;
+  transform: translateY(1px);
+  opacity:.95;
+}
+
+/* Emoji inside publication badges */
+.pub-badge .pub-emoji{
+  display:inline-block;
+  margin-right:6px;
+  transform: translateY(1px);
+  line-height:1;
+}
+
   /* spacing around badges and lists */
   .card.tile .proj-meta{ margin:4px 0 6px; }
   .card.tile ul.list{ margin-top:6px; }
@@ -616,7 +656,10 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 .badge-uniwa { background:#00695c; color:#fff; border-color:rgba(0,0,0,.1); }
 .badge-uom   { background:#ad1457; color:#fff; border-color:rgba(0,0,0,.1); }
 
-a.proj-badge:focus-visible { outline:2px solid var(--focus); outline-offset:2px; }
+a.proj-badge:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
 
 /* --- Year badges for research projects --- */
 .proj-year{
@@ -630,6 +673,9 @@ a.proj-badge:focus-visible { outline:2px solid var(--focus); outline-offset:2px;
   color:#fff;
   border:1px solid rgba(0,0,0,.1);
 }
+
+#publications .card .pub-actions{ margin-top:16px; }
+:root[data-theme="light"] .proj-year{ background:#37474f; color:#fff; }
 
 .img-fluid{ display:block; max-width:100%; height:auto; }
 
