@@ -212,6 +212,24 @@ html[data-lang="gr"] #btn-gr{
   .grid{ grid-template-columns:1fr; }
   .tile{ grid-column:span 12; }
 }
+
+/* Ensure comfortable layout before phone sizes */
+@media (max-width: 720px){
+  .container{ padding:16px; }
+  .grid{ grid-template-columns: 1fr !important; gap:16px; }
+  .tile{ grid-column: auto !important; }
+  /* Soften hyphenation on small screens for readability */
+  .card p,
+  .card li,
+  .tile p,
+  .tile li{
+    hyphens: none;
+    -webkit-hyphens: none;
+    word-break: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.55;
+  }
+}
 @media (max-width: 640px){
   /* unify card padding on phones */
   section{ padding:8px 16px; margin:28px 0; }
