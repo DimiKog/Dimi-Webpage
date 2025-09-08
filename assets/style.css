@@ -697,3 +697,57 @@ a.proj-badge:focus-visible {
 
 /* Ensure images inside <picture> behave like .img-fluid by default */
 picture img{ display:block; max-width:100%; height:auto; }
+
+/* --- Affiliation logos (About + Footer) --- */
+.affil-logos{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px 18px;
+  align-items:center;
+  justify-content:center;
+  margin-top:12px;
+  padding-top:10px;
+  border-top:1px dashed var(--line);
+}
+.affil-logo{
+  height:38px;
+  width:auto;
+  max-width:140px;
+  object-fit:contain;
+  filter: grayscale(100%) opacity(.85);
+  transition: filter .2s ease, transform .2s ease;
+  mix-blend-mode: normal;
+}
+.affil-logo:hover,
+.affil-logo:focus{
+  filter: grayscale(0%) opacity(1);
+  transform: translateY(-1px);
+}
+
+/* Footer presentation */
+.site-footer{
+  margin-top:32px;
+  padding:18px 0 26px;
+  border-top:1px solid var(--line);
+  text-align:center;
+  background: linear-gradient(180deg, rgba(255,255,255,.00), rgba(255,255,255,.02));
+}
+.affil-logos--footer{
+  border-top:none;
+  margin-top:0;
+  padding-top:0;
+  gap:12px 16px;
+}
+.site-footer .footer-copy{
+  margin-top:10px;
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* Responsive logo sizing */
+@media (max-width: 720px){
+  .affil-logo{ height:32px; max-width:120px; }
+}
+@media (max-width: 480px){
+  .affil-logo{ height:28px; max-width:100px; }
+}
