@@ -726,7 +726,7 @@ picture img{ display:block; max-width:100%; height:auto; }
 :root[data-theme="light"] .affil-logo{
   background: rgba(0,0,0,.04);
   /* keep logos readable on light theme */
-  filter: grayscale(35%) opacity(.95) brightness(.95);
+  filter: grayscale(15%) opacity(.98) brightness(.96);
 }
 .affil-logo:hover,
 .affil-logo:focus{
@@ -751,6 +751,18 @@ picture img{ display:block; max-width:100%; height:auto; }
   filter: invert(1) hue-rotate(180deg) brightness(1.1) contrast(1.05) !important;
   background: rgba(255,255,255,.12);
 }
+
+/* Extra helpers for tricky marks */
+/* Darken very light (white) logos on LIGHT theme — e.g., INATBA */
+@media (prefers-color-scheme: light){
+  .logo--onlight-darken{ filter: brightness(0) saturate(100%) invert(8%) contrast(112%); }
+}
+:root[data-theme="light"] .logo--onlight-darken{
+  filter: brightness(0) saturate(100%) invert(8%) contrast(112%);
+}
+
+/* Small universal shadow to lift thin strokes on light bg */
+.logo--tinyshadow{ filter: drop-shadow(0 0 0.6px rgba(0,0,0,.45)); }
 
 /* Footer presentation */
 .site-footer{
