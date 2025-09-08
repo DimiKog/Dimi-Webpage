@@ -301,24 +301,6 @@
                         <li id="proj-artemis-3">Participation in meetings and preparation of deliverables</li>
                     </ul>
                 </article>
-                <!-- Web3 Sources curated repo card -->
-                <article class="card tile">
-                    <h3>Web3 Sources (Curated Repository)</h3>
-                    <div class="proj-meta">
-                        <span class="proj-badge" data-en="Resources" data-gr="Πόροι">Resources</span>
-                    </div>
-                    <p id="proj-web3src-desc" class="muted">Curated collection of resources and learning materials for
-                        Web3, blockchain, and distributed systems.</p>
-                    <div class="actions">
-                        <a class="proj-link" href="https://github.com/DimiKog/Web3-Sources" target="_blank"
-                            rel="noopener noreferrer">
-                            <span data-en="GitHub repo" data-gr="Αποθετήριο GitHub">GitHub repo</span>
-                            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
-                                <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
-                            </svg>
-                        </a>
-                    </div>
-                </article>
             </div>
         </section>
         <!-- PERSONAL DEVELOPMENT PORTFOLIO -->
@@ -357,6 +339,29 @@
                     </div>
                 </article>
                 <article class="card tile">
+                    <h3>LDL Fantasy League DApp</h3>
+                    <div class="proj-meta">
+                        <span class="proj-badge" data-en="Web3 DApp" data-gr="Web3 DApp">Web3 DApp</span>
+                    </div>
+                    <p id="proj-ldl-desc" class="muted">Fantasy League management with SBT identity, multi‑team trades,
+                        and voting.</p>
+                    <ul class="list">
+                        <li id="proj-ldl-1">Backend: Flask + Google Sheets API + PostgreSQL</li>
+                        <li id="proj-ldl-2">On‑chain: trade voting + SBT profiles</li>
+                        <li id="proj-ldl-3">Planned: DAO mechanism for voting on league regulations</li>
+                    </ul>
+                    <div class="actions">
+                        <a class="proj-link" href="https://github.com/DimiKog/nba-ldl-frontend" target="_blank"
+                            rel="noopener noreferrer">
+                            <span data-en="GitHub repo (instructions)" data-gr="Αποθετήριο GitHub (οδηγίες)">GitHub repo
+                                (instructions)</span>
+                            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
+                                <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+                <article class="card tile">
                     <h3>Besu QBFT Research Network</h3>
                     <div class="proj-meta">
                         <span class="proj-badge" data-en="Research Network" data-gr="Ερευνητικό δίκτυο">Research
@@ -383,23 +388,20 @@
                         <li id="proj-labs-2">Incident walkthroughs & trace analysis (bZx‑style oracle/flash‑loan)</li>
                     </ul>
                 </article>
+                <!-- Web3 Sources curated repo card (moved from research-projects) -->
                 <article class="card tile">
-                    <h3>LDL Fantasy League DApp</h3>
+                    <h3>Web3 Sources (Curated Repository)</h3>
                     <div class="proj-meta">
-                        <span class="proj-badge" data-en="Web3 DApp" data-gr="Web3 DApp">Web3 DApp</span>
+                        <span class="proj-badge" data-en="Resources" data-gr="Πόροι">Resources</span>
+                        <span class="proj-badge" id="proj-web3src-badge" data-en="Open Source"
+                            data-gr="Ανοικτού Κώδικα">Open Source</span>
                     </div>
-                    <p id="proj-ldl-desc" class="muted">Fantasy League management with SBT identity, multi‑team trades,
-                        and voting.</p>
-                    <ul class="list">
-                        <li id="proj-ldl-1">Backend: Flask + Google Sheets API + PostgreSQL</li>
-                        <li id="proj-ldl-2">On‑chain: trade voting + SBT profiles</li>
-                        <li id="proj-ldl-3">Planned: DAO mechanism for voting on league regulations</li>
-                    </ul>
+                    <p id="proj-web3src-desc" class="muted">Curated collection of resources and learning materials for
+                        Web3, blockchain, and distributed systems.</p>
                     <div class="actions">
-                        <a class="proj-link" href="https://github.com/DimiKog/nba-ldl-frontend" target="_blank"
+                        <a class="proj-link" href="https://github.com/DimiKog/Web3-Sources" target="_blank"
                             rel="noopener noreferrer">
-                            <span data-en="GitHub repo (instructions)" data-gr="Αποθετήριο GitHub (οδηγίες)">GitHub repo
-                                (instructions)</span>
+                            <span data-en="GitHub repo" data-gr="Αποθετήριο GitHub">GitHub repo</span>
                             <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
                                 <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
                             </svg>
@@ -716,6 +718,11 @@
             'proj-labs-2': {
                 en: 'Incident walkthroughs & trace analysis (bZx‑style oracle/flash‑loan)',
                 gr: 'Ανάλυση περιστατικών & ιχνών (επιθέσεις τύπου bZx – oracle/flash‑loan)'
+            },
+            // Web3 Sources badge
+            'proj-web3src-badge': {
+                en: 'Open Source',
+                gr: 'Ανοικτού Κώδικα'
             },
             // teaching
             'teach-1': {
