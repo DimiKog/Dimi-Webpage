@@ -630,3 +630,24 @@ a.proj-badge:focus-visible { outline:2px solid var(--focus); outline-offset:2px;
   color:#fff;
   border:1px solid rgba(0,0,0,.1);
 }
+
+.img-fluid{ display:block; max-width:100%; height:auto; }
+
+/* Frame used for the hero portrait image (works on <img> inside <picture>) */
+.hero-portrait{
+  width: clamp(160px, 24vw, 220px);      /* flexible but bounded */
+  aspect-ratio: 5 / 6;                   /* reserve space to reduce CLS */
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: transparent;
+}
+
+/* Optional image frame helpers */
+.img-rounded{ border-radius:16px; overflow:hidden; }
+.img-bordered{ border:1px solid var(--line); }
+.img-shadow{ box-shadow: var(--shadow); }
+
+/* Ensure images inside <picture> behave like .img-fluid by default */
+picture img{ display:block; max-width:100%; height:auto; }
