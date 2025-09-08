@@ -714,13 +714,23 @@ picture img{ display:block; max-width:100%; height:auto; }
   width:auto;
   max-width:140px;
   object-fit:contain;
-  filter: grayscale(100%) opacity(.85);
-  transition: filter .2s ease, transform .2s ease;
+  padding:6px 10px;                 /* add a light chip behind logos */
+  border-radius:10px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.06); /* visible on dark theme */
+  filter:none;                        /* no grayscaling on dark */
+  opacity:.95;
+  transition: filter .2s ease, transform .2s ease, opacity .2s ease;
   mix-blend-mode: normal;
+}
+:root[data-theme="light"] .affil-logo{
+  background: rgba(0,0,0,.04);
+  filter: grayscale(100%) opacity(.85) brightness(.95);
 }
 .affil-logo:hover,
 .affil-logo:focus{
-  filter: grayscale(0%) opacity(1);
+  filter: none;
+  opacity:1;
   transform: translateY(-1px);
 }
 
