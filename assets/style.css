@@ -754,6 +754,27 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   color: var(--text);
   letter-spacing:.2px;
 }
+
+/* Hero mission statement */
+.hero-mission {
+  font-size: 16.5px;
+  color: var(--muted);
+  margin-top: 10px;
+  margin-bottom: 14px;
+  max-width: 620px;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .hero-mission {
+    font-size: 15.5px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    line-height: 1.48;
+  }
+}
 .pad-18{ padding:18px; }
 .mt-10{ margin-top:10px; }
 
