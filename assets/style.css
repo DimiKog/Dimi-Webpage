@@ -336,11 +336,20 @@ html[data-lang="gr"] #btn-gr{
 h1{ font-size:46px; line-height:1.12; margin:.35rem 0; letter-spacing:-0.3px; }
 .hero .sub{
   color: var(--muted);          /* adapt to dark/light theme */
+  margin:0 0 .2rem;
 }
 /* Revert to fixed desktop subtitle font size */
 .sub{ color:var(--muted); font-size:19px; line-height:1.45; }
 .hero-card h1{
   color: var(--hero-card-text);
+  margin:.15rem 0 .3rem;
+}
+.hero-micro{
+  color:var(--brand);
+  font-weight:600;
+  letter-spacing:.35px;
+  margin:0 0 .35rem;
+  font-size:clamp(.95rem, 2.8vw, 1.05rem);
 }
 .hero-card .sub{
   color: var(--hero-card-sub);
