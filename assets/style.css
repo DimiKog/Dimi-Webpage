@@ -260,8 +260,8 @@ html[data-lang="gr"] #btn-gr{
   display:grid;
   grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
   gap:clamp(28px, 4vw, 48px);
-  align-items:stretch;
-  padding:clamp(32px, 5vw, 48px) clamp(20px, 3vw, 32px);
+  align-items:center;
+  padding:clamp(40px, 6vw, 64px) clamp(20px, 3vw, 32px);
 }
 @media (max-width: 1200px){
   .hero{ gap:24px; padding:28px 20px; }
@@ -292,7 +292,9 @@ html[data-lang="gr"] #btn-gr{
   flex-direction:column;
   align-items:center;
   text-align:center;
-  gap:clamp(8px, 2vw, 16px);
+  gap:clamp(10px, 2vw, 20px);
+  padding:clamp(36px, 5vw, 56px);
+  align-self:center;
 }
 .hero-card::before{
   content:"";
@@ -399,6 +401,7 @@ h1{ font-size:46px; line-height:1.12; margin:.35rem 0; letter-spacing:-0.3px; }
   gap:12px;
   width:100%;
   max-width:640px;
+  margin:clamp(18px, 2.8vw, 32px) auto 0;
 }
 .hero-subgrid span{
   border:1px solid var(--hero-card-tag-border);
@@ -418,13 +421,35 @@ h1{ font-size:46px; line-height:1.12; margin:.35rem 0; letter-spacing:-0.3px; }
   color: var(--hero-card-text);
   margin:.15rem 0 .3rem;
 }
-.hero-micro{
-  color:var(--brand);
+.hero-card p{
+  line-height:1.42;
+}
+.hero-intro{
+  font-size:clamp(.95rem, 2vw, 1.1rem);
+  letter-spacing:.25px;
+  color:var(--hero-card-sub);
+  margin:0 auto .2rem;
+}
+.hero-name{
+  font-size:clamp(3rem, 6vw, 3.6rem);
+  line-height:1.05;
+  letter-spacing:-0.4px;
+  margin:.1rem 0 .25rem;
+  color:var(--hero-card-text);
+}
+.hero-title{
+  font-size:clamp(1.35rem, 3vw, 1.65rem);
   font-weight:600;
-  letter-spacing:.35px;
+  color:var(--hero-card-text);
   margin:0 auto .35rem;
+}
+.hero-micro{
+  color:var(--hero-card-sub);
+  font-weight:600;
+  letter-spacing:.25px;
+  margin:0 auto .5rem;
   text-align:center;
-  font-size:clamp(.95rem, 2.8vw, 1.05rem);
+  font-size:clamp(1rem, 2.5vw, 1.15rem);
 }
 .hero-card .sub{
   color: var(--hero-card-sub);
@@ -436,17 +461,28 @@ h1{ font-size:46px; line-height:1.12; margin:.35rem 0; letter-spacing:-0.3px; }
   margin:0 auto 6px;
 }
 .hero-card .btn.primary{
-  box-shadow:0 22px 44px rgba(14,153,197,.35);
+  background:#5cd2f3;
+  border:1px solid #5cd2f3;
+  color:#041018;
+  box-shadow:0 24px 55px rgba(92,210,243,.35);
+}
+.hero-card .btn.primary:hover,
+.hero-card .btn.primary:focus{
+  background:#76dbf6;
+  border-color:#76dbf6;
 }
 .hero-card .btn.ghost{
-  color: var(--hero-card-text);
-  border-color: rgba(255,255,255,.4);
-  background: rgba(255,255,255,.08);
+  background:transparent;
+  border:1.5px solid rgba(92,210,243,.5);
+  color:#5cd2f3;
 }
 :root[data-theme="light"] .hero-card .btn.ghost{
-  color: var(--text);
-  border-color: rgba(14,23,42,.2);
-  background: rgba(14,23,42,.05);
+  color:var(--brand);
+  border-color:rgba(14,153,197,.5);
+}
+.hero-card .btn.ghost:hover,
+.hero-card .btn.ghost:focus{
+  background:rgba(92,210,243,.12);
 }
 .btns{
   display:flex;
@@ -462,13 +498,14 @@ h1{ font-size:46px; line-height:1.12; margin:.35rem 0; letter-spacing:-0.3px; }
   width:100%;
   max-width:560px;
   justify-content:center;
-  margin:clamp(20px, 3vw, 32px) auto 6px;
-  gap:16px;
+  margin:clamp(18px, 3vw, 30px) auto 0;
+  gap:clamp(16px, 2.4vw, 22px);
 }
 .hero-card .btns .btn{
   flex:1 1 180px;
   min-height:48px;
   text-align:center;
+  padding:clamp(12px, 2vw, 16px) clamp(22px, 4vw, 32px);
 }
 @media (max-width: 560px){
   .btns{
@@ -613,6 +650,7 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   justify-content:center;
   gap:18px;
   min-height:100%;
+  align-self:center;
 }
 .hero-caption{
   font-weight:700;
@@ -1076,12 +1114,12 @@ a.proj-badge:focus-visible {
 
 /* Frame used for the hero portrait image (works on <img> inside <picture>) */
 .hero-portrait{
-  width: clamp(160px, 24vw, 220px);      /* flexible but bounded */
+  width: clamp(150px, 22vw, 200px);      /* flexible but bounded */
   aspect-ratio: 5 / 6;                   /* reserve space to reduce CLS */
   object-fit: cover;
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,.22);
-  box-shadow: 0 24px 60px rgba(5,10,26,.45);
+  box-shadow: 0 24px 60px rgba(5,10,26,.45), 0 0 35px rgba(92,210,243,.25);
   transition: box-shadow .25s ease, transform .25s ease;
   background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.25));
   animation: floatPortrait 12s ease-in-out infinite;
@@ -1094,7 +1132,7 @@ a.proj-badge:focus-visible {
 
 .hero-portrait:hover{
   transform: translateY(-3px);
-  box-shadow: 0 28px 70px rgba(5,10,26,.5);
+  box-shadow: 0 28px 70px rgba(5,10,26,.5), 0 0 38px rgba(92,210,243,.28);
 }
 
 /* Optional image frame helpers */
