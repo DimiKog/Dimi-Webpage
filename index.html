@@ -4,9 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dimitris G. Kogias — Researcher • Blockchain • Cybersecurity</title>
+    <title>Dimitris G. Kogias — Blockchain, Web3 & Cybersecurity Researcher & Educator</title>
+
+    <!-- Meta Description -->
     <meta name="description"
-        content="Personal homepage of Dimitris G. Kogias — researcher & educator in blockchain, Web3 DApps, distributed systems, and cybersecurity." />
+        content="Personal homepage of Dimitris G. Kogias — Blockchain, Web3 & Cybersecurity Researcher & Educator.">
     <link rel="icon" type="image/png" href="assets/Dimi_favicon.png" />
     <link rel="stylesheet" href="assets/style.css" />
 
@@ -19,17 +21,17 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://dimi-webpage.pages.dev/" />
-    <meta property="og:title" content="Dimitris G. Kogias — Researcher • Blockchain • Cybersecurity" />
+    <meta property="og:title" content="Dimitris G. Kogias — Blockchain, Web3 & Cybersecurity Researcher & Educator" />
     <meta property="og:description"
-        content="Researcher & educator in blockchain, Web3 DApps, distributed systems, and cybersecurity." />
+        content="Researcher & Educator in Blockchain, Web3 and Cybersecurity, focusing on DApps and distributed systems." />
     <meta property="og:image" content="assets/DimiKog.webp" />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Dimitris G. Kogias — Researcher • Blockchain • Cybersecurity" />
-    <meta name="twitter:description"
-        content="Researcher & educator in blockchain, Web3 DApps, distributed systems, and cybersecurity." />
+    <meta name="twitter:title" content="Dimitris G. Kogias — Blockchain, Web3 & Cybersecurity Researcher & Educator" />
+    <meta name="twitter:description" +
+        content="Researcher & Educator in Blockchain, Web3 and Cybersecurity working on DApps and distributed systems." />
     <meta name="twitter:image" content="assets/DimiKog.webp" />
 
     <!-- Schema.org person profile -->
@@ -38,7 +40,7 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Dimitris G. Kogias",
-      "jobTitle": "Researcher • Blockchain • Cybersecurity",
+      "jobTitle": "Researcher & Educator in Blockchain, Web3 & Cybersecurity",
       "url": "https://dimi-webpage.pages.dev/",
       "image": "assets/DimiKog.jpg",
       "affiliation": [
@@ -79,7 +81,7 @@
                 <div class="logo">DK</div>
                 <div>
                     <strong>Dimitris G. Kogias</strong><br>
-                    <span class="muted" id="brand-tag">Researcher • Blockchain • Cybersecurity</span>
+                    <span class="muted" id="brand-tag">Researcher & Educator in Blockchain, Web3 & Cybersecurity</span>
                 </div>
             </div>
             <button id="menu-toggle" class="hamburger" aria-label="Open menu" aria-controls="site-nav"
@@ -112,15 +114,24 @@
     <section class="hero container">
         <div class="card">
             <span class="tag" id="hero-tag">Web3 DApps • Distributed Consensus • Education</span>
-            <h1 id="hero-title">Building safer blockchain systems & clearer learning paths</h1>
+            <h1 id="hero-title">Designing secure blockchain systems & empowering practical Web3 education</h1>
             <p class="sub" id="hero-sub">
-                I work on blockchain security, DApps, Besu PoA/QBFT networks, and hands-on Web3 education.
+                I work on blockchain security, Web3 DApps, Besu PoA/QBFT networks, and applied cryptography education.
             </p>
             <div class="btns">
                 <a class="btn primary" href="#contact" id="cta-primary">Get in touch</a>
                 <a class="btn ghost" href="#research-projects" id="cta-secondary">See projects</a>
             </div>
             <div class="stats">
+                <!-- Greek hero title and subtitle for Greek language toggle (hidden by default, shown by JS) -->
+                <div style="display:none">
+                    <h1 id="hero-title-gr">Σχεδιάζοντας ασφαλή blockchain συστήματα & πρακτικές εμπειρίες Web3
+                        εκπαίδευσης</h1>
+                    <p class="sub" id="hero-sub-gr">
+                        Ασχολούμαι με θέματα ασφάλειας στο blockchain, τις αποκεντρωμένες εφαρμογές, τα δίκτυα Besu
+                        PoA/QBFT και την πρακτική εκπαίδευση στο Web3.
+                    </p>
+                </div>
                 <div class="stat"><b id="stat-1">20+</b><span class="muted" id="stat-1-lbl"> Years teaching in academic
                         institutions</span></div>
                 <div class="stat"><b id="stat-2">5+</b><span class="muted" id="stat-2-lbl"> Years teaching
@@ -152,18 +163,17 @@
 
             <div class="card">
                 <p id="about-p1">
-                    Researcher and educator specializing in blockchain security, distributed systems, and decentralized
-                    applications.
-                    I design and develop DApps, build and operate Hyperledger Besu (QBFT) networks with Blockscout and
-                    Faucet integration, and transform these systems into hands-on learning environments for students and
-                    professionals.
+                    I’m a researcher and educator specializing in blockchain security, Web3 systems, distributed
+                    consensus, and decentralized application development. I design and deploy Hyperledger Besu (QBFT)
+                    networks, create hands-on security labs, and develop real Web3 DApps used in academic and training
+                    environments.
                 </p>
-                <p id="about-p2">
-                    I teach at the University of West Attica (UniWA) and the University of Malta, and as a Senior
-                    Researcher I contribute to EU and Greek National projects. I am also co-author of the first
-                    open-access Greek textbook on blockchain
-                    (<a href="https://repository.kallipos.gr/handle/11419/9130" target="_blank"
-                        rel="noopener noreferrer">Kallipos editions</a>).
+                <p id="about-p1-gr" style="display:none;">
+                    Είμαι ερευνητής και εκπαιδευτής με εξειδίκευση στην ασφάλεια του blockchain, τα συστήματα Web3, τη
+                    συναίνεση σε κατανεμημένα δίκτυα και την ανάπτυξη αποκεντρωμένων εφαρμογών. Σχεδιάζω και υλοποιώ
+                    δίκτυα Hyperledger Besu (QBFT), δημιουργώ πρακτικά εργαστήρια σε θέματα cybersecurity και αναπτύσσω
+                    πραγματικά
+                    Web3 DApps που χρησιμοποιούνται σε πανεπιστημιακά και εκπαιδευτικά περιβάλλοντα.
                 </p>
                 <ul class="list checklist mt-10">
                     <li>
@@ -918,11 +928,11 @@
             'cta-secondary': { en: 'See projects', gr: 'Δες έργα' },
             'hero-caption': {
                 en: 'Senior Researcher – Blockchain Educator',
-                gr: 'Κύριος Ερευνητής – Εκπαιδευτής Blockchain'
+                gr: 'Κύριος Ερευνητής – Εκπαιδευτής σε Blockchain, Web3 & Cybersecurity'
             },
             'brand-tag': {
-                en: 'Researcher • Blockchain • Cybersecurity',
-                gr: 'Ερευνητής • Blockchain • Κυβερνοασφάλεια'
+                en: 'Researcher & Educator in Blockchain, Web3 & Cybersecurity',
+                gr: 'Ερευνητής & Εκπαιδευτής σε Blockchain, Web3 & Cybersecurity'
             },
             'nav-research': { en: 'Research', gr: 'Έρευνα' },
             'nav-portfolio': { en: 'Portfolio', gr: 'Portfolio' },
