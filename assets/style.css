@@ -787,6 +787,57 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 .checklist li{ display:flex; align-items:flex-start; gap:8px; }
 .icon-check{ width:16px; height:16px; color:var(--ok); flex:0 0 auto; margin-top:3px; }
 .icon-check svg{ display:block; width:100%; height:100%; }
+/* --- About Section Polish (Option C) --- */
+.about-card{
+  padding: 4px 0;
+}
+
+.about-lead{
+  min-height: 115px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: linear-gradient(160deg, rgba(92,210,243,.10), rgba(183,156,255,.06));
+}
+
+.about-list li{
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--glass), rgba(255,255,255,.03));
+}
+
+/* Subheading spacing consistency */
+.about-subheading{
+  margin: 30px 0 12px;
+  font-weight: 800;
+  letter-spacing: .065em;
+}
+
+/* Equalize card heights where text wraps more (GR version fix) */
+.about-leads .about-lead{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+/* Improve grid stability */
+.about-leads{
+  gap: 20px;
+}
+
+.about-list{
+  gap: 20px;
+}
+
+/* Subtle hover polish */
+.about-lead:hover,
+.about-list li:hover{
+  transform: translateY(-2px);
+  transition: transform .22s ease, box-shadow .22s ease;
+  box-shadow: 0 10px 28px rgba(5,8,16,.25);
+  border-color: rgba(92,210,243,.45);
+}
 .about-card{
   display:flex;
   flex-direction:column;
@@ -1440,4 +1491,99 @@ picture img{ display:block; max-width:100%; height:auto; }
   font-weight: 600;
   cursor: default;
   user-select: none;
+}
+
+/* ------------------------------------------------------ */
+/* FULL REDESIGN — Affiliation Logos                      */
+/* Premium layout, unified sizing, subtle animations      */
+/* ------------------------------------------------------ */
+
+.affil-section {
+  margin-top: 32px;
+  padding: 24px 0;
+}
+
+.affil-section h2 {
+  text-align: left;
+  margin-bottom: 18px;
+  font-weight: 800;
+  font-size: 1.65rem;
+}
+
+/* Modern grid layout */
+.affil-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 22px;
+  justify-items: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Logo container — elevated card style */
+.affil-logo-wrapper {
+  background: var(--glass);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px 16px;
+  width: 100%;
+  max-width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s;
+}
+
+/* Core logo styling */
+.affil-logo-wrapper img {
+  width: 100%;
+  max-height: 48px;
+  object-fit: contain;
+  display: block;
+  filter: brightness(1);
+}
+
+/* Hover effects */
+.affil-logo-wrapper:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 10px 28px rgba(0,0,0,.28);
+}
+
+/* Light theme enhancements */
+:root[data-theme="light"] .affil-logo-wrapper {
+  background: rgba(0,0,0,.035);
+  border-color: rgba(0,0,0,.12);
+}
+
+:root[data-theme="light"] .affil-logo-wrapper img {
+  filter: brightness(.92) contrast(1.05);
+}
+
+/* Per-logo tuning */
+.affil-logo--uom img {
+  filter: contrast(1.15) brightness(1.05);
+}
+.affil-logo--uniwa img {
+  filter: contrast(1.10);
+}
+.affil-logo--inbalight img,
+.affil-logo--frontierslight img {
+  filter: brightness(.90) contrast(1.1);
+}
+
+/* Responsive polish */
+@media (max-width: 600px) {
+  .affil-logos {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 18px;
+  }
+  .affil-logo-wrapper {
+    padding: 12px 14px;
+    max-width: 130px;
+  }
+  .affil-logo-wrapper img {
+    max-height: 42px;
+  }
 }
