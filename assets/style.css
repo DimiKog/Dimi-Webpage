@@ -353,8 +353,8 @@ html[data-lang="gr"] #btn-gr{
   flex-direction:column;
   align-items:flex-start;
   text-align:left;
-  gap:clamp(8px, 1.8vw, 18px);
-  padding:clamp(32px, 4.5vw, 48px);
+  gap:clamp(12px, 2.6vw, 26px);
+  padding:clamp(36px, 5vw, 56px);
   align-self:center;
 }
 .hero-card::before{
@@ -520,7 +520,7 @@ h1{ font-size:46px; line-height:1.12; margin:.35rem 0; letter-spacing:-0.3px; }
   font-size:clamp(1.05rem, 2.6vw, 1.3rem);
   letter-spacing:.15px;
   color:var(--hero-card-text);
-  margin:0 0 clamp(14px, 2vw, 20px);
+  margin:0 0 clamp(18px, 2.6vw, 28px);
 }
 .hero-name{
   font-size:clamp(3.2rem, 6vw, 3.9rem);
@@ -533,7 +533,7 @@ h1{ font-size:46px; line-height:1.12; margin:.35rem 0; letter-spacing:-0.3px; }
   font-size:clamp(1.3rem, 3vw, 1.55rem);
   font-weight:600;
   color:var(--hero-card-sub);
-  margin:0 0 .35rem;
+  margin:0 0 .75rem;
 }
 .hero-card .sub{
   color: var(--hero-card-sub);
@@ -545,10 +545,10 @@ h1{ font-size:46px; line-height:1.12; margin:.35rem 0; letter-spacing:-0.3px; }
   margin:0 auto 6px;
 }
 .hero-card .btn.primary{
-  background:#5cd2f3;
-  border:1px solid #5cd2f3;
+  background:var(--brand);
+  border:1px solid var(--brand);
   color:#041018;
-  box-shadow:0 28px 60px rgba(92,210,243,.4);
+  box-shadow:0 30px 64px rgba(92,210,243,.45);
   text-shadow:none;
 }
 .hero-card .btn.primary:hover,
@@ -557,17 +557,18 @@ h1{ font-size:46px; line-height:1.12; margin:.35rem 0; letter-spacing:-0.3px; }
   border-color:#7ee1f7;
 }
 .hero-card .btn.ghost{
-  background:rgba(92,210,243,.12);
-  border:1.5px solid rgba(92,210,243,.65);
-  color:#5cd2f3;
+  background:rgba(92,210,243,.16);
+  border:1.5px solid var(--brand);
+  color:var(--brand);
+  box-shadow:0 24px 50px rgba(92,210,243,.25);
 }
 :root[data-theme="light"] .hero-card .btn.ghost{
-  color:#5cd2f3;
-  border-color:rgba(14,153,197,.55);
+  color:var(--brand);
+  border-color:rgba(14,153,197,.65);
 }
 .hero-card .btn.ghost:hover,
 .hero-card .btn.ghost:focus{
-  background:rgba(92,210,243,.2);
+  background:rgba(92,210,243,.28);
 }
 .btns{
   display:flex;
@@ -583,8 +584,8 @@ h1{ font-size:46px; line-height:1.12; margin:.35rem 0; letter-spacing:-0.3px; }
   width:100%;
   max-width:560px;
   justify-content:flex-start;
-  margin:clamp(14px, 2.2vw, 24px) 0 0;
-  gap:clamp(16px, 2.4vw, 22px);
+  margin:clamp(18px, 2.8vw, 30px) 0 0;
+  gap:clamp(18px, 2.8vw, 26px);
 }
 .hero-card .btns .btn{
   flex:1 1 180px;
@@ -737,7 +738,7 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 
 /* --- Utilities moved from inline styles --- */
 .hero-aside{
-  padding:18px;
+  padding:clamp(18px, 2.8vw, 30px);
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -1218,9 +1219,10 @@ a.proj-badge:focus-visible {
 
 /* Frame used for the hero portrait image (works on <img> inside <picture>) */
 .hero-portrait{
-  width: clamp(150px, 22vw, 200px);      /* flexible but bounded */
+  width: clamp(190px, 26vw, 240px);      /* flexible but bounded */
   aspect-ratio: 5 / 6;                   /* reserve space to reduce CLS */
   object-fit: cover;
+  object-position: 50% 20%;
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,.22);
   box-shadow: 0 24px 60px rgba(5,10,26,.45), 0 0 35px rgba(92,210,243,.25);
@@ -1244,7 +1246,7 @@ a.proj-badge:focus-visible {
 .img-bordered{ border:1px solid var(--line); }
 .img-shadow{ box-shadow: var(--shadow); }
 .hero-portrait-frame{
-  padding:18px;
+  padding:22px;
   border-radius:24px;
   background:linear-gradient(145deg, rgba(255,255,255,.08), rgba(8,12,20,.4));
   border:1px solid rgba(255,255,255,.18);
