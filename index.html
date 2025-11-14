@@ -116,9 +116,11 @@
             <span class="tag" id="hero-tag">Web3 DApps • Distributed Consensus • Education</span>
             <h1 id="hero-title">Designing secure blockchain systems & empowering practical Web3 education</h1>
             <p class="hero-micro" id="hero-micro">Blockchain Security • QBFT Networks • Web3 Education</p>
-            <p class="sub" id="hero-sub">
-                I work on blockchain security, Web3 DApps, Besu PoA/QBFT networks, and applied cryptography education.
-            </p>
+            <div class="hero-subgrid sub" id="hero-sub">
+                <span>Blockchain security &amp; DApp assurance</span>
+                <span>Hyperledger Besu PoA/QBFT networks</span>
+                <span>Applied Web3 &amp; cybersecurity education</span>
+            </div>
             <div class="btns">
                 <a class="btn primary" href="#research-projects" id="cta-primary">See projects</a>
                 <a class="btn ghost" href="#contact" id="cta-secondary">Get in touch</a>
@@ -128,10 +130,11 @@
                 <div style="display:none">
                     <h1 id="hero-title-gr">Σχεδιάζοντας ασφαλή blockchain συστήματα & πρακτικές εμπειρίες Web3
                         εκπαίδευσης</h1>
-                    <p class="sub" id="hero-sub-gr">
-                        Ασχολούμαι με θέματα ασφάλειας στο blockchain, τις αποκεντρωμένες εφαρμογές, τα δίκτυα Besu
-                        PoA/QBFT και την πρακτική εκπαίδευση στο Web3.
-                    </p>
+                    <div class="hero-subgrid sub" id="hero-sub-gr">
+                        <span>Ασφάλεια blockchain &amp; διασφάλιση DApp</span>
+                        <span>Δίκτυα Hyperledger Besu PoA/QBFT</span>
+                        <span>Πρακτική εκπαίδευση σε Web3 &amp; κυβερνοασφάλεια</span>
+                    </div>
                 </div>
                 <div class="stat"><b id="stat-1">20+</b><span class="muted" id="stat-1-lbl"> Years teaching in academic
                         institutions</span></div>
@@ -146,7 +149,7 @@
         </div>
         <div class="card hero-aside">
             <!-- Portrait uses responsive <picture> with WebP/AVIF fallback and .hero-portrait framing -->
-            <picture class="img-rounded img-bordered img-shadow">
+            <picture class="img-rounded img-bordered img-shadow hero-portrait-frame">
                 <source type="image/webp" srcset="assets/DimiKog.webp" />
                 <img src="assets/DimiKog.jpeg" alt="Portrait of Dimitris G. Kogias" loading="eager" decoding="async"
                     width="220" height="264" class="hero-portrait img-fluid" />
@@ -942,8 +945,8 @@
                 gr: 'Ασφάλεια Blockchain • Δίκτυα QBFT • Εκπαίδευση Web3'
             },
             'hero-sub': {
-                en: 'I work on blockchain security, DApps, Besu PoA/QBFT networks, and hands-on Web3 education.',
-                gr: 'Ασχολούμαι με θέματα ασφάλειας στο blockchain, τις αποκεντρωμένες εφαρμογές, τα δίκτυα Besu PoA/QBFT και την πρακτική εκπαίδευση στο Web3.'
+                en: '<span>Blockchain security &amp; DApp assurance</span><span>Hyperledger Besu PoA/QBFT networks</span><span>Applied Web3 &amp; cybersecurity education</span>',
+                gr: '<span>Ασφάλεια blockchain &amp; διασφάλιση DApp</span><span>Δίκτυα Hyperledger Besu PoA/QBFT</span><span>Πρακτική εκπαίδευση σε Web3 &amp; κυβερνοασφάλεια</span>'
             },
             'cta-primary': { en: 'See projects', gr: 'Δες έργα' },
             'cta-secondary': { en: 'Get in touch', gr: 'Επικοινωνία' },
@@ -1110,6 +1113,7 @@
                     if (
                         id === 'about-p2' ||
                         id === 'about-li5' ||
+                        id === 'hero-sub' ||
                         id === 'proj-tardis-1' ||
                         id === 'proj-genera-1' ||
                         id === 'proj-faster-1' ||
