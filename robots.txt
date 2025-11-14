@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Update the URL after you attach a custom domain
-# Sitemap: https://dimi-webpage.pages.dev/sitemap.xml
+# Sitemap: https://dimikog.org/sitemap.xml

@@ -66,17 +66,17 @@ const langElems = {
                 gr: 'Dimitris G. Kogias — Ερευνητής • Blockchain • Κυβερνοασφάλεια'
             },
             // hero
+            'hero-name': {
+                en: 'Dimitris G. Kogias',
+                gr: 'Δημήτρης Γ. Κόγιας'
+            },
             'hero-intro': {
-                en: 'Building safer blockchain systems and shaping Web3 education.',
-                gr: 'Δημιουργώ ασφαλέστερα συστήματα blockchain και διαμορφώνω την εκπαίδευση Web3.'
+                en: 'Building safer blockchain systems for education and research.',
+                gr: 'Δημιουργώ ασφαλέστερα συστήματα blockchain για την εκπαίδευση και την έρευνα.'
             },
             'hero-title': {
                 en: 'Researcher & Educator in Blockchain, Web3 & Cybersecurity',
                 gr: 'Ερευνητής & Εκπαιδευτής σε Blockchain, Web3 & Κυβερνοασφάλεια'
-            },
-            'hero-micro': {
-                en: 'Blockchain Security • QBFT Networks • Web3 Education',
-                gr: 'Ασφάλεια Blockchain • Δίκτυα QBFT • Εκπαίδευση Web3'
             },
             'hero-sub': {
                 en: '<span>Blockchain security &amp; DApp assurance</span><span>Hyperledger Besu PoA/QBFT networks</span><span>Applied Web3 &amp; cybersecurity education</span>',
@@ -91,6 +91,10 @@ const langElems = {
             'brand-tag': {
                 en: 'Researcher & Educator in Blockchain, Web3 & Cybersecurity',
                 gr: 'Ερευνητής & Εκπαιδευτής σε Blockchain, Web3 & Cybersecurity'
+            },
+            'brand-name': {
+                en: 'Dimitris G. Kogias',
+                gr: 'Δημήτρης Γ. Κόγιας'
             },
             'nav-research': { en: 'Research', gr: 'Έρευνα' },
             'nav-portfolio': { en: 'Portfolio', gr: 'Portfolio' },
@@ -279,13 +283,37 @@ const langElems = {
     function initLang() {
         const btnEn = document.getElementById('btn-en');
         const btnGr = document.getElementById('btn-gr');
-        btnEn && btnEn.addEventListener('click', () => setLang('en'));
-        btnGr && btnGr.addEventListener('click', () => setLang('gr'));
-        let lang = localStorage.getItem(LANG_KEY);
-        if (!lang) {
-            const nav = (navigator.language || 'en').toLowerCase();
-            lang = nav.startsWith('el') ? 'gr' : 'en';
+        const html = document.documentElement;
+        const defaultLang = html.getAttribute('data-default-lang') || 'en';
+        const hrefs = {
+            en: html.dataset.langHrefEn || '',
+            gr: html.dataset.langHrefGr || ''
+        };
+
+        function navigateTo(lang, replace) {
+            const target = hrefs[lang];
+            if (!target) { return false; }
+            const url = new URL(target, window.location.href);
+            if (url.href === window.location.href) { return false; }
+            if (replace) {
+                window.location.replace(url.href);
+            } else {
+                window.location.href = url.href;
+            }
+            return true;
         }
+
+        function handleLangClick(lang) {
+            localStorage.setItem(LANG_KEY, lang);
+            if (lang !== defaultLang && navigateTo(lang, false)) { return; }
+            setLang(lang);
+        }
+
+        btnEn && btnEn.addEventListener('click', () => handleLangClick('en'));
+        btnGr && btnGr.addEventListener('click', () => handleLangClick('gr'));
+
+        let lang = localStorage.getItem(LANG_KEY) || defaultLang;
+        if (lang !== defaultLang && navigateTo(lang, true)) { return; }
         setLang(lang);
         window.setLang = setLang;
     }
