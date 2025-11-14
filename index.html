@@ -112,7 +112,7 @@
 
     <!-- Hero -->
     <section class="hero container">
-        <div class="card">
+        <div class="card hero-card">
             <span class="tag" id="hero-tag">Web3 DApps • Distributed Consensus • Education</span>
             <h1 id="hero-title">Designing secure blockchain systems & empowering practical Web3 education</h1>
             <p class="sub" id="hero-sub">
@@ -161,21 +161,28 @@
         <section id="about" class="alt">
             <h2 class="section-title" data-en="About" data-gr="Σχετικά">About</h2>
 
-            <div class="card">
-                <p id="about-p1">
-                    I’m a researcher and educator specializing in blockchain security, Web3 systems, distributed
-                    consensus, and decentralized application development. I design and deploy Hyperledger Besu (QBFT)
-                    networks, create hands-on security labs, and develop real Web3 DApps used in academic and training
-                    environments.
-                </p>
-                <p id="about-p1-gr" style="display:none;">
-                    Είμαι ερευνητής και εκπαιδευτής με εξειδίκευση στην ασφάλεια του blockchain, τα συστήματα Web3, τη
-                    συναίνεση σε κατανεμημένα δίκτυα και την ανάπτυξη αποκεντρωμένων εφαρμογών. Σχεδιάζω και υλοποιώ
-                    δίκτυα Hyperledger Besu (QBFT), δημιουργώ πρακτικά εργαστήρια σε θέματα cybersecurity και αναπτύσσω
-                    πραγματικά
-                    Web3 DApps που χρησιμοποιούνται σε πανεπιστημιακά και εκπαιδευτικά περιβάλλοντα.
-                </p>
-                <ul class="list checklist mt-10">
+            <div class="card about-card">
+                <div class="about-leads">
+                    <article class="about-lead">
+                        <span class="about-emoji" aria-hidden="true">🧠</span>
+                        <p id="about-p1">
+                            Researcher and educator specializing in blockchain security, distributed systems, and
+                            decentralized applications. I design and develop DApps, build and operate Hyperledger Besu
+                            (QBFT) networks with Blockscout and Faucet integration, and transform these systems into
+                            hands‑on learning environments for students and professionals.
+                        </p>
+                    </article>
+                    <article class="about-lead">
+                        <span class="about-emoji" aria-hidden="true">🎓</span>
+                        <p id="about-p2">
+                            I teach at the University of West Attica (UniWA) and the University of Malta, and as a Senior
+                            Researcher I contribute to EU and Greek National projects. I am also co‑author of the first
+                            open‑access Greek textbook on blockchain (<a href="https://repository.kallipos.gr/handle/11419/9130"
+                                target="_blank" rel="noopener noreferrer">Kallipos editions</a>).
+                        </p>
+                    </article>
+                </div>
+                <ul class="list checklist about-list mt-10">
                     <li>
                         <span class="icon-check" aria-hidden="true">
                             <svg viewBox="0 0 24 24">
@@ -194,6 +201,7 @@
                                     d="M9.5 16.3 4.9 11.7l1.4-1.4 3.2 3.2 7.2-7.2 1.4 1.4-8.6 8.6Z" />
                             </svg>
                         </span>
+                        <span class="skill-ico" aria-hidden="true">🧱</span>
                         <span id="about-li2"><b>Blockchain infrastructure</b>: Besu QBFT network, Blockscout & Faucet,
                             hardened validator ops</span>
                     </li>
@@ -201,7 +209,7 @@
                         <span class="icon-check" aria-hidden="true">
                             <svg viewBox="0 0 24 24">
                                 <path fill="currentColor"
-                                    d="M9.5 16.3 4.9 11.7l1.4-1.4 3.2 3.2 7.2-7.2 1.4 1.4-8.6 8.6Z" />
+                            d="M9.5 16.3 4.9 11.7l1.4-1.4 3.2 3.2 7.2-7.2 1.4 1.4-8.6 8.6Z" />
                             </svg>
                         </span>
                         <span class="skill-ico" aria-hidden="true">🌐</span>
@@ -212,9 +220,10 @@
                         <span class="icon-check" aria-hidden="true">
                             <svg viewBox="0 0 24 24">
                                 <path fill="currentColor"
-                                    d="M9.5 16.3 4.9 11.7l1.4-1.4 3.2 3.2 7.2-7.2 1.4 1.4-8.6 8.6Z" />
+                            d="M9.5 16.3 4.9 11.7l1.4-1.4 3.2 3.2 7.2-7.2 1.4 1.4-8.6 8.6Z" />
                             </svg>
                         </span>
+                        <span class="skill-ico" aria-hidden="true">🧩</span>
                         <span id="about-li4"><b>Research interests</b>: zero‑knowledge proofs (ZKPs), oracles, protocol
                             hardening, verifiable credentials</span>
                     </li>
@@ -222,9 +231,10 @@
                         <span class="icon-check" aria-hidden="true">
                             <svg viewBox="0 0 24 24">
                                 <path fill="currentColor"
-                                    d="M9.5 16.3 4.9 11.7l1.4-1.4 3.2 3.2 7.2-7.2 1.4 1.4-8.6 8.6Z" />
+                            d="M9.5 16.3 4.9 11.7l1.4-1.4 3.2 3.2 7.2-7.2 1.4 1.4-8.6 8.6Z" />
                             </svg>
                         </span>
+                        <span class="skill-ico" aria-hidden="true">🤝</span>
                         <span id="about-li5"><b>Professional Roles</b> Member of INATBA's Academic Advisory Board,
                             Associate Editor, <a href="https://loop.frontiersin.org/people/1136660/overview"
                                 target="_blank" rel="noopener noreferrer">Frontiers in Blockchain
@@ -238,7 +248,7 @@
                         <span class="icon-check" aria-hidden="true">
                             <svg viewBox="0 0 24 24">
                                 <path fill="currentColor"
-                                    d="M9.5 16.3 4.9 11.7l1.4-1.4 3.2 3.2 7.2-7.2 1.4 1.4-8.6 8.6Z" />
+                            d="M9.5 16.3 4.9 11.7l1.4-1.4 3.2 3.2 7.2-7.2 1.4 1.4-8.6 8.6Z" />
                             </svg>
                         </span>
                         <span class="skill-ico" aria-hidden="true">🔒</span>
@@ -246,6 +256,7 @@
                             DORA</span>
                     </li>
                 </ul>
+                <p class="about-logos-label" data-en="Affiliations & collaborators" data-gr="Συνεργασίες & φορείς">Affiliations & collaborators</p>
                 <div class="affil-logos" aria-label="Affiliations and memberships">
                     <img class="affil-logo" src="assets/logos/Uniwa_logo.svg"
                         alt="University of West Attica (UniWA) logo" loading="lazy" decoding="async" />
@@ -826,6 +837,7 @@
     </main>
 
     <footer class="site-footer">
+        <p class="footer-label" data-en="Partners & affiliations" data-gr="Συνεργάτες & φορείς">Partners & affiliations</p>
         <div class="affil-logos affil-logos--footer" aria-label="Affiliations">
             <img class="affil-logo" src="assets/logos/Uniwa_logo.svg" alt="University of West Attica (UniWA) logo"
                 loading="lazy" decoding="async" />
