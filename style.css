@@ -310,17 +310,25 @@ html[data-lang="gr"] #btn-gr{
   100%{ transform: translateY(0); }
 }
 /* HERO alignment fix — sync with About section */
-.hero,
+ .hero,
 .hero--single,
-.hero.hero--single.container {
-    max-width: 1100px !important;
-    margin: 0 auto !important;
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
+.hero.hero--single,
+.hero.hero--single.hero--wide {
+  max-width: 1280px !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  display: block !important;
 }
 
 .hero-card {
     width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+    max-width: 1280px !important;
 }
 @media (max-width: 1200px){
   .hero{ gap:20px; padding:24px 16px; }
