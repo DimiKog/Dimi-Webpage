@@ -1582,7 +1582,9 @@ picture img{ display:block; max-width:100%; height:auto; }
 }
 
 /* Fix bold visibility */
-b, strong {
-    font-weight: 700;
-    color: var(--text);
+/* Fix bold visibility across all languages and muted contexts */
+b,
+strong {
+  font-weight: 800 !important;
+  color: var(--text) !important;
 }
