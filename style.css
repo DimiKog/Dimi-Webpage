@@ -300,13 +300,11 @@ html[data-lang="gr"] #btn-gr{
 }
 
 /* --- UNIVERSAL HERO ALIGNMENT FIX (FINAL) --- */
-/* Remove full-width alignment from the section and let the inner .container handle it */
+/* Now uses the .container class directly on the section for width/centering */
 section.hero {
   width: 100%;
-  padding-left: 0;
+  padding-left: 0; /* Remove potential conflict, though container handles it */
   padding-right: 0;
-  display: flex; /* Keep display:flex for vertical alignment/centering if needed */
-  justify-content: center;
 }
 
 .hero-card {
