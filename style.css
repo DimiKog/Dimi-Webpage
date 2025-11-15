@@ -1603,3 +1603,20 @@ strong {
     font-weight: 800 !important;
     color: var(--text) !important;
 }
+
+/* Expand hero width beyond container */
+.hero.container {
+  max-width: 1280px !important;
+  width: 100% !important;
+}
+
+/* Ensure hero mission text is bold and in brand color */
+.hero-mission {
+  font-weight: 800 !important;
+  color: var(--brand) !important;
+}
+
+/* Ensure hero photo caption text is bold */
+.hero-photo-caption {
+  font-weight: 800 !important;
+}
