@@ -302,10 +302,13 @@ html[data-lang="gr"] #btn-gr{
 /* Hero */
 /* --- TRUE FIX: center hero section like About --- */
 section.hero {
-  display: flex !important;
-  justify-content: center !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(20px,4vw,40px) !important;
+  padding-right: clamp(20px,4vw,40px) !important;
+  max-width: 1120px !important;
 }
 
 section.hero .hero-card {
@@ -1617,18 +1620,17 @@ strong {
 }
 
 /* FINAL HERO WIDTH OVERRIDE — forces correct centering & width */
-.hero.hero--single.hero--wide {
-  max-width: 1120px !important;      /* match .container exactly */
+ .hero.hero--single.hero--wide {
+  max-width: 1120px !important;
   width: 100% !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: clamp(20px,4vw,40px) !important;  /* match container padding */
-  padding-right: clamp(20px,4vw,40px) !important;
   display: block !important;
 }
 
 .hero.hero--single.hero--wide .hero-card {
-  max-width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+  max-width: 1120px !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
