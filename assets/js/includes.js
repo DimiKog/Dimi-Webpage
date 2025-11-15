@@ -27,10 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (el.tagName === "HEAD") {
             el.insertAdjacentHTML("beforeend", html);
         } else {
-            const tpl = document.createElement("template");
-            tpl.innerHTML = html.trim();
-            el.replaceWith(tpl.content.cloneNode(true));
-            document.body.offsetHeight;
+            el.innerHTML = html;
         }
     }
 
