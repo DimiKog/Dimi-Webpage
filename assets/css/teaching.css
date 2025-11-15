@@ -1,0 +1,184 @@
+/* ------------------------------------------------------ */
+/* TEACHING SECTION — Modern, Structured, Responsive      */
+/* ------------------------------------------------------ */
+
+#teaching {
+  padding-top: 10px;
+}
+
+/* Section title */
+#teaching .section-title {
+  margin-bottom: 24px;
+}
+
+/* Teaching grid */
+.teaching-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 22px;
+  margin-top: 20px;
+}
+
+/* Teaching card */
+.teaching-card {
+  grid-column: span 6;
+  padding: clamp(20px, 2.2vw, 26px);
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--glass), rgba(255,255,255,0.04));
+  box-shadow: var(--shadow);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.teaching-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(92,210,243,.45);
+  box-shadow: 0 14px 32px rgba(5,8,16,.26);
+}
+
+/* -------------------------------------------- */
+/* Header with University Logo                   */
+/* -------------------------------------------- */
+.teach-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.teach-logo {
+  width: 40px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--line);
+  padding: 5px;
+}
+
+/* Course title */
+.teaching-card h3 {
+  font-size: 1.15rem;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+/* Muted course description */
+.teaching-card .muted {
+  font-size: 0.93rem;
+  color: var(--muted);
+  margin: 4px 0 10px;
+}
+
+/* -------------------------------------------- */
+/* Badges: MSc, UniWA, Malta, Focus, Semester    */
+/* -------------------------------------------- */
+
+.teaching-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 6px 0 12px;
+}
+
+.teaching-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.05);
+  color: var(--text);
+}
+
+/* Badge variants */
+.badge-focus {
+  background: linear-gradient(135deg, var(--accent), var(--brand));
+  color: #041018;
+  border: none;
+  font-weight: 700;
+}
+
+.badge-msc   { background:#3949ab; color:#fff; border-color:rgba(0,0,0,.1); }
+.badge-uniwa { background:#00695c; color:#fff; border-color:rgba(0,0,0,.1); }
+.badge-uom   { background:#ad1457; color:#fff; border-color:rgba(0,0,0,.1); }
+
+/* Semester badges */
+.badge-semester {
+  color: #fff;
+  border: none;
+}
+
+.badge-semester[data-semester="spring"] { background: #7c3aed; }
+.badge-semester[data-semester="fall"]   { background: #d97706; }
+
+/* Year badge */
+.badge-year {
+  background: linear-gradient(180deg,var(--glass), rgba(255,255,255,.02));
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+
+/* -------------------------------------------- */
+/* Course bullet list                            */
+/* -------------------------------------------- */
+
+.teaching-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0 0;
+  display: grid;
+  gap: 8px;
+}
+
+.teaching-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.teach-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  color: var(--brand);
+  margin-top: 3px;
+}
+
+/* -------------------------------------------- */
+/* Responsive Behavior                           */
+/* -------------------------------------------- */
+
+@media (max-width: 860px) {
+  .teaching-card {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 600px) {
+  .teaching-grid {
+    gap: 16px;
+  }
+
+  .teaching-card {
+    padding: 16px;
+  }
+
+  .teach-header {
+    gap: 8px;
+  }
+
+  .teach-logo {
+    width: 34px;
+    padding: 4px;
+  }
+
+  .teaching-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .teaching-card .muted {
+    font-size: 0.85rem;
+  }
+}

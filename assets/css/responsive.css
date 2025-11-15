@@ -1,0 +1,199 @@
+/* ------------------------------------------------------ */
+/* RESPONSIVE UTILITIES — Global breakpoints              */
+/* ------------------------------------------------------ */
+
+/* Large tablets & small laptops */
+@media (max-width: 1200px) {
+
+  .container {
+    padding: 20px;
+  }
+
+  .hero {
+    gap: 24px;
+    padding: 32px 20px;
+  }
+
+  .grid {
+    gap: 20px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 980px) {
+
+  /* Header */
+  .hamburger {
+    display: inline-flex;
+  }
+
+  .nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 64px;
+    background: var(--hdr-bg);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 24px;
+    transform: translateY(-130%);
+    opacity: 0;
+    pointer-events: none;
+    border-bottom: 1px solid var(--line);
+    transition: transform .25s ease, opacity .25s ease;
+  }
+
+  .nav.nav--open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav a {
+    padding: 8px 0;
+    margin: 0;
+  }
+
+  /* Grid */
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .tile {
+    grid-column: span 12 !important;
+  }
+
+  /* Hero stack */
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-left {
+    order: 2;
+  }
+
+  .hero-right {
+    order: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Cards */
+  .card {
+    padding: 22px;
+  }
+}
+
+/* Mobile — mid size */
+@media (max-width: 720px) {
+
+  .container {
+    padding: 16px;
+  }
+
+  section {
+    padding: 8px 12px;
+    margin: 28px 0;
+  }
+
+  .grid {
+    gap: 16px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    margin: 10px 0 12px;
+  }
+
+  .tag,
+  .proj-badge {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+/* Mobile — small */
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero .sub {
+    font-size: 16px;
+  }
+
+  .card,
+  .tile {
+    padding: 14px;
+  }
+
+  .contact-card {
+    padding: 16px;
+  }
+
+  .contact-social a svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Publication adjustments */
+  .pub-meta {
+    gap: 6px;
+    margin: 4px 0 6px;
+  }
+  .pub-badge {
+    padding: 2px 8px;
+    font-size: 11.5px;
+  }
+  .doi-link {
+    font-size: 11.5px;
+  }
+
+  /* Teaching badges */
+  .badge-semester,
+  .badge-year {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+}
+
+/* Mobile — very small */
+@media (max-width: 480px) {
+
+  .affil-logo {
+    height: 28px;
+    max-width: 100px;
+  }
+
+  .hero-portrait {
+    width: 140px;
+  }
+
+  .btn {
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+
+  .contact-item a {
+    font-size: 14px;
+  }
+}
+
+/* Reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

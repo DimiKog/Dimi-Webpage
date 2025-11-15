@@ -1,0 +1,171 @@
+/* -------------------------------------------- */
+/* PUBLICATIONS SECTION — Modern, Clean Styling */
+/* -------------------------------------------- */
+
+/* Wrapper */
+#publications {
+  padding-top: 10px;
+}
+
+/* Section title */
+#publications .section-title {
+  margin-bottom: 24px;
+}
+
+/* Timeline structure */
+.timeline {
+  display: grid;
+  gap: 22px;
+}
+
+/* Publication card */
+#publications .card {
+  padding: 20px 22px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--glass), rgba(255,255,255,0.04));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+#publications .card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(92,210,243,.45);
+  box-shadow: 0 12px 32px rgba(5,8,16,.28);
+}
+
+/* Title */
+#publications .card h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Muted metadata (authors, venue, year) */
+#publications .card .muted {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+/* -------------------------------------------- */
+/*         Publication Badges & Metadata        */
+/* -------------------------------------------- */
+
+.pub-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 6px 0 10px;
+}
+
+.pub-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.15);
+}
+
+/* Badge variations */
+.pub-badge.journal { background: #1976d2; }
+.pub-badge.book    { background: #6a1b9a; }
+.pub-badge.conf    { background: #00897b; }
+.pub-badge.chapter { background: #455a64; }
+
+/* Emoji inside badges */
+.pub-badge .pub-emoji {
+  display: inline-block;
+  margin-right: 6px;
+  transform: translateY(1px);
+  line-height: 1;
+}
+
+/* -------------------------------------------- */
+/*                   DOI links                  */
+/* -------------------------------------------- */
+
+.doi-link {
+  font-size: 12.5px;
+  color: var(--brand);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--brand);
+  padding-bottom: 1px;
+}
+
+.doi-link:hover,
+.doi-link:focus {
+  text-decoration: underline;
+  border-bottom-color: transparent;
+}
+
+/* -------------------------------------------- */
+/*         Publication Action Buttons           */
+/* -------------------------------------------- */
+
+.pub-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.pub-actions .btn {
+  flex: 0 0 auto;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+/* -------------------------------------------- */
+/*             Filters (static tags)            */
+/* -------------------------------------------- */
+
+.pub-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0 20px;
+}
+
+.filter-tag {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--tag-bg);
+  border: 1px solid var(--tag-border);
+  color: var(--tag-text);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: default;
+}
+
+/* -------------------------------------------- */
+/*               Mobile Adjustments             */
+/* -------------------------------------------- */
+
+@media (max-width: 640px) {
+  
+  #publications .card {
+    padding: 16px;
+  }
+
+  #publications .card h3 {
+    font-size: 0.97rem;
+  }
+
+  #publications .card .muted {
+    font-size: 0.85rem;
+  }
+
+  .pub-badge {
+    padding: 3px 8px;
+    font-size: 11.5px;
+  }
+
+  .doi-link {
+    font-size: 11.5px;
+  }
+}

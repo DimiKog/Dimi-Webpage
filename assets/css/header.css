@@ -1,0 +1,126 @@
+
+
+/* ---------------------------------------------- */
+/* Header & Navigation CSS                        */
+/* ---------------------------------------------- */
+
+/* Header container */
+.site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  backdrop-filter: blur(12px);
+  background: var(--hdr-bg);
+  border-bottom: 1px solid var(--line);
+  padding: 10px 0;
+  transition: background .25s ease, border-color .25s ease;
+}
+
+/* Content alignment */
+.header-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 40px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.header-logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: var(--text);
+}
+
+.header-logo:hover {
+  opacity: .85;
+}
+
+/* Navigation */
+.nav-links {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 15px;
+  color: var(--nav-link);
+  font-weight: 500;
+  transition: color .2s ease, opacity .2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--brand);
+}
+
+/* Language + Theme container */
+.nav-right {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+/* Language switcher */
+.lang-switch {
+  font-size: 14px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--glass);
+  color: var(--text);
+  border: 1px solid var(--line);
+  transition: background .2s ease, border-color .2s ease;
+}
+.lang-switch:hover {
+  background: var(--tag-bg);
+  border-color: var(--tag-border);
+  color: var(--brand);
+}
+
+/* Theme toggle */
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--glass);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+.theme-toggle:hover {
+  background: var(--tag-bg);
+  border-color: var(--tag-border);
+  color: var(--brand);
+}
+
+/* Mobile nav toggle */
+.nav-toggle {
+  display: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--glass);
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 720px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+}

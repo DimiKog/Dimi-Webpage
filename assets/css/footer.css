@@ -1,0 +1,111 @@
+/* ------------------------------------------------------ */
+/* FOOTER — Clean, unified, responsive                    */
+/* ------------------------------------------------------ */
+
+.site-footer{
+  margin-top:40px;
+  padding:28px 0 36px;
+  border-top:1px solid var(--line);
+  text-align:center;
+  background:linear-gradient(180deg, rgba(255,255,255,.00), rgba(255,255,255,.03));
+}
+
+.footer-label{
+  font-size:.82rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:14px;
+  font-weight:700;
+}
+
+/* Footer affiliations grid */
+.affil-section--footer{
+  margin: 20px auto 0;
+}
+
+.affil-logos--footer{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px,1fr));
+  gap:20px;
+  justify-items:center;
+  align-items:center;
+  padding: 0;
+  margin-top: 10px;
+}
+
+/* Footer logo wrapper */
+.affil-logo-wrapper{
+  background:var(--glass);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:12px 14px;
+  width:100%;
+  max-width:150px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.affil-logo-wrapper img{
+  width:100%;
+  max-height:46px;
+  object-fit:contain;
+  display:block;
+  filter:brightness(1);
+}
+
+.affil-logo-wrapper:hover{
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.06);
+  box-shadow:0 10px 26px rgba(0,0,0,.28);
+}
+
+/* Light theme tuning */
+:root[data-theme="light"] .affil-logo-wrapper{
+  background:rgba(0,0,0,.04);
+  border-color:rgba(0,0,0,.12);
+}
+:root[data-theme="light"] .affil-logo-wrapper img{
+  filter:brightness(.92) contrast(1.05);
+}
+
+/* Footer copyright */
+.site-footer .footer-copy{
+  margin-top:22px;
+  font-size:14px;
+  color:var(--muted);
+  opacity:.9;
+}
+
+/* ------------------------------------------------------ */
+/* Responsive                                              */
+/* ------------------------------------------------------ */
+@media (max-width: 720px){
+  .affil-logos--footer{
+    grid-template-columns: repeat(auto-fit, minmax(110px,1fr));
+    gap:16px;
+  }
+  .affil-logo-wrapper{
+    padding:10px 12px;
+    max-width:130px;
+  }
+  .affil-logo-wrapper img{
+    max-height:40px;
+  }
+}
+
+@media (max-width: 480px){
+  .affil-logos--footer{
+    grid-template-columns: repeat(auto-fit, minmax(95px,1fr));
+    gap:14px;
+  }
+  .affil-logo-wrapper{
+    padding:8px 10px;
+    max-width:110px;
+  }
+  .affil-logo-wrapper img{
+    max-height:34px;
+  }
+}
