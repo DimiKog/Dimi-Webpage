@@ -1,22 +1,20 @@
 (function () {
     const LANG_KEY = 'site_lang';
 
-    function onPartialsReady(cb) {
-        if (document.documentElement.getAttribute('data-partials-ready') === 'true') {
-            cb();
-        } else {
-            document.addEventListener('partials:ready', cb, { once: true });
-        }
-    }
-
-    onPartialsReady(() => {
+    function initPage() {
         updateYear();
         initScrollSpy();
         initLang();
         initTheme();
         initMenu();
         initBackToTop();
-    });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initPage);
+    } else {
+        initPage();
+    }
 
 const langElems = {
             // research: FASTER

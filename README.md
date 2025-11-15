@@ -13,17 +13,14 @@ Welcome! This is the **personal bilingual (EN/GR) static webpage of Dimitris Kog
 - Each entry point defaults to its language (`index.html` → EN, `index-gr.html` → GR), so you can share stable URLs with search engines and users.
 
 ## 🧱 Structure
-- `index.html` (EN) and `index-gr.html` (GR) are lightweight shells that load each section from `partials/*.html` using a tiny include helper (`assets/js/includes.js`), making the page Cloudflare Pages–friendly without a build step. Language buttons swap between the two entry points and also toggle copy in-place.
-- Content edits happen inside the relevant partial (e.g., `partials/about.html`, `partials/research.html`, etc.); simply add a new partial and drop a `<div data-include="partials/your-file.html">` in `index.html` to expand the page.
+- `index.html` (EN) and `index-gr.html` (GR) now contain the full markup for each language; no runtime includes are required.
+- Former partial files live in `assets/partials-en-backup/` and `assets/partials-gr-backup/` for reference — useful if you ever want to re‑modularize.
 - All interactive behaviour (language toggle, theme, menu, scrollspy, back-to-top) lives in `assets/js/site.js`, so you can tweak logic without touching the markup.
 
 ## 📁 Customize
-- Edit the contact information (email, GitHub, etc.) in `partials/contact.html`.
+- Edit the contact information (email, GitHub, etc.) directly inside the relevant section of `index.html` / `index-gr.html` (search for `id="contact"`).
 - Replace `assets/KOGIAS_CV_GR.pdf` with your actual CV file.
 - To use your own photo, swap the avatar block with `<img src="assets/avatar.jpg">`.
-
-## 👀 Preview
-Because the page now fetches modular partials, run any static web server (e.g. `python3 -m http.server 8080` or `npx serve .`) and open `http://localhost:8080` to preview locally.
 
 ## 📈 SEO
 - Edit `robots.txt` and update the Sitemap line with your domain.
