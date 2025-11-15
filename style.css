@@ -323,7 +323,7 @@ html[data-lang="gr"] #btn-gr{
   grid-template-columns: minmax(0,1fr) minmax(0,1fr);
   align-items: center;
   gap: clamp(12px, 1.8vw, 24px);
-  padding: clamp(14px, 2vw, 22px) clamp(12px, 2vw, 18px);
+  padding: clamp(10px, 1.5vw, 16px) clamp(10px, 1.5vw, 14px);
   margin-top: 10px;
 }
 @media (max-width: 1200px){
@@ -355,8 +355,8 @@ html[data-lang="gr"] #btn-gr{
   flex-direction:column;
   align-items:flex-start;
   text-align:left;
-  gap:clamp(12px, 2.6vw, 26px);
-  padding:clamp(36px, 5vw, 56px);
+  gap:clamp(8px, 1.8vw, 18px);
+  padding:clamp(22px, 3vw, 34px);
   align-self:center;
 }
 .hero-card::before{
@@ -495,7 +495,7 @@ h1{ font-size:46px; line-height:1.12; margin:.35rem 0; letter-spacing:-0.3px; }
   gap:12px;
   width:100%;
   max-width:640px;
-  margin:clamp(18px, 2.8vw, 32px) 0 0;
+  margin:clamp(12px, 2vw, 20px) 0 0;
 }
 .hero-subgrid span{
   border:1px solid var(--hero-card-tag-border);
@@ -523,7 +523,7 @@ h1{ font-size:46px; line-height:1.12; margin:.35rem 0; letter-spacing:-0.3px; }
   letter-spacing:.15px;
   color: var(--brand);
   font-weight: 600;
-  margin:0 0 clamp(18px, 2.6vw, 28px);
+  margin:0 0 clamp(12px, 1.8vw, 18px);
 }
 .hero-name{
   font-size:clamp(3.2rem, 6vw, 3.9rem);
@@ -536,7 +536,7 @@ h1{ font-size:46px; line-height:1.12; margin:.35rem 0; letter-spacing:-0.3px; }
   font-size:clamp(1.3rem, 3vw, 1.55rem);
   font-weight:600;
   color:var(--hero-card-sub);
-  margin:0 0 .75rem;
+  margin:0 0 .45rem;
 }
 /* Accent underline for premium look */
 .hero-title::after {
@@ -597,7 +597,7 @@ h1{ font-size:46px; line-height:1.12; margin:.35rem 0; letter-spacing:-0.3px; }
   width:100%;
   max-width:560px;
   justify-content:flex-start;
-  margin:clamp(18px, 2.8vw, 30px) 0 0;
+  margin:clamp(12px, 2vw, 20px) 0 0;
   gap:clamp(18px, 2.8vw, 26px);
 }
 .hero-card .btns .btn{
@@ -1294,7 +1294,7 @@ a.proj-badge:focus-visible {
 
 /* Frame used for the hero portrait image (works on <img> inside <picture>) */
 .hero-portrait{
-  width: clamp(210px, 28vw, 270px);      /* flexible but bounded */
+  width: clamp(180px, 24vw, 230px);      /* flexible but bounded */
   aspect-ratio: 5 / 6;                   /* reserve space to reduce CLS */
   object-fit: cover;
   object-position: 50% 20%;
