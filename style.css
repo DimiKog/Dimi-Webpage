@@ -1588,3 +1588,22 @@ strong {
   font-weight: 800 !important;
   color: var(--text) !important;
 }
+
+/* ------------------------------------------------------------------ */
+/* FIX: Make bold text fully visible in all About cards (EN + GR)     */
+/* Ensures <b> and <strong> override muted/parent colors and spans    */
+/* ------------------------------------------------------------------ */
+
+.about-lead b,
+.about-lead strong,
+.about-lead p b,
+.about-lead p strong,
+.about-lead span b,
+.about-lead span strong,
+.list li b,
+.list li strong,
+.muted b,
+.muted strong {
+    font-weight: 800 !important;
+    color: var(--text) !important;
+}
