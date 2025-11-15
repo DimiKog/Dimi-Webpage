@@ -299,22 +299,22 @@ html[data-lang="gr"] #btn-gr{
   background:var(--text);
 }
 
-/* Hero */
-/* --- TRUE FIX: center hero section like About --- */
+/* --- UNIVERSAL HERO ALIGNMENT FIX (FINAL) --- */
 section.hero {
-  display: block !important;
-  width: 100% !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: clamp(20px,4vw,40px) !important;
-  padding-right: clamp(20px,4vw,40px) !important;
-  max-width: 1120px !important;
+  width: 100%;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(20px, 4vw, 40px);
+  padding-right: clamp(20px, 4vw, 40px);
+  display: block;
 }
 
-section.hero .hero-card {
-  max-width: 1120px !important; /* same as .container */
-  width: 100% !important;
-  margin: 0 auto !important;
+.hero-card {
+  width: 100%;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (max-width: 1200px){
   .hero{ gap:20px; padding:24px 16px; }
@@ -1599,38 +1599,3 @@ strong {
     color: var(--text) !important;
 }
 
-
-/* Expand hero width for wide layout */
-.hero--wide {
-  max-width: 1280px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Ensure hero mission text is bold and in brand color */
-.hero-mission {
-  font-weight: 800 !important;
-  color: var(--brand) !important;
-}
-
-/* Ensure hero photo caption text is bold */
-.hero-photo-caption {
-  font-weight: 800 !important;
-}
-
-/* FINAL HERO WIDTH OVERRIDE — forces correct centering & width */
- .hero.hero--single.hero--wide {
-  max-width: 1120px !important;
-  width: 100% !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  display: block !important;
-}
-
-.hero.hero--single.hero--wide .hero-card {
-  max-width: 1120px !important;
-  width: 100% !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
