@@ -302,21 +302,31 @@ html[data-lang="gr"] #btn-gr{
 /* --- UNIVERSAL HERO ALIGNMENT FIX (FINAL) --- */
 section.hero {
   width: 100%;
-  display: flex; /* Keep for vertical alignment/centering if needed */
-  justify-content: center;
+  display: flex;             /* STEP 1: Enable Flexbox on the parent section */
+  justify-content: center;   /* STEP 1: Center the content horizontally */
+  align-items: center;       /* Center vertically, if needed */
   padding-left: 0;
   padding-right: 0;
 }
+
 .hero-card {
-  /* Ensure the card itself is full width of its container, overriding any default constraints */
   width: 100%;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
-/* Critical Fix: Ensure the inner container of the hero is not shrinking the content unnecessarily */
+
+/* CRITICAL STEP 2: Override default .container padding *only inside* the hero */
 section.hero .container {
-    padding: 0; /* Clear the side padding applied by the .container, allowing the card to span the full 1120px max-width */
+    padding-left: 0;
+    padding-right: 0;
+    /* This next part is tricky. We need the container to shrink to max-width: 1120px 
+       but we can't use .container since we're removing its padding. Let's rely on Flexbox
+       centering from the parent and explicitly setting the dimensions here. */
+    max-width: 1120px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (max-width: 1200px){
