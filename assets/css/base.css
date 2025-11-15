@@ -1,3 +1,7 @@
+/* Partial visibility control */
+[data-include] { opacity: 0; }
+[data-partials-ready="true"] [data-include] { opacity: 1; }
+
 /* ---------------------------------------------- */
 /* Base Styles — resets, typography, global rules */
 /* ---------------------------------------------- */

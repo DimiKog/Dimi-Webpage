@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const tpl = document.createElement("template");
             tpl.innerHTML = html.trim();
             el.replaceWith(tpl.content.cloneNode(true));
+            document.body.offsetHeight;
         }
     }
 

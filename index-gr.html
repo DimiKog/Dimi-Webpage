@@ -2,6 +2,16 @@
 <html lang="el" data-default-lang="gr" data-lang-href-en="index.html" data-lang-href-gr="index-gr.html">
 
 <head>
+    <script src="assets/js/includes.js"></script>
+    <style>
+        [data-include] {
+            opacity: 0;
+        }
+
+        [data-partials-ready="true"] [data-include] {
+            opacity: 1;
+        }
+    </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Δημήτριος Γ. Κόγιας — Ερευνητής σε Blockchain, Web3 & Κυβερνοασφάλεια</title>
@@ -103,7 +113,7 @@
     </main>
     <div data-include="assets/partials-gr/footer.html"></div>
     <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
-    <script defer src="assets/js/includes.js"></script>
+
     <script defer src="assets/js/site.js"></script>
 </body>
 
