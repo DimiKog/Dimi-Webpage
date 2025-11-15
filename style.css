@@ -304,18 +304,10 @@ html[data-lang="gr"] #btn-gr{
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-@keyframes heroGlow{
-  0%{ opacity:.55; transform: scale(1); }
-  100%{ opacity:.95; transform: scale(1.04); }
-}
 @keyframes floatPortrait{
   0%{ transform: translateY(0); }
   50%{ transform: translateY(-6px); }
   100%{ transform: translateY(0); }
-}
-@keyframes statRise{
-  from{ opacity:0; transform: translateY(10px); }
-  to{ opacity:1; transform: translateY(0); }
 }
 .hero{
   position: relative;
@@ -325,6 +317,9 @@ html[data-lang="gr"] #btn-gr{
   gap: clamp(10px, 1.2vw, 20px);
   padding: clamp(6px, 1vw, 12px);
   margin-top: 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (max-width: 1200px){
   .hero{ gap:20px; padding:24px 16px; }
@@ -677,9 +672,6 @@ code{ white-space:normal; word-break:break-word; }
 pre{ white-space:pre-wrap; word-break:break-word; }
 
 /* Restore base grid and tile structure */
-.grid{ display:grid; grid-template-columns:repeat(12,1fr); gap:22px }
-.tile{ grid-column:span 6; padding:clamp(20px, 2.2vw, 26px); overflow:hidden }
-.tile h3{ margin:0 0 8px; font-size:18px }
 
 /* Project action links */
 .actions{ display:flex; flex-wrap:wrap; gap:10px; margin-top:10px }
@@ -775,7 +767,7 @@ pre{ white-space:pre-wrap; word-break:break-word; }
     background: rgba(255,255,255,0.75);
     border-radius: 14px;
     backdrop-filter: blur(6px);
-    font-weight: 600;
+    font-weight: 800;
     font-size: 0.95rem;
     color: #0a0c12;
     box-shadow: 0 4px 14px rgba(0,0,0,0.08);
@@ -791,7 +783,7 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   margin-bottom: 14px;
   max-width: 620px;
   line-height: 1.45;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 /* Mobile adjustments */
@@ -1004,10 +996,6 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 }
 
 /* Adjust hero image scaling */
-.hero .card img{
-  max-width:160px;
-  height:auto;
-}
 
 @media (hover: none){
   .card:hover{ transform:none; box-shadow:var(--shadow); }
