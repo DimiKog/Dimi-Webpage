@@ -766,9 +766,9 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   font-weight:700;
   text-align:center;
   margin-top:6px;
-  color: var(--accent);
+  color: var(--brand);
   letter-spacing:.22px;
-  text-shadow: 0 0 5px rgba(183,156,255,0.28);
+  text-shadow: 0 0 5px rgba(92,210,243,0.28);
 }
 
 /* Hero mission statement */
