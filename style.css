@@ -750,9 +750,23 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   flex:0 0 auto;
 }
 
-/* --- Utilities moved from inline styles --- */
-.hero-aside {
-    text-align: center;
+
+/* Hero Photo Box (unified inside hero-card) */
+.hero-photo-box {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.hero-photo-box picture {
+  display: block;
+}
+
+.hero-photo-box .hero-portrait {
+  max-width: 240px;
 }
 
 .hero-photo-caption {
@@ -794,10 +808,6 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
-  }
-  .hero-aside {
-    order: -1;
-    margin-bottom: 18px;
   }
   .hero-caption {
     color: var(--muted);
