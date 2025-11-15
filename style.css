@@ -1580,3 +1580,9 @@ picture img{ display:block; max-width:100%; height:auto; }
     max-height: 42px;
   }
 }
+
+/* Fix bold visibility */
+b, strong {
+    font-weight: 700;
+    color: var(--text);
+}
