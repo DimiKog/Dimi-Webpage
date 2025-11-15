@@ -300,19 +300,25 @@ html[data-lang="gr"] #btn-gr{
 }
 
 /* --- UNIVERSAL HERO ALIGNMENT FIX (FINAL) --- */
-/* Enforce max width and centering for the Hero, equivalent to what main > section does. */
 section.hero {
-  /* Inherit the container properties to constrain size, but override internal padding for max width */
-  max-width:1120px;
-  margin:0 auto;
-  padding:0; /* Crucial: Remove the internal padding to allow the card to expand */
   width: 100%;
+  display: flex; /* Keep for vertical alignment/centering if needed */
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
 }
-
 .hero-card {
+  /* Ensure the card itself is full width of its container, overriding any default constraints */
   width: 100%;
   max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
+/* Critical Fix: Ensure the inner container of the hero is not shrinking the content unnecessarily */
+section.hero .container {
+    padding: 0; /* Clear the side padding applied by the .container, allowing the card to span the full 1120px max-width */
+}
+
 @media (max-width: 1200px){
   .hero{ gap:20px; padding:24px 16px; }
 }
