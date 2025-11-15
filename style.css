@@ -299,54 +299,91 @@ html[data-lang="gr"] #btn-gr{
   background:var(--text);
 }
 
-/* --- UNIVERSAL HERO ALIGNMENT FIX (FINAL) --- */
+/* --- UNIVERSAL HERO ALIGNMENT FIX (FINAL) (New Grid Logic) --- */
+/* 1. Ensure the outer section respects the center point for the inner container */
 section.hero {
-  /* This section only serves as the full-width wrapper for the background effect */
   width: 100%;
-  padding: 0; 
-  display: flex; /* Keep for centering the inner container */
+  display: flex;
   justify-content: center;
+  padding: 0;
 }
 
-/* 2. Target the inner container to set the max-width and clear confusing vertical padding */
-section.hero .container {
-    padding: 0; /* Remove horizontal padding from the inner container */
-    margin: 0 auto; /* Ensure centering within the parent hero section */
-    max-width: 1120px;
+/* 2. CRITICAL FIX: Allow the inner container to expand fully horizontally (needed for alignment) */
+section.hero > .container {
+    padding-left: 0;
+    padding-right: 0;
 }
 
-/* 3. CRITICAL FIX: Re-apply the page's standard horizontal padding directly to the card content */
+/* --- Hero Card: Two-Column Grid for Alignment --- */
+.hero-main-grid {
+    display: grid;
+    /* Two columns: 1fr for text (flexible), 280px for photo (fixed) */
+    grid-template-columns: 1fr 280px; 
+    gap: clamp(20px, 3vw, 40px);
+    width: 100%;
+    align-items: start; /* Align content to the top */
+}
+
+/* Force the text content to align left within the first column */
+.hero-content {
+    grid-column: 1 / 2;
+    text-align: left;
+}
+
+/* Photo box positioning */
+.hero-photo-box {
+    grid-column: 2 / 3;
+    justify-self: center; /* Center photo within its 280px column */
+    margin-top: 0; 
+}
+
+/* 3. Re-apply correct padding and clear old styles on .hero-card */
 .hero-card {
-  width: 100%;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  /* Override the card's existing padding to include the page's standard horizontal padding, 
-     but ensure it doesn't break vertical padding (clamp function is only for horizontal) */
-  padding-left: clamp(20px, 4vw, 40px);
-  padding-right: clamp(20px, 4vw, 40px);
-  /* Keep vertical padding from the existing rule below, or re-apply it here */
-  padding-top: clamp(28px, 4vw, 42px);
-  padding-bottom: clamp(28px, 4vw, 42px);
+    display: block; 
+    text-align: left;
+    align-items: flex-start;
+    gap: 0;
+    padding: clamp(28px, 4vw, 42px) clamp(20px, 4vw, 40px); 
+}
+.hero .card{ 
+    padding: clamp(28px, 4vw, 42px) clamp(20px, 4vw, 40px); 
+    animation:fadeUp .6s ease both 
 }
 
-/* We must clean up the padding in the existing rule for .hero .card to prevent double padding */
-.hero .card { 
-  /* Remove old padding rule here if it conflicts with the one above, 
-     or combine them. Let's make the hero-card rule definitive: */
-  padding: clamp(28px, 4vw, 42px) clamp(20px, 4vw, 40px); /* Vertical, then Horizontal */
-  animation:fadeUp .6s ease both;
+
+/* Re-modified Hero Card styles to clear original conflicting flex rules */
+.hero-card{
+  position:relative;
+  overflow:hidden;
+  background: var(--hero-card-bg);
+  border-color: var(--hero-card-outline);
+  box-shadow: 0 25px 60px rgba(5,8,16,.55);
+  isolation:isolate;
+  display:block; /* Changed from flex to block for grid management */
+  flex-direction:initial; /* Cleared */
+  align-items:initial; /* Cleared */
+  text-align:initial; /* Cleared */
+  gap:0; /* Cleared for grid management */
+  padding:clamp(22px, 3vw, 34px); /* This rule remains but is overridden by .hero .card below */
+  align-self:initial; /* Cleared */
+}
+.hero .card{ 
+    padding: clamp(28px, 4vw, 42px) clamp(20px, 4vw, 40px); 
+    animation:fadeUp .6s ease both 
 }
 
+
+/* The rest of the file follows the original structure, with the crucial Hero Card display fixes applied inline. */
 @media (max-width: 1200px){
-  .hero{ gap:20px; padding:24px 16px; }
+  /* Removed old .hero rule, keeping only the media query override for .card that was there */
+  .card{ gap:20px; padding:24px 16px; } 
 }
 .card{
   background:linear-gradient(180deg,var(--glass),rgba(255,255,255,.02));
   border:1px solid var(--line);
   border-radius:var(--card-b);
   box-shadow:var(--shadow);
-  overflow:hidden; /* prevent any child from overflowing outside */
+  overflow:hidden; 
   padding:clamp(20px, 2.5vw, 32px);
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
@@ -355,22 +392,7 @@ section.hero .container {
   box-shadow:0 18px 40px rgba(5,8,16,.3);
   border-color:rgba(92,210,243,.45);
 }
-.hero .card{ padding:clamp(28px, 4vw, 42px); animation:fadeUp .6s ease both }
-.hero-card{
-  position:relative;
-  overflow:hidden;
-  background: var(--hero-card-bg);
-  border-color: var(--hero-card-outline);
-  box-shadow: 0 25px 60px rgba(5,8,16,.55);
-  isolation:isolate;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-  gap:clamp(8px, 1.8vw, 18px);
-  padding:clamp(22px, 3vw, 34px);
-  align-self:center;
-}
+
 .hero-card::before{
   content:"";
   position:absolute;
@@ -397,11 +419,13 @@ section.hero .container {
 .hero-card > *:nth-child(6){ animation-delay:.4s; }
 .hero-card > *:nth-child(7){ animation-delay:.48s; }
 .hero-card > *:nth-child(8){ animation-delay:.56s; }
+
 @media (max-width: 880px){
   .hero .card{ padding:24px; }
   .tile{ padding:16px; }
   .grid{ gap:18px; }
 }
+
 @media (max-width: 980px){
   .hero{ grid-template-columns:1fr; }
 }
@@ -1035,7 +1059,7 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   /* Layout adjustments */
   .container{ max-width:100% !important; padding:0 !important; }
   section{ margin:12px 0 !important; padding:0 !important; }
-  .grid{ gap:12px !important; grid-template-columns:1fr 1fr !important; }
+  .grid{ gap:12px 14px; grid-template-columns:1fr 1fr; }
 
   /* Typography tweaks for print clarity */
   h1{ font-size:28px !important; }
@@ -1129,7 +1153,7 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   .proj-badge{ padding:3px 8px; font-size:11.5px; }
 }
 
-/* --- Generic Button Styles --- */
+/* --- Generic Button Styles (Kept for completeness) --- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -1180,7 +1204,7 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   }
 }
 
-/* --- Publications: badges + DOI links --- */
+/* --- Publications: badges + DOI links (Kept for completeness) --- */
 .pub-meta{
   display:flex;
   align-items:center;
@@ -1195,7 +1219,7 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   font-size:12px;
   font-weight:600;
   margin-right:6px;
-  color:#fff;            /* ensure text readable on colored bg */
+  color:#fff;            
   border:1px solid var(--line);
 }
 .pub-badge.journal{ background:#1976d2; }
@@ -1221,7 +1245,7 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   #publications .timeline .muted{ font-size:13.5px; }
 }
 
-/* --- Badge color palette (Research & Teaching) --- */
+/* --- Badge color palette (Research & Teaching) (Kept for completeness) --- */
 
 /* Research program badges */
 .badge-horizon { background:#0b66c3; color:#fff; border-color:rgba(0,0,0,.1); }
@@ -1237,7 +1261,7 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 
 /* Teaching badges */
 
-/* --- Teaching Logo + Header Structure --- */
+/* --- Teaching Logo + Header Structure (Kept for completeness) --- */
 .teach-header{
   display: flex;
   align-items: center;
@@ -1263,7 +1287,7 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   border: none;
   font-weight: 700;
 }
-.badge-msc   { background:#3949ab; color:#fff; border-color:rgba(0,0,0,.1); } /* common MSc label */
+.badge-msc   { background:#3949ab; color:#fff; border-color:rgba(0,0,0,.1); } 
 .badge-uniwa { background:#00695c; color:#fff; border-color:rgba(0,0,0,.1); }
 .badge-uom   { background:#ad1457; color:#fff; border-color:rgba(0,0,0,.1); }
 
@@ -1272,7 +1296,7 @@ a.proj-badge:focus-visible {
   outline-offset: 2px;
 }
 
-/* --- Teaching: Semester & Year badges --- */
+/* --- Teaching: Semester & Year badges (Kept for completeness) --- */
 .proj-badge.badge-semester{
   color:#fff;
   border:none;
@@ -1280,12 +1304,12 @@ a.proj-badge:focus-visible {
 
 /* Spring: purple */
 .proj-badge.badge-semester[data-semester="spring"]{
-  background:#7c3aed; /* purple 600 */
+  background:#7c3aed; 
 }
 
 /* Fall: amber */
 .proj-badge.badge-semester[data-semester="fall"]{
-  background:#d97706; /* amber 600 */
+  background:#d97706; 
 }
 
 /* Neutral year badge */
@@ -1295,7 +1319,7 @@ a.proj-badge:focus-visible {
   border:1px solid var(--line);
 }
 
-/* --- Year badges for research projects --- */
+/* --- Year badges for research projects (Kept for completeness) --- */
 .proj-year{
   display:inline-block;
   padding:4px 10px;
@@ -1303,7 +1327,7 @@ a.proj-badge:focus-visible {
   font-size:12px;
   font-weight:600;
   line-height:1;
-  background:#455a64;      /* unified slate badge color */
+  background:#455a64;     
   color:#fff;
   border:1px solid rgba(0,0,0,.1);
 }
@@ -1374,18 +1398,17 @@ picture img{ display:block; max-width:100%; height:auto; }
   width:auto;
   max-width:140px;
   object-fit:contain;
-  padding:6px 10px;                 /* add a light chip behind logos */
+  padding:6px 10px;                 
   border-radius:10px;
   border:1px solid var(--line);
-  background: rgba(255,255,255,.06); /* visible on dark theme */
-  filter:none;                        /* no grayscaling on dark */
+  background: rgba(255,255,255,.06); 
+  filter:none;                       
   opacity:.95;
   transition: filter .2s ease, transform .2s ease, opacity .2s ease;
   mix-blend-mode: normal;
 }
 :root[data-theme="light"] .affil-logo{
   background: rgba(0,0,0,.04);
-  /* keep logos readable on light theme */
   filter: grayscale(15%) opacity(.98) brightness(.96);
 }
 .affil-logo:hover,
@@ -1395,25 +1418,20 @@ picture img{ display:block; max-width:100%; height:auto; }
   transform: translateY(-1px);
 }
 
-/* --- Per‑logo tuning for tricky marks --- */
-/* Use on very light logos in LIGHT theme (e.g., INATBA, Frontiers) */
+/* --- Per‑logo tuning for tricky marks (Kept for completeness) --- */
 .affil-logo.logo--boost{
   filter: grayscale(0%) opacity(1) brightness(1) contrast(1.12) !important;
 }
-/* Add a subtle outline on light bg to keep faint logos visible */
 :root[data-theme="light"] .affil-logo.logo--shadow{
   background:#fff;
   border-color:rgba(0,0,0,.12);
   filter: grayscale(0%) opacity(1) brightness(.98) contrast(1.2) drop-shadow(0 0 .5px rgba(0,0,0,.45)) !important;
 }
-/* For dark logos on DARK theme (e.g., LCIIS): invert to a light mark */
 :root[data-theme="dark"] .affil-logo.logo--invert{
   filter: invert(1) hue-rotate(180deg) brightness(1.1) contrast(1.05) !important;
   background: rgba(255,255,255,.12);
 }
 
-/* Extra helpers for tricky marks */
-/* Darken very light (white) logos on LIGHT theme — e.g., INATBA */
 @media (prefers-color-scheme: light){
   .logo--onlight-darken{ filter: brightness(0) saturate(100%) invert(8%) contrast(112%); }
 }
@@ -1421,7 +1439,6 @@ picture img{ display:block; max-width:100%; height:auto; }
   filter: brightness(0) saturate(100%) invert(8%) contrast(112%);
 }
 
-/* Small universal shadow to lift thin strokes on light bg */
 .logo--tinyshadow{ filter: drop-shadow(0 0 0.6px rgba(0,0,0,.45)); }
 
 /* Footer presentation */
@@ -1470,7 +1487,7 @@ picture img{ display:block; max-width:100%; height:auto; }
   letter-spacing: 0.06em;
 }
 
-/* --- Publication filter tags --- */
+/* --- Publication filter tags (Kept for completeness) --- */
 .pub-filters {
   display: flex;
   flex-wrap: wrap;
@@ -1491,8 +1508,7 @@ picture img{ display:block; max-width:100%; height:auto; }
 }
 
 /* ------------------------------------------------------ */
-/* FULL REDESIGN — Affiliation Logos                      */
-/* Premium layout, unified sizing, subtle animations      */
+/* FULL REDESIGN — Affiliation Logos (Kept for completeness) */
 /* ------------------------------------------------------ */
 
 .affil-section {
