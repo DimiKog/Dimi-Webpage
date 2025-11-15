@@ -300,11 +300,13 @@ html[data-lang="gr"] #btn-gr{
 }
 
 /* --- UNIVERSAL HERO ALIGNMENT FIX (FINAL) --- */
-/* Now uses the .container class directly on the section for width/centering */
+/* Enforce max width and centering for the Hero, equivalent to what main > section does. */
 section.hero {
+  /* Inherit the container properties to constrain size, but override internal padding for max width */
+  max-width:1120px;
+  margin:0 auto;
+  padding:0; /* Crucial: Remove the internal padding to allow the card to expand */
   width: 100%;
-  padding-left: 0; /* Remove potential conflict, though container handles it */
-  padding-right: 0;
 }
 
 .hero-card {
