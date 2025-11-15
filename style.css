@@ -300,35 +300,18 @@ html[data-lang="gr"] #btn-gr{
 }
 
 /* Hero */
-@keyframes fadeUp{
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes floatPortrait{
-  0%{ transform: translateY(0); }
-  50%{ transform: translateY(-6px); }
-  100%{ transform: translateY(0); }
-}
-/* HERO alignment fix — sync with About section */
- .hero,
-.hero--single,
-.hero.hero--single,
-.hero.hero--single.hero--wide {
-  max-width: 1280px !important;
-  width: 100% !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 2rem !important;
-  padding-right: 2rem !important;
-  display: block !important;
+/* --- TRUE FIX: center hero section like About --- */
+section.hero {
+  display: flex !important;
+  justify-content: center !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-.hero-card {
-    width: 100%;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 100% !important;
-    max-width: 1280px !important;
+section.hero .hero-card {
+  max-width: 1120px !important; /* same as .container */
+  width: 100% !important;
+  margin: 0 auto !important;
 }
 @media (max-width: 1200px){
   .hero{ gap:20px; padding:24px 16px; }
