@@ -1624,3 +1624,13 @@ strong {
 .hero-photo-caption {
   font-weight: 800 !important;
 }
+
+/* FINAL HERO WIDTH OVERRIDE — forces correct centering & width */
+.hero.hero--single.hero--wide {
+  max-width: 1280px !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
