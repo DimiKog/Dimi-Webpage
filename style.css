@@ -302,17 +302,15 @@ html[data-lang="gr"] #btn-gr{
 /* --- UNIVERSAL HERO ALIGNMENT FIX (FINAL) --- */
 section.hero {
   width: 100%;
-  max-width: 1120px;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  justify-content: center;
   padding-left: clamp(20px, 4vw, 40px);
   padding-right: clamp(20px, 4vw, 40px);
-  display: block;
 }
 
 .hero-card {
   width: 100%;
-  max-width: 1120px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
