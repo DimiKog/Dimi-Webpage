@@ -1618,10 +1618,17 @@ strong {
 
 /* FINAL HERO WIDTH OVERRIDE — forces correct centering & width */
 .hero.hero--single.hero--wide {
-  max-width: 1280px !important;
+  max-width: 1120px !important;      /* match .container exactly */
   width: 100% !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: 2rem !important;
-  padding-right: 2rem !important;
+  padding-left: clamp(20px,4vw,40px) !important;  /* match container padding */
+  padding-right: clamp(20px,4vw,40px) !important;
+  display: block !important;
+}
+
+.hero.hero--single.hero--wide .hero-card {
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
