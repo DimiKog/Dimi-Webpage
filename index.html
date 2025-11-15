@@ -6,17 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dimitris G. Kogias — Blockchain, Web3 & Cybersecurity Researcher & Educator</title>
 
-    <script src="assets/js/includes.js"></script>
-    <style>
-        [data-include] {
-            opacity: 0;
-        }
-
-        [data-partials-ready="true"] [data-include] {
-            opacity: 1;
-        }
-    </style>
-
     <!-- Meta Description -->
     <meta name="description"
         content="Personal homepage of Dimitris G. Kogias — Blockchain, Web3 & Cybersecurity Researcher & Educator.">
@@ -113,17 +102,143 @@
 
 <body>
     <a href="#about" class="sr-only-focusable">Skip to content</a>
-    <div data-include="assets/partials-en/header.html"></div>
-    <div data-include="assets/partials-en/hero.html"></div>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="Homepage">
+                <img src="assets/Dimi_favicon.png" alt="Dimitris G. Kogias logo" width="48" height="48" />
+            </a>
+            <nav class="main-navigation" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#teaching">Teaching</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero container">
+        <div class="hero-text">
+            <h1>Welcome to the Official Site of Dimitris G. Kogias</h1>
+            <p>Your gateway to insights on Blockchain, Web3, and Cybersecurity research and education.</p>
+            <nav class="hero-social">
+                <a href="https://github.com/DimiKog" aria-label="GitHub Profile">GitHub</a>
+                <a href="https://www.linkedin.com/in/dimitris-kogias-b376222a/"
+                    aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=VY5yMDYAAAAJ"
+                    aria-label="Google Scholar Profile">Scholar</a>
+            </nav>
+        </div>
+        <div class="hero-image">
+            <img src="assets/DimiKog.webp" alt="Portrait of Dimitris G. Kogias" width="240" height="240" />
+        </div>
+    </section>
+
     <main class="container" id="main-content">
-        <div data-include="assets/partials-en/about.html"></div>
-        <div data-include="assets/partials-en/research.html"></div>
-        <div data-include="assets/partials-en/portfolio.html"></div>
-        <div data-include="assets/partials-en/publications.html"></div>
-        <div data-include="assets/partials-en/teaching.html"></div>
-        <div data-include="assets/partials-en/contact.html"></div>
+
+        <section id="about">
+            <h2>About Dimitris</h2>
+            <p>Greetings! I am Dimitris G. Kogias, a dedicated scholar and instructor specializing in blockchain
+                technology, Web3 innovations, and cybersecurity. My academic journey is enriched by my roles at the
+                University of West Attica and the University of Malta, where I engage in groundbreaking research and
+                inspire future leaders in these dynamic fields.</p>
+            <p>Driven by a deep interest in distributed systems, my work explores the transformative potential of
+                decentralized applications and secure digital frameworks. I am passionate about cultivating a
+                collaborative environment that promotes learning, innovation, and the advancement of technology.</p>
+        </section>
+
+        <section id="research-projects">
+            <h2>Highlighted Research Initiatives</h2>
+            <ul>
+                <li><strong>Decentralized Identity Systems:</strong> Crafting blockchain-based solutions that ensure
+                    privacy and security in digital identities.</li>
+                <li><strong>Smart Contract Vulnerability Analysis:</strong> Investigating security flaws in Ethereum
+                    smart contracts and developing countermeasures.</li>
+                <li><strong>Performance Optimization for DApps:</strong> Creating scalable and efficient architectures
+                    for decentralized applications.</li>
+            </ul>
+        </section>
+
+        <section id="portfolio">
+            <h2>Development Portfolio</h2>
+            <p>Explore a curated selection of projects that reflect my technical skills and research interests:</p>
+            <ul>
+                <li><a href="https://github.com/DimiKog/smart-contracts" target="_blank" rel="noopener">Smart Contracts
+                        Repository</a>: A collection of rigorously audited smart contracts ensuring security and
+                    reliability.</li>
+                <li><a href="https://dimikog.org/projects/blockchain-protocols" target="_blank"
+                        rel="noopener">Blockchain Protocols</a>: Research and experimental implementations of innovative
+                    consensus algorithms.</li>
+                <li><a href="https://dimikog.org/projects/web3-tools" target="_blank" rel="noopener">Web3 Developer
+                        Tools</a>: A suite of utilities and libraries designed to streamline decentralized application
+                    development.</li>
+            </ul>
+        </section>
+
+        <section id="publications">
+            <h2>Key Publications</h2>
+            <ol>
+                <li><a href="https://doi.org/10.1007/s12394-020-00304-0" target="_blank" rel="noopener">Security
+                        Analysis of Ethereum Smart Contracts</a> – Journal of Computer Security, 2020.</li>
+                <li><a href="https://arxiv.org/abs/2103.00000" target="_blank" rel="noopener">Decentralized Identity:
+                        Challenges and Opportunities</a> – arXiv preprint, 2021.</li>
+                <li><a href="https://doi.org/10.1109/Blockchain.2019.00012" target="_blank" rel="noopener">Scalable
+                        Architectures for DApps</a> – IEEE Blockchain Conference, 2019.</li>
+            </ol>
+        </section>
+
+        <section id="teaching">
+            <h2>Courses & Teaching Philosophy</h2>
+            <p>I offer a range of courses designed to equip students with comprehensive knowledge and practical skills
+                in blockchain and cybersecurity:</p>
+            <ul>
+                <li><strong>Blockchain Fundamentals:</strong> A foundational course covering the principles and
+                    applications of blockchain technology.</li>
+                <li><strong>Web3 Development:</strong> Hands-on training in building decentralized applications using
+                    contemporary Web3 frameworks and tools.</li>
+                <li><strong>Cybersecurity Best Practices:</strong> Instruction on protecting digital assets and
+                    infrastructures through effective security strategies.</li>
+            </ul>
+            <p>My instructional approach integrates theoretical concepts with experiential learning to foster deep
+                understanding and real-world application.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <img src="assets/DimiKog_avatar.webp" alt="Avatar of Dimitris G. Kogias" width="120" height="120"
+                    class="contact-avatar" />
+                <p>Feel free to reach out for collaborations, speaking engagements, or research inquiries.</p>
+                <address>
+                    <a href="mailto:contact@dimikog.org">contact@dimikog.org</a>
+                </address>
+                <div class="contact-social">
+                    <a href="https://github.com/DimiKog" aria-label="GitHub Profile">GitHub</a> |
+                    <a href="https://www.linkedin.com/in/dimitris-kogias-b376222a/"
+                        aria-label="LinkedIn Profile">LinkedIn</a> |
+                    <a href="https://scholar.google.com/citations?user=VY5yMDYAAAAJ"
+                        aria-label="Google Scholar Profile">Scholar</a>
+                </div>
+            </div>
+        </section>
     </main>
-    <div data-include="assets/partials-en/footer.html"></div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Dimitris G. Kogias. All rights reserved.</p>
+            <nav class="footer-navigation" aria-label="Footer navigation">
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Use</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
     <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
     <script defer src="assets/js/site.js"></script>
 </body>
