@@ -300,19 +300,18 @@ html[data-lang="gr"] #btn-gr{
 }
 
 /* --- UNIVERSAL HERO ALIGNMENT FIX (FINAL) --- */
+/* Remove full-width alignment from the section and let the inner .container handle it */
 section.hero {
   width: 100%;
-  display: flex;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex; /* Keep display:flex for vertical alignment/centering if needed */
   justify-content: center;
-  padding-left: clamp(20px, 4vw, 40px);
-  padding-right: clamp(20px, 4vw, 40px);
 }
 
 .hero-card {
   width: 100%;
   max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 }
 @media (max-width: 1200px){
   .hero{ gap:20px; padding:24px 16px; }
