@@ -322,8 +322,8 @@ html[data-lang="gr"] #btn-gr{
   display: grid;
   grid-template-columns: minmax(0,1fr) minmax(0,1fr);
   align-items: center;
-  gap: clamp(16px, 2.4vw, 32px);
-  padding: clamp(20px, 3vw, 34px) clamp(16px, 3vw, 24px);
+  gap: clamp(12px, 1.8vw, 24px);
+  padding: clamp(14px, 2vw, 22px) clamp(12px, 2vw, 18px);
   margin-top: 10px;
 }
 @media (max-width: 1200px){
@@ -521,7 +521,8 @@ h1{ font-size:46px; line-height:1.12; margin:.35rem 0; letter-spacing:-0.3px; }
 .hero-intro{
   font-size:clamp(1.05rem, 2.6vw, 1.3rem);
   letter-spacing:.15px;
-  color:var(--hero-card-text);
+  color: var(--brand);
+  font-weight: 600;
   margin:0 0 clamp(18px, 2.6vw, 28px);
 }
 .hero-name{
@@ -536,6 +537,16 @@ h1{ font-size:46px; line-height:1.12; margin:.35rem 0; letter-spacing:-0.3px; }
   font-weight:600;
   color:var(--hero-card-sub);
   margin:0 0 .75rem;
+}
+/* Accent underline for premium look */
+.hero-title::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  background: var(--accent);
+  margin-top: 10px;
+  border-radius: 999px;
 }
 .hero-card .sub{
   color: var(--hero-card-sub);
@@ -1283,7 +1294,7 @@ a.proj-badge:focus-visible {
 
 /* Frame used for the hero portrait image (works on <img> inside <picture>) */
 .hero-portrait{
-  width: clamp(190px, 26vw, 240px);      /* flexible but bounded */
+  width: clamp(210px, 28vw, 270px);      /* flexible but bounded */
   aspect-ratio: 5 / 6;                   /* reserve space to reduce CLS */
   object-fit: cover;
   object-position: 50% 20%;
