@@ -84,23 +84,6 @@ p, li {
   hyphens: auto;
 }
 
-/* Generic section layout restoration */
-section {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 80px 20px;
-}
-
-.section-block {
-  margin-bottom: 48px;
-}
-
-.section-title {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 24px;
-}
 
 /* Typography helpers */
 p, li {
