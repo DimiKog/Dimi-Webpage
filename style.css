@@ -1604,10 +1604,13 @@ strong {
     color: var(--text) !important;
 }
 
-/* Expand hero width beyond container */
-.hero.container {
-  max-width: 1280px !important;
-  width: 100% !important;
+
+/* Expand hero width for wide layout */
+.hero--wide {
+  max-width: 1280px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Ensure hero mission text is bold and in brand color */
