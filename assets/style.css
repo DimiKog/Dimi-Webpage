@@ -787,110 +787,73 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 .checklist li{ display:flex; align-items:flex-start; gap:8px; }
 .icon-check{ width:16px; height:16px; color:var(--ok); flex:0 0 auto; margin-top:3px; }
 .icon-check svg{ display:block; width:100%; height:100%; }
-/* --- About Section Polish (Option C) --- */
-.about-card{
-  padding: 4px 0;
-}
-
-.about-lead{
-  min-height: 115px;
-  padding: 16px 18px;
-  border-radius: 20px;
-  border: 1px solid var(--line);
-  background: linear-gradient(160deg, rgba(92,210,243,.10), rgba(183,156,255,.06));
-}
-
-.about-list li{
-  padding: 14px 16px;
-  border-radius: 16px;
-  border: 1px solid var(--line);
-  background: linear-gradient(180deg, var(--glass), rgba(255,255,255,.03));
-}
-
-/* Subheading spacing consistency */
-.about-subheading{
-  margin: 30px 0 12px;
-  font-weight: 800;
-  letter-spacing: .065em;
-}
-
-/* Equalize card heights where text wraps more (GR version fix) */
-.about-leads .about-lead{
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-/* Improve grid stability */
-.about-leads{
-  gap: 20px;
-}
-
-.about-list{
-  gap: 20px;
-}
-
-/* Subtle hover polish */
-.about-lead:hover,
-.about-list li:hover{
-  transform: translateY(-2px);
-  transition: transform .22s ease, box-shadow .22s ease;
-  box-shadow: 0 10px 28px rgba(5,8,16,.25);
-  border-color: rgba(92,210,243,.45);
-}
 .about-card{
   display:flex;
   flex-direction:column;
   gap:20px;
 }
+
+.about-subheading{
+  margin:32px 0 14px;
+  font-size:0.95rem;
+  font-weight:800;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
 .about-leads{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
-  gap:16px;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+  gap:22px 26px;
+  align-items:start;
 }
+
 .about-lead{
   display:flex;
-  gap:12px;
-  padding:14px 16px;
-  border-radius:18px;
+  flex-direction:row;
+  align-items:flex-start;
+  gap:14px;
+  padding:16px 18px;
+  min-height:120px;
+  border-radius:20px;
   border:1px solid var(--line);
-  background:linear-gradient(140deg, rgba(92,210,243,.12), rgba(183,156,255,.08));
+  background:linear-gradient(160deg, rgba(92,210,243,.10), rgba(183,156,255,.06));
   box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
-  animation: fadeUp .6s ease both;
 }
-.about-lead:nth-of-type(2){
-  animation-delay:.1s;
-}
-.about-lead p{
-  margin:0;
-}
-.about-emoji{
-  font-size:1.4rem;
-  line-height:1;
-}
+
 .about-list{
-  grid-template-columns:repeat(auto-fit, minmax(320px,1fr));
-  gap:18px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+  gap:20px;
+  padding-left:0;
+  margin-top:14px;
 }
+
 .about-list li{
+  padding:14px 16px;
+  border-radius:16px;
   border:1px solid var(--line);
-  border-radius:14px;
-  padding:12px;
-  background:linear-gradient(180deg,var(--glass),rgba(255,255,255,.02));
+  background:linear-gradient(180deg,var(--glass),rgba(255,255,255,.03));
   box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
 }
-.about-logos-label{
-  font-size:.85rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  color:var(--muted);
-  margin:6px 0;
+
+.affil-logos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
+  gap:22px;
+  padding-top:14px;
+  padding-bottom:14px;
+  justify-items:center;
+  align-items:center;
 }
-@media (max-width: 720px){
-  .about-leads{ grid-template-columns:1fr; }
-}
-@media (max-width: 600px){
-  .about-list{ grid-template-columns:1fr; }
+
+.affil-logo-wrapper img{
+  width:100%;
+  max-height:52px;
+  object-fit:contain;
+  display:block;
+  filter:brightness(1);
 }
 
 /* Align icon + text nicely inside contact items */
