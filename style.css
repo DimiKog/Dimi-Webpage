@@ -301,32 +301,41 @@ html[data-lang="gr"] #btn-gr{
 
 /* --- UNIVERSAL HERO ALIGNMENT FIX (FINAL) --- */
 section.hero {
+  /* This section only serves as the full-width wrapper for the background effect */
   width: 100%;
-  display: flex;             /* STEP 1: Enable Flexbox on the parent section */
-  justify-content: center;   /* STEP 1: Center the content horizontally */
-  align-items: center;       /* Center vertically, if needed */
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0; 
+  display: flex; /* Keep for centering the inner container */
+  justify-content: center;
 }
 
+/* 2. Target the inner container to set the max-width and clear confusing vertical padding */
+section.hero .container {
+    padding: 0; /* Remove horizontal padding from the inner container */
+    margin: 0 auto; /* Ensure centering within the parent hero section */
+    max-width: 1120px;
+}
+
+/* 3. CRITICAL FIX: Re-apply the page's standard horizontal padding directly to the card content */
 .hero-card {
   width: 100%;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  /* Override the card's existing padding to include the page's standard horizontal padding, 
+     but ensure it doesn't break vertical padding (clamp function is only for horizontal) */
+  padding-left: clamp(20px, 4vw, 40px);
+  padding-right: clamp(20px, 4vw, 40px);
+  /* Keep vertical padding from the existing rule below, or re-apply it here */
+  padding-top: clamp(28px, 4vw, 42px);
+  padding-bottom: clamp(28px, 4vw, 42px);
 }
 
-/* CRITICAL STEP 2: Override default .container padding *only inside* the hero */
-section.hero .container {
-    padding-left: 0;
-    padding-right: 0;
-    /* This next part is tricky. We need the container to shrink to max-width: 1120px 
-       but we can't use .container since we're removing its padding. Let's rely on Flexbox
-       centering from the parent and explicitly setting the dimensions here. */
-    max-width: 1120px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+/* We must clean up the padding in the existing rule for .hero .card to prevent double padding */
+.hero .card { 
+  /* Remove old padding rule here if it conflicts with the one above, 
+     or combine them. Let's make the hero-card rule definitive: */
+  padding: clamp(28px, 4vw, 42px) clamp(20px, 4vw, 40px); /* Vertical, then Horizontal */
+  animation:fadeUp .6s ease both;
 }
 
 @media (max-width: 1200px){
