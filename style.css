@@ -331,10 +331,6 @@ section.hero > .container {
 }
 
 /* Photo box positioning */
-.hero-photo-box {
-    grid-column: 2 / 3;
-    justify-self: center;
-}
 
 /* Unified and corrected .hero-photo-box definition */
 .hero-photo-box {
@@ -349,13 +345,6 @@ section.hero > .container {
 }
 
 /* 3. Re-apply correct padding and clear old styles on .hero-card */
-.hero-card {
-    display: block; 
-    text-align: left;
-    align-items: flex-start;
-    gap: 0;
-    padding: clamp(28px, 4vw, 42px) clamp(20px, 4vw, 40px); 
-}
 
 
 /* Re-modified Hero Card styles to clear original conflicting flex rules */
