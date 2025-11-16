@@ -318,16 +318,26 @@ html[data-lang="gr"] #btn-gr{
 }
 
 .hero-section .hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 300px;
+  display: flex;
+  flex-wrap: wrap;
   gap: 48px;
-  align-items: start;
+  align-items: flex-start;
+}
+
+@supports (display: grid) {
+  .hero-section .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(220px, 26vw, 320px);
+    align-items: start;
+  }
 }
 
 .hero-section .hero-left {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  flex: 1 1 420px;
+  min-width: min(100%, 320px);
 }
 
 .hero-section .hero-card {
@@ -393,20 +403,9 @@ html[data-lang="gr"] #btn-gr{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
-  flex-shrink: 0;
-}
-
-@media (min-width: 881px) {
-  .hero-section .hero-left {
-    grid-column: 1;
-  }
-
-  .hero-section .hero-right {
-    grid-column: 2;
-    grid-row: 1;
-    justify-self: center;
-  }
+  width: clamp(240px, 24vw, 320px);
+  flex: 0 0 clamp(240px, 24vw, 320px);
+  justify-self: center;
 }
 
 .hero-section .hero-photo-frame {
@@ -436,9 +435,12 @@ html[data-lang="gr"] #btn-gr{
   .hero-section .hero-grid {
     grid-template-columns: 1fr;
     text-align: center;
+    justify-content: center;
   }
   .hero-section .hero-right {
     margin-top: 26px;
+    width: min(100%, 260px);
+    flex: 0 0 auto;
   }
   .hero-section .hero-card {
     padding: 22px;
