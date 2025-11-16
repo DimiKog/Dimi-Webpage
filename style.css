@@ -316,7 +316,7 @@ section.hero > .container {
 
 /* --- Hero Card: Two-Column Grid for Alignment --- */
 .hero-main-grid {
-    display: grid;
+    display: grid !important; /* Override any conflicting flex styles */
     /* Two columns: 1fr for text (flexible), 280px for photo (fixed) */
     grid-template-columns: 1fr 280px; 
     gap: clamp(20px, 3vw, 40px);
@@ -344,10 +344,6 @@ section.hero > .container {
     align-items: flex-start;
     gap: 0;
     padding: clamp(28px, 4vw, 42px) clamp(20px, 4vw, 40px); 
-}
-.hero .card{ 
-    padding: clamp(28px, 4vw, 42px) clamp(20px, 4vw, 40px); 
-    animation:fadeUp .6s ease both 
 }
 
 
