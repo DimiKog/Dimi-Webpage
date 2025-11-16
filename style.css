@@ -317,7 +317,7 @@ section.hero > .container {
 /* --- Hero Card: Two-Column Grid for Alignment --- */
 .hero-main-grid {
     display: grid !important; /* FORCING GRID LAYOUT */
-    grid-template-columns: minmax(520px, 1fr) minmax(260px, 320px) !important;
+    grid-template-columns: minmax(500px, 1fr) minmax(240px, 300px) !important;
     gap: clamp(20px, 3vw, 40px);
     width: 100%;
     align-items: start; /* Align content to the top */
@@ -327,7 +327,7 @@ section.hero > .container {
 .hero-content {
     grid-column: 1 / 2;
     text-align: left;
-    max-width: 720px;
+    max-width: 700px;
 }
 
 /* Photo box positioning */
@@ -788,7 +788,7 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 }
 
 .hero-photo-box .hero-portrait {
-  max-width: 240px;
+  max-width: 230px;
 }
 
 .hero-photo-caption {
@@ -1328,7 +1328,7 @@ a.proj-badge:focus-visible {
 
 /* Frame used for the hero portrait image (works on <img> inside <picture>) */
 .hero-portrait{
-  width: clamp(200px, 24vw, 260px);
+  width: clamp(190px, 22vw, 240px);
   aspect-ratio: 5 / 6;
   object-fit: cover;
   object-position: 50% 20%;
