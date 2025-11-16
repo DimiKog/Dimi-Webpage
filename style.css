@@ -309,7 +309,7 @@ html[data-lang="gr"] #btn-gr{
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 320px;
+  grid-template-columns: 1fr 300px;
   gap: 48px;
   align-items: start;
 }
@@ -383,6 +383,8 @@ html[data-lang="gr"] #btn-gr{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 300px;
+  flex-shrink: 0;
 }
 
 .hero-photo-frame {
@@ -394,7 +396,8 @@ html[data-lang="gr"] #btn-gr{
 }
 
 .hero-photo {
-  width: clamp(200px, 22vw, 260px);
+  width: 100%;
+  max-width: 260px;
   border-radius: 16px;
   display: block;
 }
