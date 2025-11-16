@@ -299,28 +299,38 @@ html[data-lang="gr"] #btn-gr{
   background:var(--text);
 }
 
+/* HERO NAMESPACE ISOLATION — prevents legacy CSS from affecting hero */
+.hero-section {
+  all: unset;
+  display: block;
+}
+.hero-section * {
+  all: revert;
+  box-sizing: border-box;
+}
+
 /* --- HERO SECTION — CLEAN RESPONSIVE LAYOUT (FINAL) --- */
 
-.hero-container {
+.hero-section .hero-container {
   max-width: 1120px;
   margin: 0 auto;
   padding: clamp(30px, 4vw, 50px) 20px;
 }
 
-.hero-grid {
+.hero-section .hero-grid {
   display: grid;
   grid-template-columns: 1fr 300px;
   gap: 48px;
   align-items: start;
 }
 
-.hero-left {
+.hero-section .hero-left {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-.hero-card {
+.hero-section .hero-card {
   background: var(--hero-card-bg);
   border: 1px solid var(--hero-card-outline);
   border-radius: 22px;
@@ -328,41 +338,41 @@ html[data-lang="gr"] #btn-gr{
   box-shadow: 0 14px 40px rgba(0,0,0,.38);
 }
 
-.hero-name {
+.hero-section .hero-name {
   font-size: clamp(2rem, 3.4vw, 2.6rem);
   font-weight: 800;
   margin-bottom: 10px;
   color: var(--hero-card-text);
 }
 
-.hero-title {
+.hero-section .hero-title {
   font-size: clamp(1.05rem, 1.8vw, 1.25rem);
   color: var(--hero-card-sub);
   margin-bottom: 16px;
 }
 
-.hero-intro,
-.hero-mission {
+.hero-section .hero-intro,
+.hero-section .hero-mission {
   color: var(--hero-card-text);
   line-height: 1.55;
   margin-bottom: 14px;
 }
 
-.hero-ctas {
+.hero-section .hero-ctas {
   margin-top: 20px;
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
 }
 
-.hero-subgrid {
+.hero-section .hero-subgrid {
   margin-top: 24px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.hero-subgrid span {
+.hero-section .hero-subgrid span {
   background: var(--hero-card-tag-bg);
   border: 1px solid var(--hero-card-tag-border);
   padding: 6px 12px;
@@ -372,14 +382,14 @@ html[data-lang="gr"] #btn-gr{
   font-weight: 600;
 }
 
-.hero-stats {
+.hero-section .hero-stats {
   margin-top: 28px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 14px;
 }
 
-.hero-right {
+.hero-section .hero-right {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -387,7 +397,7 @@ html[data-lang="gr"] #btn-gr{
   flex-shrink: 0;
 }
 
-.hero-photo-frame {
+.hero-section .hero-photo-frame {
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.15);
   border-radius: 20px;
@@ -395,14 +405,14 @@ html[data-lang="gr"] #btn-gr{
   box-shadow: 0 14px 34px rgba(0,0,0,.34);
 }
 
-.hero-photo {
+.hero-section .hero-photo {
   width: 100%;
   max-width: 260px;
   border-radius: 16px;
   display: block;
 }
 
-.hero-photo-caption {
+.hero-section .hero-photo-caption {
   margin-top: 10px;
   color: var(--muted);
   font-size: 0.9rem;
@@ -411,26 +421,26 @@ html[data-lang="gr"] #btn-gr{
 
 /* Responsive collapse */
 @media (max-width: 880px) {
-  .hero-grid {
+  .hero-section .hero-grid {
     grid-template-columns: 1fr;
     text-align: center;
   }
-  .hero-right {
+  .hero-section .hero-right {
     margin-top: 26px;
   }
-  .hero-card {
+  .hero-section .hero-card {
     padding: 22px;
   }
 }
 
 @media (max-width: 520px) {
-  .hero-photo {
+  .hero-section .hero-photo {
     width: 170px;
   }
-  .hero-card {
+  .hero-section .hero-card {
     padding: 18px;
   }
-  .hero-ctas {
+  .hero-section .hero-ctas {
     flex-direction: column;
   }
 }
