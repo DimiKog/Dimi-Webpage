@@ -357,6 +357,7 @@ html[data-lang="gr"] #btn-gr{
 
 .hero-section .hero-title {
   font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  font-weight: 700;
   color: var(--hero-card-sub);
   margin-bottom: 16px;
 }
@@ -366,6 +367,11 @@ html[data-lang="gr"] #btn-gr{
   color: var(--hero-card-text);
   line-height: 1.55;
   margin-bottom: 14px;
+}
+
+.hero-section .hero-mission {
+  font-weight: 600;
+  color: var(--accent);
 }
 
 .hero-section .hero-ctas {
