@@ -317,7 +317,7 @@ section.hero > .container {
 /* --- Hero Card: Two-Column Grid for Alignment --- */
 .hero-main-grid {
     display: grid !important; /* FORCING GRID LAYOUT */
-    grid-template-columns: 1fr 280px !important; /* FORCING COLUMN WIDTHS */
+    grid-template-columns: 1fr 320px !important;
     gap: clamp(20px, 3vw, 40px);
     width: 100%;
     align-items: start; /* Align content to the top */
@@ -332,8 +332,19 @@ section.hero > .container {
 /* Photo box positioning */
 .hero-photo-box {
     grid-column: 2 / 3;
-    justify-self: center; /* Center photo within its 280px column */
-    margin-top: 0; 
+    justify-self: center;
+}
+
+/* Unified and corrected .hero-photo-box definition */
+.hero-photo-box {
+  grid-column: 2 / 3;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  margin-top: 0;
 }
 
 /* 3. Re-apply correct padding and clear old styles on .hero-card */
@@ -422,7 +433,6 @@ section.hero > .container {
 }
 
 @media (max-width: 980px){
-  .hero{ grid-template-columns:1fr; }
 }
 @media (max-width: 860px){
   .grid{ grid-template-columns:1fr; }
@@ -780,14 +790,6 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 
 
 /* Hero Photo Box (unified inside hero-card) */
-.hero-photo-box {
-  margin-top: 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 12px;
-}
 
 .hero-photo-box picture {
   display: block;
