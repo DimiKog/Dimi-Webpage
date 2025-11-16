@@ -317,7 +317,7 @@ section.hero > .container {
 /* --- Hero Card: Two-Column Grid for Alignment --- */
 .hero-main-grid {
     display: grid !important; /* FORCING GRID LAYOUT */
-    grid-template-columns: 1fr 320px !important;
+    grid-template-columns: minmax(520px, 1fr) minmax(260px, 320px) !important;
     gap: clamp(20px, 3vw, 40px);
     width: 100%;
     align-items: start; /* Align content to the top */
@@ -327,6 +327,7 @@ section.hero > .container {
 .hero-content {
     grid-column: 1 / 2;
     text-align: left;
+    max-width: 720px;
 }
 
 /* Photo box positioning */
