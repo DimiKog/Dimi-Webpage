@@ -360,6 +360,8 @@ section.hero > .container {
 
 /* Re-modified Hero Card styles to clear original conflicting flex rules */
 .hero-card{
+  width: 100% !important;
+  max-width: 720px !important;
   position:relative;
   overflow:hidden;
   background: var(--hero-card-bg);
