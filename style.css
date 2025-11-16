@@ -316,9 +316,8 @@ section.hero > .container {
 
 /* --- Hero Card: Two-Column Grid for Alignment --- */
 .hero-main-grid {
-    display: grid !important; /* Override any conflicting flex styles */
-    /* Two columns: 1fr for text (flexible), 280px for photo (fixed) */
-    grid-template-columns: 1fr 280px; 
+    display: grid !important; /* FORCING GRID LAYOUT */
+    grid-template-columns: 1fr 280px !important; /* FORCING COLUMN WIDTHS */
     gap: clamp(20px, 3vw, 40px);
     width: 100%;
     align-items: start; /* Align content to the top */
@@ -356,8 +355,8 @@ section.hero > .container {
   box-shadow: 0 25px 60px rgba(5,8,16,.55);
   isolation:isolate;
   display:block !important; /* FORCING BLOCK DISPLAY */
-  flex-direction:initial; 
-  align-items:initial; 
+  flex-direction:initial !important; /* CRITICAL: Neutralize flex-direction */
+  align-items:initial !important; /* CRITICAL: Neutralize align-items */
   text-align:initial; 
   gap:0; 
   padding:clamp(22px, 3vw, 34px); 
