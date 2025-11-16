@@ -397,6 +397,18 @@ html[data-lang="gr"] #btn-gr{
   flex-shrink: 0;
 }
 
+@media (min-width: 881px) {
+  .hero-section .hero-left {
+    grid-column: 1;
+  }
+
+  .hero-section .hero-right {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+  }
+}
+
 .hero-section .hero-photo-frame {
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.15);
