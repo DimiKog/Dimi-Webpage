@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dimitris G. Kogias — Blockchain, Web3 & Cybersecurity Researcher, Educator & Project Manager</title>
+    <title>Dimitrios G. Kogias — Blockchain, Web3 & Cybersecurity Researcher, Educator & Project Manager</title>
 
     <!-- Meta Description -->
     <meta name="description"
-        content="Personal homepage of Dimitris G. Kogias — Blockchain, Web3 & Cybersecurity Researcher & Educator.">
+        content="Personal homepage of Dimitrios G. Kogias — Blockchain, Web3 & Cybersecurity Researcher & Educator.">
     <link rel="icon" type="image/png" href="assets/Dimi_favicon.png" />
 
     <!-- Touch icon for iOS home screen -->
@@ -19,7 +19,7 @@
     <link rel="alternate" hreflang="x-default" href="https://dimikog.org/" />
 
     <!-- New Modular CSS Structure -->
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="style.css">
 
     <!-- Preload hero portrait (WebP) for faster LCP -->
     <link rel="preload" as="image" href="assets/DimiKog.webp" imagesrcset="assets/DimiKog.webp"
@@ -27,7 +27,7 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://dimikog.org/" />
-    <meta property="og:title" content="Dimitris G. Kogias — Blockchain, Web3 & Cybersecurity Researcher & Educator" />
+    <meta property="og:title" content="Dimitrios G. Kogias — Blockchain, Web3 & Cybersecurity Researcher, Educator & Project Manager" />
     <meta property="og:description"
         content="Researcher & Educator in Blockchain, Web3 and Cybersecurity, focusing on DApps and distributed systems." />
     <meta property="og:image" content="https://dimikog.org/assets/DimiKog.webp" />
@@ -35,7 +35,7 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Dimitris G. Kogias — Blockchain, Web3 & Cybersecurity Researcher & Educator" />
+    <meta name="twitter:title" content="Dimitrios G. Kogias — Blockchain, Web3 & Cybersecurity Researcher, Educator & Project Manager" />
     <meta name="twitter:description"
         content="Researcher & Educator in Blockchain, Web3 and Cybersecurity working on DApps and distributed systems." />
     <meta name="twitter:image" content="https://dimikog.org/assets/DimiKog.webp" />
@@ -61,7 +61,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Dimitris G. Kogias",
+  "name": "Dimitrios G. Kogias",
   "alternateName": "Δημήτριος Γ. Κόγιας",
   "jobTitle": "Blockchain, Web3 & Cybersecurity Researcher, Educator & Project Manager",
   "additionalRole": "Project Manager",
@@ -87,6 +87,8 @@
 </head>
 
 <body>
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <span id="doc-title" class="sr-only" aria-hidden="true"></span>
     <a href="#about" class="sr-only-focusable">Skip to content</a>
 
     <header class="hdr">
@@ -94,7 +96,7 @@
             <div class="brand">
                 <div class="logo">DK</div>
                 <div>
-                    <strong id="brand-name">Dimitris G. Kogias</strong><br>
+                    <strong id="brand-name">Dimitrios G. Kogias</strong><br>
                     <span class="muted" id="brand-tag">Researcher, Educator & Project Manager in Blockchain, Web3 &
                         Cybersecurity</span>
                 </div>
@@ -135,11 +137,11 @@
     <section class="hero-section">
         <div class="hero">
             <div class="container hero-container">
-                <div class="hero-grid">
+                <div class="hero-card">
 
-                    <div class="hero-left">
-                        <div class="hero-card">
-                            <h1 class="hero-name">Dimitris G. Kogias</h1>
+                    <div class="hero-card-top">
+                        <div class="hero-card-info">
+                            <h1 class="hero-name">Dimitrios G. Kogias</h1>
 
                             <p class="hero-title">
                                 Blockchain, Web3 & Cybersecurity Researcher, Educator & Project Manager
@@ -154,43 +156,36 @@
                                 Coordinating the Web3Edu initiative — supporting students, developers, and researchers
                                 as they grow within the Web3 ecosystem.
                             </p>
-
-                            <div class="btns hero-ctas">
-                                <a class="btn primary" href="#research-projects">See projects</a>
-                                <a class="btn ghost" href="#contact">Get in touch</a>
-                            </div>
-
-                            <div class="hero-subgrid">
-                                <span>Security engineering</span>
-                                <span>DApps development</span>
-                                <span>Applied Web3 teaching</span>
-                                <span class="proj-badge badge-focus">Project Management</span>
-                            </div>
-
-                            <div class="hero-stats">
-                                <div class="stat"><b>20+</b><span class="muted"> Years teaching in academia</span></div>
-                                <div class="stat"><b>5+</b><span class="muted"> Years teaching blockchain</span></div>
-                                <div class="stat"><b>60+</b><span class="muted"> Research publications</span></div>
-                                <div class="stat"><b>12+</b><span class="muted"> Theses supervised</span></div>
-                                <div class="stat"><b>2</b><span class="muted"> DApps developed</span></div>
-                            </div>
-
                         </div>
-                    </div>
 
-                    <div class="hero-right">
                         <div class="hero-photo-frame">
                             <picture>
                                 <source type="image/webp" srcset="assets/DimiKog.webp" />
                                 <source type="image/jpeg" srcset="assets/DimiKog.jpeg" />
-                                <img src="assets/DimiKog.jpeg" alt="Portrait of Dimitris G. Kogias" class="hero-photo"
+                                <img src="assets/DimiKog.jpeg" alt="Portrait of Dimitrios G. Kogias" class="hero-photo"
                                     loading="eager" decoding="async" />
                             </picture>
                         </div>
+                    </div>
 
-                        <p class="hero-photo-caption">
-                            Researcher & Project Manager — Blockchain, Web3 & Cybersecurity
-                        </p>
+                    <div class="btns hero-ctas">
+                        <a class="btn primary" href="#research-projects">See projects</a>
+                        <a class="btn ghost" href="#contact">Get in touch</a>
+                        <a class="btn ghost" href="assets/KOGIAS_CV_GR.pdf" target="_blank" rel="noreferrer">Download CV</a>
+                    </div>
+
+                    <div class="hero-subgrid">
+                        <span>Security engineering</span>
+                        <span>DApps development</span>
+                        <span>Applied Web3 teaching</span>
+                        <span>Project Management</span>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat"><b>20+</b><span class="muted"> Years teaching in academia</span></div>
+                        <div class="stat"><b>5+</b><span class="muted"> Years teaching blockchain</span></div>
+                        <div class="stat"><b>60+</b><span class="muted"> Research publications</span></div>
+                        <div class="stat"><b>12+</b><span class="muted"> Theses supervised</span></div>
                     </div>
 
                 </div>
@@ -220,7 +215,6 @@
                     <span class="about-emoji" aria-hidden="true">📂</span>
                     <p><b>Project Manager</b> in EU and national research projects, coordinating multidisciplinary teams
                         and delivering outcomes in blockchain, cybersecurity, and distributed systems.</p>
-                    <span class="proj-badge badge-focus">Project Management</span>
                 </article>
             </div>
             <h3 class="about-subheading">Teaching Roles</h3>
@@ -353,6 +347,37 @@
                         decoding="async" />
                 </div>
 
+            </div>
+        </section>
+
+        <section id="current-focus" class="alt">
+            <h2 class="section-title" data-en="Current Focus" data-gr="Τρέχουσα Εστίαση">Current Focus</h2>
+            <div class="grid">
+                <article class="card tile">
+                    <h3>🔬 Active Research Priorities</h3>
+                    <ul class="list">
+                        <li><b>Distributed Identities & eIDAS v2 Compliance</b> — Aligning decentralized identity architectures with the eIDAS v2 framework for trusted digital credentials</li>
+                        <li><b>Zero-Knowledge Proofs (ZKPs)</b> — Implementing privacy-preserving mechanisms for identity, educational credentials, and governance voting systems</li>
+                        <li><b>DAO Governance Models</b> — Designing resilient decision-making frameworks for Web3 communities and education initiatives</li>
+                        <li><b>DORA Compliance</b> — Developing cybersecurity and operational resilience strategies for blockchain systems under EU regulatory frameworks</li>
+                    </ul>
+                </article>
+                <article class="card tile">
+                    <h3>🚀 Active Development Projects</h3>
+                    <ul class="list">
+                        <li><b>Proof of Escape (PoE)</b> — Expanding Web3 security education gamification with advanced challenge levels and NFT rewards</li>
+                        <li><b>Web3Edu Foundation</b> — Building governance infrastructure, credentialing flows, and educational frameworks for decentralized learning communities</li>
+                        <li><b>Besu QBFT Network</b> — Enhancing monitoring, security hardening, and operational best practices for production-grade private networks</li>
+                    </ul>
+                </article>
+                <article class="card tile">
+                    <h3>📚 Teaching & Dissemination</h3>
+                    <ul class="list">
+                        <li><b>Spring 2026 Courses</b> — DLT Cybersecurity at University of Malta; Blockchain & DLT at UniWA</li>
+                        <li><b>Security Labs</b> — Developing hands-on labs for ZKPs, governance attacks, flash-loan exploits, and consensus vulnerabilities</li>
+                        <li><b>Open Educational Resources</b> — Curating Web3 learning materials and maintaining open-source repositories for blockchain education</li>
+                    </ul>
+                </article>
             </div>
         </section>
 
@@ -508,7 +533,10 @@
                 Development Portfolio</h2>
             <div class="grid">
                 <h3 class="about-subheading">Active Projects</h3>
-                <article class="card tile">
+                <article class="card tile tile-with-preview">
+                    <a href="https://dimikog.github.io/proof-of-escape/" target="_blank" rel="noopener noreferrer" class="tile-preview-link">
+                        <img src="assets/poe-preview.png" alt="Proof of Escape - Decentralized Learning Adventure" class="tile-preview" loading="lazy" decoding="async" style="object-position:center center" />
+                    </a>
                     <h3>
                         <a href="https://dimikog.github.io/proof-of-escape/" target="_blank" rel="noopener noreferrer">
                             Proof of Escape (PoE)
@@ -701,6 +729,7 @@
                             </span>
                             <a href="https://doi.org/10.1016/j.jpdc.2017.05.021" target="_blank" class="doi-link">DOI:
                                 10.1016/j.jpdc.2017.05.021</a>
+                            <span class="citation-count" data-en="Cited by 83" data-gr="Αναφορές: 83">Cited by 83</span>
                         </div>
                         <p class="muted"
                             data-en="Survey of security challenges and mitigation approaches in M2M/IoT communications; one of my most cited works."
@@ -723,6 +752,7 @@
                             </span>
                             <a href="https://doi.org/10.3390/info11120570" target="_blank" class="doi-link">DOI:
                                 10.3390/info11120570</a>
+                            <span class="citation-count" data-en="Cited by 37" data-gr="Αναφορές: 37">Cited by 37</span>
                         </div>
                         <p class="muted"
                             data-en="Links blockchain with automated, secure resource trading across providers; prototype and performance results on a cloud testbed."
@@ -747,6 +777,7 @@
                             </span>
                             <a href="https://doi.org/10.3390/s22030993" target="_blank" class="doi-link">DOI:
                                 10.3390/s22030993</a>
+                            <span class="citation-count" data-en="Cited by 42" data-gr="Αναφορές: 42">Cited by 42</span>
                         </div>
                         <p class="muted"
                             data-en="Machine-learning wearable platform recognizing K9 behavior in real time; used in the EU FASTER project."
@@ -766,6 +797,7 @@
                             <span class="pub-badge book">
                                 <span class="pub-emoji" aria-hidden="true">📗</span> Book
                             </span>
+                            <span class="book-stats" data-en="2,746 views · 764 downloads" data-gr="2.746 προβολές · 764 λήψεις">2,746 views · 764 downloads</span>
                         </div>
                         <p class="muted">
                             <a class="proj-link" href="https://repository.kallipos.gr/handle/11419/9130" target="_blank"
@@ -935,45 +967,67 @@
 
         <section id="contact">
             <h2 class="section-title" data-en="Contact" data-gr="Επικοινωνία">Contact</h2>
-            <div class="card contact-card">
-                <img src="assets/avatar.png" alt="Portrait of Dimitris G. Kogias" loading="lazy" decoding="async"
-                    class="contact-avatar" />
-                <ul class="list">
-                    <li>
-                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
-                            <path
-                                d="M4 6h16a2 2 0 0 1 2 2v.2l-10 6.25L2 8.2V8a2 2 0 0 1 2-2Zm16 12H4a2 2 0 0 1-2-2V9.3l9.2 5.7a2 2 0 0 0 2.1 0L22 9.3V16a2 2 0 0 1-2 2Z" />
+            <div class="card contact-card-new">
+                <div class="contact-header">
+                    <img src="assets/avatar.png" alt="Portrait of Dimitrios G. Kogias" loading="lazy" decoding="async"
+                        class="contact-avatar-new" />
+                    <div class="contact-intro">
+                        <h3>Let's Connect</h3>
+                        <p class="muted">Feel free to reach out for collaborations, speaking engagements, or research inquiries.</p>
+                    </div>
+                </div>
+                <div class="contact-links-grid">
+                    <a href="mailto:dimitris@kogias.eu" class="contact-link-item">
+                        <svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4 6h16a2 2 0 0 1 2 2v.2l-10 6.25L2 8.2V8a2 2 0 0 1 2-2Zm16 12H4a2 2 0 0 1-2-2V9.3l9.2 5.7a2 2 0 0 0 2.1 0L22 9.3V16a2 2 0 0 1-2 2Z" />
                         </svg>
-                        <span id="lbl-email">Email:</span>
-                        <a href="mailto:dimitris@kogias.eu">dimitris@kogias.eu</a>
-                    </li>
-                    <li>
-                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.53-1.35-1.3-1.71-1.3-1.71-1.06-.73.08-.72.08-.72 1.18.08 1.8 1.22 1.8 1.22 1.04 1.79 2.74 1.27 3.41.97.11-.76.41-1.27.75-1.56-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.2 1.18a11 11 0 0 1 5.83 0c2.22-1.49 3.2-1.18 3.2-1.18.63 1.59.23 2.77.11 3.06.74.81 1.2 1.84 1.2 3.1 0 4.42-2.69 5.39-5.25 5.68.42.36.8 1.07.8 2.17v3.22c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z" />
+                        <div class="contact-link-content">
+                            <span id="lbl-email" class="contact-link-label">Email</span>
+                            <span class="contact-link-value">dimitris@kogias.eu</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/DimiKog" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                        <svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.53-1.35-1.3-1.71-1.3-1.71-1.06-.73.08-.72.08-.72 1.18.08 1.8 1.22 1.8 1.22 1.04 1.79 2.74 1.27 3.41.97.11-.76.41-1.27.75-1.56-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.2 1.18a11 11 0 0 1 5.83 0c2.22-1.49 3.2-1.18 3.2-1.18.63 1.59.23 2.77.11 3.06.74.81 1.2 1.84 1.2 3.1 0 4.42-2.69 5.39-5.25 5.68.42.36.8 1.07.8 2.17v3.22c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z" />
                         </svg>
-                        <span id="lbl-github">GitHub:</span>
-                        <a href="https://github.com/DimiKog" target="_blank" rel="noopener noreferrer">@DimiKog</a>
-                    </li>
-                    <li>
-                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
-                            <path
-                                d="M4 4.5h9a3.5 3.5 0 0 1 3.5 3.5v9.5a2.5 2.5 0 0 1-2.5 2.5H4a1.5 1.5 0 0 1-1.5-1.5V6A1.5 1.5 0 0 1 4 4.5Zm0 2A.5.5 0 0 0 3.5 7v11a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V8A1.5 1.5 0 0 0 12 6.5H4Zm14 1h2a1 1 0 0 1 1 1V20a.5.5 0 0 1-1 0v-5h-2v5a1 1 0 0 1-2 0V8a1 1 0 0 1 1-1Zm0 2v3h2V9h-2Z" />
+                        <div class="contact-link-content">
+                            <span id="lbl-github" class="contact-link-label">GitHub</span>
+                            <span class="contact-link-value">@DimiKog</span>
+                        </div>
+                    </a>
+
+                    <a href="https://scholar.google.com/citations?user=VY5yMDYAAAAJ&hl=el" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                        <svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0L3.708 8.308h16.584L12 0zM3.708 8.308v7.385l8.292 8.308 8.292-8.308V8.308H3.708zM12 18.462l-5.538-5.538h11.076L12 18.462z"/>
                         </svg>
-                        <span id="lbl-scholar">Scholar:</span>
-                        <a href="https://scholar.google.com/citations?user=VY5yMDYAAAAJ&amp;hl=el" target="_blank"
-                            rel="noopener noreferrer">Google Scholar</a>
-                    </li>
-                    <li>
-                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
-                            <path
-                                d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM.5 8.5h4.9V24H.5V8.5ZM8.5 8.5h4.7v2.1h.1c.7-1.3 2.5-2.7 5.1-2.7 5.4 0 6.4 3.6 6.4 8.3V24h-4.9v-6.8c0-1.6 0-3.7-2.2-3.7-2.3 0-2.6 1.7-2.6 3.6V24H8.5V8.5Z" />
+                        <div class="contact-link-content">
+                            <span id="lbl-scholar" class="contact-link-label">Google Scholar</span>
+                            <span class="contact-link-value">Publications</span>
+                        </div>
+                    </a>
+
+                    <a href="https://orcid.org/0000-0001-8985-6136" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                        <svg class="contact-icon" aria-hidden="true" viewBox="0 0 256 256" fill="currentColor">
+                            <path d="M256 128c0 70.7-57.3 128-128 128S0 198.7 0 128 57.3 0 128 0s128 57.3 128 128z" fill="#A6CE39"/>
+                            <path d="M86.3 186.2H70.9V79.1h15.4v107.1zM108.9 79.1h41.6c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.6-56.8 53.6h-41.8V79.1zm15.4 93.3h24.5c34.9 0 42.9-26.5 42.9-39.7C191.7 111.2 178 93 148 93h-23.7v79.4zM71.3 73.2c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5c0 4.7-3.8 8.5-8.5 8.5s-8.5-3.8-8.5-8.5z" fill="#FFF"/>
                         </svg>
-                        <span id="lbl-linkedin">LinkedIn:</span>
-                        <a href="https://www.linkedin.com/in/dimitris-kogias-b376222a/" target="_blank"
-                            rel="noopener noreferrer">Profile</a>
-                    </li>
-                </ul>
+                        <div class="contact-link-content">
+                            <span class="contact-link-label">ORCID</span>
+                            <span class="contact-link-value">0000-0001-8985-6136</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/dimitris-kogias-b376222a/" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                        <svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM.5 8.5h4.9V24H.5V8.5ZM8.5 8.5h4.7v2.1h.1c.7-1.3 2.5-2.7 5.1-2.7 5.4 0 6.4 3.6 6.4 8.3V24h-4.9v-6.8c0-1.6 0-3.7-2.2-3.7-2.3 0-2.6 1.7-2.6 3.6V24H8.5V8.5Z" />
+                        </svg>
+                        <div class="contact-link-content">
+                            <span id="lbl-linkedin" class="contact-link-label">LinkedIn</span>
+                            <span class="contact-link-value">Professional Profile</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -996,7 +1050,11 @@
             <img class="affil-logo logo--boost logo--shadow" src="assets/logos/Frontiers_bloc_logo.svg"
                 alt="Frontiers in Blockchain logo" loading="lazy" decoding="async" />
         </div>
-        <div class="footer-copy">© <span id="y"></span> Dimitris G. Kogias · Athens, GR</div>
+        <div class="footer-copy">
+            © <span id="y"></span> Dimitrios G. Kogias · Athens, GR
+            <span class="footer-divider">·</span>
+            <span id="last-updated" data-en="Last updated: January 2026" data-gr="Τελευταία ενημέρωση: Ιανουάριος 2026">Last updated: January 2026</span>
+        </div>
     </footer>
 
     <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>

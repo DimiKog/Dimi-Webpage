@@ -9,7 +9,7 @@
     <meta name="description"
         content="Προσωπική ιστοσελίδα του Δημητρίου Γ. Κόγια, ερευνητή και εκπαιδευτή σε Blockchain, Web3 & Κυβερνοασφάλεια.">
     <link rel="icon" type="image/png" href="assets/Dimi_favicon.png" />
-    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <link rel="apple-touch-icon" href="assets/Dimi_favicon.png" />
     <link rel="canonical" href="https://dimikog.org/index-gr.html" />
@@ -20,14 +20,14 @@
         imagesizes="(max-width: 980px) 200px, 240px" type="image/webp" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://dimikog.org/index-gr.html" />
-    <meta property="og:title" content="Dimitris G. Kogias — Ερευνητής σε Blockchain, Web3 & Κυβερνοασφάλεια" />
+    <meta property="og:title" content="Δημήτριος Γ. Κόγιας — Ερευνητής, Εκπαιδευτής & Project Manager σε Blockchain, Web3 & Κυβερνοασφάλεια" />
     <meta property="og:description"
         content="Ερευνητής & Εκπαιδευτής σε Blockchain, Web3 και Κυβερνοασφάλεια με εστίαση σε DApps και κατανεμημένα συστήματα." />
     <meta property="og:image" content="https://dimikog.org/assets/DimiKog.webp" />
     <meta property="og:locale" content="el_GR" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Δημήτριος Γ. Κόγιας — Ερευνητής σε Blockchain, Web3 & Κυβερνοασφάλεια" />
+    <meta name="twitter:title" content="Δημήτριος Γ. Κόγιας — Ερευνητής, Εκπαιδευτής & Project Manager σε Blockchain, Web3 & Κυβερνοασφάλεια" />
     <meta name="twitter:description"
         content="Ερευνητής & Εκπαιδευτής σε Blockchain, Web3 και Κυβερνοασφάλεια με έργο στα DApps και τα κατανεμημένα συστήματα." />
     <meta name="twitter:image" content="https://dimikog.org/assets/DimiKog.webp" />
@@ -53,14 +53,14 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Δημήτριος Γ. Κόγιας",
-      "alternateName": "Dimitris G. Kogias",
-      "jobTitle": "Researcher, Educator & Project Manager in Blockchain, Web3 & Cybersecurity",
-      "additionalRole": "Project Manager",
+      "alternateName": "Dimitrios G. Kogias",
+      "jobTitle": "Ερευνητής, Εκπαιδευτικός & Υπεύθυνος Έργων σε Blockchain, Web3 & Κυβερνοασφάλεια",
+      "additionalRole": "Υπεύθυνος Έργων",
       "url": "https://dimikog.org/index-gr.html",
       "image": "https://dimikog.org/assets/DimiKog.webp",
       "affiliation": [
         { "@type": "Organization", "name": "Πανεπιστήμιο Δυτικής Αττικής (UniWA)" },
-        { "@type": "Organization", "name": "University of Malta" }
+        { "@type": "Organization", "name": "Πανεπιστήμιο Μάλτας" }
       ],
       "sameAs": [
         "https://scholar.google.com/citations?user=VY5yMDYAAAAJ",
@@ -72,6 +72,8 @@
 </head>
 
 <body>
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <span id="doc-title" class="sr-only" aria-hidden="true"></span>
     <a href="#about" class="sr-only-focusable">Μετάβαση στο περιεχόμενο</a>
 
     <header class="hdr">
@@ -79,17 +81,16 @@
             <div class="brand">
                 <div class="logo">DK</div>
                 <div>
-                    <strong id="brand-name">Dimitris G. Kogias</strong><br>
-                    <span class="muted" id="brand-tag">Researcher, Educator & Project Manager in Blockchain, Web3 &
-                        Cybersecurity</span>
+                    <strong id="brand-name">Δημήτριος Γ. Κόγιας</strong><br>
+                    <span class="muted" id="brand-tag">Ερευνητής & Εκπαιδευτής σε Blockchain, Web3 & Κυβερνοασφάλεια</span>
                 </div>
             </div>
-            <button id="menu-toggle" class="hamburger" aria-label="Open menu" aria-controls="site-nav"
+            <button id="menu-toggle" class="hamburger" aria-label="Άνοιγμα μενού" aria-controls="site-nav"
                 aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
             <div class="hdr-navwrap">
-                <nav id="site-nav" class="nav" role="navigation" aria-label="Primary">
+                <nav id="site-nav" class="nav" role="navigation" aria-label="Κύρια πλοήγηση">
                     <a id="nav-about" href="#about" class="active">Σχετικά</a>
                     <a id="nav-research" href="#research-projects">Έρευνα</a>
                     <a id="nav-portfolio" href="#portfolio">Portfolio</a>
@@ -98,15 +99,15 @@
                     <a id="nav-contact" href="#contact">Επικοινωνία</a>
                 </nav>
                 <div class="hdr-controls">
-                    <div class="lang" role="group" aria-label="Language">
-                        <span class="lang-label" aria-hidden="true">Language</span>
+                    <div class="lang" role="group" aria-label="Γλώσσα">
+                        <span class="lang-label" aria-hidden="true">Γλώσσα</span>
                         <div class="lang-buttons">
                             <button id="btn-en" type="button">EN</button>
                             <button id="btn-gr" type="button">GR</button>
                         </div>
                     </div>
                     <div class="theme">
-                        <select id="theme-select" aria-label="Select theme">
+                        <select id="theme-select" aria-label="Επιλογή θέματος">
                             <option value="system">System</option>
                             <option value="light">Light</option>
                             <option value="dark">Dark</option>
@@ -120,11 +121,11 @@
     <section class="hero-section">
         <div class="hero">
             <div class="container hero-container">
-                <div class="hero-grid">
+                <div class="hero-card">
 
-                    <div class="hero-left">
-                        <div class="hero-card">
-                            <h1 class="hero-name">Δημήτρης Γ. Κόγιας</h1>
+                    <div class="hero-card-top">
+                        <div class="hero-card-info">
+                            <h1 class="hero-name">Δημήτριος Γ. Κόγιας</h1>
 
                             <p class="hero-title">
                                 Ερευνητής, Εκπαιδευτής & Project Manager σε Blockchain, Web3 & Κυβερνοασφάλεια
@@ -139,43 +140,36 @@
                                 Συντονίζω την πρωτοβουλία Web3Edu, υποστηρίζοντας φοιτητές, προγραμματιστές και
                                 ερευνητές που εξελίσσονται στο αναδυόμενο οικοσύστημα του Web3.
                             </p>
-
-                            <div class="btns hero-ctas">
-                                <a class="btn primary" href="#research-projects">Δες τα έργα</a>
-                                <a class="btn ghost" href="#contact">Επικοινώνησε</a>
-                            </div>
-
-                            <div class="hero-subgrid">
-                                <span>Ασφάλεια Blockchain</span>
-                                <span>Κατανεμημένα Συστήματα & DApps</span>
-                                <span>Εφαρμοσμένη Web3 Διδασκαλία</span>
-                                <span class="proj-badge badge-focus">Project Management</span>
-                            </div>
-
-                            <div class="hero-stats">
-                                <div class="stat"><b>20+</b><span class="muted"> Χρόνια ακαδημαϊκής διδασκαλίας</span></div>
-                                <div class="stat"><b>5+</b><span class="muted"> Χρόνια διδασκαλίας blockchain</span></div>
-                                <div class="stat"><b>60+</b><span class="muted"> Ερευνητικές δημοσιεύσεις</span></div>
-                                <div class="stat"><b>12+</b><span class="muted"> Εποπτευόμενες διατριβές</span></div>
-                                <div class="stat"><b>2</b><span class="muted"> Ανεπτυγμένες DApps</span></div>
-                            </div>
-
                         </div>
-                    </div>
 
-                    <div class="hero-right">
                         <div class="hero-photo-frame">
                             <picture>
                                 <source type="image/webp" srcset="assets/DimiKog.webp" />
                                 <source type="image/jpeg" srcset="assets/DimiKog.jpeg" />
-                                <img src="assets/DimiKog.jpeg" alt="Portrait of Dimitris G. Kogias" class="hero-photo"
+                                <img src="assets/DimiKog.jpeg" alt="Portrait of Dimitrios G. Kogias" class="hero-photo"
                                     loading="eager" decoding="async" />
                             </picture>
                         </div>
+                    </div>
 
-                        <p class="hero-photo-caption">
-                            Ερευνητής, Εκπαιδευτής & Project Manager σε Blockchain, Web3 & Κυβερνοασφάλεια
-                        </p>
+                    <div class="btns hero-ctas">
+                        <a class="btn primary" href="#research-projects">Δες τα έργα</a>
+                        <a class="btn ghost" href="#contact">Επικοινώνησε</a>
+                        <a class="btn ghost" href="assets/KOGIAS_CV_GR.pdf" target="_blank" rel="noreferrer">Λήψη Βιογραφικού</a>
+                    </div>
+
+                    <div class="hero-subgrid">
+                        <span>Ασφάλεια Blockchain</span>
+                        <span>Κατανεμημένα Συστήματα & DApps</span>
+                        <span>Εφαρμοσμένη Web3 Διδασκαλία</span>
+                        <span>Διαχείριση Έργου</span>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat"><b>20+</b><span class="muted"> Χρόνια ακαδημαϊκής διδασκαλίας</span></div>
+                        <div class="stat"><b>5+</b><span class="muted"> Χρόνια διδασκαλίας blockchain</span></div>
+                        <div class="stat"><b>60+</b><span class="muted"> Ερευνητικές δημοσιεύσεις</span></div>
+                        <div class="stat"><b>12+</b><span class="muted"> Εποπτευόμενες διατριβές</span></div>
                     </div>
 
                 </div>
@@ -192,7 +186,7 @@
             <div class="about-leads">
                 <article class="about-lead">
                     <span class="about-emoji" aria-hidden="true">🧠</span>
-                    <p><b>Ερευνητής και εκπαιδευτής</b> με ειδίκευση στην ασφάλεια blockchain, τα κατανεμημένα συστήματα
+                    <p id="about-p1"><b>Ερευνητής και εκπαιδευτής</b> με ειδίκευση στην ασφάλεια blockchain, τα κατανεμημένα συστήματα
                         και τις αποκεντρωμένες εφαρμογές. Αναπτύσσω DApps και υλοποιώ δίκτυα Hyperledger Besu (QBFT) με
                         Blockscout και Faucet για εκπαιδευτικές και ερευνητικές εφαρμογές.</p>
                 </article>
@@ -281,7 +275,7 @@
                             <path fill="currentColor" d="M9.5 16.3 4.9 11.7l1.4-1.4 3.2 3.2 7.2-7.2 1.4 1.4-8.6 8.6Z" />
                         </svg></span>
                     <span class="skill-ico">🌐</span>
-                    <span><b>Founder, Web3Edu Initiative</b> — Ανάπτυξη πλαισίου αποκεντρωμένης εκπαίδευσης και
+                    <span><b>Ιδρυτής, πρωτοβουλία Web3Edu</b> — Ανάπτυξη πλαισίου αποκεντρωμένης εκπαίδευσης και
                         διακυβέρνησης, με στόχο ενεργές μαθησιακές κοινότητες Web3.</span>
                 </li>
             </ul>
@@ -290,36 +284,36 @@
                 Συνεργασίες & φορείς</p>
 
             <div class="affil-logos">
-                <div class="affil-logo-wrapper affil-logo--uniwa" title="University of West Attica (UniWA)">
-                    <img src="assets/logos/Uniwa_logo.svg" alt="University of West Attica (UniWA) logo" loading="lazy"
+                <div class="affil-logo-wrapper affil-logo--uniwa" title="Πανεπιστήμιο Δυτικής Αττικής (ΠαΔΑ)">
+                    <img src="assets/logos/Uniwa_logo.svg" alt="Λογότυπο Πανεπιστημίου Δυτικής Αττικής (ΠαΔΑ)" loading="lazy"
                         decoding="async" />
                 </div>
 
-                <div class="affil-logo-wrapper affil-logo--uom" title="University of Malta">
-                    <img src="assets/logos/un_malta_logo.svg" alt="University of Malta logo" loading="lazy"
+                <div class="affil-logo-wrapper affil-logo--uom" title="Πανεπιστήμιο Μάλτας">
+                    <img src="assets/logos/un_malta_logo.svg" alt="Λογότυπο Πανεπιστημίου Μάλτας" loading="lazy"
                         decoding="async" />
                 </div>
 
-                <div class="affil-logo-wrapper affil-logo--consert" title="ConSeRT Research Group">
-                    <img src="assets/logos/consert_logo.svg" alt="ConSeRT Research Group logo" loading="lazy"
+                <div class="affil-logo-wrapper affil-logo--consert" title="Ερευνητική ομάδα ConSeRT">
+                    <img src="assets/logos/consert_logo.svg" alt="Λογότυπο ερευνητικής ομάδας ConSeRT" loading="lazy"
                         decoding="async" />
                 </div>
 
-                <div class="affil-logo-wrapper affil-logo--lciis" title="LCIIS Research Lab">
-                    <img src="assets/logos/lciis_logo.svg" alt="LCIIS Research Lab logo" loading="lazy"
+                <div class="affil-logo-wrapper affil-logo--lciis" title="Ερευνητικό εργαστήριο LCIIS">
+                    <img src="assets/logos/lciis_logo.svg" alt="Λογότυπο ερευνητικού εργαστηρίου LCIIS" loading="lazy"
                         decoding="async" />
                 </div>
 
-                <div class="affil-logo-wrapper affil-logo--nkua" title="National and Kapodistrian University of Athens">
-                    <img src="assets/logos/NKUA_logo.svg" alt="NKUA University logo" loading="lazy" decoding="async" />
+                <div class="affil-logo-wrapper affil-logo--nkua" title="Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών (ΕΚΠΑ)">
+                    <img src="assets/logos/NKUA_logo.svg" alt="Λογότυπο Εθνικού και Καποδιστριακού Πανεπιστημίου Αθηνών (ΕΚΠΑ)" loading="lazy" decoding="async" />
                 </div>
 
                 <div class="affil-logo-wrapper affil-logo--inbalight" title="INATBA">
-                    <img src="assets/logos/INATBA_logo2.svg?v=2" alt="INATBA logo" loading="lazy" decoding="async" />
+                    <img src="assets/logos/INATBA_logo2.svg?v=2" alt="Λογότυπο INATBA" loading="lazy" decoding="async" />
                 </div>
 
                 <div class="affil-logo-wrapper affil-logo--frontierslight" title="Frontiers in Blockchain">
-                    <img src="assets/logos/Frontiers_bloc_logo.svg" alt="Frontiers in Blockchain logo" loading="lazy"
+                    <img src="assets/logos/Frontiers_bloc_logo.svg" alt="Λογότυπο Frontiers in Blockchain" loading="lazy"
                         decoding="async" />
                 </div>
 
@@ -329,6 +323,37 @@
                         alt="Web3Edu Initiative — decentralized blockchain education and governance logo" loading="lazy"
                         decoding="async" />
                 </div>
+            </div>
+        </section>
+
+        <section id="current-focus" class="alt">
+            <h2 class="section-title" data-en="Current Focus" data-gr="Τρέχουσα Εστίαση">Τρέχουσα Εστίαση</h2>
+            <div class="grid">
+                <article class="card tile">
+                    <h3>🔬 Ενεργές Ερευνητικές Προτεραιότητες</h3>
+                    <ul class="list">
+                        <li><b>Κατανεμημένες Ταυτότητες & Συμμόρφωση με eIDAS v2</b> — Ευθυγράμμιση αρχιτεκτονικών αποκεντρωμένης ταυτότητας με το πλαίσιο eIDAS v2 για αξιόπιστα ψηφιακά διαπιστευτήρια</li>
+                        <li><b>Αποδείξεις Μηδενικής Γνώσης (ZKPs)</b> — Υλοποίηση μηχανισμών διατήρησης ιδιωτικότητας για ταυτότητα, εκπαιδευτικά διαπιστευτήρια και συστήματα ψηφοφορίας διακυβέρνησης</li>
+                        <li><b>Μοντέλα Διακυβέρνησης DAO</b> — Σχεδιασμός ανθεκτικών πλαισίων λήψης αποφάσεων για κοινότητες Web3 και εκπαιδευτικές πρωτοβουλίες</li>
+                        <li><b>Συμμόρφωση με DORA</b> — Ανάπτυξη στρατηγικών κυβερνοασφάλειας και επιχειρησιακής ανθεκτικότητας για συστήματα blockchain στο πλαίσιο των ρυθμιστικών πλαισίων της ΕΕ</li>
+                    </ul>
+                </article>
+                <article class="card tile">
+                    <h3>🚀 Ενεργά Αναπτυξιακά Έργα</h3>
+                    <ul class="list">
+                        <li><b>Proof of Escape (PoE)</b> — Επέκταση της gamification εκπαίδευσης ασφάλειας Web3 με προηγμένα επίπεδα πρόκλησης και ανταμοιβές NFT</li>
+                        <li><b>Web3Edu Foundation</b> — Κατασκευή υποδομής διακυβέρνησης, ροών διαπιστευτηρίων και εκπαιδευτικών πλαισίων για αποκεντρωμένες μαθησιακές κοινότητες</li>
+                        <li><b>Besu QBFT Network</b> — Βελτίωση της παρακολούθησης, ενίσχυση της ασφάλειας και βέλτιστες πρακτικές λειτουργίας για ιδιωτικά δίκτυα παραγωγής</li>
+                    </ul>
+                </article>
+                <article class="card tile">
+                    <h3>📚 Διδασκαλία & Διάχυση</h3>
+                    <ul class="list">
+                        <li><b>Μαθήματα Εαρινού Εξαμήνου 2026</b> — DLT Cybersecurity στο Πανεπιστήμιο της Μάλτας· Blockchain & DLT στο ΠαΔΑ</li>
+                        <li><b>Εργαστήρια Ασφάλειας</b> — Ανάπτυξη πρακτικών εργαστηρίων για ZKPs, επιθέσεις διακυβέρνησης, exploits flash-loan και ευπάθειες συναίνεσης</li>
+                        <li><b>Ανοικτοί Εκπαιδευτικοί Πόροι</b> — Επιμέλεια εκπαιδευτικών υλικών Web3 και συντήρηση αποθετηρίων ανοικτού κώδικα για εκπαίδευση blockchain</li>
+                    </ul>
+                </article>
             </div>
         </section>
 
@@ -382,16 +407,16 @@
                     <div class="proj-meta">
                         <span class="proj-year" id="year-genera">2022 – 2025</span>
                         <span class="proj-badge badge-life" data-en="LIFE EU" data-gr="LIFE ΕΕ">LIFE EU</span>
-                        <span class="proj-badge badge-focus">Project Management</span>
+                        <span class="proj-badge badge-focus">Διαχείριση Έργου</span>
                     </div>
                     <p id="proj-genera" class="muted">Έργο LIFE EU που υποστηρίζει τη μετάβαση των τοπικών αρχών σε
                         βιώσιμα και απανθρακοποιημένα ενεργειακά συστήματα, με έμφαση σε νησιωτικές και τουριστικές
                         περιοχές.</p>
                     <p class="muted"><b>Κύρια Σημεία Ρόλου:</b></p>
                     <ul class="list">
-                        <li id="proj-genera-1"><b>Ρόλος:</b> Senior Researcher & Ανάληψη καθηκόντων Project Management
+                        <li id="proj-genera-1"><b>Ρόλος:</b> Senior Researcher & Ανάληψη καθηκόντων Διαχείρισης Έργου
                             (συντονισμός εργασιών, παραδοτέων και συναντήσεων) για το UniWA</li>
-                        <li id="proj-genera-1b">Ανάληψη Project Management (συντονισμός συναντήσεων, reporting και
+                        <li id="proj-genera-1b">Ανάληψη Διαχείρισης Έργου (συντονισμός συναντήσεων, reporting και
                             τεχνικού συντονισμού)</li>
                         <li id="proj-genera-2">Σχεδιασμός στρατηγικής Web3 και ανάπτυξη εκπαιδευτικού παιχνιδιού
                             πράσινης ενέργειας</li>
@@ -428,16 +453,16 @@
                         <span class="proj-badge badge-research">Ολοκληρωμένο</span>
                         <span class="proj-badge badge-horizon" data-en="Horizon Europe" data-gr="Horizon Europe">Horizon
                             Europe</span>
-                        <span class="proj-badge badge-focus">Project Management</span>
+                        <span class="proj-badge badge-focus">Διαχείριση Έργου</span>
                     </div>
                     <p id="proj-faster" class="muted">Έργο Horizon Europe που ενισχύει τις δυνατότητες ομάδων πρώτης
                         ανταπόκρισης σε όλα τα στάδια διαχείρισης κρίσεων — σχεδιασμό, εκπαίδευση, επικοινωνία και
                         επιχειρησιακή λειτουργία.</p>
                     <p class="muted"><b>Κύρια Σημεία Ρόλου:</b></p>
                     <ul class="list">
-                        <li id="proj-faster-1"><b>Ρόλος:</b> Senior Researcher & Ανάληψη καθηκόντων Project Management
+                        <li id="proj-faster-1"><b>Ρόλος:</b> Senior Researcher & Ανάληψη καθηκόντων Διαχείρισης Έργου
                             (συντονισμός εργασιών, παραδοτέων και συναντήσεων) για το UniWA</li>
-                        <li id="proj-faster-1b">Ανάληψη Project Management (τεχνικός συντονισμός και παρακολούθηση
+                        <li id="proj-faster-1b">Ανάληψη Διαχείρισης Έργου (τεχνικός συντονισμός και παρακολούθηση
                             παραδοτέων)</li>
                         <li id="proj-faster-2">Παραδοτέα εργαλεία: MORSE (αναγνώριση χειρονομιών), RESCUE
                             (κρυπτογραφημένα BLE μηνύματα χωρίς υποδομή), Smart Textiles, K9 collar</li>
@@ -461,16 +486,16 @@
                         <span class="proj-year" id="year-artemis">2021 – 2023</span>
                         <span class="proj-badge badge-espa" data-en="ESPA (Research – Innovate)"
                             data-gr="ΕΣΠΑ (Ερευνώ – Καινοτομώ)">ΕΣΠΑ (Ερευνώ – Καινοτομώ)</span>
-                        <span class="proj-badge badge-focus">Project Management</span>
+                        <span class="proj-badge badge-focus">Διαχείριση Έργου</span>
                     </div>
                     <p id="proj-artemis" class="muted">Έργο ΕΣΠΑ (Ερευνώ – Καινοτομώ) που αναπτύσσει ασφαλή κατανεμημένη
                         αρχιτεκτονική ιχνηλασιμότητας για εφοδιαστικές αλυσίδες, αξιοποιώντας blockchain και έξυπνα
                         συμβόλαια.</p>
                     <p class="muted"><b>Κύρια Σημεία Ρόλου:</b></p>
                     <ul class="list">
-                        <li id="proj-artemis-1"><b>Ρόλος:</b> Senior Researcher & Project Management (συντονισμός
+                        <li id="proj-artemis-1"><b>Ρόλος:</b> Senior Researcher & Διαχείριση Έργου (συντονισμός
                             ομάδας, παραδοτέων και συναντήσεων) για την iTrack Services (SME)</li>
-                        <li id="proj-artemis-1b">Ανάληψη Project Management (προγραμματισμός παραδοτέων και συντονισμός
+                        <li id="proj-artemis-1b">Ανάληψη Διαχείρισης Έργου (προγραμματισμός παραδοτέων και συντονισμός
                             συναντήσεων)</li>
                         <li id="proj-artemis-2">Συνεισφορά στον σχεδιασμό της αρχιτεκτονικής και στη διασύνδεση με την
                             εταιρική πλατφόρμα</li>
@@ -486,7 +511,10 @@
                 Portfolio Ανάπτυξης</h2>
             <div class="grid">
                 <h3 class="about-subheading">Ενεργά Έργα</h3>
-                <article class="card tile">
+                <article class="card tile tile-with-preview">
+                    <a href="https://dimikog.github.io/proof-of-escape/" target="_blank" rel="noopener noreferrer" class="tile-preview-link">
+                        <img src="assets/poe-preview.png" alt="Proof of Escape - Decentralized Learning Adventure" class="tile-preview" loading="lazy" decoding="async" style="object-position:center center" />
+                    </a>
                     <h3>
                         <a href="https://dimikog.github.io/proof-of-escape/" target="_blank" rel="noopener noreferrer">
                             Proof of Escape (PoE)
@@ -677,6 +705,7 @@
                             </span>
                             <a href="https://doi.org/10.1016/j.jpdc.2017.05.021" target="_blank" class="doi-link">DOI:
                                 10.1016/j.jpdc.2017.05.021</a>
+                            <span class="citation-count" data-en="Cited by 83" data-gr="Αναφορές: 83">Αναφορές: 83</span>
                         </div>
                         <p class="muted"
                             data-en="Survey of security challenges and mitigation approaches in M2M/IoT communications; one of my most cited works."
@@ -699,6 +728,7 @@
                             </span>
                             <a href="https://doi.org/10.3390/info11120570" target="_blank" class="doi-link">DOI:
                                 10.3390/info11120570</a>
+                            <span class="citation-count" data-en="Cited by 37" data-gr="Αναφορές: 37">Αναφορές: 37</span>
                         </div>
                         <p class="muted"
                             data-en="Links blockchain with automated, secure resource trading across providers; prototype and performance results on a cloud testbed."
@@ -724,6 +754,7 @@
                             </span>
                             <a href="https://doi.org/10.3390/s22030993" target="_blank" class="doi-link">DOI:
                                 10.3390/s22030993</a>
+                            <span class="citation-count" data-en="Cited by 42" data-gr="Αναφορές: 42">Αναφορές: 42</span>
                         </div>
                         <p class="muted"
                             data-en="Machine-learning wearable platform recognizing K9 behavior in real time; used in the EU FASTER project."
@@ -744,6 +775,7 @@
                             <span class="pub-badge book">
                                 <span class="pub-emoji" aria-hidden="true">📗</span> Βιβλίο
                             </span>
+                            <span class="book-stats" data-en="2,746 views · 764 downloads" data-gr="2.746 προβολές · 764 λήψεις">2.746 προβολές · 764 λήψεις</span>
                         </div>
                         <p class="muted">
                             <a class="proj-link" href="https://repository.kallipos.gr/handle/11419/9130" target="_blank"
@@ -786,12 +818,12 @@
             <div class="grid">
                 <div class="card tile">
                     <div class="teach-header">
-                        <img class="teach-logo" src="assets/logos/Uniwa_logo.svg" alt="UniWA Logo">
+                        <img class="teach-logo" src="assets/logos/Uniwa_logo.svg" alt="Λογότυπο ΠαΔΑ">
                         <h3 data-en="Blockchain & DLT — M.Sc in Cybersecurity (UniWA)"
                             data-gr="Blockchain & DLT — Μεταπτυχιακό στην Κυβερνοασφάλεια (ΠαΔΑ)">
                             <a href="https://cscyb.uniwa.gr/el/course/technologies-alysidas-systoichion-katanemimenoy-katholikoy/"
                                 target="_blank" rel="noopener noreferrer">
-                                Blockchain &amp; DLT — M.Sc in Cybersecurity (UniWA)
+                                Blockchain &amp; DLT — Μεταπτυχιακό στην Κυβερνοασφάλεια (ΠαΔΑ)
                                 <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
                                     <path
                                         d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
@@ -821,12 +853,12 @@
                 </div>
                 <div class="card tile">
                     <div class="teach-header">
-                        <img class="teach-logo" src="assets/logos/Uniwa_logo.svg" alt="UniWA Logo">
+                        <img class="teach-logo" src="assets/logos/Uniwa_logo.svg" alt="Λογότυπο ΠαΔΑ">
                         <h3 data-en="High‑Performance Computing Systems for Blockchain Applications (UniWA)"
                             data-gr="Υπολογιστικά συστήματα υψηλών επιδόσεων για εφαρμογές blockchain (ΠαΔΑ)">
                             <a href="https://msc-acs.uniwa.gr/orologio-programma/" target="_blank"
                                 rel="noopener noreferrer">
-                                High‑Performance Computing Systems for Blockchain Applications (UniWA)
+                                Υπολογιστικά συστήματα υψηλών επιδόσεων για εφαρμογές blockchain (ΠαΔΑ)
                                 <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
                                     <path
                                         d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
@@ -853,12 +885,12 @@
                 </div>
                 <div class="card tile">
                     <div class="teach-header">
-                        <img class="teach-logo" src="assets/logos/un_malta_logo.svg" alt="University of Malta Logo">
+                        <img class="teach-logo" src="assets/logos/un_malta_logo.svg" alt="Λογότυπο Πανεπιστημίου Μάλτας">
                         <h3 data-en="DLT Cybersecurity, Auditing and Sandbox Considerations (University of Malta)"
                             data-gr="DLT: Κυβερνοασφάλεια, Έλεγχος και Ζητήματα Sandbox (Πανεπιστήμιο Μάλτας)">
                             <a href="https://www.um.edu.mt/courses/studyunit/DLT5301" target="_blank"
                                 rel="noopener noreferrer">
-                                DLT Cybersecurity, Auditing and Sandbox Considerations (University of Malta)
+                                DLT: Κυβερνοασφάλεια, Έλεγχος και Ζητήματα Sandbox (Πανεπιστήμιο Μάλτας)
                                 <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
                                     <path
                                         d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
@@ -897,7 +929,7 @@
                         <span class="proj-badge badge-security">Oracles</span>
                         <span class="proj-badge badge-web3">Web3Edu</span>
                     </div>
-                    <p id="proj-labs-desc" class="muted">Σχεδιασμός και υλοποίηση εργαστηρίων Web3 security,
+                    <p id="teach-4" class="muted">Σχεδιασμός και υλοποίηση εργαστηρίων Web3 security,
                         συμπεριλαμβανομένων επιθέσεων DeFi, consensus simulations, oracle manipulation και ιδιωτικών
                         testnets με Besu.</p>
                 </div>
@@ -906,45 +938,67 @@
 
         <section id="contact">
             <h2 class="section-title" data-en="Contact" data-gr="Επικοινωνία">Επικοινωνία</h2>
-            <div class="card contact-card">
-                <img src="assets/avatar.png" alt="Φωτογραφία του Δημήτρη Γ. Κόγια" loading="lazy" decoding="async"
-                    class="contact-avatar" />
-                <ul class="list">
-                    <li>
-                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
-                            <path
-                                d="M4 6h16a2 2 0 0 1 2 2v.2l-10 6.25L2 8.2V8a2 2 0 0 1 2-2Zm16 12H4a2 2 0 0 1-2-2V9.3l9.2 5.7a2 2 0 0 0 2.1 0L22 9.3V16a2 2 0 0 1-2 2Z" />
+            <div class="card contact-card-new">
+                <div class="contact-header">
+                    <img src="assets/avatar.png" alt="Φωτογραφία του Δημήτρη Γ. Κόγια" loading="lazy" decoding="async"
+                        class="contact-avatar-new" />
+                    <div class="contact-intro">
+                        <h3>Ας Συνδεθούμε</h3>
+                        <p class="muted">Επικοινωνήστε μαζί μου για συνεργασίες, ομιλίες ή ερευνητικά ερωτήματα.</p>
+                    </div>
+                </div>
+                <div class="contact-links-grid">
+                    <a href="mailto:dimitris@kogias.eu" class="contact-link-item">
+                        <svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4 6h16a2 2 0 0 1 2 2v.2l-10 6.25L2 8.2V8a2 2 0 0 1 2-2Zm16 12H4a2 2 0 0 1-2-2V9.3l9.2 5.7a2 2 0 0 0 2.1 0L22 9.3V16a2 2 0 0 1-2 2Z" />
                         </svg>
-                        <span id="lbl-email">Email:</span>
-                        <a href="mailto:dimitris@kogias.eu">dimitris@kogias.eu</a>
-                    </li>
-                    <li>
-                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.53-1.35-1.3-1.71-1.3-1.71-1.06-.73.08-.72.08-.72 1.18.08 1.8 1.22 1.8 1.22 1.04 1.79 2.74 1.27 3.41.97.11-.76.41-1.27.75-1.56-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.2 1.18a11 11 0 0 1 5.83 0c2.22-1.49 3.2-1.18 3.2-1.18.63 1.59.23 2.77.11 3.06.74.81 1.2 1.84 1.2 3.1 0 4.42-2.69 5.39-5.25 5.68.42.36.8 1.07.8 2.17v3.22c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z" />
+                        <div class="contact-link-content">
+                            <span id="lbl-email" class="contact-link-label">Email</span>
+                            <span class="contact-link-value">dimitris@kogias.eu</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/DimiKog" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                        <svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.53-1.35-1.3-1.71-1.3-1.71-1.06-.73.08-.72.08-.72 1.18.08 1.8 1.22 1.8 1.22 1.04 1.79 2.74 1.27 3.41.97.11-.76.41-1.27.75-1.56-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.2 1.18a11 11 0 0 1 5.83 0c2.22-1.49 3.2-1.18 3.2-1.18.63 1.59.23 2.77.11 3.06.74.81 1.2 1.84 1.2 3.1 0 4.42-2.69 5.39-5.25 5.68.42.36.8 1.07.8 2.17v3.22c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z" />
                         </svg>
-                        <span id="lbl-github">GitHub:</span>
-                        <a href="https://github.com/DimiKog" target="_blank" rel="noopener noreferrer">@DimiKog</a>
-                    </li>
-                    <li>
-                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
-                            <path
-                                d="M4 4.5h9a3.5 3.5 0 0 1 3.5 3.5v9.5a2.5 2.5 0 0 1-2.5 2.5H4a1.5 1.5 0 0 1-1.5-1.5V6A1.5 1.5 0 0 1 4 4.5Zm0 2A.5.5 0 0 0 3.5 7v11a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V8A1.5 1.5 0 0 0 12 6.5H4Zm14 1h2a1 1 0 0 1 1 1V20a.5.5 0 0 1-1 0v-5h-2v5a1 1 0 0 1-2 0V8a1 1 0 0 1 1-1Zm0 2v3h2V9h-2Z" />
+                        <div class="contact-link-content">
+                            <span id="lbl-github" class="contact-link-label">GitHub</span>
+                            <span class="contact-link-value">@DimiKog</span>
+                        </div>
+                    </a>
+
+                    <a href="https://scholar.google.com/citations?user=VY5yMDYAAAAJ&hl=el" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                        <svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0L3.708 8.308h16.584L12 0zM3.708 8.308v7.385l8.292 8.308 8.292-8.308V8.308H3.708zM12 18.462l-5.538-5.538h11.076L12 18.462z"/>
                         </svg>
-                        <span id="lbl-scholar">Scholar:</span>
-                        <a href="https://scholar.google.com/citations?user=VY5yMDYAAAAJ&amp;hl=el" target="_blank"
-                            rel="noopener noreferrer">Προφίλ Scholar</a>
-                    </li>
-                    <li>
-                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
-                            <path
-                                d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM.5 8.5h4.9V24H.5V8.5ZM8.5 8.5h4.7v2.1h.1c.7-1.3 2.5-2.7 5.1-2.7 5.4 0 6.4 3.6 6.4 8.3V24h-4.9v-6.8c0-1.6 0-3.7-2.2-3.7-2.3 0-2.6 1.7-2.6 3.6V24H8.5V8.5Z" />
+                        <div class="contact-link-content">
+                            <span id="lbl-scholar" class="contact-link-label">Google Scholar</span>
+                            <span class="contact-link-value">Δημοσιεύσεις</span>
+                        </div>
+                    </a>
+
+                    <a href="https://orcid.org/0000-0001-8985-6136" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                        <svg class="contact-icon" aria-hidden="true" viewBox="0 0 256 256" fill="currentColor">
+                            <path d="M256 128c0 70.7-57.3 128-128 128S0 198.7 0 128 57.3 0 128 0s128 57.3 128 128z" fill="#A6CE39"/>
+                            <path d="M86.3 186.2H70.9V79.1h15.4v107.1zM108.9 79.1h41.6c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.6-56.8 53.6h-41.8V79.1zm15.4 93.3h24.5c34.9 0 42.9-26.5 42.9-39.7C191.7 111.2 178 93 148 93h-23.7v79.4zM71.3 73.2c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5c0 4.7-3.8 8.5-8.5 8.5s-8.5-3.8-8.5-8.5z" fill="#FFF"/>
                         </svg>
-                        <span id="lbl-linkedin">LinkedIn:</span>
-                        <a href="https://www.linkedin.com/in/dimitris-kogias-b376222a/" target="_blank"
-                            rel="noopener noreferrer">Προφίλ LinkedIn</a>
-                    </li>
-                </ul>
+                        <div class="contact-link-content">
+                            <span class="contact-link-label">ORCID</span>
+                            <span class="contact-link-value">0000-0001-8985-6136</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/dimitris-kogias-b376222a/" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                        <svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM.5 8.5h4.9V24H.5V8.5ZM8.5 8.5h4.7v2.1h.1c.7-1.3 2.5-2.7 5.1-2.7 5.4 0 6.4 3.6 6.4 8.3V24h-4.9v-6.8c0-1.6 0-3.7-2.2-3.7-2.3 0-2.6 1.7-2.6 3.6V24H8.5V8.5Z" />
+                        </svg>
+                        <div class="contact-link-content">
+                            <span id="lbl-linkedin" class="contact-link-label">LinkedIn</span>
+                            <span class="contact-link-value">Επαγγελματικό Προφίλ</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -952,21 +1006,25 @@
 
     <footer class="site-footer">
         <p class="footer-label" data-en="Partners & affiliations" data-gr="Συνεργάτες & φορείς">Συνεργάτες & φορείς</p>
-        <div class="affil-logos affil-logos--footer" aria-label="Affiliations">
-            <img class="affil-logo" src="assets/logos/Uniwa_logo.svg" alt="University of West Attica (UniWA) logo"
+        <div class="affil-logos affil-logos--footer" aria-label="Συνεργασίες">
+            <img class="affil-logo" src="assets/logos/Uniwa_logo.svg" alt="Λογότυπο Πανεπιστημίου Δυτικής Αττικής (ΠαΔΑ)"
                 loading="lazy" decoding="async" />
-            <img class="affil-logo" src="assets/logos/consert_logo.svg" alt="ConSeRT Research Group logo" loading="lazy"
+            <img class="affil-logo" src="assets/logos/consert_logo.svg" alt="Λογότυπο ερευνητικής ομάδας ConSeRT" loading="lazy"
                 decoding="async" />
-            <img class="affil-logo logo--invert" src="assets/logos/lciis_logo.svg" alt="LCIIS Research Lab logo"
+            <img class="affil-logo logo--invert" src="assets/logos/lciis_logo.svg" alt="Λογότυπο ερευνητικού εργαστηρίου LCIIS"
                 loading="lazy" decoding="async" />
             <img class="affil-logo" src="assets/logos/NKUA_logo.svg"
-                alt="National and Kapodistrian University of Athens (NKUA) logo" loading="lazy" decoding="async" />
-            <img class="affil-logo logo--boost logo--shadow" src="assets/logos/INATBA_logo2.svg?v=2" alt="INATBA logo"
+                alt="Λογότυπο Εθνικού και Καποδιστριακού Πανεπιστημίου Αθηνών (ΕΚΠΑ)" loading="lazy" decoding="async" />
+            <img class="affil-logo logo--boost logo--shadow" src="assets/logos/INATBA_logo2.svg?v=2" alt="Λογότυπο INATBA"
                 loading="lazy" decoding="async" />
             <img class="affil-logo logo--boost logo--shadow" src="assets/logos/Frontiers_bloc_logo.svg"
-                alt="Frontiers in Blockchain logo" loading="lazy" decoding="async" />
+                alt="Λογότυπο Frontiers in Blockchain" loading="lazy" decoding="async" />
         </div>
-        <div class="footer-copy">© <span id="y"></span> Δημήτρης Γ. Κόγιας · Αθήνα, Ελλάδα</div>
+        <div class="footer-copy">
+            © <span id="y"></span> Δημήτριος Γ. Κόγιας · Αθήνα, Ελλάδα
+            <span class="footer-divider">·</span>
+            <span id="last-updated" data-en="Last updated: January 2026" data-gr="Τελευταία ενημέρωση: Ιανουάριος 2026">Τελευταία ενημέρωση: Ιανουάριος 2026</span>
+        </div>
     </footer>
 
     <button id="back-to-top" class="back-to-top" aria-label="Επιστροφή στην κορυφή">↑</button>

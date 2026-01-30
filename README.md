@@ -1,6 +1,6 @@
-# Dimi Webpage – Dimitris Kogias’ Personal Bilingual Static Site
+# Dimi Webpage – Dimitrios Kogias’ Personal Bilingual Static Site
 
-Welcome! This is the **personal bilingual (EN/GR) static webpage of Dimitris Kogias**, thoughtfully designed for easy deployment on **Cloudflare Pages**.
+Welcome! This is the **personal bilingual (EN/GR) static webpage of Dimitrios Kogias**, thoughtfully designed for easy deployment on **Cloudflare Pages**.
 
 ## 🚀 Quick Deploy
 1. Create a new GitHub repository (e.g. `Dimi-Webpage`) and push this folder to it.
@@ -26,4 +26,4 @@ Welcome! This is the **personal bilingual (EN/GR) static webpage of Dimitris Kog
 - Edit `robots.txt` and update the Sitemap line with your domain.
 - Update `sitemap.xml` to reflect your actual domain.
 
-© 2025 Dimitris Kogias
+© 2025 Dimitrios Kogias

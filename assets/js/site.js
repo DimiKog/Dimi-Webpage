@@ -45,39 +45,16 @@
         'proj-artemis-3': { en: 'Participation in meetings and preparation of deliverables', gr: 'Συμμετοχή σε συναντήσεις και στη συγγραφή παραδοτέων' },
         // document title
         'doc-title': {
-            en: 'Dimitris G. Kogias — Researcher • Blockchain • Cybersecurity',
-            gr: 'Dimitris G. Kogias — Ερευνητής • Blockchain • Κυβερνοασφάλεια'
-        },
-        // hero
-        'hero-name': {
-            en: 'Dimitris G. Kogias',
-            gr: 'Δημήτρης Γ. Κόγιας'
-        },
-        'hero-intro': {
-            en: 'Building safer blockchain systems for education and research.',
-            gr: 'Δημιουργώ ασφαλέστερα συστήματα blockchain για την εκπαίδευση και την έρευνα.'
-        },
-        'hero-title': {
-            en: 'Researcher & Educator in Blockchain, Web3 & Cybersecurity',
-            gr: 'Ερευνητής & Εκπαιδευτής σε Blockchain, Web3 & Κυβερνοασφάλεια'
-        },
-        'hero-sub': {
-            en: '<span>Blockchain security &amp; DApp assurance</span><span>Hyperledger Besu PoA/QBFT networks</span><span>Applied Web3 &amp; cybersecurity education</span>',
-            gr: '<span>Ασφάλεια blockchain &amp; διασφάλιση DApp</span><span>Δίκτυα Hyperledger Besu PoA/QBFT</span><span>Πρακτική εκπαίδευση σε Web3 &amp; κυβερνοασφάλεια</span>'
-        },
-        'cta-primary': { en: 'See projects', gr: 'Δες έργα' },
-        'cta-secondary': { en: 'Get in touch', gr: 'Επικοινωνία' },
-        'hero-caption': {
-            en: 'Senior Researcher – Blockchain Educator',
-            gr: 'Κύριος Ερευνητής – Εκπαιδευτής σε Blockchain, Web3 & Cybersecurity'
+            en: 'Dimitrios G. Kogias — Blockchain, Web3 & Cybersecurity Researcher, Educator & Project Manager',
+            gr: 'Δημήτριος Γ. Κόγιας — Ερευνητής, Εκπαιδευτής & Project Manager σε Blockchain, Web3 & Κυβερνοασφάλεια'
         },
         'brand-tag': {
-            en: 'Researcher & Educator in Blockchain, Web3 & Cybersecurity',
-            gr: 'Ερευνητής & Εκπαιδευτής σε Blockchain, Web3 & Cybersecurity'
+            en: 'Researcher, Educator & Project Manager in Blockchain, Web3 & Cybersecurity',
+            gr: 'Ερευνητής & Εκπαιδευτής σε Blockchain, Web3 & Κυβερνοασφάλεια'
         },
         'brand-name': {
-            en: 'Dimitris G. Kogias',
-            gr: 'Δημήτρης Γ. Κόγιας'
+            en: 'Dimitrios G. Kogias',
+            gr: 'Δημήτριος Γ. Κόγιας'
         },
         'nav-research': { en: 'Research', gr: 'Έρευνα' },
         'nav-portfolio': { en: 'Portfolio', gr: 'Portfolio' },
@@ -85,45 +62,6 @@
         'nav-publications': { en: 'Publications', gr: 'Δημοσιεύσεις' },
         'nav-teaching': { en: 'Teaching', gr: 'Διδασκαλία' },
         'nav-contact': { en: 'Contact', gr: 'Επικοινωνία' },
-        // stats labels
-        'stat-1-lbl': { en: 'Years teaching in academic institutions', gr: 'Χρόνια διδασκαλίας σε ακαδημαϊκά ιδρύματα' },
-        'stat-2-lbl': { en: 'Years teaching blockchain', gr: 'Χρόνια διδασκαλίας στο blockchain' },
-        'stat-3-lbl': { en: 'Research publications', gr: 'Ερευνητικές δημοσιεύσεις' },
-        'stat-4-lbl': { en: 'Academic theses supervised', gr: 'Διπλωματικές εργασίες που επιβλέφθηκαν' },
-        'stat-5-lbl': { en: 'DApps developed', gr: 'DApps που αναπτύχθηκαν' },
-        // about
-        'about-p1': {
-            en: 'Researcher and educator specializing in blockchain security, distributed systems, and decentralized applications. I design and develop DApps, build and operate Hyperledger Besu (QBFT) networks with Blockscout and Faucet integration, and transform these systems into hands‑on learning environments for students and professionals.',
-            gr: 'Είμαι ερευνητής και διδάσκων με εξειδίκευση στην ασφάλεια blockchain, τα κατανεμημένα συστήματα και τις αποκεντρωμένες εφαρμογές. Σχεδιάζω και αναπτύσσω DApps, στήνω και λειτουργώ δίκτυα Hyperledger Besu (QBFT) με ενσωμάτωση Blockscout και Faucet, και μετατρέπω αυτά τα συστήματα σε πρακτικά, εργαστηριακά περιβάλλοντα για φοιτητές και επαγγελματίες.'
-        },
-        'about-p2': {
-            en: 'I teach at the University of West Attica (UniWA) and the University of Malta, and as a Senior Researcher I contribute to EU and Greek National projects. I am also co‑author of the first open‑access Greek textbook on blockchain (<a href="https://repository.kallipos.gr/handle/11419/9130" target="_blank" rel="noopener noreferrer">Kallipos editions</a>).',
-            gr: 'Διδάσκω στο Πανεπιστήμιο Δυτικής Αττικής (ΠαΔΑ) και στο Πανεπιστήμιο Μάλτας και, ως Κύριος Ερευνητής, συμβάλλω σε ευρωπαϊκά και ελληνικά εθνικά έργα. Είμαι επίσης συν‑συγγραφέας του πρώτου ανοικτής πρόσβασης ελληνικού συγγράμματος για το blockchain (<a href="https://repository.kallipos.gr/handle/11419/9130" target="_blank" rel="noopener noreferrer">εκδόσεις Κάλλιπος</a>).'
-        },
-        'about-li1': {
-            en: 'PhD in Computer Networks — focus on distributed systems & security',
-            gr: 'Διδακτορικό στα Δίκτυα Υπολογιστών — εστίαση σε κατανεμημένα συστήματα & ασφάλεια'
-        },
-        'about-li2': {
-            en: 'Blockchain infrastructure: Besu QBFT network, Blockscout & Faucet, hardened validator ops',
-            gr: 'Υποδομή blockchain: δίκτυο Besu QBFT, Blockscout & Faucet, ενισχυμένες λειτουργίες validators'
-        },
-        'about-li3': {
-            en: 'Teaching & workshops on: Blockchain, P2P Networks, Cybersecurity, DApp security labs',
-            gr: 'Διδασκαλία & εργαστήρια σε: Blockchain, Δίκτυα P2P, Κυβερνοασφάλεια, εργαστήρια ασφάλειας DApp'
-        },
-        'about-li4': {
-            en: 'Research interests: zero‑knowledge proofs (ZKPs), oracles, protocol hardening, verifiable credentials',
-            gr: 'Ερευνητικά ενδιαφέροντα: αποδείξεις μηδενικής γνώσης (ZKPs), oracles, ενίσχυση πρωτοκόλλων, επαληθεύσιμα διαπιστευτήρια'
-        },
-        'about-li5': {
-            en: 'Professional roles: Member of INATBA\'s Academic Advisory Board, Associate Editor, <a href="https://loop.frontiersin.org/people/1136660/overview" target="_blank" rel="noopener noreferrer">Frontiers in Blockchain <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z"/></svg></a> (“Blockchain for Web3 and the Metaverse”)',
-            gr: 'Επαγγελματικοί ρόλοι: Μέλος του Academic Advisory Board της INATBA, Associate Editor στο <a href="https://loop.frontiersin.org/people/1136660/overview" target="_blank" rel="noopener noreferrer">Frontiers in Blockchain <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z"/></svg></a> («Blockchain for Web3 and the Metaverse»)'
-        },
-        'about-li6': {
-            en: 'Regulatory focus: cybersecurity and blockchain resilience under DORA',
-            gr: 'Ρυθμιστική εστίαση: κυβερνοασφάλεια και ανθεκτικότητα blockchain στο πλαίσιο του DORA'
-        },
         'pub-note': {
             en: 'A few popular/representative publications are listed here. For the full list, please see my CV or Google Scholar.',
             gr: 'Παρακάτω παρατίθενται μερικές δημοφιλείς/ενδεικτικές δημοσιεύσεις. Για την πλήρη λίστα, δείτε το Βιογραφικό μου ή το Google Scholar.'
@@ -166,8 +104,8 @@
             gr: 'Ιδιωτικό δίκτυο Hyperledger Besu (QBFT) για έρευνα στη συναίνεση, την ιδιωτικότητα και τη λειτουργική ανθεκτικότητα.'
         },
         'proj-besu-1': {
-            en: 'Besu (v25.6.0) network with 5 validators, Blockscout explorer & Faucet',
-            gr: 'Δίκτυο Besu (v.25.6.0) με 5 κόμβους επαλήθευσης, Blockscout explorer και χρήση Faucet'
+            en: 'Five‑validator network (v25.8.0) with Blockscout explorer and Faucet',
+            gr: 'Δίκτυο Besu (v25.8.0) με 5 validators, Blockscout explorer & Faucet'
         },
         'proj-besu-2': {
             en: 'Hardened nodes & monitoring (metrics, logs, alerts)',
@@ -242,9 +180,6 @@
             const el = document.getElementById(id);
             if (el && langElems[id][lang]) {
                 if (
-                    id === 'about-p2' ||
-                    id === 'about-li5' ||
-                    id === 'hero-sub' ||
                     id === 'proj-tardis-1' ||
                     id === 'proj-genera-1' ||
                     id === 'proj-faster-1' ||
@@ -321,6 +256,22 @@
     function updateYear() {
         const target = document.getElementById('y');
         if (target) { target.textContent = new Date().getFullYear(); }
+
+        // Update "Last updated" date (English version)
+        const updateDateEl = document.getElementById('update-date');
+        if (updateDateEl) {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            updateDateEl.textContent = now.toLocaleDateString('en-US', options);
+        }
+
+        // Update "Last updated" date (Greek version)
+        const updateDateGrEl = document.getElementById('update-date-gr');
+        if (updateDateGrEl) {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            updateDateGrEl.textContent = now.toLocaleDateString('el-GR', options);
+        }
     }
 
     function initScrollSpy() {
@@ -406,4 +357,20 @@
         toggle();
         btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     }
+
+    function initScrollProgress() {
+        const progressBar = document.getElementById('scroll-progress');
+        if (!progressBar) { return; }
+        const updateProgress = () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            progressBar.style.width = progress + '%';
+        };
+        window.addEventListener('scroll', updateProgress, { passive: true });
+        updateProgress();
+    }
+
+    // Initialize scroll progress
+    initScrollProgress();
 })();
