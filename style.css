@@ -891,6 +891,17 @@ pre{ white-space:pre-wrap; word-break:break-word; }
 }
 
 /* Skip link utility */
+.sr-only{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
 .sr-only-focusable{ position:absolute; left:-9999px; }
 .sr-only-focusable:focus{ left:8px; top:8px; background:var(--bg); color:var(--text); padding:8px 10px; border-radius:8px; outline:2px solid var(--brand); }
 
