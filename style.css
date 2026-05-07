@@ -594,7 +594,7 @@ h1{ font-size:46px; line-height:1.12; margin:.35rem 0; letter-spacing:-0.3px; }
 }
 .stat b{
   font-size:1.45rem;
-  color:var(--text);
+  color:var(--brand);
 }
 .stat .muted{
   font-size:.9rem;
@@ -1153,6 +1153,10 @@ a:focus-visible,
   flex-shrink:0;
 }
 .badge-dev { background:#bf360c; color:#ffccbc; border-color:rgba(0,0,0,.1); }
+@media (prefers-color-scheme: light){
+  .badge-live { background:#e8f5e9; color:#1b5e20; }
+  .badge-live::before { background:#2e7d32; }
+}
 
 /* Web3Edu section CTA row */
 .web3edu-ctas {
