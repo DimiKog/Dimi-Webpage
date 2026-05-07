@@ -61,6 +61,7 @@
         'nav-about': { en: 'About', gr: 'Σχετικά' },
         'nav-publications': { en: 'Publications', gr: 'Δημοσιεύσεις' },
         'nav-teaching': { en: 'Teaching', gr: 'Διδασκαλία' },
+        'nav-web3edu': { en: 'Web3Edu', gr: 'Web3Edu' },
         'nav-contact': { en: 'Contact', gr: 'Επικοινωνία' },
         'pub-note': {
             en: 'A few popular/representative publications are listed here. For the full list, please see my CV or Google Scholar.',
@@ -139,6 +140,32 @@
         'proj-web3src-desc': {
             en: 'Curated collection of resources and learning materials for Web3, blockchain, and distributed systems.',
             gr: 'Επιμελημένη συλλογή από πόρους και εκπαιδευτικό υλικό για το Web3, το blockchain και τα κατανεμημένα συστήματα.'
+        },
+        // web3edu section
+        'web3edu-intro': {
+            en: 'Web3Edu is an open learning ecosystem built on a live Hyperledger Besu private network. Students interact with real smart contracts, earn Soulbound Token credentials, and advance through 16+ structured labs spanning consensus, security, DeFi, and DAO governance.',
+            gr: 'Το Web3Edu είναι ένα ανοικτό οικοσύστημα μάθησης που βασίζεται σε ζωντανό ιδιωτικό δίκτυο Hyperledger Besu. Οι φοιτητές αλληλεπιδρούν με πραγματικά smart contracts, αποκτούν διαπιστευτήρια Soulbound Token και εξελίσσονται μέσα από 16+ δομημένα εργαστήρια που καλύπτουν συναίνεση, ασφάλεια, DeFi και διακυβέρνηση DAO.'
+        },
+        'web3edu-infra-desc': {
+            en: 'Private Ethereum-compatible network for educational deployments — 5 validators, Blockscout explorer, Faucet, and SBT identity layer.',
+            gr: 'Ιδιωτικό δίκτυο συμβατό με Ethereum για εκπαιδευτικές αναπτύξεις — 5 validators, Blockscout explorer, Faucet και επίπεδο ταυτότητας SBT.'
+        },
+        'web3edu-labs-desc': {
+            en: 'Structured lab series covering the full Web3 stack — from running a node to auditing DeFi protocols and designing governance systems.',
+            gr: 'Δομημένη σειρά εργαστηρίων που καλύπτει ολόκληρο το Web3 stack — από τη λειτουργία κόμβου μέχρι τον έλεγχο πρωτοκόλλων DeFi και τον σχεδιασμό συστημάτων διακυβέρνησης.'
+        },
+        'web3edu-track-1': { en: 'Track 1: Blockchain Foundations & Node Operations', gr: 'Τροχιά 1: Βάσεις Blockchain & Λειτουργία Κόμβων' },
+        'web3edu-track-2': { en: 'Track 2: Smart Contract Development & Testing', gr: 'Τροχιά 2: Ανάπτυξη & Δοκιμή Smart Contracts' },
+        'web3edu-track-3': { en: 'Track 3: DeFi, Tokens & Economics', gr: 'Τροχιά 3: DeFi, Tokens & Οικονομικά' },
+        'web3edu-track-4': { en: 'Track 4: Security, Auditing & Attack Simulations', gr: 'Τροχιά 4: Ασφάλεια, Έλεγχος & Προσομοίωση Επιθέσεων' },
+        'web3edu-track-5': { en: 'Track 5: DAO Governance & On-chain Coordination', gr: 'Τροχιά 5: Διακυβέρνηση DAO & On-chain Συντονισμός' },
+        'web3edu-community-desc': {
+            en: 'Web3Edu is building toward a community-governed learning platform. A DAO governance framework is in place, with on-chain voting and credential-gated access coming soon.',
+            gr: 'Το Web3Edu εξελίσσεται σε πλατφόρμα μάθησης διοικούμενη από κοινότητα. Υπάρχει πλαίσιο διακυβέρνησης DAO με on-chain ψηφοφορία και πρόσβαση βάσει διαπιστευτηρίων που έρχεται σύντομα.'
+        },
+        'proj-poe-festival': {
+            en: 'Festival Edition: themed variant for live events and workshops, deployed on EduNet',
+            gr: 'Festival Edition: ειδική έκδοση για ζωντανές εκδηλώσεις και εργαστήρια, αναπτυγμένη στο EduNet'
         },
         // teaching
         'teach-1': {

@@ -1107,6 +1107,29 @@ a:focus-visible,
 .badge-resources { background:#455a64; color:#fff; border-color:rgba(0,0,0,.1); }
 .badge-oss       { background:#263238; color:#fff; border-color:rgba(0,0,0,.1); }
 
+/* Web3Edu: live / in-dev status badges */
+@keyframes live-pulse {
+  0%, 100% { opacity:1; }
+  50%       { opacity:.35; }
+}
+.badge-live {
+  background:#1b5e20; color:#a5d6a7; border-color:rgba(0,0,0,.1);
+  display:inline-flex; align-items:center; gap:5px;
+}
+.badge-live::before {
+  content:''; display:inline-block;
+  width:7px; height:7px; border-radius:50%;
+  background:#4caf50;
+  animation:live-pulse 2s ease-in-out infinite;
+  flex-shrink:0;
+}
+.badge-dev { background:#bf360c; color:#ffccbc; border-color:rgba(0,0,0,.1); }
+
+/* Web3Edu section CTA row */
+.web3edu-ctas {
+  display:flex; flex-wrap:wrap; gap:10px; margin-top:18px;
+}
+
 /* Teaching badges */
 
 /* --- Teaching Logo + Header Structure (Kept for completeness) --- */
