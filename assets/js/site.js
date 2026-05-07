@@ -167,6 +167,7 @@
         initTheme();
         initMenu();
         initBackToTop();
+        initScrollProgress();
     }
 
     if (document.readyState === 'loading') {
@@ -257,21 +258,6 @@
         const target = document.getElementById('y');
         if (target) { target.textContent = new Date().getFullYear(); }
 
-        // Update "Last updated" date (English version)
-        const updateDateEl = document.getElementById('update-date');
-        if (updateDateEl) {
-            const now = new Date();
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            updateDateEl.textContent = now.toLocaleDateString('en-US', options);
-        }
-
-        // Update "Last updated" date (Greek version)
-        const updateDateGrEl = document.getElementById('update-date-gr');
-        if (updateDateGrEl) {
-            const now = new Date();
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            updateDateGrEl.textContent = now.toLocaleDateString('el-GR', options);
-        }
     }
 
     function initScrollSpy() {
@@ -371,6 +357,4 @@
         updateProgress();
     }
 
-    // Initialize scroll progress
-    initScrollProgress();
 })();

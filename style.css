@@ -463,7 +463,13 @@ html[data-lang="gr"] #btn-gr{
 }
 
 
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(340px,1fr));
+  gap:22px;
+}
 @media (max-width: 980px){
+  .grid{ grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:18px; }
 }
 @media (max-width: 860px){
   .grid{ grid-template-columns:1fr; }
@@ -535,11 +541,11 @@ h1{ font-size:46px; line-height:1.12; margin:.35rem 0; letter-spacing:-0.3px; }
   margin-top:clamp(20px, 3vw, 32px);
   width:100%;
 }
-.hero-card .stats{
+.hero-card .hero-stats{
   border-top:1px solid rgba(255,255,255,.15);
   padding-top:clamp(16px, 2vw, 26px);
 }
-:root[data-theme="light"] .hero-card .stats{
+:root[data-theme="light"] .hero-card .hero-stats{
   border-top:1px solid rgba(0,0,0,.08);
 }
 .stat{
@@ -716,30 +722,6 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   }
 }
 
-/* OLD Contact styles - Keep for backwards compatibility if needed */
-.contact-card{
-  padding:14px 16px;
-  display:flex;
-  align-items:flex-start;
-  gap:12px;
-}
-
-.contact-avatar{
-  width:48px;
-  height:48px;
-  border-radius:50%;
-  object-fit:cover;
-  border:2px solid var(--brand);
-  flex:0 0 auto;
-}
-
-.contact-card .list{
-  display:grid;
-  grid-template-columns: repeat(2, minmax(220px, 1fr));
-  column-gap:16px;
-  row-gap:6px;
-  line-height:1.25;
-}
 
 /* Icon utilities */
 .icon{
@@ -819,62 +801,7 @@ pre{ white-space:pre-wrap; word-break:break-word; }
   box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
 }
 
-.affil-logos{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
-  gap:22px;
-  padding-top:14px;
-  padding-bottom:14px;
-  justify-items:center;
-  align-items:center;
-}
-
-.affil-logo-wrapper img{
-  width:100%;
-  max-height:52px;
-  object-fit:contain;
-  display:block;
-  filter:brightness(1);
-}
-
-/* Align icon + text nicely inside contact items */
-.contact-card .list li{
-  display:flex;
-  align-items:center;
-  gap:6px;                    /* was 8px */
-  font-size:14.5px;           /* a bit smaller */
-}
-
-/* Keep labels narrow and readable */
-.contact-card .list li span[id^="lbl-"]{
-  min-width:84px;             /* aligns columns */
-  color:var(--muted);
-}
-/* Slightly brighten icons on hover to signal interactivity */
-.contact-card a:hover .icon,
-.contact-card a:focus .icon{
-  opacity:1;
-}
-
-/* Mobile-friendly: stack avatar above details */
-@media (max-width: 640px){
-  .contact-card{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:10px;                 /* was 12px */
-    padding:14px;             /* tighter on mobile too */
-  }
-  .contact-avatar{
-    width:52px;               /* a touch larger for touch */
-    height:52px;
-  }
-  .contact-card .list{
-    grid-template-columns: 1fr; /* single column on mobile */
-    row-gap:8px;
-  }
-  .contact-card .list li{ font-size:15px; }
-  .card li, .tile li{ line-height:1.55; }
-}
+.card li, .tile li{ line-height:1.55; }
 
 /* Visible keyboard focus for header links */
 .nav a:focus-visible{
@@ -994,35 +921,6 @@ a:focus-visible,
   .hero-portrait{ animation:none !important; }
 }
 
-/* Print styles */
-@media print{
-  /* Basic page setup */
-  @page{ margin: 12mm; }
-  html, body{ background:#fff !important; }
-  body{ color:#000 !important; }
-
-  /* Simplify components for print */
-  .hdr, .hamburger, .theme, .lang, .back-to-top{ display:none !important; }
-  .card, .tile{ box-shadow:none !important; background:#fff !important; border:1px solid #ccc !important; }
-  .btn, .tag{ display:none !important; }
-
-  /* Layout adjustments */
-  .container{ max-width:100% !important; padding:0 !important; }
-  section{ margin:12px 0 !important; padding:0 !important; }
-  .grid{ gap:12px 14px; grid-template-columns:1fr 1fr; }
-
-  /* Typography tweaks for print clarity */
-  h1{ font-size:28px !important; }
-  h2{ font-size:20px !important; }
-  h3{ font-size:16px !important; }
-  .sub{ font-size:14px !important; color:#000 !important; }
-
-  /* Images */
-  img{ max-width:100% !important; height:auto !important; box-shadow:none !important; border:none !important; }
-
-  /* Links show URL (optional; many browsers handle this via settings) */
-  a{ color:#000 !important; text-decoration:none !important; }
-}
 
 /* Revert tag font size to fixed desktop size */
 .tag{ display:inline-flex; gap:8px; align-items:center; padding:6px 12px; border-radius:999px; background:var(--tag-bg); border:1px solid var(--tag-border); color:var(--tag-text); font-weight:600; font-size:13px }
@@ -1393,58 +1291,13 @@ picture img{ display:block; max-width:100%; height:auto; }
   padding-bottom: 12px;
 }
 
-.footer-icon-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
-  border-radius: 8px;
-  background: rgba(92,210,243,.08);
-  border: 1px solid rgba(92,210,243,.25);
-  color: var(--brand);
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all .2s ease;
-}
-
-.footer-icon-link:hover,
-.footer-icon-link:focus {
-  background: rgba(92,210,243,.15);
-  border-color: rgba(92,210,243,.45);
-  transform: translateY(-2px);
-  text-decoration: none;
-}
-
-.footer-icon {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-}
-
-.footer-divider {
-  margin: 0 8px;
-  opacity: 0.5;
-}
-
-#last-updated {
-  font-size: 13px;
-  opacity: 0.8;
-}
-
 @media (max-width: 600px) {
-  .footer-links {
-    flex-direction: column;
-    gap: 12px;
-  }
-
   .footer-copy {
     display: flex;
     flex-direction: column;
     gap: 8px;
     text-align: center;
   }
-
   .footer-divider {
     display: none;
   }
@@ -1502,23 +1355,7 @@ picture img{ display:block; max-width:100%; height:auto; }
   margin-right: 1px;
 }
 
-/* ------------------------------------------------------ */
-/* FULL REDESIGN — Affiliation Logos (Kept for completeness) */
-/* ------------------------------------------------------ */
-
-.affil-section {
-  margin-top: 32px;
-  padding: 24px 0;
-}
-
-.affil-section h2 {
-  text-align: left;
-  margin-bottom: 18px;
-  font-weight: 800;
-  font-size: 1.65rem;
-}
-
-/* Modern grid layout */
+/* --- Affiliation logo grid (About section) --- */
 .affil-logos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -1681,22 +1518,6 @@ strong {
     .tile-preview {
         height: 140px;
     }
-}
-
-/* ------------------------------------------------------------------ */
-/* Contact card hover effects                                          */
-/* ------------------------------------------------------------------ */
-.contact-grid .contact-item,
-.contact-card-grid > a,
-.contact-card-grid > div {
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-.contact-grid .contact-item:hover,
-.contact-card-grid > a:hover,
-.contact-card-grid > div:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(92, 210, 243, 0.15);
-    border-color: var(--brand);
 }
 
 /* ------------------------------------------------------------------ */
