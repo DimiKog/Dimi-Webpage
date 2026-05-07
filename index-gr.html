@@ -362,7 +362,7 @@
             <h2 class="section-title" data-en="Recent Research Projects" data-gr="Επιλεγμένα Πρόσφατα Έργα">Επιλεγμένα
                 Ερευνητικά Έργα</h2>
             <div class="grid">
-                <h3 class="about-subheading">Τρέχοντα Έργα</h3>
+                <h3 class="about-subheading" data-en="Current Projects" data-gr="Τρέχοντα Έργα">Τρέχοντα Έργα</h3>
                 <article class="card tile">
                     <h3>
                         <a href="https://project-tardis.eu/" target="_blank" rel="noopener noreferrer">
@@ -396,6 +396,7 @@
                         </a>
                     </div>
                 </article>
+                <h3 class="about-subheading" data-en="Completed Projects" data-gr="Ολοκληρωμένα Έργα">Ολοκληρωμένα Έργα</h3>
                 <article class="card tile">
                     <h3>
                         <a href="https://life-genera.eu/" target="_blank" rel="noopener noreferrer">
@@ -407,6 +408,7 @@
                     </h3>
                     <div class="proj-meta">
                         <span class="proj-year" id="year-genera">2022 – 2025</span>
+                        <span class="proj-badge badge-research" data-en="Completed" data-gr="Ολοκληρωμένο">Ολοκληρωμένο</span>
                         <span class="proj-badge badge-life" data-en="LIFE EU" data-gr="LIFE ΕΕ">LIFE EU</span>
                         <span class="proj-badge badge-focus">Διαχείριση Έργου</span>
                     </div>
@@ -439,7 +441,6 @@
                         </a>
                     </div>
                 </article>
-                <h3 class="about-subheading">Ολοκληρωμένα Έργα</h3>
                 <article class="card tile">
                     <h3>
                         <a href="https://cordis.europa.eu/project/id/833507" target="_blank" rel="noopener noreferrer">
@@ -598,19 +599,31 @@
                     <h3>Web3Edu Governance Framework</h3>
                     <div class="proj-meta">
                         <span class="proj-badge badge-web3">Web3Edu</span>
+                        <span class="proj-badge badge-research">Έρευνα</span>
                         <span class="proj-badge badge-web3">Governance</span>
-                        <span class="proj-badge badge-web3">Education</span>
                         <span class="proj-badge badge-web3">DAO</span>
                         <span class="proj-badge badge-web3">ZKPs</span>
                     </div>
-                    <p class="muted">Πλαίσιο διακυβέρνησης για αποκεντρωμένα εκπαιδευτικά οικοσυστήματα, συνδυάζοντας
-                        SBT ταυτότητα, DAO μοντέλα ψηφοφορίας και ZKPs για ιδιωτικότητα όταν απαιτείται.</p>
+                    <p class="muted">
+                        Μοντέλο διακυβέρνησης για αποκεντρωμένα εκπαιδευτικά οικοσυστήματα — credential-based, χωρίς
+                        κερδοσκοπικό χαρακτήρα. Η επιρροή αναπτύσσεται μέσω συνεισφοράς: ολοκλήρωση labs, PoE και
+                        επαληθευμένης on-chain δράσης. Επόμενο ορόσημο: on-chain ενεργοποίηση DAO.
+                    </p>
                     <p class="muted"><b>Κύρια Σημεία Ρόλου:</b></p>
                     <ul class="list">
                         <li>Σχεδίαση modular μηχανισμών διακυβέρνησης για συμμετοχική λήψη αποφάσεων</li>
-                        <li>Ενσωμάτωση SBT ταυτότητας για διαφάνεια και ασφάλεια</li>
-                        <li>Πειραματισμός με ZKP‑based ανώνυμη ψηφοφορία για προστασία ιδιωτικότητας</li>
+                        <li>SBT ταυτότητα για διαφάνεια και ασφάλεια — live στο Besu EduNet</li>
+                        <li>ZKP prototypes για ανώνυμη ψηφοφορία και επιλεκτική γνωστοποίηση</li>
                     </ul>
+                    <div class="actions">
+                        <a class="proj-link" href="https://web3edu.dimikog.org/#/dao-governance" target="_blank"
+                            rel="noopener noreferrer">
+                            <span data-en="Governance model" data-gr="Μοντέλο Διακυβέρνησης">Μοντέλο Διακυβέρνησης</span>
+                            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
+                                <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
+                            </svg>
+                        </a>
+                    </div>
                 </article>
                 <h3 class="about-subheading">Εργαλεία Υποδομής &amp; Έρευνας</h3>
                 <article class="card tile">
@@ -802,8 +815,7 @@
                                 Scholar</span>
                         </a>
                         <a class="btn primary" href="assets/KOGIAS_CV_GR.pdf" target="_blank" rel="noreferrer">
-                            <span data-en="Download CV (PDF)" data-gr="Λήψη Βιογραφικού (PDF)">Λήψη Βιογραφικού
-                                (PDF)</span>
+                            <span data-en="Download CV — PDF (GR)" data-gr="Λήψη Βιογραφικού (PDF)">Λήψη Βιογραφικού (PDF)</span>
                         </a>
                     </div>
                 </div>
@@ -923,7 +935,7 @@
                 </div>
                 <div class="card tile">
                     <div class="teach-header">
-                        <img class="teach-logo" src="assets/logos/Frontiers_bloc_logo.svg" alt="Labs Logo">
+                        <img class="teach-logo" src="assets/logos/Web3Edu_logo.svg" alt="Web3Edu Logo">
                         <h3>Blockchain Security Labs</h3>
                     </div>
                     <div class="proj-meta">
@@ -1028,7 +1040,7 @@
         <div class="footer-copy">
             © <span id="y"></span> Δημήτριος Γ. Κόγιας · Αθήνα, Ελλάδα
             <span class="footer-divider">·</span>
-            <span id="last-updated" data-en="Last updated: January 2026" data-gr="Τελευταία ενημέρωση: Ιανουάριος 2026">Τελευταία ενημέρωση: Ιανουάριος 2026</span>
+            <span id="last-updated" data-en="Last updated: May 2026" data-gr="Τελευταία ενημέρωση: Μάιος 2026">Τελευταία ενημέρωση: Μάιος 2026</span>
         </div>
     </footer>
 

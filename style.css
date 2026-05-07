@@ -1338,8 +1338,7 @@ picture img{ display:block; max-width:100%; height:auto; }
 }
 
 .filter-tag {
-  padding: 4px 10px;
-  border-radius: 6px;
+  padding: 0;
   background: transparent;
   border: none;
   color: var(--muted);
@@ -1347,11 +1346,12 @@ picture img{ display:block; max-width:100%; height:auto; }
   font-weight: 600;
   cursor: default;
   user-select: none;
+  pointer-events: none;
   letter-spacing: 0.03em;
+  opacity: 0.6;
 }
 .filter-tag::before {
   content: "#";
-  opacity: 0.5;
   margin-right: 1px;
 }
 
