@@ -92,9 +92,9 @@
             <div class="hdr-navwrap">
                 <nav id="site-nav" class="nav" role="navigation" aria-label="Κύρια πλοήγηση">
                     <a id="nav-about" href="#about" class="active">Σχετικά</a>
-                    <a id="nav-research" href="#research-projects">Έρευνα</a>
-                    <a id="nav-portfolio" href="#portfolio">Portfolio</a>
                     <a id="nav-web3edu" href="#web3edu">Web3Edu</a>
+                    <a id="nav-portfolio" href="#portfolio">Portfolio</a>
+                    <a id="nav-research" href="#research-projects">Έρευνα</a>
                     <a id="nav-publications" href="#publications">Δημοσιεύσεις</a>
                     <a id="nav-teaching" href="#teaching">Διδασκαλία</a>
                     <a id="nav-contact" href="#contact">Επικοινωνία</a>
@@ -360,151 +360,110 @@
             </div>
         </section>
 
-        <section id="research-projects">
-            <h2 class="section-title" data-en="Recent Research Projects" data-gr="Επιλεγμένα Πρόσφατα Έργα">Επιλεγμένα
-                Ερευνητικά Έργα</h2>
+        <section id="web3edu">
+            <h2 class="section-title" data-en="Web3Edu — Blockchain Learning Ecosystem" data-gr="Web3Edu — Οικοσύστημα Εκμάθησης Blockchain">
+                Web3Edu — Οικοσύστημα Εκμάθησης Blockchain
+            </h2>
+            <p id="web3edu-intro" class="muted">
+                Το Web3Edu είναι ένα ανοικτό οικοσύστημα μάθησης που βασίζεται σε ζωντανό ιδιωτικό δίκτυο
+                Hyperledger Besu. Οι φοιτητές αλληλεπιδρούν με πραγματικά smart contracts, αποκτούν
+                διαπιστευτήρια Soulbound Token και εξελίσσονται μέσα από 16+ δομημένα εργαστήρια που
+                καλύπτουν συναίνεση, ασφάλεια, DeFi και διακυβέρνηση DAO.
+            </p>
             <div class="grid">
-                <h3 class="about-subheading" data-en="Current Projects" data-gr="Τρέχοντα Έργα">Τρέχοντα Έργα</h3>
+                <!-- EduNet Infrastructure -->
                 <article class="card tile">
-                    <h3>
-                        <a href="https://project-tardis.eu/" target="_blank" rel="noopener noreferrer">
-                            TARDIS - Trustworthy and Resilient Decentralised Intelligence for Edge Systems
-                            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
-                                <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
-                            </svg>
-                        </a>
+                    <h3 data-en="EduNet: Live Blockchain Infrastructure" data-gr="EduNet: Ζωντανή Υποδομή Blockchain">
+                        EduNet: Ζωντανή Υποδομή Blockchain
                     </h3>
                     <div class="proj-meta">
-                        <span class="proj-year" id="year-tardis">2023 – 2026</span>
-                        <span class="proj-badge badge-horizon" data-en="Horizon Europe" data-gr="Horizon Europe">Horizon
-                            Europe</span>
+                        <span class="proj-badge badge-live" data-en="Live" data-gr="Ζωντανό">Ζωντανό</span>
+                        <span class="proj-badge badge-web3">Hyperledger Besu</span>
+                        <span class="proj-badge badge-web3">QBFT</span>
+                        <span class="proj-badge badge-web3">Chain ID 424242</span>
                     </div>
-                    <p id="proj-tardis-desc" class="muted">Έργο Horizon Europe που μειώνει την πολυπλοκότητα ετερογενών
-                        edge συστημάτων και swarm AI, μέσω ασφαλών και ανθεκτικών μηχανισμών λήψης αποφάσεων και
-                        επιτήρησης.</p>
-                    <p class="muted"><b>Κύρια Σημεία Ρόλου:</b></p>
+                    <p id="web3edu-infra-desc" class="muted">
+                        Ιδιωτικό δίκτυο συμβατό με Ethereum για εκπαιδευτικές αναπτύξεις — 7 validators,
+                        Blockscout explorer, Faucet και επίπεδο ταυτότητας SBT.
+                    </p>
                     <ul class="list">
-                        <li id="proj-tardis-1"><b>Ρόλος:</b> Senior Researcher για το ΕΚΠΑ</li>
-                        <li id="proj-tardis-2">Υπεύθυνος για το WP7: υλοποίηση, αξιολόγηση και συντονισμό δοκιμών</li>
-                        <li id="proj-tardis-3">Συντονισμός Use Cases και υποστήριξη των παραδοτέων</li>
+                        <li>7-validator QBFT, Besu v25.8.0</li>
+                        <li>Blockscout explorer &amp; χρηματοδοτημένο Faucet</li>
+                        <li>SBT ταυτότητα: εγγραφή, διαπιστευτήρια, εξέλιξη</li>
+                        <li>Αναπτυγμένα DApps: PoE Core + Festival Edition</li>
                     </ul>
-                    <div class="actions">
-                        <a class="proj-link" href="https://project-tardis.eu/" target="_blank"
-                            rel="noopener noreferrer">
-                            <span data-en="Project page" data-gr="Σελίδα έργου">Σελίδα έργου</span>
+                    <div class="web3edu-ctas">
+                        <a class="proj-link" href="https://web3edu.dimikog.org" target="_blank" rel="noopener noreferrer">
+                            <span data-en="Visit Web3Edu Platform" data-gr="Επίσκεψη στην Πλατφόρμα Web3Edu">Επίσκεψη στην Πλατφόρμα Web3Edu</span>
                             <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
                                 <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
                             </svg>
                         </a>
                     </div>
                 </article>
-                <h3 class="about-subheading" data-en="Completed Projects" data-gr="Ολοκληρωμένα Έργα">Ολοκληρωμένα Έργα</h3>
+
+                <!-- Labs & Learning Tracks -->
                 <article class="card tile">
-                    <h3>
-                        <a href="https://life-genera.eu/" target="_blank" rel="noopener noreferrer">
-                            GENERA – Re-vitalising Energy Transition in Touristic Islands
-                            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
-                                <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
-                            </svg>
-                        </a>
+                    <h3 data-en="16+ Hands-On Labs" data-gr="16+ Πρακτικά Εργαστήρια">
+                        16+ Πρακτικά Εργαστήρια
                     </h3>
                     <div class="proj-meta">
-                        <span class="proj-year" id="year-genera">2022 – 2025</span>
-                        <span class="proj-badge badge-research" data-en="Completed" data-gr="Ολοκληρωμένο">Ολοκληρωμένο</span>
-                        <span class="proj-badge badge-life" data-en="LIFE EU" data-gr="LIFE ΕΕ">LIFE EU</span>
-                        <span class="proj-badge badge-focus">Διαχείριση Έργου</span>
+                        <span class="proj-badge badge-web3">Labs</span>
+                        <span class="proj-badge badge-security">Ασφάλεια</span>
+                        <span class="proj-badge badge-web3">DeFi</span>
+                        <span class="proj-badge badge-research">DAO</span>
                     </div>
-                    <p id="proj-genera" class="muted">Έργο LIFE EU που υποστηρίζει τη μετάβαση των τοπικών αρχών σε
-                        βιώσιμα και απανθρακοποιημένα ενεργειακά συστήματα, με έμφαση σε νησιωτικές και τουριστικές
-                        περιοχές.</p>
-                    <p class="muted"><b>Κύρια Σημεία Ρόλου:</b></p>
+                    <p id="web3edu-labs-desc" class="muted">
+                        Πρακτική σειρά εργαστηρίων για smart contracts, DeFi, ασφάλεια και διακυβέρνηση —
+                        αναπτυγμένη σε ζωντανό δίκτυο Besu.
+                    </p>
                     <ul class="list">
-                        <li id="proj-genera-1"><b>Ρόλος:</b> Senior Researcher & Ανάληψη καθηκόντων Διαχείρισης Έργου
-                            (συντονισμός εργασιών, παραδοτέων και συναντήσεων) για το UniWA</li>
-                        <li id="proj-genera-1b">Ανάληψη Διαχείρισης Έργου (συντονισμός συναντήσεων, reporting και
-                            τεχνικού συντονισμού)</li>
-                        <li id="proj-genera-2">Σχεδιασμός στρατηγικής Web3 και ανάπτυξη εκπαιδευτικού παιχνιδιού
-                            πράσινης ενέργειας</li>
-                        <li id="proj-genera-3">Συμμετοχή σε δράσεις διάχυσης και τεχνικό συντονισμό</li>
+                        <li id="web3edu-labs-highlight">Onboarding με Account Abstraction μέσω social log-in</li>
                     </ul>
-                    <div class="actions">
-                        <a class="proj-link" href="https://life-genera.eu/" target="_blank" rel="noopener noreferrer">
-                            <span data-en="Project page" data-gr="Σελίδα έργου">Σελίδα έργου</span>
-                            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
-                                <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
-                            </svg>
-                        </a>
-                        <a class="proj-link" href="https://genera-game-v3-new-graphics.vercel.app/" target="_blank"
-                            rel="noopener noreferrer">
-                            <span data-en="Play the game" data-gr="Παίξε το παιχνίδι">Παίξε το παιχνίδι</span>
+                    <div class="web3edu-ctas">
+                        <a class="proj-link" href="https://web3edu.dimikog.org" target="_blank" rel="noopener noreferrer">
+                            <span data-en="Start Learning" data-gr="Ξεκίνα τη Μάθηση">Ξεκίνα τη Μάθηση</span>
                             <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
                                 <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
                             </svg>
                         </a>
                     </div>
                 </article>
+
+                <!-- Community & Governance -->
                 <article class="card tile">
-                    <h3>
-                        <a href="https://cordis.europa.eu/project/id/833507" target="_blank" rel="noopener noreferrer">
-                            FASTER - First responder Advanced technologies for Safe and efficienT Emergency Response
-                            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
-                                <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
-                            </svg>
-                        </a>
+                    <h3 data-en="Community &amp; Governance" data-gr="Κοινότητα &amp; Διακυβέρνηση">
+                        Κοινότητα &amp; Διακυβέρνηση
                     </h3>
                     <div class="proj-meta">
-                        <span class="proj-year" id="year-faster">2019 – 2022</span>
-                        <span class="proj-badge badge-research">Ολοκληρωμένο</span>
-                        <span class="proj-badge badge-horizon" data-en="Horizon Europe" data-gr="Horizon Europe">Horizon
-                            Europe</span>
-                        <span class="proj-badge badge-focus">Διαχείριση Έργου</span>
+                        <span class="proj-badge badge-research">DAO</span>
+                        <span class="proj-badge badge-dev" data-en="In Dev" data-gr="Σε Ανάπτυξη">Σε Ανάπτυξη</span>
                     </div>
-                    <p id="proj-faster" class="muted">Έργο Horizon Europe που ενισχύει τις δυνατότητες ομάδων πρώτης
-                        ανταπόκρισης σε όλα τα στάδια διαχείρισης κρίσεων — σχεδιασμό, εκπαίδευση, επικοινωνία και
-                        επιχειρησιακή λειτουργία.</p>
-                    <p class="muted"><b>Κύρια Σημεία Ρόλου:</b></p>
+                    <p id="web3edu-community-desc" class="muted">
+                        Το Web3Edu εξελίσσεται σε πλατφόρμα μάθησης διοικούμενη από κοινότητα. Υπάρχει
+                        πλαίσιο διακυβέρνησης DAO με on-chain ψηφοφορία και πρόσβαση βάσει διαπιστευτηρίων
+                        που έρχεται σύντομα.
+                    </p>
                     <ul class="list">
-                        <li id="proj-faster-1"><b>Ρόλος:</b> Senior Researcher & Ανάληψη καθηκόντων Διαχείρισης Έργου
-                            (συντονισμός εργασιών, παραδοτέων και συναντήσεων) για το UniWA</li>
-                        <li id="proj-faster-1b">Ανάληψη Διαχείρισης Έργου (τεχνικός συντονισμός και παρακολούθηση
-                            παραδοτέων)</li>
-                        <li id="proj-faster-2">Παραδοτέα εργαλεία: MORSE (αναγνώριση χειρονομιών), RESCUE
-                            (κρυπτογραφημένα BLE μηνύματα χωρίς υποδομή), Smart Textiles, K9 collar</li>
-                        <li id="proj-faster-3">Εστίαση σε AI, ασφαλή επικοινωνία, κρυπτογράφηση και mobile εργαλεία για
-                            ομάδες πρώτης ανταπόκρισης</li>
+                        <li>Ενεργή κοινότητα Discord για φοιτητές &amp; συνεισφέροντες</li>
+                        <li>Μοντέλο DAO: τεκμηριωμένο &amp; σε εξέλιξη</li>
+                        <li>SBT-gated επίπεδα πρόσβασης βάσει αποκτηθέντων διαπιστευτηρίων</li>
+                        <li>Ανοικτό σε συνεισφορές: labs, DApps, περιεχόμενο</li>
                     </ul>
-                    <div class="actions">
-                        <a class="proj-link" href="https://cordis.europa.eu/project/id/833507" target="_blank"
-                            rel="noopener noreferrer">
-                            <span data-en="Project page" data-gr="Σελίδα έργου">Σελίδα έργου</span>
+                    <div class="web3edu-ctas">
+                        <a class="proj-link" href="https://web3edu.dimikog.org" target="_blank" rel="noopener noreferrer">
+                            <span data-en="Join the Community" data-gr="Γίνε Μέλος της Κοινότητας">Γίνε Μέλος της Κοινότητας</span>
+                            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
+                                <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
+                            </svg>
+                        </a>
+                        <a class="proj-link" href="https://web3edu.dimikog.org/#/dao-governance" target="_blank" rel="noopener noreferrer">
+                            <span data-en="Governance Model" data-gr="Μοντέλο Διακυβέρνησης">Μοντέλο Διακυβέρνησης</span>
                             <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
                                 <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
                             </svg>
                         </a>
                     </div>
-                </article>
-                <h3 class="about-subheading">Πρόσθετα Έργα</h3>
-                <article class="card tile">
-                    <h3>ARTEMIS – Secure Supply Chain Traceability Management</h3>
-                    <div class="proj-meta">
-                        <span class="proj-year" id="year-artemis">2021 – 2023</span>
-                        <span class="proj-badge badge-espa" data-en="ESPA (Research – Innovate)"
-                            data-gr="ΕΣΠΑ (Ερευνώ – Καινοτομώ)">ΕΣΠΑ (Ερευνώ – Καινοτομώ)</span>
-                        <span class="proj-badge badge-focus">Διαχείριση Έργου</span>
-                    </div>
-                    <p id="proj-artemis" class="muted">Έργο ΕΣΠΑ (Ερευνώ – Καινοτομώ) που αναπτύσσει ασφαλή κατανεμημένη
-                        αρχιτεκτονική ιχνηλασιμότητας για εφοδιαστικές αλυσίδες, αξιοποιώντας blockchain και έξυπνα
-                        συμβόλαια.</p>
-                    <p class="muted"><b>Κύρια Σημεία Ρόλου:</b></p>
-                    <ul class="list">
-                        <li id="proj-artemis-1"><b>Ρόλος:</b> Senior Researcher & Διαχείριση Έργου (συντονισμός
-                            ομάδας, παραδοτέων και συναντήσεων) για την iTrack Services (SME)</li>
-                        <li id="proj-artemis-1b">Ανάληψη Διαχείρισης Έργου (προγραμματισμός παραδοτέων και συντονισμός
-                            συναντήσεων)</li>
-                        <li id="proj-artemis-2">Συνεισφορά στον σχεδιασμό της αρχιτεκτονικής και στη διασύνδεση με την
-                            εταιρική πλατφόρμα</li>
-                        <li id="proj-artemis-3">Συμμετοχή σε συναντήσεις και προετοιμασία παραδοτέων</li>
-                    </ul>
                 </article>
             </div>
         </section>
@@ -696,110 +655,151 @@
             </div>
         </section>
 
-        <section id="web3edu">
-            <h2 class="section-title" data-en="Web3Edu — Blockchain Learning Ecosystem" data-gr="Web3Edu — Οικοσύστημα Εκμάθησης Blockchain">
-                Web3Edu — Οικοσύστημα Εκμάθησης Blockchain
-            </h2>
-            <p id="web3edu-intro" class="muted">
-                Το Web3Edu είναι ένα ανοικτό οικοσύστημα μάθησης που βασίζεται σε ζωντανό ιδιωτικό δίκτυο
-                Hyperledger Besu. Οι φοιτητές αλληλεπιδρούν με πραγματικά smart contracts, αποκτούν
-                διαπιστευτήρια Soulbound Token και εξελίσσονται μέσα από 16+ δομημένα εργαστήρια που
-                καλύπτουν συναίνεση, ασφάλεια, DeFi και διακυβέρνηση DAO.
-            </p>
+        <section id="research-projects">
+            <h2 class="section-title" data-en="Recent Research Projects" data-gr="Επιλεγμένα Πρόσφατα Έργα">Επιλεγμένα
+                Ερευνητικά Έργα</h2>
             <div class="grid">
-                <!-- EduNet Infrastructure -->
+                <h3 class="about-subheading" data-en="Current Projects" data-gr="Τρέχοντα Έργα">Τρέχοντα Έργα</h3>
                 <article class="card tile">
-                    <h3 data-en="EduNet: Live Blockchain Infrastructure" data-gr="EduNet: Ζωντανή Υποδομή Blockchain">
-                        EduNet: Ζωντανή Υποδομή Blockchain
+                    <h3>
+                        <a href="https://project-tardis.eu/" target="_blank" rel="noopener noreferrer">
+                            TARDIS - Trustworthy and Resilient Decentralised Intelligence for Edge Systems
+                            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
+                                <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
+                            </svg>
+                        </a>
                     </h3>
                     <div class="proj-meta">
-                        <span class="proj-badge badge-live" data-en="Live" data-gr="Ζωντανό">Ζωντανό</span>
-                        <span class="proj-badge badge-web3">Hyperledger Besu</span>
-                        <span class="proj-badge badge-web3">QBFT</span>
-                        <span class="proj-badge badge-web3">Chain ID 424242</span>
+                        <span class="proj-year" id="year-tardis">2023 – 2026</span>
+                        <span class="proj-badge badge-horizon" data-en="Horizon Europe" data-gr="Horizon Europe">Horizon
+                            Europe</span>
                     </div>
-                    <p id="web3edu-infra-desc" class="muted">
-                        Ιδιωτικό δίκτυο συμβατό με Ethereum για εκπαιδευτικές αναπτύξεις — 7 validators,
-                        Blockscout explorer, Faucet και επίπεδο ταυτότητας SBT.
-                    </p>
+                    <p id="proj-tardis-desc" class="muted">Έργο Horizon Europe που μειώνει την πολυπλοκότητα ετερογενών
+                        edge συστημάτων και swarm AI, μέσω ασφαλών και ανθεκτικών μηχανισμών λήψης αποφάσεων και
+                        επιτήρησης.</p>
+                    <p class="muted"><b>Κύρια Σημεία Ρόλου:</b></p>
                     <ul class="list">
-                        <li>7-validator QBFT, Besu v25.8.0</li>
-                        <li>Blockscout explorer &amp; χρηματοδοτημένο Faucet</li>
-                        <li>SBT ταυτότητα: εγγραφή, διαπιστευτήρια, εξέλιξη</li>
-                        <li>Αναπτυγμένα DApps: PoE Core + Festival Edition</li>
+                        <li id="proj-tardis-1"><b>Ρόλος:</b> Senior Researcher για το ΕΚΠΑ</li>
+                        <li id="proj-tardis-2">Υπεύθυνος για το WP7: υλοποίηση, αξιολόγηση και συντονισμό δοκιμών</li>
+                        <li id="proj-tardis-3">Συντονισμός Use Cases και υποστήριξη των παραδοτέων</li>
                     </ul>
-                    <div class="web3edu-ctas">
-                        <a class="proj-link" href="https://web3edu.dimikog.org" target="_blank" rel="noopener noreferrer">
-                            <span data-en="Visit Web3Edu Platform" data-gr="Επίσκεψη στην Πλατφόρμα Web3Edu">Επίσκεψη στην Πλατφόρμα Web3Edu</span>
+                    <div class="actions">
+                        <a class="proj-link" href="https://project-tardis.eu/" target="_blank"
+                            rel="noopener noreferrer">
+                            <span data-en="Project page" data-gr="Σελίδα έργου">Σελίδα έργου</span>
                             <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
                                 <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
                             </svg>
                         </a>
                     </div>
                 </article>
-
-                <!-- Labs & Learning Tracks -->
+                <h3 class="about-subheading" data-en="Completed Projects" data-gr="Ολοκληρωμένα Έργα">Ολοκληρωμένα Έργα</h3>
                 <article class="card tile">
-                    <h3 data-en="16+ Hands-On Labs" data-gr="16+ Πρακτικά Εργαστήρια">
-                        16+ Πρακτικά Εργαστήρια
+                    <h3>
+                        <a href="https://life-genera.eu/" target="_blank" rel="noopener noreferrer">
+                            GENERA – Re-vitalising Energy Transition in Touristic Islands
+                            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
+                                <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
+                            </svg>
+                        </a>
                     </h3>
                     <div class="proj-meta">
-                        <span class="proj-badge badge-web3">Labs</span>
-                        <span class="proj-badge badge-security">Ασφάλεια</span>
-                        <span class="proj-badge badge-web3">DeFi</span>
-                        <span class="proj-badge badge-research">DAO</span>
+                        <span class="proj-year" id="year-genera">2022 – 2025</span>
+                        <span class="proj-badge badge-research" data-en="Completed" data-gr="Ολοκληρωμένο">Ολοκληρωμένο</span>
+                        <span class="proj-badge badge-life" data-en="LIFE EU" data-gr="LIFE ΕΕ">LIFE EU</span>
+                        <span class="proj-badge badge-focus">Διαχείριση Έργου</span>
                     </div>
-                    <p id="web3edu-labs-desc" class="muted">
-                        Πρακτική σειρά εργαστηρίων για smart contracts, DeFi, ασφάλεια και διακυβέρνηση —
-                        αναπτυγμένη σε ζωντανό δίκτυο Besu.
-                    </p>
+                    <p id="proj-genera" class="muted">Έργο LIFE EU που υποστηρίζει τη μετάβαση των τοπικών αρχών σε
+                        βιώσιμα και απανθρακοποιημένα ενεργειακά συστήματα, με έμφαση σε νησιωτικές και τουριστικές
+                        περιοχές.</p>
+                    <p class="muted"><b>Κύρια Σημεία Ρόλου:</b></p>
                     <ul class="list">
-                        <li id="web3edu-labs-highlight">Onboarding με Account Abstraction μέσω social log-in</li>
+                        <li id="proj-genera-1"><b>Ρόλος:</b> Senior Researcher & Ανάληψη καθηκόντων Διαχείρισης Έργου
+                            (συντονισμός εργασιών, παραδοτέων και συναντήσεων) για το UniWA</li>
+                        <li id="proj-genera-1b">Ανάληψη Διαχείρισης Έργου (συντονισμός συναντήσεων, reporting και
+                            τεχνικού συντονισμού)</li>
+                        <li id="proj-genera-2">Σχεδιασμός στρατηγικής Web3 και ανάπτυξη εκπαιδευτικού παιχνιδιού
+                            πράσινης ενέργειας</li>
+                        <li id="proj-genera-3">Συμμετοχή σε δράσεις διάχυσης και τεχνικό συντονισμό</li>
                     </ul>
-                    <div class="web3edu-ctas">
-                        <a class="proj-link" href="https://web3edu.dimikog.org" target="_blank" rel="noopener noreferrer">
-                            <span data-en="Start Learning" data-gr="Ξεκίνα τη Μάθηση">Ξεκίνα τη Μάθηση</span>
+                    <div class="actions">
+                        <a class="proj-link" href="https://life-genera.eu/" target="_blank" rel="noopener noreferrer">
+                            <span data-en="Project page" data-gr="Σελίδα έργου">Σελίδα έργου</span>
+                            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
+                                <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
+                            </svg>
+                        </a>
+                        <a class="proj-link" href="https://genera-game-v3-new-graphics.vercel.app/" target="_blank"
+                            rel="noopener noreferrer">
+                            <span data-en="Play the game" data-gr="Παίξε το παιχνίδι">Παίξε το παιχνίδι</span>
                             <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
                                 <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
                             </svg>
                         </a>
                     </div>
                 </article>
-
-                <!-- Community & Governance -->
                 <article class="card tile">
-                    <h3 data-en="Community &amp; Governance" data-gr="Κοινότητα &amp; Διακυβέρνηση">
-                        Κοινότητα &amp; Διακυβέρνηση
+                    <h3>
+                        <a href="https://cordis.europa.eu/project/id/833507" target="_blank" rel="noopener noreferrer">
+                            FASTER - First responder Advanced technologies for Safe and efficienT Emergency Response
+                            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
+                                <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
+                            </svg>
+                        </a>
                     </h3>
                     <div class="proj-meta">
-                        <span class="proj-badge badge-research">DAO</span>
-                        <span class="proj-badge badge-dev" data-en="In Dev" data-gr="Σε Ανάπτυξη">Σε Ανάπτυξη</span>
+                        <span class="proj-year" id="year-faster">2019 – 2022</span>
+                        <span class="proj-badge badge-research">Ολοκληρωμένο</span>
+                        <span class="proj-badge badge-horizon" data-en="Horizon Europe" data-gr="Horizon Europe">Horizon
+                            Europe</span>
+                        <span class="proj-badge badge-focus">Διαχείριση Έργου</span>
                     </div>
-                    <p id="web3edu-community-desc" class="muted">
-                        Το Web3Edu εξελίσσεται σε πλατφόρμα μάθησης διοικούμενη από κοινότητα. Υπάρχει
-                        πλαίσιο διακυβέρνησης DAO με on-chain ψηφοφορία και πρόσβαση βάσει διαπιστευτηρίων
-                        που έρχεται σύντομα.
-                    </p>
+                    <p id="proj-faster" class="muted">Έργο Horizon Europe που ενισχύει τις δυνατότητες ομάδων πρώτης
+                        ανταπόκρισης σε όλα τα στάδια διαχείρισης κρίσεων — σχεδιασμό, εκπαίδευση, επικοινωνία και
+                        επιχειρησιακή λειτουργία.</p>
+                    <p class="muted"><b>Κύρια Σημεία Ρόλου:</b></p>
                     <ul class="list">
-                        <li>Ενεργή κοινότητα Discord για φοιτητές &amp; συνεισφέροντες</li>
-                        <li>Μοντέλο DAO: τεκμηριωμένο &amp; σε εξέλιξη</li>
-                        <li>SBT-gated επίπεδα πρόσβασης βάσει αποκτηθέντων διαπιστευτηρίων</li>
-                        <li>Ανοικτό σε συνεισφορές: labs, DApps, περιεχόμενο</li>
+                        <li id="proj-faster-1"><b>Ρόλος:</b> Senior Researcher & Ανάληψη καθηκόντων Διαχείρισης Έργου
+                            (συντονισμός εργασιών, παραδοτέων και συναντήσεων) για το UniWA</li>
+                        <li id="proj-faster-1b">Ανάληψη Διαχείρισης Έργου (τεχνικός συντονισμός και παρακολούθηση
+                            παραδοτέων)</li>
+                        <li id="proj-faster-2">Παραδοτέα εργαλεία: MORSE (αναγνώριση χειρονομιών), RESCUE
+                            (κρυπτογραφημένα BLE μηνύματα χωρίς υποδομή), Smart Textiles, K9 collar</li>
+                        <li id="proj-faster-3">Εστίαση σε AI, ασφαλή επικοινωνία, κρυπτογράφηση και mobile εργαλεία για
+                            ομάδες πρώτης ανταπόκρισης</li>
                     </ul>
-                    <div class="web3edu-ctas">
-                        <a class="proj-link" href="https://web3edu.dimikog.org" target="_blank" rel="noopener noreferrer">
-                            <span data-en="Join the Community" data-gr="Γίνε Μέλος της Κοινότητας">Γίνε Μέλος της Κοινότητας</span>
-                            <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
-                                <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
-                            </svg>
-                        </a>
-                        <a class="proj-link" href="https://web3edu.dimikog.org/#/dao-governance" target="_blank" rel="noopener noreferrer">
-                            <span data-en="Governance Model" data-gr="Μοντέλο Διακυβέρνησης">Μοντέλο Διακυβέρνησης</span>
+                    <div class="actions">
+                        <a class="proj-link" href="https://cordis.europa.eu/project/id/833507" target="_blank"
+                            rel="noopener noreferrer">
+                            <span data-en="Project page" data-gr="Σελίδα έργου">Σελίδα έργου</span>
                             <svg class="ext-icon" aria-hidden="true" viewBox="0 0 24 24">
                                 <path d="M14 3h7v7h-2V7.4l-7.3 7.3-1.4-1.4L17.6 6H14V3ZM5 5h7v2H7v10h10v-5h2v7H5V5Z" />
                             </svg>
                         </a>
                     </div>
+                </article>
+                <h3 class="about-subheading">Πρόσθετα Έργα</h3>
+                <article class="card tile">
+                    <h3>ARTEMIS – Secure Supply Chain Traceability Management</h3>
+                    <div class="proj-meta">
+                        <span class="proj-year" id="year-artemis">2021 – 2023</span>
+                        <span class="proj-badge badge-espa" data-en="ESPA (Research – Innovate)"
+                            data-gr="ΕΣΠΑ (Ερευνώ – Καινοτομώ)">ΕΣΠΑ (Ερευνώ – Καινοτομώ)</span>
+                        <span class="proj-badge badge-focus">Διαχείριση Έργου</span>
+                    </div>
+                    <p id="proj-artemis" class="muted">Έργο ΕΣΠΑ (Ερευνώ – Καινοτομώ) που αναπτύσσει ασφαλή κατανεμημένη
+                        αρχιτεκτονική ιχνηλασιμότητας για εφοδιαστικές αλυσίδες, αξιοποιώντας blockchain και έξυπνα
+                        συμβόλαια.</p>
+                    <p class="muted"><b>Κύρια Σημεία Ρόλου:</b></p>
+                    <ul class="list">
+                        <li id="proj-artemis-1"><b>Ρόλος:</b> Senior Researcher & Διαχείριση Έργου (συντονισμός
+                            ομάδας, παραδοτέων και συναντήσεων) για την iTrack Services (SME)</li>
+                        <li id="proj-artemis-1b">Ανάληψη Διαχείρισης Έργου (προγραμματισμός παραδοτέων και συντονισμός
+                            συναντήσεων)</li>
+                        <li id="proj-artemis-2">Συνεισφορά στον σχεδιασμό της αρχιτεκτονικής και στη διασύνδεση με την
+                            εταιρική πλατφόρμα</li>
+                        <li id="proj-artemis-3">Συμμετοχή σε συναντήσεις και προετοιμασία παραδοτέων</li>
+                    </ul>
                 </article>
             </div>
         </section>
