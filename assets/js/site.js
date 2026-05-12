@@ -2,188 +2,206 @@
     const LANG_KEY = 'site_lang';
 
     const langElems = {
-        // research: FASTER
         'proj-faster': {
-            en: 'Horizon EU project examining the impact and role of first responders across the full emergency lifecycle—planning, logistics, maintenance/diagnostics, training, and management—to strengthen the EU’s ability to respond to emergencies.',
-            gr: 'Έργο Horizon της ΕΕ που εξετάζει τον ρόλο και τον αντίκτυπο των πρώτων ανταποκριτών σε όλο τον κύκλο ζωής μιας έκτακτης ανάγκης—σχεδιασμός, υποστήριξη, συντήρηση/διάγνωση, εκπαίδευση και διαχείριση—για την ενίσχυση της ικανότητας της ΕΕ να ανταποκρίνεται σε κρίσεις.'
+            en: 'Horizon 2020 project focused on technologies for first responders across the full emergency lifecycle, including planning, logistics, diagnostics, training, management, and resilient communications.',
+            gr: 'Έργο Horizon 2020 με εστίαση σε τεχνολογίες για πρώτους ανταποκριτές σε όλο τον κύκλο έκτακτης ανάγκης: σχεδιασμός, logistics, διαγνωστικά, εκπαίδευση, διαχείριση και ανθεκτικές επικοινωνίες.'
         },
-        'proj-faster-1': { en: '<b>Role:</b> Senior Researcher for UniWA', gr: '<b>Ρόλος:</b> Κύριος Ερευνητής για το ΠαΔΑ' },
+        'proj-faster-1': { en: 'Role: Senior Researcher for UniWA', gr: 'Ρόλος: Κύριος Ερευνητής για το ΠαΔΑ' },
         'proj-faster-2': {
-            en: 'Delivered tools: MORSE (gesture recognition), RESCUE (encrypted BLE messaging when infrastructure is down), Smart Textiles (uniform sensors), K9 collar (rescue alerts)',
-            gr: 'Παραδοθέντα εργαλεία: MORSE (αναγνώριση χειρονομιών), RESCUE (κρυπτογραφημένα μηνύματα BLE όταν η υποδομή επικοινωνίας δεν είναι διαθέσιμη), Smart Textiles (αισθητήρες στη στολή), K9 collar (ειδοποιήσεις διάσωσης)'
+            en: 'Technical / Research focus: secure communication, mobile applications, encrypted messaging, and first-responder support tools',
+            gr: 'Τεχνική/ερευνητική εστίαση: ασφαλής επικοινωνία, εφαρμογές κινητών, κρυπτογραφημένα μηνύματα και εργαλεία υποστήριξης πρώτων ανταποκριτών'
         },
         'proj-faster-3': {
-            en: 'Focus: safe communication, AI, encryption, and mobile applications for first responders',
-            gr: 'Εστίαση: ασφαλής επικοινωνία, AI, κρυπτογράφηση και εφαρμογές κινητών για πρώτους ανταποκριτές'
+            en: 'Contribution: technical coordination, reporting, and delivery of tools including MORSE, RESCUE, smart textiles, and K9 collar alerting components',
+            gr: 'Συνεισφορά: τεχνικός συντονισμός, αναφορές και παράδοση εργαλείων όπως MORSE, RESCUE, έξυπνα υφάσματα και ειδοποιήσεις περιλαίμιου K9'
         },
 
-        // research: TARDIS
         'proj-tardis-desc': {
-            en: 'Horizon Europe program whose primary goal is to significantly ease the complexity and reduce the effort of building correct and efficient heterogeneous swarms.',
-            gr: 'Πρόγραμμα Horizon Europe με κύριο στόχο να μειώσει σημαντικά την πολυπλοκότητα και το κόστος δημιουργίας ορθών και αποδοτικών ετερογενών σμηνών.'
+            en: 'Horizon Europe project focused on trustworthy and resilient decentralized intelligence for edge systems, with emphasis on scalable coordination, heterogeneous swarms, and robust distributed decision-making.',
+            gr: 'Έργο Horizon Europe για αξιόπιστη και ανθεκτική αποκεντρωμένη νοημοσύνη σε συστήματα άκρης, με έμφαση στην κλιμακώσιμο συντονισμό, ετερογενή σμήνη και ισχυρή κατανεμημένη λήψη αποφάσεων.'
         },
-        'proj-tardis-1': { en: '<b>Role:</b> Senior Researcher for NKUA', gr: '<b>Ρόλος:</b> Κύριος Ερευνητής για το ΕΚΠΑ' },
-        'proj-tardis-2': { en: 'Responsible for WP7: Implementation and Evaluation', gr: 'Υπεύθυνος για το WP7: Υλοποίηση και Αξιολόγηση' },
-        'proj-tardis-3': { en: 'Coordinating the Use Cases and respective Deliverables', gr: 'Συντονισμός των περιπτώσεων χρήσης (Use Cases) και των αντίστοιχων παραδοτέων' },
+        'proj-tardis-1': { en: 'Role: Senior Researcher for NKUA', gr: 'Ρόλος: Κύριος Ερευνητής για το ΕΚΠΑ' },
+        'proj-tardis-2': {
+            en: 'Technical / Research focus: decentralized intelligence, edge systems, trustworthy coordination, and evaluation activities',
+            gr: 'Τεχνική/ερευνητική εστίαση: αποκεντρωμένη νοημοσύνη, συστήματα άκρης, αξιόπιστος συντονισμός και δραστηριότητες αξιολόγησης'
+        },
+        'proj-tardis-3': {
+            en: 'Contribution: evaluation support, use-case technical coordination, reporting, and integrating research outputs into prototypes',
+            gr: 'Συνεισφορά: υποστήριξη αξιολόγησης, τεχνικός συντονισμός περιπτώσεων χρήσης, αναφορές και ενσωμάτωση ερευνητικών αποτελεσμάτων σε πρωτότυπα'
+        },
 
-        // research: GENERA
         'proj-genera': {
-            en: 'LIFE EU program that assists public authorities in transforming the energy context of the European regions to facilitate a rapid transition to a decarbonized and sustainable economy.',
-            gr: 'Πρόγραμμα LIFE της ΕΕ που βοηθά τις δημόσιες αρχές να μετασχηματίσουν το ενεργειακό πλαίσιο των ευρωπαϊκών περιφερειών, ώστε να διευκολυνθεί η ταχεία μετάβαση σε μια απανθρακοποιημένη και βιώσιμη οικονομία.'
+            en: 'LIFE EU project supporting energy transition in touristic islands through public engagement, digital tools, and sustainability-oriented behavioral change.',
+            gr: 'Έργο LIFE ΕΕ για την ενεργειακή μετάβαση σε τουριστικά νησιά μέσω δημόσιας εμπλοκής, ψηφιακών εργαλείων και βιώσιμης αλλαγής συμπεριφοράς.'
         },
-        'proj-genera-1': { en: '<b>Role:</b> Senior Researcher for UniWA', gr: '<b>Ρόλος:</b> Κύριος Ερευνητής για το ΠαΔΑ' },
-        'proj-genera-2': { en: 'Responsible for the design and development of a Web 3.0 strategy and a card‑based game to motivate users on the transition to green energy.', gr: 'Υπεύθυνος για τον σχεδιασμό και την ανάπτυξη στρατηγικής Web 3.0 και παιχνιδιού με κάρτες, για την ενθάρρυνση της μετάβασης σε πράσινη ενέργεια.' },
-        'proj-genera-3': { en: 'Leading participant in meetings and dissemination actions', gr: 'Κύριος συμμετέχων σε συναντήσεις και δράσεις διάχυσης' },
+        'proj-genera-1': { en: 'Role: Senior Researcher for UniWA', gr: 'Ρόλος: Κύριος Ερευνητής για το ΠαΔΑ' },
+        'proj-genera-2': {
+            en: 'Technical / Research focus: digital engagement, gamification, sustainability transition, and Web 3.0 strategy',
+            gr: 'Τεχνική/ερευνητική εστίαση: ψηφιακή εμπλοκή, παιχνιδοποίηση, βιώσιμη μετάβαση και στρατηγική Web 3.0'
+        },
+        'proj-genera-3': {
+            en: 'Contribution: web engagement tools, dissemination, and stakeholder coordination',
+            gr: 'Συνεισφορά: διαδικτυακά εργαλεία εμπλοκής, διάχυση και συντονισμός ενδιαφερόμενων μερών'
+        },
 
-        // research: ARTEMIS
         'proj-artemis': {
-            en: 'ESPA (Research – Innovate) project aiming to develop a distributed architecture, both in software and hardware, to secure supply chain traceability processes and data using blockchain, smart contracts, and embedded security mechanisms.',
-            gr: 'Έργο ΕΣΠΑ (Ερευνώ – Καινοτομώ) με στόχο την ανάπτυξη κατανεμημένης αρχιτεκτονικής, σε επίπεδο λογισμικού και υλικού, για την ασφάλεια των διαδικασιών και των δεδομένων ιχνηλάτησης της εφοδιαστικής αλυσίδας με χρήση blockchain, έξυπνων συμβολαίων και ενσωματωμένων μηχανισμών ασφάλειας.'
+            en: 'ESPA (Research – Innovate) project developing a secure distributed software and hardware architecture for supply-chain traceability using blockchain, smart contracts, and embedded security.',
+            gr: 'Έργο ΕΣΠΑ (Ερευνώ – Καινοτομώ) για ασφαλή κατανεμημένη αρχιτεκτονική λογισμικού και υλικού για ιχνηλασία εφοδιαστικής αλυσίδας με blockchain, smart contracts και ενσωματωμένη ασφάλεια.'
         },
-        'proj-artemis-1': { en: '<b>Role:</b> Senior Researcher for iTrack', gr: '<b>Ρόλος:</b> Κύριος Ερευνητής για την εταιρεία iTrack' },
-        'proj-artemis-2': { en: 'Participation in the design of the architecture and integration with the company’s platform', gr: 'Συμμετοχή στον σχεδιασμό της αρχιτεκτονικής και στη διασύνδεση με την πλατφόρμα της εταιρείας' },
-        'proj-artemis-3': { en: 'Participation in meetings and preparation of deliverables', gr: 'Συμμετοχή σε συναντήσεις και στη συγγραφή παραδοτέων' },
-        // document title
+        'proj-artemis-1': { en: 'Role: Senior Researcher for iTrack Services (SME)', gr: 'Ρόλος: Κύριος Ερευνητής για την iTrack Services (SME)' },
+        'proj-artemis-2': {
+            en: 'Technical / Research focus: distributed architecture, blockchain-based traceability, smart contracts, and embedded security integration',
+            gr: 'Τεχνική/ερευνητική εστίαση: κατανεμημένη αρχιτεκτονική, ιχνηλασία με blockchain, smart contracts και ενσωμάτωση ασφάλειας υλικού'
+        },
+        'proj-artemis-3': {
+            en: 'Contribution: architecture design, platform integration, technical meetings, and applied deliverables',
+            gr: 'Συνεισφορά: σχεδιασμός αρχιτεκτονικής, ενσωμάτωση πλατφόρμας, τεχνικές συναντήσεις και εφαρμοσμένα παραδοτέα'
+        },
+
         'doc-title': {
-            en: 'Dimitrios G. Kogias — Blockchain, Web3 & Cybersecurity Researcher, Educator & Project Manager',
-            gr: 'Δημήτριος Γ. Κόγιας — Ερευνητής, Εκπαιδευτής & Project Manager σε Blockchain, Web3 & Κυβερνοασφάλεια'
+            en: 'Dimitrios G. Kogias — Applied Researcher · Digital Trust',
+            gr: 'Δημήτριος Γ. Κόγιας — Εφαρμοσμένος ερευνητής · Ψηφιακή εμπιστοσύνη'
         },
         'brand-tag': {
-            en: 'Researcher, Educator & Project Manager in Blockchain, Web3 & Cybersecurity',
-            gr: 'Ερευνητής & Εκπαιδευτής σε Blockchain, Web3 & Κυβερνοασφάλεια'
+            en: 'Applied Researcher · Digital Trust',
+            gr: 'Εφαρμοσμένος ερευνητής · Ψηφιακή εμπιστοσύνη'
         },
         'brand-name': {
             en: 'Dimitrios G. Kogias',
             gr: 'Δημήτριος Γ. Κόγιας'
         },
+        'nav-focus': { en: 'Current Focus', gr: 'Τρέχουσα Εστίαση' },
         'nav-research': { en: 'Research', gr: 'Έρευνα' },
-        'nav-portfolio': { en: 'Portfolio', gr: 'Portfolio' },
+        'nav-portfolio': { en: 'Portfolio', gr: 'Έργα' },
         'nav-about': { en: 'About', gr: 'Σχετικά' },
         'nav-publications': { en: 'Publications', gr: 'Δημοσιεύσεις' },
         'nav-teaching': { en: 'Teaching', gr: 'Διδασκαλία' },
         'nav-web3edu': { en: 'Web3Edu', gr: 'Web3Edu' },
         'nav-contact': { en: 'Contact', gr: 'Επικοινωνία' },
         'pub-note': {
-            en: 'A few popular/representative publications are listed here. For the full list, please see my CV or Google Scholar.',
-            gr: 'Παρακάτω παρατίθενται μερικές δημοφιλείς/ενδεικτικές δημοσιεύσεις. Για την πλήρη λίστα, δείτε το Βιογραφικό μου ή το Google Scholar.'
+            en: 'A selection of representative publications is shown below. For the complete list, please visit my Google Scholar profile or consult my CV.',
+            gr: 'Παρακάτω εμφανίζεται μια επιλογή ενδεικτικών δημοσιεύσεων. Για την πλήρη λίστα, επισκεφτείτε το προφίλ μου στο Google Scholar ή συμβουλευτείτε το βιογραφικό μου.'
         },
-        // projects
+
         'proj-poe-desc': {
-            en: 'Gamified Web3 DApp for blockchain learning with quizzes and token rewards.',
-            gr: 'Παιχνιδοποιημένη Web3 DApp για μάθηση blockchain με κουίζ και ανταμοιβές σε tokens.'
+            en: 'Gamified Web3 learning DApp for blockchain security awareness, smart contract interaction, and challenge-based education.',
+            gr: 'Παιχνιδοποιημένη Web3 DApp για ευαισθητοποίηση ασφάλειας blockchain, αλληλεπίδραση με smart contracts και εκπαίδευση βάσει προκλήσεων.'
         },
         'proj-poe-1': {
-            en: 'Quizzes on blockchain topics',
-            gr: 'Κουίζ σε θέματα blockchain'
+            en: 'Quiz-based blockchain learning tasks',
+            gr: 'Μαθησιακές εργασίες blockchain με κουίζ'
         },
         'proj-poe-2': {
-            en: 'Rewards in tokens',
-            gr: 'Ανταμοιβές σε tokens'
+            en: 'Token and NFT-based rewards',
+            gr: 'Ανταμοιβές με tokens και NFT'
         },
         'proj-poe-3': {
-            en: 'Special reward: an NFT that can unlock the next level (when ready)',
-            gr: 'Ειδική ανταμοιβή: ένα NFT που θα ξεκλειδώνει το επόμενο επίπεδο (όταν είναι έτοιμο)'
+            en: 'Festival edition for live events and workshops',
+            gr: 'Έκδοση φεστιβάλ για ζωντανές εκδηλώσεις και εργαστήρια'
         },
         'proj-ldl-desc': {
-            en: 'Fantasy League management with SBT identity, multi‑team trades, and voting.',
-            gr: 'Διαχείριση Fantasy League με ταυτότητα SBT, ανταλλαγές μεταξύ πολλών ομάδων και ψηφοφορία.'
+            en: 'Experimental fantasy league management DApp exploring identity-linked participation, multi-team trades, voting, and DAO-style decision flows.',
+            gr: 'Πειραματική DApp διαχείρισης fantasy league με συμμετοχή συνδεδεμένη με ταυτότητα, ανταλλαγές πολλών ομάδων, ψηφοφορίες και ροές αποφάσεων τύπου DAO.'
         },
         'proj-ldl-1': {
-            en: 'Backend: Flask + Google Sheets API + PostgreSQL',
-            gr: 'Backend: Flask + Google Sheets API + PostgreSQL'
+            en: 'Backend: Flask, PostgreSQL, and API-based data handling',
+            gr: 'Backend: Flask, PostgreSQL και διαχείριση δεδομένων μέσω API'
         },
         'proj-ldl-2': {
-            en: 'On‑chain: trade voting + SBT profiles',
-            gr: 'On‑chain: ψηφοφορία ανταλλαγών + προφίλ SBT'
+            en: 'On-chain: smart contract logic for trading, voting, and identity-linked profiles',
+            gr: 'On-chain: λογική smart contracts για συναλλαγές, ψηφοφορίες και προφίλ συνδεδεμένα με ταυτότητα'
         },
         'proj-ldl-3': {
-            en: 'Planned: DAO mechanism for voting on league regulations',
-            gr: 'Σε εξέλιξη: μηχανισμός DAO για ψηφοφορίες στους κανονισμούς της λίγκας'
+            en: 'Planned: DAO mechanisms for league decisions and dispute handling',
+            gr: 'Προγραμματισμένα: μηχανισμοί DAO για αποφάσεις λίγκας και διαχείριση διαφορών'
         },
         'proj-besu-desc': {
-            en: 'Private Hyperledger Besu (QBFT) Ethereum network for research on consensus, privacy, and operational resilience.',
-            gr: 'Ιδιωτικό δίκτυο Hyperledger Besu (QBFT) για έρευνα στη συναίνεση, την ιδιωτικότητα και τη λειτουργική ανθεκτικότητα.'
+            en: 'Private Hyperledger Besu QBFT network for applied research, Web3Edu labs, consensus experimentation, blockchain monitoring, and operational resilience.',
+            gr: 'Ιδιωτικό δίκτυο Hyperledger Besu QBFT για εφαρμοσμένη έρευνα, εργαστήρια Web3Edu, πειραματισμό συναίνεσης, παρακολούθηση blockchain και λειτουργική ανθεκτικότητα.'
         },
         'proj-besu-1': {
-            en: 'Seven‑validator network (v25.8.0) with Blockscout explorer and Faucet',
-            gr: 'Δίκτυο Besu (v25.8.0) με 7 validators, Blockscout explorer & Faucet'
+            en: 'Seven-validator Besu QBFT network',
+            gr: 'Δίκτυο Besu QBFT με επτά validators'
         },
         'proj-besu-2': {
-            en: 'Hardened nodes & monitoring (metrics, logs, alerts)',
-            gr: 'Ενισχυμένη ασφάλεια κόμβων & παρακολούθηση (μετρικές, logs, ειδοποιήσεις)'
+            en: 'Blockscout explorer and faucet services',
+            gr: 'Blockscout explorer και υπηρεσίες faucet'
         },
         'proj-besu-3': {
-            en: 'Applied smart contracts: Soulbound Tokens, NFTs, ZKPs, oracles',
-            gr: 'Εφαρμοσμένα smart contracts: Soulbound Tokens, NFTs, ZKPs, oracles'
+            en: 'Monitoring, logs, alerts, and operational hardening',
+            gr: 'Παρακολούθηση, logs, ειδοποιήσεις και ενίσχυση λειτουργίας'
         },
         'proj-labs-desc': {
-            en: 'Hands-on labs on consensus mechanics, common attack patterns, and DeFi incident simulations inspired by the bZx oracle/flash-loan exploits.',
-            gr: 'Πρακτικά εργαστήρια για μηχανισμούς συναίνεσης, συνήθη μοτίβα επιθέσεων και προσομοιώσεις περιστατικών DeFi εμπνευσμένες από τα exploits του bZx (oracle/flash-loan).'
+            en: 'Hands-on blockchain security labs covering consensus behavior, smart contract attack patterns, oracle manipulation, DeFi incident analysis, governance risks, and private testnet experimentation.',
+            gr: 'Πρακτικά εργαστήρια ασφάλειας blockchain: συμπεριφορά συναίνεσης, μοτίβα επιθέσεων σε smart contracts, χειραγώγηση oracle, ανάλυση περιστατικών DeFi, κίνδυνοι διακυβέρνησης και πειραματισμός σε ιδιωτικό testnet.'
         },
         'proj-labs-1': {
-            en: 'Oracle design and price‑feed defenses (TWAPs, circuit breakers)',
-            gr: 'Σχεδίαση oracle και άμυνες στα price‑feeds (TWAPs, circuit breakers)'
+            en: 'Oracle design and price-feed defense patterns',
+            gr: 'Σχεδιασμός oracle και μοτίβα άμυνας σε price feeds'
         },
         'proj-labs-2': {
-            en: 'Incident walkthroughs & trace analysis (bZx‑style oracle/flash‑loan)',
-            gr: 'Ανάλυση περιστατικών & ιχνών (επιθέσεις τύπου bZx – oracle/flash‑loan)'
+            en: 'Incident walkthroughs and trace-based analysis',
+            gr: 'Αναλυτικές παρουσιάσεις περιστατικών και ανάλυση βάσει ιχνών'
         },
-        // Web3 Sources badge
         'proj-web3src-badge': {
             en: 'Open Source',
             gr: 'Ανοικτού Κώδικα'
         },
         'proj-web3src-title': {
-            en: 'Web3 Sources (Curated Repository)',
-            gr: 'Πόροι Web3 (Επιμελημένη Συλλογή)'
+            en: 'Curated Web3 Learning Resources',
+            gr: 'Επιμελημένοι Πόροι Μάθησης Web3'
         },
         'proj-web3src-desc': {
-            en: 'Curated collection of resources and learning materials for Web3, blockchain, and distributed systems.',
-            gr: 'Επιμελημένη συλλογή από πόρους και εκπαιδευτικό υλικό για το Web3, το blockchain και τα κατανεμημένα συστήματα.'
+            en: 'Curated open educational resources, repositories, and references for blockchain, Web3, smart contracts, decentralized identity, and applied cybersecurity learning.',
+            gr: 'Επιμελημένοι ανοιχτοί εκπαιδευτικοί πόροι, αποθετήρια και αναφορές για blockchain, Web3, smart contracts, αποκεντρωμένη ταυτότητα και εφαρμοσμένη κυβερνοασφάλεια.'
         },
-        // web3edu section
+
         'web3edu-intro': {
-            en: 'Web3Edu is an open learning ecosystem built on a live Hyperledger Besu private network. Students interact with real smart contracts, earn Soulbound Token credentials, and advance through 16+ structured labs spanning consensus, security, DeFi, and DAO governance.',
-            gr: 'Το Web3Edu είναι ένα ανοικτό οικοσύστημα μάθησης που βασίζεται σε ζωντανό ιδιωτικό δίκτυο Hyperledger Besu. Οι φοιτητές αλληλεπιδρούν με πραγματικά smart contracts, αποκτούν διαπιστευτήρια Soulbound Token και εξελίσσονται μέσα από 16+ δομημένα εργαστήρια που καλύπτουν συναίνεση, ασφάλεια, DeFi και διακυβέρνηση DAO.'
+            en: 'Web3Edu is an applied research and learning ecosystem built on a live Hyperledger Besu network. It connects hands-on technical activity, blockchain interaction, learner identity, and verifiable progress records to support evidence-backed education in Web3 and cybersecurity.',
+            gr: 'Το Web3Edu είναι οικοσύστημα εφαρμοσμένης έρευνας και μάθησης πάνω σε ζωντανό δίκτυο Hyperledger Besu. Συνδέει πρακτική τεχνική δραστηριότητα, αλληλεπίδραση με blockchain, ταυτότητα μαθητή και επαληθεύσιμα αρχεία προόδου ώστε να υποστηρίζει τεκμηριωμένη εκπαίδευση σε Web3 και κυβερνοασφάλεια.'
         },
         'web3edu-infra-desc': {
-            en: 'Private Ethereum-compatible network for educational deployments — 7 validators, Blockscout explorer, Faucet, and SBT identity layer.',
-            gr: 'Ιδιωτικό δίκτυο συμβατό με Ethereum για εκπαιδευτικές αναπτύξεις — 7 validators, Blockscout explorer, Faucet και επίπεδο ταυτότητας SBT.'
+            en: 'Live Hyperledger Besu QBFT network for research and teaching, supporting smart contracts, identity experiments, Web3Edu labs, Blockscout exploration, faucet onboarding, and deployed educational exercises.',
+            gr: 'Ζωντανό δίκτυο Hyperledger Besu QBFT για έρευνα και διδασκαλία, με υποστήριξη smart contracts, πειραμάτων ταυτότητας, εργαστηρίων Web3Edu, εξερεύνησης Blockscout, onboarding μέσω faucet και αναπτυγμένων εκπαιδευτικών ασκήσεων.'
         },
         'web3edu-labs-desc': {
-            en: 'Hands-on lab series covering smart contracts, DeFi, security, and governance — deployed on a live Besu network.',
-            gr: 'Πρακτική σειρά εργαστηρίων για smart contracts, DeFi, ασφάλεια και διακυβέρνηση — αναπτυγμένη σε ζωντανό δίκτυο Besu.'
+            en: 'Structured labs covering wallets, blockchain fundamentals, smart contracts, security, consensus, DeFi, identity, and governance — deployed on live Besu infrastructure.',
+            gr: 'Δομημένα εργαστήρια που καλύπτουν πορτοφόλια, βασικές αρχές blockchain, smart contracts, ασφάλεια, συναίνεση, DeFi, ταυτότητα και διακυβέρνηση — αναπτυγμένα σε ζωντανή υποδομή Besu.'
         },
         'web3edu-labs-highlight': {
-            en: 'Account Abstraction Onboarding using social log-in',
-            gr: 'Onboarding με Account Abstraction μέσω social log-in'
+            en: 'Progressive onboarding with social login and wallet-based interaction',
+            gr: 'Προοδευτικό onboarding με social login και αλληλεπίδραση πορτοφολιού'
         },
         'web3edu-community-desc': {
-            en: 'Web3Edu is building toward a community-governed learning platform. A DAO governance framework is in place, with on-chain voting and credential-gated access coming soon.',
-            gr: 'Το Web3Edu εξελίσσεται σε πλατφόρμα μάθησης διοικούμενη από κοινότητα. Υπάρχει πλαίσιο διακυβέρνησης DAO με on-chain ψηφοφορία και πρόσβαση βάσει διαπιστευτηρίων που έρχεται σύντομα.'
+            en: 'Web3Edu is evolving toward a contribution-aware learning community, where participation, technical progress, and governance experiments can be connected to transparent learner identity and verifiable records.',
+            gr: 'Το Web3Edu εξελίσσεται προς κοινότητα μάθησης ευαισθητοποιημένη στη συνεισφορά, όπου η συμμετοχή, η τεχνική πρόοδος και τα πειράματα διακυβέρνησης μπορούν να συνδεθούν με διαφανή ταυτότητα μαθητή και επαληθεύσιμα αρχεία.'
         },
         'proj-poe-festival': {
-            en: 'Festival Edition: themed variant for live events and workshops, deployed on EduNet',
-            gr: 'Festival Edition: ειδική έκδοση για ζωντανές εκδηλώσεις και εργαστήρια, αναπτυγμένη στο EduNet'
+            en: 'Deployed on the Web3Edu / Edu-Net infrastructure',
+            gr: 'Αναπτυγμένο στην υποδομή Web3Edu / Edu-Net'
         },
-        // teaching
+
         'teach-1': {
-            en: 'Introductory course focused on cybersecurity threats and blockchain (including DORA regulation), with hands-on lab sessions.',
-            gr: 'Εισαγωγικό μάθημα με έμφαση στις απειλές κυβερνοασφάλειας και το blockchain (περιλαμβάνει τον κανονισμό DORA), με εργαστηριακές ασκήσεις.'
+            en: 'Postgraduate course on Blockchain and DLT, using Web3Edu and Besu Edu-Net for hands-on interaction with wallets, smart contracts, block explorers, and live educational infrastructure.',
+            gr: 'Μεταπτυχιακό μάθημα σε Blockchain και DLT, με χρήση Web3Edu και Besu Edu-Net για πρακτική αλληλεπίδραση με πορτοφόλια, smart contracts, block explorers και ζωντανή εκπαιδευτική υποδομή.'
         },
         'teach-2': {
-            en: 'Development and security of Web 3.0 DApps.',
-            gr: 'Ανάπτυξη και ασφάλεια εφαρμογών Web 3.0 (DApps).'
+            en: 'Course on Web 3.0 decentralized application design, covering smart contracts, DApp architectures, identity-aware interaction, and security considerations.',
+            gr: 'Μάθημα σχεδιασμού αποκεντρωμένων εφαρμογών Web 3.0, με κάλυψη smart contracts, αρχιτεκτονικών DApp, αλληλεπίδρασης με επίγνωση ταυτότητας και ζητημάτων ασφάλειας.'
         },
         'teach-3': {
-            en: 'A fundamental introduction to cybersecurity and other aspects to instil assurances in DLT-related activities and compatibility with EU regulations (e.g., DORA).',
-            gr: 'Βασική εισαγωγή στην κυβερνοασφάλεια και σε άλλα θέματα για την παροχή διασφαλίσεων σε δραστηριότητες που σχετίζονται με DLT και τη συμβατότητα με κανονισμούς της ΕΕ (π.χ. DORA).'
+            en: 'Course introducing cybersecurity and assurance concepts for DLT-related systems, including operational resilience, regulatory context, and applied security considerations.',
+            gr: 'Εισαγωγικό μάθημα σε έννοιες κυβερνοασφάλειας και διασφάλισης για συστήματα σχετικά με DLT, συμπεριλαμβανομένης λειτουργικής ανθεκτικότητας, ρυθμιστικού πλαισίου και εφαρμοσμένης ασφάλειας.'
         },
-        // contact labels
-        'lbl-email': { en: 'Email:', gr: 'Ηλ. ταχυδρομείο:' },
-        'lbl-github': { en: 'GitHub:', gr: 'GitHub:' },
-        'lbl-scholar': { en: 'Scholar:', gr: 'Scholar:' },
-        'lbl-linkedin': { en: 'LinkedIn:', gr: 'LinkedIn:' },
+        'teach-4': {
+            en: 'Design and delivery of Web3 security labs covering DeFi attack simulations, consensus behavior, oracle manipulation, and private testnet experimentation with Besu.',
+            gr: 'Σχεδιασμός και παράδοση εργαστηρίων ασφάλειας Web3 με προσομοιώσεις επιθέσεων DeFi, συμπεριφορά συναίνεσης, χειραγώγηση oracle και πειραματισμό σε ιδιωτικό testnet με Besu.'
+        },
+
+        'lbl-email': { en: 'Email', gr: 'Ηλ. ταχυδρομείο' },
+        'lbl-github': { en: 'GitHub', gr: 'GitHub' },
+        'lbl-scholar': { en: 'Google Scholar', gr: 'Google Scholar' },
+        'lbl-linkedin': { en: 'LinkedIn', gr: 'LinkedIn' },
     };
 
     function initPage() {
@@ -206,16 +224,7 @@
         for (const id in langElems) {
             const el = document.getElementById(id);
             if (el && langElems[id][lang]) {
-                if (
-                    id === 'proj-tardis-1' ||
-                    id === 'proj-genera-1' ||
-                    id === 'proj-faster-1' ||
-                    id === 'proj-artemis-1'
-                ) {
-                    el.innerHTML = langElems[id][lang];
-                } else {
-                    el.textContent = langElems[id][lang];
-                }
+                el.textContent = langElems[id][lang];
             }
         }
         document.querySelectorAll('.section-title').forEach(el => {
