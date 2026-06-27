@@ -19,11 +19,11 @@ Welcome! This is the **personal bilingual (EN/GR) static webpage of Dimitrios Ko
 
 ## 📁 Customize
 - Edit the contact information (email, GitHub, etc.) directly inside the relevant section of `index.html` / `index-gr.html` (search for `id="contact"`).
-- Replace `assets/KOGIAS_CV_GR.pdf` with your actual CV file.
+- Replace `assets/Kogias_CV_EN.pdf` and `assets/Kogias_CV_GR.pdf` with your CV files (English and Greek). Download links switch automatically with the language toggle.
 - To use your own photo, swap the avatar block with `<img src="assets/avatar.jpg">`.
 
 ## 📈 SEO
 - Edit `robots.txt` and update the Sitemap line with your domain.
 - Update `sitemap.xml` to reflect your actual domain.
 
-© 2025 Dimitrios Kogias
+© 2026 Dimitrios Kogias

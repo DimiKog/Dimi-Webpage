@@ -59,12 +59,12 @@
         },
 
         'doc-title': {
-            en: 'Dimitrios G. Kogias — Applied Researcher · Digital Trust',
-            gr: 'Δημήτριος Γ. Κόγιας — Εφαρμοσμένος ερευνητής · Ψηφιακή εμπιστοσύνη'
+            en: 'Dimitrios G. Kogias — Elected Assistant Professor · Distributed Systems · Edge Computing · Applications',
+            gr: 'Δημήτριος Γ. Κόγιας — Εκλεγμένος Επίκουρος Καθηγητής · Κατανεμημένα Συστήματα · Υπολογιστική Άκρου · Εφαρμογές'
         },
         'brand-tag': {
-            en: 'Applied Researcher · Digital Trust',
-            gr: 'Εφαρμοσμένος ερευνητής · Ψηφιακή εμπιστοσύνη'
+            en: 'Elected Assistant Professor · Distributed Systems · Edge Computing · Applications',
+            gr: 'Εκλεγμένος Επίκουρος Καθηγητής · Κατανεμημένα Συστήματα · Υπολογιστική Άκρου · Εφαρμογές'
         },
         'brand-name': {
             en: 'Dimitrios G. Kogias',
@@ -186,8 +186,8 @@
             gr: 'Μεταπτυχιακό μάθημα σε Blockchain και DLT, με χρήση Web3Edu και Besu Edu-Net για πρακτική αλληλεπίδραση με πορτοφόλια, smart contracts, block explorers και ζωντανή εκπαιδευτική υποδομή.'
         },
         'teach-2': {
-            en: 'Course on Web 3.0 decentralized application design, covering smart contracts, DApp architectures, identity-aware interaction, and security considerations.',
-            gr: 'Μάθημα σχεδιασμού αποκεντρωμένων εφαρμογών Web 3.0, με κάλυψη smart contracts, αρχιτεκτονικών DApp, αλληλεπίδρασης με επίγνωση ταυτότητας και ζητημάτων ασφάλειας.'
+            en: 'Postgraduate course on high-performance computing systems for blockchain applications, covering scalable distributed architectures, performance optimization, and applied blockchain infrastructure.',
+            gr: 'Μεταπτυχιακό μάθημα για υπολογιστικά συστήματα υψηλών επιδόσεων σε εφαρμογές blockchain, με έμφαση στην κλιμακούμενη κατανεμημένη αρχιτεκτονική, βελτιστοποίηση απόδοσης και εφαρμοσμένη υποδομή blockchain.'
         },
         'teach-3': {
             en: 'Course introducing cybersecurity and assurance concepts for DLT-related systems, including operational resilience, regulatory context, and applied security considerations.',
@@ -234,6 +234,10 @@
         document.querySelectorAll('[data-en][data-gr]').forEach(el => {
             const key = lang === 'gr' ? 'gr' : 'en';
             el.textContent = el.dataset[key];
+        });
+        document.querySelectorAll('[data-en-href][data-gr-href]').forEach(el => {
+            const href = lang === 'gr' ? el.getAttribute('data-gr-href') : el.getAttribute('data-en-href');
+            if (href) { el.setAttribute('href', href); }
         });
         localStorage.setItem(LANG_KEY, lang);
         document.documentElement.setAttribute('data-lang', lang);
@@ -283,9 +287,8 @@
         btnEn && btnEn.addEventListener('click', () => handleLangClick('en'));
         btnGr && btnGr.addEventListener('click', () => handleLangClick('gr'));
 
-        let lang = localStorage.getItem(LANG_KEY) || defaultLang;
-        if (lang !== defaultLang && navigateTo(lang, true)) { return; }
-        setLang(lang);
+        setLang(defaultLang);
+        localStorage.setItem(LANG_KEY, defaultLang);
         window.setLang = setLang;
     }
 
