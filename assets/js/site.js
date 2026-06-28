@@ -59,12 +59,12 @@
         },
 
         'doc-title': {
-            en: 'Dimitrios G. Kogias — Elected Assistant Professor · Distributed Systems · Edge Computing · Applications',
-            gr: 'Δημήτριος Γ. Κόγιας — Εκλεγμένος Επίκουρος Καθηγητής · Κατανεμημένα Συστήματα · Υπολογιστική Άκρου · Εφαρμογές'
+            en: 'Dimitrios G. Kogias — Elected Assistant Professor · Distributed Computing · Edge Computing · Applications',
+            gr: 'Δημήτριος Γ. Κόγιας — Εκλεγμένος Επίκουρος Καθηγητής · Κατανεμημένη Υπολογιστική · Υπολογιστική Άκρου · Εφαρμογές'
         },
         'brand-tag': {
-            en: 'Elected Assistant Professor · Distributed Systems · Edge Computing · Applications',
-            gr: 'Εκλεγμένος Επίκουρος Καθηγητής · Κατανεμημένα Συστήματα · Υπολογιστική Άκρου · Εφαρμογές'
+            en: 'Elected Assistant Professor · Distributed Computing · Edge Computing · Applications',
+            gr: 'Εκλεγμένος Επίκουρος Καθηγητής · Κατανεμημένη Υπολογιστική · Υπολογιστική Άκρου · Εφαρμογές'
         },
         'brand-name': {
             en: 'Dimitrios G. Kogias',
