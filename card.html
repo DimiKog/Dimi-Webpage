@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dimitrios G. Kogias — Digital Business Card</title>
+    <meta name="description" content="Digital business card for Dimitrios G. Kogias — Assistant Professor, University of West Attica." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/png" href="assets/Dimi_favicon.png" />
+    <link rel="apple-touch-icon" href="assets/Dimi_favicon.png" />
+    <link rel="canonical" href="https://dimikog.org/card.html" />
+    <link rel="alternate" hreflang="en" href="https://dimikog.org/card.html" />
+    <link rel="alternate" hreflang="el" href="https://dimikog.org/card-gr.html" />
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://dimikog.org/card.html" />
+    <meta property="og:title" content="Dimitrios G. Kogias — Digital Business Card" />
+    <meta property="og:description" content="Assistant Professor, University of West Attica. Distributed systems, blockchain infrastructure, decentralized identity, verifiable AI." />
+    <meta property="og:image" content="https://dimikog.org/assets/DimiKog.webp" />
+
+    <style>
+        .card-page {
+            min-height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 16px;
+        }
+
+        .vcard {
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+            padding: 32px 24px;
+        }
+
+        .vcard-avatar {
+            width: 112px;
+            height: 112px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 16px;
+            border: 2px solid var(--line);
+        }
+
+        .vcard h1 {
+            margin: 0 0 4px;
+            font-size: 1.4rem;
+        }
+
+        .vcard .vcard-title {
+            color: var(--muted);
+            margin: 0 0 2px;
+            font-size: .95rem;
+        }
+
+        .vcard .vcard-org {
+            color: var(--muted);
+            margin: 0 0 20px;
+            font-size: .85rem;
+        }
+
+        .vcard-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .vcard-actions .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .vcard-links {
+            display: grid;
+            gap: 10px;
+            text-align: left;
+            margin-bottom: 24px;
+        }
+
+        .vcard-qr {
+            margin: 4px auto 8px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 12px;
+            width: fit-content;
+        }
+
+        .vcard-qr img {
+            display: block;
+            width: 150px;
+            height: 150px;
+        }
+
+        .vcard-qr-caption {
+            font-size: .78rem;
+            color: var(--muted);
+        }
+
+        .vcard-lang {
+            margin-top: 18px;
+            font-size: .85rem;
+        }
+
+        .vcard-lang a {
+            color: var(--brand);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="card-page">
+        <div class="card vcard">
+            <img class="vcard-avatar" src="assets/avatar.png" alt="Portrait of Dimitrios G. Kogias" loading="eager" />
+            <h1>Dimitrios G. Kogias</h1>
+            <p class="vcard-title">Assistant Professor</p>
+            <p class="vcard-org">University of West Attica · Dept. of Informatics &amp; Computing Engineering</p>
+
+            <div class="vcard-actions">
+                <a class="btn primary" href="assets/Dimitrios_Kogias.vcf" download>Save to Contacts</a>
+                <a class="btn ghost" href="mailto:dimikog@uniwa.gr">Email me</a>
+            </div>
+
+            <div class="vcard-links contact-links-grid">
+                <a href="https://www.linkedin.com/in/dimitris-kogias-b376222a/" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                    <div class="contact-link-content">
+                        <span class="contact-link-label">LinkedIn</span>
+                        <span class="contact-link-value">Professional Profile</span>
+                    </div>
+                </a>
+                <a href="https://github.com/DimiKog" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                    <div class="contact-link-content">
+                        <span class="contact-link-label">GitHub</span>
+                        <span class="contact-link-value">@DimiKog</span>
+                    </div>
+                </a>
+                <a href="https://scholar.google.com/citations?user=VY5yMDYAAAAJ&hl=el" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                    <div class="contact-link-content">
+                        <span class="contact-link-label">Google Scholar</span>
+                        <span class="contact-link-value">Publications</span>
+                    </div>
+                </a>
+                <a href="https://orcid.org/0000-0001-8985-6136" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                    <div class="contact-link-content">
+                        <span class="contact-link-label">ORCID</span>
+                        <span class="contact-link-value">0000-0001-8985-6136</span>
+                    </div>
+                </a>
+                <a href="https://dimikog.org" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                    <div class="contact-link-content">
+                        <span class="contact-link-label">Website</span>
+                        <span class="contact-link-value">dimikog.org</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="vcard-qr">
+                <img src="assets/qr/card-qr.png" alt="QR code linking to this card" width="150" height="150" />
+            </div>
+            <p class="vcard-qr-caption">Scan to open this card</p>
+
+            <p class="vcard-lang"><a href="card-gr.html">Ελληνικά</a></p>
+        </div>
+    </main>
+</body>
+
+</html>

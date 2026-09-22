@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Kogias;Dimitrios;G.;;
+FN:Dimitrios G. Kogias
+TITLE:Assistant Professor
+ORG:University of West Attica (UniWA);Dept. of Informatics and Computing Engineering
+EMAIL;TYPE=INTERNET:dimikog@uniwa.gr
+URL:https://dimikog.org
+URL;TYPE=LinkedIn:https://www.linkedin.com/in/dimitris-kogias-b376222a/
+URL;TYPE=GitHub:https://github.com/DimiKog
+URL;TYPE=ORCID:https://orcid.org/0000-0001-8985-6136
+URL;TYPE=Scholar:https://scholar.google.com/citations?user=VY5yMDYAAAAJ&hl=el
+ADR;TYPE=WORK:;;Athens;;;;Greece
+NOTE:Blockchain & Distributed Identity Researcher — Web3Edu, Besu EduNet
+END:VCARD
